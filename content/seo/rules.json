@@ -1,0 +1,95 @@
+{
+  "_note": "SEO rules for openinkhub.io. Auto-configured defaults; edit values and run `npm test`. Used by tools/seo-fix.mjs (automatic fixes at build time) and tools/seo-audit.mjs (checklist + /admin report).",
+  "site": {
+    "name": "openink Hub",
+    "legalName": "Openink Hub",
+    "url": "https://openinkhub.io",
+    "logo": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+    "defaultImage": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp",
+    "locale": "en_IN",
+    "twitterCard": "summary_large_image",
+    "entities": ["Openink Hub", "SEO", "AEO", "GEO", "AIO", "WhatsApp", "Google Business Profile", "Ranchi"]
+  },
+
+  "sections": [
+    { "id": "pages", "label": "Pages", "match": { "type": ["home", "page"] } },
+    { "id": "posts", "label": "Blog posts", "match": { "type": ["post"], "notCategory": "/category/seo-agency-by-city/" } },
+    { "id": "city", "label": "SEO city guides", "match": { "type": ["post"], "category": "/category/seo-agency-by-city/" } },
+    { "id": "listings", "label": "Categories, tags & archives", "match": { "type": ["category", "tag", "archive"] } }
+  ],
+
+  "keyphrase": {
+    "_note": "Order of sources for each page's focus keyphrase.",
+    "sources": ["squirrly", "cityPost", "titlePhrase"],
+    "cityPostPattern": "seo agency in {city}"
+  },
+
+  "thresholds": {
+    "title": { "min": 30, "max": 60 },
+    "description": { "min": 70, "max": 160 },
+    "slug": { "maxLength": 75, "maxWords": 8 },
+    "wordCount": { "page": 300, "post": 600, "home": 300, "category": 0, "tag": 0, "archive": 0 },
+    "keyphraseDensity": { "min": 0.3, "max": 2.5 },
+    "sentenceLength": { "longSentenceWords": 20, "maxPercentLong": 25 },
+    "paragraphLength": { "maxWords": 150 },
+    "subheadingDistribution": { "maxWordsWithoutHeading": 300 },
+    "passiveVoice": { "maxPercent": 10 },
+    "transitionWords": { "minPercent": 20 },
+    "consecutiveSentences": { "maxRun": 2 },
+    "wordComplexity": { "maxPercentComplex": 20 },
+    "readability": { "minFleschGood": 50, "minFleschOk": 30 },
+    "textToImage": { "minWordsPerImage": 80 },
+    "internalLinks": { "min": 3 },
+    "outboundLinks": { "minForPosts": 1 },
+    "anchors": { "maxPercentGeneric": 15 },
+    "uniqueness": { "maxOverlapWarn": 0.25, "maxOverlapFail": 0.5 },
+    "freshness": { "warnAfterDays": 365, "failAfterDays": 730 },
+    "crawlDepth": { "max": 3 },
+    "pageWeight": { "maxHtmlKB": 150, "maxImagesPerPage": 30 },
+    "faq": { "minQuestions": 3 }
+  },
+
+  "autofix": {
+    "_note": "Safe fixes applied automatically on every build. Set any to false to turn it off.",
+    "metaDescription": true,
+    "listingHeadings": true,
+    "openGraph": true,
+    "twitterCard": true,
+    "excerpt": true,
+    "imageAlt": true,
+    "imageDimensions": true,
+    "breadcrumbSchema": true,
+    "organizationSchema": true,
+    "websiteSchema": true,
+    "articleSchema": true,
+    "authorSchema": true,
+    "faqSchema": true,
+    "llmsTxt": true,
+    "redirects": true,
+    "robotsDisallowAdmin": true,
+    "securityHeaders": true
+  },
+
+  "critical": ["seo_title", "canonical", "h1", "schema_jsonld", "broken_links", "indexing"],
+
+  "weights": {
+    "seo_title": 3, "meta_description": 3, "keyphrase": 3, "canonical": 3, "h1": 3, "indexing": 3, "slug": 1,
+    "hero_image": 1, "open_graph": 2, "twitter_card": 1, "schema_jsonld": 2, "breadcrumb_schema": 1,
+    "organization_schema": 1, "article_schema": 2, "author_schema": 1, "faq_schema_validation": 2,
+    "internal_links": 2, "outbound_links": 1, "broken_links": 3, "images": 2, "word_count": 2,
+    "keyword_density": 1, "topical_relevance": 2, "semantic_coverage": 1, "content_uniqueness": 2,
+    "cannibalization": 2, "faq_optimization": 1, "entity_coverage": 1, "anchor_text": 1,
+    "crawl_depth": 1, "sitemap": 2, "follow": 1, "viewport": 1, "llm_submit": 1, "excerpt": 1,
+    "trust_signal": 1, "authority_signal": 1, "page_speed": 1, "cls_risk": 1, "js_issues": 1,
+    "search_intent": 1, "content_freshness": 1, "schema_entity_consistency": 1
+  },
+
+  "words": {
+    "transition": ["also", "and then", "as a result", "because", "besides", "but", "consequently", "finally", "first", "firstly", "for example", "for instance", "furthermore", "however", "in addition", "in contrast", "in fact", "in short", "instead", "likewise", "meanwhile", "moreover", "next", "nevertheless", "on the other hand", "otherwise", "second", "similarly", "since", "so", "still", "then", "therefore", "thus", "while", "yet", "that means", "in other words", "after that", "before", "once", "unless", "whereas", "overall", "ultimately", "in practice", "for that reason"],
+    "generic_anchors": ["click here", "here", "read more", "more", "this", "link", "learn more", "this page", "go"],
+    "inclusive": ["chairman", "manpower", "mankind", "man-hours", "blacklist", "whitelist", "master/slave", "guys", "crazy", "insane", "lame", "dumb", "handicapped", "sanity check", "grandfathered", "spokesman", "salesman", "policeman", "fireman", "cameraman"],
+    "authority_domains": ["google.com", "developers.google.com", "support.google.com", "schema.org", "w3.org", "wikipedia.org", "gov.in", "nic.in", ".gov", ".edu", ".ac.in", "who.int", "meta.com", "developers.facebook.com", "openai.com", "cloudflare.com"],
+    "informational": ["what", "how", "why", "guide", "tips", "steps", "learn", "beginner", "ultimate", "checklist", "explained", "vs", "choose"],
+    "commercial": ["best", "agency", "services", "service", "company", "top", "software", "tool", "tools", "solutions", "platform", "pricing", "hire"]
+  }
+}

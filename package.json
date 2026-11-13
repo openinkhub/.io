@@ -8,12 +8,14 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "node tools/build.mjs",
+    "build": "node tools/build.mjs && node tools/seo-audit.mjs",
     "verify": "node tools/verify.mjs",
     "dupcheck": "node tools/dupcheck.mjs",
     "city-posts": "node tools/city-posts.mjs",
     "test": "npm run build && npm run verify && node tools/dupcheck.mjs 0.25",
     "preview": "node tools/serve.mjs",
-    "dev": "npm run build && npm run preview"
+    "dev": "npm run build && npm run preview",
+    "audit": "node tools/seo-audit.mjs",
+    "import-squirrly": "node tools/import-squirrly.mjs"
   }
 }

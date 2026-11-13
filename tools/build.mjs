@@ -13,6 +13,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { fixRecord, fixHtml, listingLabel, RULES, SQUIRRLY } from "./seo-fix.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const C = path.join(ROOT, "content");
@@ -67,7 +68,8 @@ const CFG = load(path.join(C, "site-config.json"));
 const HOME = load(path.join(C, "home.json"));
 const CATS = load(path.join(C, "site.json")).categories || [];
 const RECS = fs.readdirSync(path.join(C, "pages")).filter((n) => n.endsWith(".json")).sort()
-  .map((n) => load(path.join(C, "pages", n))).filter((r) => r.status === 200 && r.head);
+  .map((n) => load(path.join(C, "pages", n))).filter((r) => r.status === 200 && r.head).map(fixRecord); // safe SEO auto-fixes (content/seo/rules.json)
+const HTML_FIXES = {}; // image fixes applied per page, reported in /admin
 const POSTS = RECS.filter((r) => r.type === "post").sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 const now = new Date();
 const VERSION = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}${pad(now.getHours())}${pad(now.getMinutes())}`;
@@ -304,7 +306,7 @@ function pageTpl(rec) {
   </div>
 </section>
 ${contact}
-<section class="section"><div class="wrap narrow prose">${localizeBody(body)}</div></section>
+<section class="section"><div class="wrap narrow prose"><!--seo:content-->${localizeBody(body)}<!--/seo:content--></div></section>
 ${faqs}`, "is-page" + (legal ? " is-legal" : ""));
 }
 
@@ -345,7 +347,7 @@ function postTpl(rec) {
       <span>${readMinutes(body)} min read</span>
     </div>
   </div></header>
-  <div class="wrap narrow">${fig}<div class="prose">${localizeBody(body)}</div>
+  <div class="wrap narrow">${fig}<div class="prose"><!--seo:content-->${localizeBody(body)}<!--/seo:content--></div>
   ${tags ? `<div class="post-tags">${tags}</div>` : ""}
   <aside class="post-cta"><div><h2>Want results like this for your business?</h2>
   <p>Get a free consultation on SEO, AEO, GEO and AI automation from the Openink Hub team.</p></div>
@@ -361,14 +363,16 @@ function listingTpl(rec, posts, label) {
   const intro = (rec.content_html || "").replace(/<[^>]+>/g, " ").trim();
   const h1 = rec.h1 || rec.title;
   const cards = posts.map(postCard).join("") || "<p>No articles yet.</p>";
+  const months = RECS.filter((r) => r.type === "archive").sort((a, b) => b.path.localeCompare(a.path));
   const filters = CATS.filter((c) => c.count).map((c) =>
-    `<a class="chip${c.path === rec.path ? " is-on" : ""}" href="${E(c.path)}">${E(c.name)}</a>`).join("");
-  return document_(rec, `<section class="page-hero page-hero-sm"><div class="wrap">
+    `<a class="chip${c.path === rec.path ? " is-on" : ""}" href="${E(c.path)}">${E(c.name)}</a>`).join("") +
+    months.map((m) => `<a class="chip${m.path === rec.path ? " is-on" : ""}" href="${E(m.path)}">${E(listingLabel(m))}</a>`).join("");
+  return document_(rec, `<!--seo:content--><section class="page-hero page-hero-sm"><div class="wrap">
   ${breadcrumb([[label, null], [h1, null]])}
   <h1>${E(h1)}</h1>
   <p class="lead">${posts.length} article${posts.length !== 1 ? "s" : ""}${intro && len(intro) < 400 ? " · " + E(cut(intro, 200)) : ""}</p>
   <div class="chips">${filters}</div>
-</div></section>
+</div></section><!--/seo:content-->
 <section class="section"><div class="wrap"><div class="post-grid">${cards}</div></div></section>`, "is-archive");
 }
 
@@ -399,7 +403,7 @@ function homeTpl(rec) {
   const faqItems = H.faq.items.map((f) => `<details class="faq"><summary>${E(f.q)}</summary><div class="faq-a"><p>${f.a}</p></div></details>`).join("");
   const latest = POSTS.filter((p) => !p.path.includes("best-seo-agency-in-")).slice(0, 3).map(postCard).join("");
   const blogCat = CATS.find((c) => c.slug === "best-seo-content-agency")?.path || "/";
-  return document_(rec, `<section class="hero">
+  return document_(rec, `<!--seo:content--><section class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
@@ -450,7 +454,7 @@ function homeTpl(rec) {
   <div class="sec-head sec-head-row"><h2 class="sec-title">Latest insights</h2><a class="link-arrow" href="${E(blogCat)}">All articles${icon("arrow")}</a></div>
   <div class="post-grid">${latest}</div>
 </div></section>
-<section class="section section-alt"><div class="wrap narrow"><h2 class="sec-title">${E(H.faq.h2)}</h2>${faqItems}</div></section>`, "is-home");
+<section class="section section-alt"><div class="wrap narrow"><h2 class="sec-title">${E(H.faq.h2)}</h2>${faqItems}</div></section><!--/seo:content-->`, "is-home");
 }
 
 // ---------------------------------------------------------------- output
@@ -458,6 +462,11 @@ function write(p, text) {
   let target = path.join(DIST, ...p.replace(/^\/+/, "").split("/"));
   if (p.endsWith("/")) target = path.join(target, "index.html");
   fs.mkdirSync(path.dirname(target), { recursive: true });
+  if (target.endsWith(".html")) {
+    const fx = fixHtml(text, DIST, (/<title>([^<]*)<\/title>/.exec(text) || [])[1] || "");
+    text = fx.html;
+    if (fx.fixes.length) HTML_FIXES[p] = [...new Set(fx.fixes)].map((f) => `${f}:${fx.fixes.filter((x) => x === f).length}`);
+  }
   fs.writeFileSync(target, text, "utf8");
 }
 
@@ -482,7 +491,7 @@ function sitemaps() {
   idx.push("</sitemapindex>\n");
   write("/sitemap.xml", idx.join("\n"));
   write("/sitemap_index.xml", idx.join("\n")); // was live on WordPress too
-  write("/robots.txt", "User-agent: *\nAllow: /\n\n" + ["", "home", "posts", "pages", "categories", "tags", "archives"]
+  write("/robots.txt", "User-agent: *\nAllow: /\n" + (RULES.autofix.robotsDisallowAdmin ? "Disallow: /admin/\n" : "") + "\n" + ["", "home", "posts", "pages", "categories", "tags", "archives"]
     .map((n) => `Sitemap: ${BASE}/sitemap${n ? "-" + n : ""}.xml\n`).join(""));
 }
 
@@ -495,6 +504,38 @@ function notFound() {
 <p class="lead">The link may be outdated. Try one of our services or the latest articles below.</p>
 <div class="hero-ctas center"><a class="btn btn-primary" href="/">Back to home</a><a class="btn btn-ghost" href="/best-seo-services-in-india/">Our services</a></div>
 </div></section><section class="section"><div class="wrap"><div class="post-grid">${latest}</div></div></section>`));
+}
+
+/** _redirects (from Squirrly), _headers (security + noindex for /admin), llms.txt (for AI crawlers). */
+function seoFiles() {
+  if (RULES.autofix.redirects && SQUIRRLY.redirects?.length) {
+    const lines = SQUIRRLY.redirects.flatMap((r) => [`${r.from} ${r.to} ${r.code}`, `${r.from}/ ${r.to} ${r.code}`]);
+    write("/_redirects", "# Imported from Squirrly SEO (content/seo/squirrly.json). Live URLs are never redirected.\n" + lines.join("\n") + "\n");
+  }
+  if (RULES.autofix.securityHeaders) {
+    write("/_headers", [
+      "/*", "  X-Content-Type-Options: nosniff", "  Referrer-Policy: strict-origin-when-cross-origin",
+      "  X-Frame-Options: SAMEORIGIN", "  Permissions-Policy: camera=(), microphone=(), geolocation=()", "",
+      "/admin/*", "  X-Robots-Tag: noindex, nofollow", "  Cache-Control: no-store", "",
+      "/assets/*", "  Cache-Control: public, max-age=31536000, immutable", "",
+      "/wp-content/uploads/*", "  Cache-Control: public, max-age=2592000", "",
+    ].join("\n"));
+  }
+  if (RULES.autofix.llmsTxt) {
+    const plain = (h) => String(h || "").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+    const indexable = RECS.filter((r) => !r.head.meta.some((m) => m.key === "robots" && /noindex/.test(m.content)));
+    const isCity = (r) => (r.categories || []).some((c) => c.path === "/category/seo-agency-by-city/");
+    const line = (r) => `- [${plain(r.head.title)}](${BASE}${r.path}): ${plain((r.head.meta.find((m) => m.key === "description") || {}).content || r.excerpt).slice(0, 160)}`;
+    const group = (label, list) => (list.length ? [`\n## ${label}\n`, ...list.map(line)] : []);
+    write("/llms.txt", [
+      "# openink Hub", "",
+      "> AI-powered growth engine for startups and SMEs in India: SEO, answer engine optimization (AEO), generative engine optimization (GEO), artificial intelligence optimization (AIO), WhatsApp AI automation, Google Business Profile optimization and AI voice agents. Based in Ranchi, Jharkhand.",
+      "", `Contact: ${CFG.contact.email} · ${CFG.contact.phone} · ${CFG.contact.address}`,
+      ...group("Services and key pages", indexable.filter((r) => ["home", "page"].includes(r.type))),
+      ...group("Guides and articles", indexable.filter((r) => r.type === "post" && !isCity(r))),
+      ...group("SEO city guides", indexable.filter(isCity)),
+    ].join("\n") + "\n");
+  }
 }
 
 function walk(dir) {
@@ -524,6 +565,9 @@ function main() {
   notFound();
   write("/CNAME", "openinkhub.io\n");
   write("/.nojekyll", "");
+  seoFiles();
+  fs.mkdirSync(path.join(DIST, "admin"), { recursive: true });
+  fs.writeFileSync(path.join(DIST, "admin", "html-fixes.json"), JSON.stringify(HTML_FIXES));
 
   // sanity: every referenced local asset exists
   const missing = new Set();

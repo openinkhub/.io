@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SEO admin · openink Hub</title>
+<link rel="icon" href="/wp-content/uploads/2026/07/openinkhub-favicon.webp">
+<style>
+:root{--blue:#046bd2;--teal:#15ccc9;--ink:#0f1b2d;--slate:#475569;--muted:#64748b;--line:#e2e8f0;--bg:#f5f8fc;--pass:#16a34a;--warn:#d97706;--fail:#dc2626;--na:#94a3b8}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--slate);background:var(--bg)}
+header{background:var(--ink);color:#cbd5e1;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header b{color:#fff;font-size:16px}header .sp{flex:1}header a{color:#9fd8ff}
+main{max-width:1400px;margin:0 auto;padding:20px 24px 60px}
+h2{color:var(--ink);font-size:17px;margin:28px 0 10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer}
+.card.on{border-color:var(--blue);box-shadow:0 0 0 2px rgba(4,107,210,.15)}
+.card .n{font-size:26px;font-weight:700;color:var(--ink)}.card .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.score{display:inline-block;min-width:44px;text-align:center;padding:2px 8px;border-radius:999px;font-weight:700;color:#fff}
+.s-good{background:var(--pass)}.s-ok{background:var(--warn)}.s-bad{background:var(--fail)}.s-none{background:var(--na)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0}
+input,select,button{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f8fafc;color:var(--ink);font-weight:600;cursor:pointer;white-space:nowrap;position:sticky;top:0}
+tr.row:hover{background:#f8fbff;cursor:pointer}td.t a{color:var(--blue);text-decoration:none;font-weight:600}td.t small{display:block;color:var(--muted)}
+.pill{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px}.p-pass{background:var(--pass)}.p-warn{background:var(--warn)}.p-fail{background:var(--fail)}.p-info,.p-na{background:var(--na)}
+.detail td{background:#fbfdff;padding:16px}
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}
+.group{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}.group h4{margin:0 0 6px;color:var(--ink)}
+.chk{display:grid;grid-template-columns:16px 1fr;gap:6px;padding:4px 0;border-bottom:1px dashed #eef2f7}.chk:last-child{border:0}
+.chk .v{color:var(--ink)}.chk .note{color:var(--muted);font-size:12.5px}
+.serp{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;max-width:640px;margin-bottom:14px;font-family:arial,sans-serif}
+.serp .u{color:#202124;font-size:12px}.serp .h{color:#1a0dab;font-size:19px;line-height:1.3;margin:2px 0}.serp .d{color:#4d5156;font-size:13.5px}
+.tag{display:inline-block;background:#eef5fd;color:var(--blue);border-radius:6px;padding:1px 6px;font-size:12px;margin:1px}
+.muted{color:var(--muted)}.issues td:first-child{width:40%}
+pre{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:12.5px}
+</style>
+</head>
+<body>
+<header><b>openink Hub · SEO admin</b><span id="gen" class="muted"></span><span class="sp"></span>
+  <a href="report.csv" download>Download CSV</a><a href="report.json" target="_blank" rel="noopener">report.json</a><a href="/">View site</a></header>
+<main>
+  <div class="cards" id="cards"></div>
+
+  <h2>Top issues across the site</h2>
+  <table class="issues"><thead><tr><th>Check</th><th>Group</th><th>Fail</th><th>Warn</th></tr></thead><tbody id="issues"></tbody></table>
+
+  <h2 id="secTitle">All pages</h2>
+  <div class="bar">
+    <input id="q" placeholder="Search title, URL or keyphrase…" size="34">
+    <select id="check"><option value="">Filter by failing/warning check…</option></select>
+    <select id="status"><option value="">Any status</option><option value="fail">Has fails</option><option value="warn">Has warnings</option></select>
+    <span class="sp"></span><span id="count" class="muted"></span>
+  </div>
+  <table><thead><tr>
+    <th data-k="title">Page</th><th data-k="keyphrase">Keyphrase</th><th data-k="seo_score">SEO</th><th data-k="readability_score">Readability</th>
+    <th data-k="words">Words</th><th data-k="fails">Fails</th><th data-k="warns">Warnings</th><th data-k="date">Published</th>
+  </tr></thead><tbody id="rows"></tbody></table>
+
+  <h2>Site checks</h2>
+  <div id="site" class="groups"></div>
+</main>
+<script>
+(async function () {
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const cls = (v) => v == null ? "s-none" : v >= 80 ? "s-good" : v >= 60 ? "s-ok" : "s-bad";
+  const badge = (v) => `<span class="score ${cls(v)}">${v ?? "—"}</span>`;
+  const R = await (await fetch("report.json", { cache: "no-store" })).json();
+  const byId = Object.fromEntries(R.checks.map((c) => [c.id, c]));
+  R.results.forEach((x) => { const st = Object.values(x.checks).map((c) => c.status); x.fails = st.filter((s) => s === "fail").length; x.warns = st.filter((s) => s === "warn").length; });
+  document.getElementById("gen").textContent = `${R.pages} URLs · generated ${new Date(R.generated).toLocaleString()}`;
+
+  let section = "", sortK = "seo_score", sortDir = 1, open = null;
+  const cards = document.getElementById("cards");
+  const allCard = { id: "", label: "All pages", count: R.pages, avg_seo: R.avg_seo, avg_readability: R.avg_readability, fails: R.results.reduce((t, x) => t + x.fails, 0) };
+  function drawCards() {
+    cards.innerHTML = [allCard, ...R.sections].map((s) => `<div class="card ${s.id === section ? "on" : ""}" data-s="${esc(s.id)}">
+      <div class="l">${esc(s.label)}</div><div class="n">${s.count}</div>
+      <div>SEO ${badge(s.avg_seo)} &nbsp; Read ${badge(s.avg_readability)}</div><div class="muted">${s.fails} failing checks</div></div>`).join("");
+    cards.querySelectorAll(".card").forEach((el) => el.onclick = () => { section = el.dataset.s; drawCards(); draw(); });
+  }
+  document.getElementById("issues").innerHTML = R.issues.slice(0, 15).map((i) =>
+    `<tr><td>${esc(i.label)}</td><td>${esc(i.group)}</td><td><span class="pill p-fail"></span>${i.fail}</td><td><span class="pill p-warn"></span>${i.warn}</td></tr>`).join("") || "<tr><td colspan=4>No issues 🎉</td></tr>";
+  const sel = document.getElementById("check");
+  R.checks.forEach((c) => { const o = document.createElement("option"); o.value = c.id; o.textContent = `${c.group} · ${c.label}`; sel.appendChild(o); });
+
+  function detail(x) {
+    const groups = {};
+    for (const c of R.checks) (groups[c.group] ||= []).push(c);
+    const fx = x.fixes.length ? `<p><b>Auto-fixed at build:</b> ${x.fixes.map((f) => `<span class="tag">${esc(f)}</span>`).join(" ")}</p>` : "";
+    return `<div class="serp"><div class="u">${esc(x.url)}</div><div class="h">${esc(x.serp.title.slice(0, 60))}${x.serp.title.length > 60 ? "…" : ""}</div>
+      <div class="d">${esc(x.serp.description.slice(0, 158))}${x.serp.description.length > 158 ? "…" : ""}</div></div>${fx}
+      <div class="groups">${Object.entries(groups).map(([g, list]) => `<div class="group"><h4>${esc(g)}</h4>${list.map((c) => {
+        const r = x.checks[c.id] || { status: "na", value: "" };
+        return `<div class="chk"><span class="pill p-${r.status}" title="${r.status}"></span><div><b>${esc(c.label)}</b> <span class="v">${esc(r.value)}</span>${r.note ? `<div class="note">${esc(r.note)}</div>` : ""}</div></div>`;
+      }).join("")}</div>`).join("")}</div>`;
+  }
+  function draw() {
+    const q = document.getElementById("q").value.toLowerCase(), chk = sel.value, st = document.getElementById("status").value;
+    let list = R.results.filter((x) => !section || x.section === section)
+      .filter((x) => !q || (x.title + x.url + x.keyphrase).toLowerCase().includes(q))
+      .filter((x) => !chk || ["fail", "warn"].includes(x.checks[chk]?.status))
+      .filter((x) => !st || (st === "fail" ? x.fails : x.warns));
+    list.sort((a, b) => { const A = a[sortK] ?? -1, B = b[sortK] ?? -1; return (A > B ? 1 : A < B ? -1 : 0) * sortDir; });
+    document.getElementById("secTitle").textContent = (section ? R.sections.find((s) => s.id === section).label : "All pages") + " — checklist by page";
+    document.getElementById("count").textContent = `${list.length} shown`;
+    document.getElementById("rows").innerHTML = list.map((x) => `<tr class="row" data-p="${esc(x.path)}">
+      <td class="t"><a href="${esc(x.path)}" target="_blank" rel="noopener">${esc(x.title)}</a><small>${esc(x.path)}</small></td>
+      <td>${esc(x.keyphrase)}<br><small class="muted">${esc(x.keyphrase_source)}</small></td>
+      <td>${badge(x.seo_score)}</td><td>${badge(x.readability_score)}</td><td>${x.words}</td>
+      <td>${x.fails ? `<span class="pill p-fail"></span>${x.fails}` : "0"}</td><td>${x.warns ? `<span class="pill p-warn"></span>${x.warns}` : "0"}</td><td>${esc(x.date)}</td></tr>
+      ${open === x.path ? `<tr class="detail"><td colspan="8">${detail(x)}</td></tr>` : ""}`).join("");
+    document.querySelectorAll("tr.row").forEach((tr) => tr.onclick = (e) => { if (e.target.closest("a")) return; open = open === tr.dataset.p ? null : tr.dataset.p; draw(); });
+  }
+  document.querySelectorAll("th[data-k]").forEach((th) => th.onclick = () => { sortDir = sortK === th.dataset.k ? -sortDir : 1; sortK = th.dataset.k; draw(); });
+  ["q", "check", "status"].forEach((id) => document.getElementById(id).oninput = draw);
+
+  const S = R.site_checks;
+  document.getElementById("site").innerHTML = `
+    <div class="group"><h4>Automatic fixes applied this build</h4>${Object.entries(R.fixes_applied).map(([k, v]) => `<div>${esc(k)}: <b>${v}</b> page(s)</div>`).join("") || "none"}</div>
+    <div class="group"><h4>Redirects (from Squirrly)</h4><div>${S.redirects.active} active</div>${S.redirects.skipped.map((s) => `<div class="note muted">skipped ${esc(s.from)} → ${esc(s.to)}: ${esc(s.reason)}</div>`).join("")}</div>
+    <div class="group"><h4>Discovery</h4><div>${S.sitemap_urls} URLs in sitemaps</div><div>${S.llms_txt_pages} pages in llms.txt</div><div>Core Web Vitals measured: ${S.cwv_measured || "not measured (set PSI_API_KEY)"}</div><div>CSS: ${esc(S.css_errors.join("; ") || "no errors")}</div></div>
+    <div class="group"><h4>robots.txt</h4><pre>${esc(S.robots_txt)}</pre></div>
+    ${R.critical.length ? `<div class="group"><h4>Critical failures</h4>${R.critical.map((c) => `<div>${esc(c.check)} · ${esc(c.path)}</div>`).join("")}</div>` : ""}`;
+  drawCards(); draw();
+})();
+</script>
+</body>
+</html>

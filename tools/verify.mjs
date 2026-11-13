@@ -9,6 +9,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { fixRecord } from "./seo-fix.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
@@ -48,7 +49,7 @@ const rows = parseCsv(fs.readFileSync(path.join(ROOT, "content", "urls.csv"), "u
 // urls.csv is the frozen snapshot of the live WordPress site and guards the URL-level contract.
 const PAGES = path.join(ROOT, "content", "pages");
 const intended = new Map(fs.readdirSync(PAGES).filter((n) => n.endsWith(".json"))
-  .map((n) => JSON.parse(fs.readFileSync(path.join(PAGES, n), "utf8"))).map((r) => [r.path, r]));
+  .map((n) => fixRecord(JSON.parse(fs.readFileSync(path.join(PAGES, n), "utf8")))).map((r) => [r.path, r]));
 const metaOf = (rec, key) => rec?.head?.meta.find((m) => m.key === key)?.content ?? "";
 const errors = [];
 let rewritten = 0;

@@ -163,6 +163,8 @@ function apply(c) {
     "aeo", "questions", "geo", "aio", "example", "faqs"]) if (!c[key] || (Array.isArray(c[key]) && !c[key].length)) throw new Error(`${c.file}: missing ${key}`);
   const rec = JSON.parse(fs.readFileSync(f, "utf8"));
   rec.citylabel = c.city;
+  if (c.keyphrase) { rec.keyphrase_override = c.keyphrase; rec.keyphrase_secondary_override = c.secondary || ["AEO", "GEO", "AIO"]; }
+  else { delete rec.keyphrase_override; delete rec.keyphrase_secondary_override; }
   rec.title = c.title;
   rec.h1 = c.h1.replace(/\*\*/g, "");
   rec.excerpt = c.quick.replace(/\*\*/g, "");

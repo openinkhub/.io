@@ -421,5 +421,13 @@
       "a": "<p>A local team understands the market, can meet in person and knows local media and directories — but expertise and transparency matter more than location.</p>"
     }
   ],
-  "citylabel": "Ranchi"
+  "citylabel": "Ranchi",
+  "keyphrase_override": "SEO services company in Ranchi",
+  "keyphrase_secondary_override": [
+    "SEO audit",
+    "AEO",
+    "GEO",
+    "AIO",
+    "red flags"
+  ]
 }

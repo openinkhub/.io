@@ -1,0 +1,1426 @@
+{
+  "_note": "Imported from a Squirrly SEO backup by tools/import-squirrly.mjs. Re-run the importer to refresh.",
+  "source": {
+    "file": "squirrly-export-2026-11-08.jsonl.gz",
+    "site": "https://openinkhub.io",
+    "created": "2026-11-08 18:04:01",
+    "plugin_version": "14.2.10"
+  },
+  "tracked_keywords": [
+    "seo services",
+    "seo services near me",
+    "aio",
+    "artificial intelligence optimisation",
+    "search engine optimization"
+  ],
+  "settings": {
+    "sq_audit_email": "info@openinkhub.io",
+    "sq_redirects": 1,
+    "sq_jsonld_reusable_schemas": 0,
+    "sq_sla": 1,
+    "sq_sla_frontend": "1",
+    "sq_sla_otherkeywords": 1,
+    "sq_sla_type": "auto",
+    "sq_sla_exclude_post_types": [
+      "0"
+    ],
+    "sq_local_images": false,
+    "sq_sla_social_fetch": "1",
+    "sq_auto_jsonld": "1",
+    "sq_auto_jsonld_local": "1",
+    "sq_jsonld_type": "Organization",
+    "sq_jsonld_personal": "1",
+    "sq_jsonld_global_person": false,
+    "sq_jsonld_breadcrumbs": "1",
+    "sq_jsonld_woocommerce": "1",
+    "sq_jsonld_clearcode": false,
+    "sq_jsonld_product_rating": 0,
+    "sq_jsonld_product_custom": "1",
+    "sq_jsonld_product_defaults": false,
+    "sq_jsonld_local": {
+      "priceRange": "",
+      "servesCuisine": "",
+      "menu": "",
+      "acceptsReservations": "",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "10.00",
+          "closes": "20.00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Tuesday",
+          "opens": "10.00",
+          "closes": "20.00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Wednesday",
+          "opens": "10.00",
+          "closes": "20.00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Thursday",
+          "opens": "10.00",
+          "closes": "20.00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "10.00",
+          "closes": "20.00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10.00",
+          "closes": "20.00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "00.00",
+          "closes": "00.00"
+        }
+      ]
+    },
+    "sq_jsonld": {
+      "Organization": {
+        "name": "Openink Hub",
+        "url": "https://openinkhub.io",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://openinkhub.io/wp-content/uploads/2026/07/agency_logo_3-1.webp"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "",
+          "contactType": ""
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "",
+          "addressLocality": "",
+          "addressRegion": "",
+          "postalCode": "",
+          "addressCountry": ""
+        },
+        "place": {
+          "@type": "Place",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "23.356528",
+            "longitude": "85.324508"
+          }
+        },
+        "description": "Openink Hub is home to a complete AI search optimization stack — SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Artificial Intelligence Optimization (AIO), WhatsApp AI automation, Google Business Profile optimization, and AI voice agents — engineered to get your business found on Google, ChatGPT, Gemini, Perplexity, and every AI assistant in between."
+      },
+      "Person": {
+        "name": "Harish Neotia",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://openinkhub.io/wp-content/uploads/2026/07/google-my-business.webp"
+        },
+        "telephone": "+7366904004",
+        "jobTitle": "CEO",
+        "description": "\"Chief Executive Officer responsible for the overall strategic direction, vision, and growth of openink Hub.\""
+      }
+    },
+    "sq_auto_indexnow": 1,
+    "sq_auto_sitemap": "1",
+    "sq_sitemap_ping": "1",
+    "sq_sitemap_exclude_noindex": "1",
+    "sq_sitemap_show": {
+      "images": "1",
+      "videos": "1"
+    },
+    "sq_sitemap_perpage": "500",
+    "sq_sitemap_frequency": "weekly",
+    "sq_sitemap_combinelangs": 0,
+    "sq_sitemap_do_cache": "1",
+    "sq_sitemap_style": 1,
+    "sq_sitemap_cache": [],
+    "sq_sitemap": {
+      "sitemap": [
+        "sitemap.xml",
+        1
+      ],
+      "sitemap-home": [
+        "sitemap-home.xml",
+        1
+      ],
+      "sitemap-news": [
+        "sitemap-news.xml",
+        0
+      ],
+      "sitemap-product": [
+        "sitemap-product.xml",
+        0
+      ],
+      "sitemap-post": [
+        "sitemap-posts.xml",
+        1
+      ],
+      "sitemap-page": [
+        "sitemap-pages.xml",
+        1
+      ],
+      "sitemap-category": [
+        "sitemap-categories.xml",
+        1
+      ],
+      "sitemap-post_tag": [
+        "sitemap-tags.xml",
+        1
+      ],
+      "sitemap-archive": [
+        "sitemap-archives.xml",
+        1
+      ],
+      "sitemap-author": [
+        "sitemap-authors.xml",
+        0
+      ],
+      "sitemap-custom-tax": [
+        "sitemap-custom-taxonomies.xml",
+        1
+      ],
+      "sitemap-custom-post": [
+        "sitemap-custom-posts.xml",
+        1
+      ],
+      "sitemap-attachment": [
+        "sitemap-attachment.xml",
+        1
+      ]
+    },
+    "sq_auto_robots": "1",
+    "sq_robots_permission": [
+      ""
+    ],
+    "sq_auto_llms": "1",
+    "sq_auto_metas": "1",
+    "sq_auto_links": "1",
+    "sq_auto_redirects": 1,
+    "sq_auto_title": "1",
+    "sq_auto_description": "1",
+    "sq_auto_keywords": "1",
+    "sq_auto_canonical": "1",
+    "sq_auto_dublincore": false,
+    "sq_auto_feed": 0,
+    "sq_auto_noindex": "1",
+    "sq_metas": {
+      "title_maxlength": "75",
+      "description_maxlength": "320",
+      "og_title_maxlength": "75",
+      "og_description_maxlength": "200",
+      "tw_title_maxlength": "75",
+      "tw_description_maxlength": "280",
+      "jsonld_title_maxlength": "75",
+      "jsonld_description_maxlength": "320"
+    },
+    "sq_auto_favicon": "1",
+    "sq_auto_devkit": 0,
+    "sq_auto_facebook": "1",
+    "sq_auto_twitter": "1",
+    "sq_og_locale": "en_US",
+    "sq_og_image": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp",
+    "sq_auto_amp": "1",
+    "sq_auto_tracking": 1,
+    "sq_auto_pixels": 1,
+    "sq_auto_webmasters": 1,
+    "sq_auto_innelinks": "1",
+    "sq_auto_pattern": "1",
+    "sq_redirects_tables": true,
+    "sq_redirects_cache": false,
+    "sq_redirects_posts": true,
+    "sq_redirects_track_hits": true,
+    "sq_redirects_log_hits": false,
+    "sq_redirects_log_404": "1",
+    "sq_redirects_log_header": true,
+    "sq_redirects_log_days": 7,
+    "sq_redirects_log_tables": true,
+    "sq_redirects_action_code": "301",
+    "sq_jsonld_schema_cache": true
+  },
+  "pages": {
+    "/best-expert-in-answer-engine-optimization/": {
+      "url": "https://openinkhub.io/best-expert-in-answer-engine-optimization/",
+      "wp_id": 1368,
+      "post_type": "page",
+      "title": "Answer Engine Optimization (AEO) Services | Rank in AI Search Results",
+      "description": "How an expert in Answer Engine Optimization improves AI search visibility. Learn how AEO experts optimize content for AI search engines, answers, and better online presence.",
+      "keyphrase": "answer engine optimization",
+      "keywords": [
+        "answer engine optimization",
+        "AEO",
+        "answer engine optimization services",
+        "AI search optimization",
+        "answer engine optimization company",
+        "AI SEO",
+        "voice search optimization",
+        "featured snippets",
+        "AI search rankings",
+        "search engine optimization",
+        "AI content optimization",
+        "answer engine marketing",
+        "OpenAI search optimization",
+        "Google AI search",
+        "generative AI SEO",
+        "digital growth"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "Answer Engine Optimization (AEO) Services | Improve AI Search Visibility",
+        "description": "Increase your AI search visibility with Answer Engine Optimization. Rank in AI-powered search engines, voice assistants, and featured answer results.",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "Answer Engine Optimization (AEO) Services",
+        "description": "Optimize your website for AI search engines and voice search with expert Answer Engine Optimization services.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/ai-agentic-workflow-automation/": {
+      "url": "https://openinkhub.io/ai-agentic-workflow-automation/",
+      "wp_id": 155,
+      "post_type": "post",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/ai-seo-automation/": {
+      "url": "https://openinkhub.io/ai-seo-automation/",
+      "wp_id": 156,
+      "post_type": "post",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/what-is-seo-the-ultimate-beginners-guide-to-ranking/": {
+      "url": "https://openinkhub.io/what-is-seo-the-ultimate-beginners-guide-to-ranking/",
+      "wp_id": 154,
+      "post_type": "post",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/": {
+      "url": "https://openinkhub.io/?elementor_library=single-post",
+      "wp_id": 35,
+      "post_type": "elementor_library",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/artificial-intelligence-optimization-strategy-how-to-rank-in-ai/": {
+      "url": "https://openinkhub.io/artificial-intelligence-optimization-strategy-how-to-rank-in-ai/",
+      "wp_id": 158,
+      "post_type": "post",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/boost-your-business-with-geo-targeting-marketing/": {
+      "url": "https://openinkhub.io/boost-your-business-with-geo-targeting-marketing/",
+      "wp_id": 157,
+      "post_type": "post",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/how-to-setup-gmb-step-by-step-local-guide/": {
+      "url": "https://openinkhub.io/how-to-setup-gmb-step-by-step-local-guide/",
+      "wp_id": 159,
+      "post_type": "post",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/top-hrms-solutions-automate-your-hr-workflow/": {
+      "url": "https://openinkhub.io/top-hrms-solutions-automate-your-hr-workflow/",
+      "wp_id": 160,
+      "post_type": "post",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/best-ats-software-for-small-business-2026-guide/": {
+      "url": "https://openinkhub.io/best-ats-software-for-small-business-2026-guide/",
+      "wp_id": 161,
+      "post_type": "post",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/what-is-on-page-seo-step-by-step-optimization/": {
+      "url": "https://openinkhub.io/what-is-on-page-seo-step-by-step-optimization/",
+      "wp_id": 162,
+      "post_type": "post",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/whatsapp-ai-chatbot/": {
+      "url": "https://openinkhub.io/whatsapp-ai-chatbot/",
+      "wp_id": 350,
+      "post_type": "page",
+      "title": "WhatsApp API Solutions for Business Automation",
+      "description": "What is WhatsApp API and how does it work? Learn how businesses automate messaging, customer support, notifications, and engagement with the WhatsApp Business API.",
+      "keyphrase": "WhatsApp API",
+      "keywords": [
+        "WhatsApp API",
+        "WhatsApp Business API",
+        "WhatsApp API integration",
+        "WhatsApp automation",
+        "business messaging",
+        "customer engagement"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "WhatsApp API Solutions for Smarter Customer Messaging",
+        "description": "Leverage the WhatsApp API to automate business messaging, manage customer interactions, and deliver personalized communication at scale.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/whatsapp-business-api.webp",
+        "type": ""
+      },
+      "twitter": {
+        "title": "WhatsApp API for Automated Business Messaging",
+        "description": "Automate customer support, notifications, and conversations with the WhatsApp API to improve engagement and streamline business communication.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/whatsapp-business-api.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/best-on-page-seo-services/": {
+      "url": "https://openinkhub.io/best-on-page-seo-services/",
+      "wp_id": 134,
+      "post_type": "page",
+      "title": "SEO Services That Drive Traffic, Leads &#038; Business Growth",
+      "description": "Affordable SEO services for startups. Boost your online visibility with cost-effective SEO strategies that increase rankings, traffic, leads, and long-term business growth.",
+      "keyphrase": "SEO services",
+      "keywords": [
+        "SEO services",
+        "search engine optimization",
+        "local SEO services",
+        "technical SEO",
+        "on-page SEO",
+        "off-page SEO",
+        "SEO company",
+        "SEO agency"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "SEO Services for Higher Rankings &#038; More Organic Traffic",
+        "description": "Achieve sustainable growth with professional SEO services designed to improve visibility, attract qualified traffic, and increase conversions.",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "Professional SEO Services for Better Search Rankings",
+        "description": "Boost your online presence with data-driven SEO services that increase rankings, drive organic traffic, and help your business grow faster.",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/google-my-business/": {
+      "url": "https://openinkhub.io/google-my-business/",
+      "wp_id": 351,
+      "post_type": "page",
+      "title": "GMB Services | Optimize Your Google Business Profile",
+      "description": "How to optimize Google My Business for local SEO. Improve local rankings, attract nearby customers, increase visibility, and grow your business with proven GMB optimization tips.",
+      "keyphrase": "GMB",
+      "keywords": [
+        "GMB",
+        "Google Business Profile",
+        "Google My Business",
+        "GMB optimization",
+        "local SEO",
+        "local business listing",
+        "Google Maps ranking"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "GMB Services to Improve Local Search Rankings",
+        "description": "Optimize your Google Business Profile with professional GMB services to increase local visibility, attract nearby customers, and grow your business.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/local-seo-automation.webp",
+        "type": ""
+      },
+      "twitter": {
+        "title": "GMB Services for Better Local Search Visibility",
+        "description": "Enhance your Google Business Profile with expert GMB optimization to improve local rankings, drive more leads, and grow your business.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/local-seo-automation.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/ai-voice-agent/": {
+      "url": "https://openinkhub.io/ai-voice-agent/",
+      "wp_id": 1396,
+      "post_type": "page",
+      "title": "AI Voice Agent | Automate Calls & Customer Support",
+      "description": "AI Voice Agent for sales and lead generation. Automate customer calls, qualify leads, book appointments, and boost conversions with intelligent AI voice automation.",
+      "keyphrase": "AI Voice Agent",
+      "keywords": [
+        "AI Voice Agent",
+        "AI calling assistant",
+        "voice AI",
+        "AI phone agent",
+        "conversational AI",
+        "virtual voice assistant",
+        "call automation"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "AI Voice Agent for Smart Business Communication",
+        "description": "Deploy an AI Voice Agent to handle customer calls, automate support, book appointments, and deliver fast, intelligent voice interactions.",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "AI Voice Agent for Automated Customer Calls",
+        "description": "Use an AI Voice Agent to automate customer conversations, reduce response times, and provide 24/7 voice support for your business.",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/human-resources-management/": {
+      "url": "https://openinkhub.io/human-resources-management/",
+      "wp_id": 1398,
+      "post_type": "page",
+      "title": "Human Resources Management | Simplify HR Operations",
+      "description": "Human Resources Management best practices in 2026. Discover modern HR strategies to improve hiring, employee engagement, compliance, performance, and workforce productivity.",
+      "keyphrase": "Human Resources Management",
+      "keywords": [
+        "Human Resources Management",
+        "HR management",
+        "HR software",
+        "employee management",
+        "payroll management",
+        "attendance tracking",
+        "HR automation"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "Human Resources Management for Modern Businesses",
+        "description": "Optimize HR processes with Human Resources Management solutions that automate payroll, attendance, recruitment, and employee management.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/hrms-workflow-automation.webp",
+        "type": ""
+      },
+      "twitter": {
+        "title": "Human Resources Management Made Simple",
+        "description": "Manage recruitment, payroll, attendance, and employee performance efficiently with Human Resources Management solutions designed for growing businesses.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/hrms-workflow-automation.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/best-seo-audit-tools/": {
+      "url": "https://openinkhub.io/best-seo-audit-tools/",
+      "wp_id": 1142,
+      "post_type": "page",
+      "title": "SEO Audit Tool | Analyze &#038; Improve Website Performance",
+      "description": "SEO audit tools for mobile SEO testing. Analyze mobile performance, fix technical SEO issues, improve page speed, and boost search rankings across all devices.",
+      "keyphrase": "SEO Audit Tool",
+      "keywords": [
+        "SEO Audit Tool",
+        "website SEO audit",
+        "technical SEO audit",
+        "SEO checker",
+        "site audit tool",
+        "SEO analysis",
+        "website optimization"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "SEO Audit Tool for Better Search Rankings",
+        "description": "Use an SEO Audit Tool to uncover technical issues, optimize on-page SEO, improve website health, and increase organic search visibility.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/comprehensive-brand-audit.webp",
+        "type": ""
+      },
+      "twitter": {
+        "title": "SEO Audit Tool to Optimize Your Website",
+        "description": "Scan your website, detect SEO issues, and improve rankings with a powerful SEO Audit Tool built for better performance and organic growth.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/hrms-workflow-automation.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/social-media-optimization/": {
+      "url": "https://openinkhub.io/social-media-optimization/",
+      "wp_id": 1386,
+      "post_type": "page",
+      "title": "SMO Services | Grow Your Brand on Social Media",
+      "description": "Social Media Optimization automation tools. Streamline content scheduling, audience engagement, analytics, and social media growth with powerful SMO automation solutions.",
+      "keyphrase": "SMO",
+      "keywords": [
+        "SMO",
+        "Social Media Optimization",
+        "social media marketing",
+        "social media management",
+        "brand awareness",
+        "social media strategy",
+        "audience engagement"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "SMO Services to Boost Social Media Growth",
+        "description": "Enhance your social media presence with expert SMO services that improve engagement, expand reach, and build a stronger online brand.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/social-media-automation.webp",
+        "type": ""
+      },
+      "twitter": {
+        "title": "SMO Services for Better Social Media Performance",
+        "description": "Grow your audience and improve brand visibility with SMO services designed to increase engagement and maximize your social media impact.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/social-media-automation.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/application-tracking-system/": {
+      "url": "https://openinkhub.io/application-tracking-system/",
+      "wp_id": 1397,
+      "post_type": "page",
+      "title": "ATS Software | Streamline Recruitment & Hiring",
+      "description": "Application Tracking System for campus recruitment. Simplify candidate sourcing, screening, interview scheduling, and hiring with an efficient ATS platform.",
+      "keyphrase": "ATS",
+      "keywords": [
+        "ATS",
+        "Applicant Tracking System",
+        "recruitment software",
+        "hiring software",
+        "talent acquisition",
+        "HR technology",
+        "candidate management"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "ATS Software for Smarter Recruitment",
+        "description": "Optimize your hiring process with ATS software that automates applicant tracking, recruitment workflows, and candidate management.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/ats-automation.webp",
+        "type": ""
+      },
+      "twitter": {
+        "title": "ATS Software to Hire Top Talent Faster",
+        "description": "Improve recruitment efficiency with ATS software that streamlines hiring, tracks applicants, and helps you find the right candidates quickly.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/ats-automation.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/artificial-intelligence-optimization/": {
+      "url": "https://openinkhub.io/artificial-intelligence-optimization/",
+      "wp_id": 1290,
+      "post_type": "page",
+      "title": "AIO Services | Artificial Intelligence Optimization",
+      "description": "Artificial Intelligence Optimization for ChatGPT and AI assistants. Improve AI responses, content visibility, and performance with effective AIO strategies.",
+      "keyphrase": "AIO",
+      "keywords": [
+        "AIO",
+        "Artificial Intelligence Optimization",
+        "AI SEO",
+        "AI search optimization",
+        "AI search engines",
+        "generative AI optimization",
+        "AI visibility"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "AIO Services for AI Search Optimization",
+        "description": "Boost your presence in AI-powered search with AIO services that optimize content for better visibility, relevance, and AI-driven discovery.",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "AIO Services to Rank in AI Search Engines",
+        "description": "Optimize your content with AIO services to improve AI search visibility, increase discoverability, and reach more users through AI-powered platforms.",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/best-answer-engine-optimization-services/": {
+      "url": "https://openinkhub.io/best-answer-engine-optimization-services/",
+      "wp_id": 1312,
+      "post_type": "page",
+      "title": "AEO Services | Optimize for Answer Engine Results",
+      "description": "How structured data improves Answer Engine Optimization. Learn how schema markup helps AI search engines deliver accurate answers and increase content visibility.",
+      "keyphrase": "AEO",
+      "keywords": [
+        "AEO",
+        "Answer Engine Optimization",
+        "answer engine SEO",
+        "AI search optimization",
+        "featured snippets",
+        "voice search optimization",
+        "search visibility"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "AEO Services for AI & Answer Engine Visibility",
+        "description": "Enhance your digital presence with AEO services designed to optimize content for answer engines, featured snippets, and AI-driven search experiences.",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "AEO Services to Improve Answer Engine Rankings",
+        "description": "Optimize your content with AEO services to rank in answer engines, earn featured snippets, and increase visibility across AI-powered search platforms.",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/generative-engine-optimization/": {
+      "url": "https://openinkhub.io/generative-engine-optimization/",
+      "wp_id": 1299,
+      "post_type": "page",
+      "title": "GEO Services | Generative Engine Optimization",
+      "description": "Generative Engine Optimization for local businesses. Increase AI search visibility, attract local customers, and grow your business with effective GEO strategies.",
+      "keyphrase": "GEO",
+      "keywords": [
+        "GEO",
+        "Generative Engine Optimization",
+        "AI search optimization",
+        "generative AI SEO",
+        "AI content optimization",
+        "AI search visibility",
+        "LLM optimization"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "GEO Services for Generative AI Search Optimization",
+        "description": "Strengthen your presence in generative AI search with GEO services that improve content visibility, AI citations, and brand authority.",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "GEO Services to Rank in Generative AI Search",
+        "description": "Optimize your content with GEO services to improve visibility in generative AI search engines and attract more qualified traffic.",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/best-ai-writing-tools-for-bloggers/": {
+      "url": "https://openinkhub.io/best-ai-writing-tools-for-bloggers/",
+      "wp_id": 1388,
+      "post_type": "page",
+      "title": "Content Writing Services | SEO-Optimized Content",
+      "description": "What are AI writing tools and how do they work? Discover how AI-powered writing tools create content, improve productivity, enhance SEO, and simplify content creation.",
+      "keyphrase": "Content Writing",
+      "keywords": [
+        "Content Writing",
+        "content writing services",
+        "SEO content writing",
+        "blog writing",
+        "website content",
+        "copywriting",
+        "digital content",
+        "ai tools for content writing"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "Content Writing Services for Better Rankings & Engagement",
+        "description": "Create compelling, SEO-optimized content that improves search rankings, engages your audience, and helps your business achieve sustainable growth",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/ai-blog-automation.webp",
+        "type": ""
+      },
+      "twitter": {
+        "title": "Professional Content Writing Services",
+        "description": "Boost traffic and conversions with expert content writing services that deliver engaging, SEO-friendly blogs, website copy, and marketing content.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/ai-blog-automation.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/high-quality-backlinks/": {
+      "url": "https://openinkhub.io/high-quality-backlinks/",
+      "wp_id": 1480,
+      "post_type": "page",
+      "title": "Off Page SEO Services | Build Authority &#038; Rankings",
+      "description": "What are quality backlinks and why are they important? Learn how high-quality backlinks improve SEO, boost domain authority, increase rankings, and drive organic traffic.",
+      "keyphrase": "Off Page SEO",
+      "keywords": [
+        "Off Page SEO",
+        "off page SEO services",
+        "link building",
+        "backlink services",
+        "SEO outreach",
+        "digital PR",
+        "authority building"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "Off Page SEO Services for Higher Search Rankings",
+        "description": "Strengthen your website's authority with Off Page SEO strategies including quality backlinks, digital PR, and brand mentions for long-term growth.",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "Off Page SEO Services to Grow Website Authority",
+        "description": "Increase search visibility with Off Page SEO services that focus on quality backlinks, authority building, and sustainable organic growth",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/best-seo-services-in-india/": {
+      "url": "https://openinkhub.io/best-seo-services-in-india/",
+      "wp_id": 91,
+      "post_type": "page",
+      "title": "SEO Services in India | Grow Rankings &#038; Online Traffic",
+      "description": "Professional expert in SEO services in India. Get expert SEO solutions to improve search rankings, increase organic traffic, generate quality leads, and grow your business online.",
+      "keyphrase": "SEO Services in India",
+      "keywords": [
+        "SEO Services in India",
+        "SEO company India",
+        "SEO agency India",
+        "professional SEO services",
+        "search engine optimization India",
+        "organic SEO services"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "SEO Services in India for Business Growth",
+        "description": "Partner with expert SEO professionals in India to improve search visibility, attract targeted traffic, and achieve long-term online growth.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp",
+        "type": ""
+      },
+      "twitter": {
+        "title": "Best SEO Services in India for Higher Rankings",
+        "description": "Boost your website performance with reliable SEO services in India designed to improve rankings, increase traffic, and generate more business opportunities.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/category/best-seo-content-agency/": {
+      "url": "https://openinkhub.io/category/best-seo-content-agency/",
+      "wp_id": 0,
+      "post_type": "category",
+      "title": "SEO Content Agency | Create Content That Ranks",
+      "description": "Affordable SEO content agency for startups. Create search-optimized content that improves rankings, attracts traffic, generates leads, and supports scalable business growth.",
+      "keyphrase": "SEO Content Agency",
+      "keywords": [
+        "SEO Content Agency",
+        "SEO content writing",
+        "SEO blog writing",
+        "content marketing agency",
+        "optimized content",
+        "website content services"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "SEO Content Agency for High-Quality Ranked Content",
+        "description": "Create search-friendly content with an SEO content agency that helps improve visibility, engage audiences, and increase organic traffic.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp",
+        "type": ""
+      },
+      "twitter": {
+        "title": "SEO Content Agency for Better Search Visibility",
+        "description": "Get SEO-optimized content from experts to improve rankings, attract targeted visitors, and build a stronger online presence.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/best-seo-agency/": {
+      "url": "https://openinkhub.io/best-seo-agency/",
+      "wp_id": 2082,
+      "post_type": "post",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/whatsapp-api-automation-tool-scale-your-sales-10x/": {
+      "url": "https://openinkhub.io/whatsapp-api-automation-tool-scale-your-sales-10x/",
+      "wp_id": 2047,
+      "post_type": "post",
+      "title": "WhatsApp API Automation Tool | Scale Your Sales 10x",
+      "description": "Simplify customer communication using a WhatsApp API automation tool to automate chats, notifications, marketing, and support with ease.",
+      "keyphrase": "whatsapp api automation tool",
+      "keywords": [
+        "whatsapp api automation tool",
+        "whatsapp api automation",
+        "whatsapp business api",
+        "whatsapp marketing automation"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/what-is-profile-creation/": {
+      "url": "https://openinkhub.io/what-is-profile-creation/",
+      "wp_id": 2054,
+      "post_type": "post",
+      "title": "what is profile Creation",
+      "description": "Learn what is profile creation, why it matters for SEO, and how creating profiles on trusted websites helps improve online visibility and backlinks.",
+      "keyphrase": "what is profile creation",
+      "keywords": [
+        "what is profile creation",
+        "profile creation",
+        "profile creation sites",
+        "profile creation in SEO",
+        "SEO profile creation",
+        "profile creation backlinks",
+        "profile backlinks",
+        "free profile creation sites",
+        "high DA profile creation sites",
+        "off page SEO",
+        "backlink building",
+        "link building",
+        "SEO backlinks",
+        "online profile creation",
+        "business profile creation",
+        "website profile creation",
+        "profile submission",
+        "profile submission sites",
+        "digital marketing",
+        "search engine optimization"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "What is Profile Creation? Benefits, SEO Guide & Best Practices",
+        "description": "Learn what is profile creation, how it improves SEO, builds quality backlinks, increases brand visibility, and strengthens your website's online authority.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/what-is-profile-creation.webp",
+        "type": ""
+      },
+      "twitter": {
+        "title": "What is Profile Creation? Benefits, SEO Guide & Best Practices",
+        "description": "Discover what is profile creation and how profile creation helps improve SEO, build backlinks, increase brand credibility, and boost online visibility.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/08/what-is-profile-creation.webp",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/seo-agency-in-patna-top-seo-services-company/": {
+      "url": "https://openinkhub.io/seo-agency-in-patna-top-seo-services-company/",
+      "wp_id": 2057,
+      "post_type": "post",
+      "title": "SEO Agency in Patna | Top SEO Services &#038; Company",
+      "description": "Looking for the best SEO agency in Patna? Boost your website rankings, increase organic traffic, generate quality leads, and grow your business with expert SEO services.",
+      "keyphrase": "SEO Agency in Patna",
+      "keywords": [
+        "SEO Agency in Patna",
+        "SEO Company in Patna",
+        "Best SEO Agency Patna",
+        "SEO Services Patna",
+        "Digital Marketing Agency Patna",
+        "Local SEO Patna",
+        "Technical SEO Services",
+        "On Page SEO",
+        "Off Page SEO",
+        "Search Engine Optimization Patna",
+        "Organic SEO Services",
+        "Google Ranking Services",
+        "SEO Expert Patna",
+        "Affordable SEO Patna",
+        "Business SEO Services"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "SEO Agency in Patna | Top SEO Services &#038; Digital Marketing Company",
+        "description": "Boost your online presence with professional SEO services in Patna. Increase search rankings, organic traffic, and qualified leads with proven SEO strategies.",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "SEO Agency in Patna | Top SEO Services &#038; Digital Marketing Company",
+        "description": "Grow your business with expert SEO services in Patna. Improve Google rankings, drive organic traffic, and generate more leads.",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/seo-agency-in-ranchi-top-seo-services-company/": {
+      "url": "https://openinkhub.io/seo-agency-in-ranchi-top-seo-services-company/",
+      "wp_id": 2077,
+      "post_type": "post",
+      "title": "SEO Agency in Ranchi | Top SEO Services & Company",
+      "description": "Looking for a reliable SEO agency in Ranchi? Boost Google rankings, drive organic traffic, and generate quality leads with SEO strategies.",
+      "keyphrase": "SEO Agency in Ranchi",
+      "keywords": [
+        "SEO Agency in Ranchi",
+        "SEO Services in Ranchi",
+        "Best SEO Agency in Ranchi",
+        "Best SEO Company in Ranchi",
+        "SEO Company in Ranchi",
+        "Digital Marketing Agency in Ranchi",
+        "Digital Marketing Company in Ranchi",
+        "Local SEO Services in Ranchi",
+        "Professional SEO Services in Ranchi",
+        "Affordable SEO Services in Ranchi",
+        "SEO Expert in Ranchi",
+        "SEO Consultant in Ranchi",
+        "SEO Specialist in Ranchi",
+        "Freelance SEO Expert in Ranchi",
+        "Google Ranking Services in Ranchi",
+        "Website SEO Services in Ranchi",
+        "On-Page SEO Services in Ranchi",
+        "Technical SEO Services in Ranchi",
+        "Off-Page SEO Services in Ranchi",
+        "Ecommerce SEO Services in Ranchi",
+        "Local Business SEO in Ranchi",
+        "Small Business SEO Services in Ranchi",
+        "SEO Packages in Ranchi",
+        "SEO Company Near Me Ranchi",
+        "Website Optimization Services in Ranchi",
+        "Google Business Profile Optimization Ranchi",
+        "Keyword Research Services in Ranchi",
+        "Content Marketing Agency in Ranchi",
+        "Organic Traffic Growth Services in Ranchi",
+        "Search Engine Optimization Company Ranchi",
+        "B2B SEO Services in Ranchi",
+        "Startup SEO Services in Ranchi",
+        "Enterprise SEO Services in Ranchi",
+        "WordPress SEO Services in Ranchi",
+        "Shopify SEO Services in Ranchi",
+        "SEO Audit Services in Ranchi",
+        "SEO Strategy Services in Ranchi",
+        "Lead Generation Services in Ranchi",
+        "Online Marketing Services in Ranchi",
+        "Website Ranking Company in Ranchi",
+        "SEO Agency for Small Businesses Ranchi",
+        "Best Digital Marketing Services in Ranchi",
+        "Local Search Optimization Ranchi",
+        "Google Search Ranking Expert Ranchi",
+        "SEO Solutions for Businesses in Ranchi",
+        "Real Estate SEO Services in Ranchi",
+        "Healthcare SEO Services in Ranchi",
+        "Restaurant SEO Services in Ranchi",
+        "SEO Company for Startups in Ranchi",
+        "AI SEO Services in Ranchi"
+      ],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "SEO Agency in Ranchi | Top SEO Services & Company",
+        "description": "Discover professional SEO services in Ranchi to improve Google rankings, increase organic traffic, and generate quality leads for your business.",
+        "media": "https://openinkhub.io/wp-content/uploads/2026/10/seo-agency-in-ranchi.webp",
+        "type": "website"
+      },
+      "twitter": {
+        "title": "SEO Agency in Ranchi | Top SEO Services",
+        "description": "Boost online visibility, improve search rankings, and attract more customers with professional SEO services in Ranchi.",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    },
+    "/best-seo-agency-in-bangalore/": {
+      "url": "https://openinkhub.io/best-seo-agency-in-bangalore/",
+      "wp_id": 1914,
+      "post_type": "page",
+      "title": "",
+      "description": "",
+      "keyphrase": "",
+      "keywords": [],
+      "noindex": false,
+      "nofollow": false,
+      "nositemap": false,
+      "canonical": "",
+      "og": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "media": "",
+        "type": ""
+      },
+      "jsonld_types": []
+    }
+  },
+  "redirects": [
+    {
+      "from": "/services",
+      "to": "/best-seo-services-in-india/",
+      "code": 301,
+      "hits": 9
+    },
+    {
+      "from": "/seo-services",
+      "to": "/best-on-page-seo-services/",
+      "code": 301,
+      "hits": 27
+    },
+    {
+      "from": "/whatsapp-api",
+      "to": "/whatsapp-ai-chatbot/",
+      "code": 301,
+      "hits": 15
+    },
+    {
+      "from": "/ats-2",
+      "to": "/application-tracking-system/",
+      "code": 301,
+      "hits": 19
+    },
+    {
+      "from": "/aeo",
+      "to": "/best-answer-engine-optimization-services/",
+      "code": 301,
+      "hits": 3
+    },
+    {
+      "from": "/ai-blog",
+      "to": "/best-ai-writing-tools-for-bloggers/",
+      "code": 301,
+      "hits": 2
+    },
+    {
+      "from": "/brand-audit",
+      "to": "/best-seo-audit-tools/",
+      "code": 301,
+      "hits": 3
+    },
+    {
+      "from": "/do-ppc-ninjas-really-exist",
+      "to": "/ai-agentic-workflow-automation/",
+      "code": 301,
+      "hits": 5
+    },
+    {
+      "from": "/fun-fun-and-more-fun-come-work-at-beyond",
+      "to": "/ai-seo-automation/",
+      "code": 301,
+      "hits": 7
+    },
+    {
+      "from": "/best-seo-agency-in-agartala-2",
+      "to": "/best-seo-agency-in-hyderabad/",
+      "code": 301,
+      "hits": 0
+    },
+    {
+      "from": "/onward-our-award-winning-creative-campaign",
+      "to": "/artificial-intelligence-optimization-strategy-how-to-rank-in-ai/",
+      "code": 301,
+      "hits": 3
+    },
+    {
+      "from": "/lets-party-our-end-of-the-year-celebration",
+      "to": "/boost-your-business-with-geo-targeting-marketing/",
+      "code": 301,
+      "hits": 2
+    },
+    {
+      "from": "/the-digital-marketing-revolution-is-here-is-here-now",
+      "to": "/how-to-setup-gmb-step-by-step-local-guide/",
+      "code": 301,
+      "hits": 5
+    },
+    {
+      "from": "/always-learn-from-experience-and-past-mistakes",
+      "to": "/top-hrms-solutions-automate-your-hr-workflow/",
+      "code": 301,
+      "hits": 4
+    },
+    {
+      "from": "/the-weekly-podcast-design-meets-technology",
+      "to": "/best-ats-software-for-small-business-2026-guide/",
+      "code": 301,
+      "hits": 9
+    },
+    {
+      "from": "/will-there-be-a-future-post-facebook",
+      "to": "/what-is-on-page-seo-step-by-step-optimization/",
+      "code": 301,
+      "hits": 7
+    }
+  ],
+  "skipped_redirects": [
+    {
+      "from": "/contact-us",
+      "to": "/best-seo-agency/",
+      "code": 301,
+      "hits": 104,
+      "reason": "source is a live page (live URLs are never redirected)"
+    },
+    {
+      "from": "/best-seo-agency",
+      "to": "/contact-us/",
+      "code": 301,
+      "hits": 4,
+      "reason": "source is a live page (live URLs are never redirected)"
+    }
+  ]
+}

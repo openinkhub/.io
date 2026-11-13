@@ -414,5 +414,13 @@
       "a": "<p>Yes, when their details are consistent, their services are clearly described and they have genuine reviews.</p>"
     }
   ],
-  "citylabel": "Ranchi"
+  "citylabel": "Ranchi",
+  "keyphrase_override": "SEO in Ranchi",
+  "keyphrase_secondary_override": [
+    "AEO",
+    "GEO",
+    "AIO",
+    "local SEO",
+    "Google Business Profile"
+  ]
 }

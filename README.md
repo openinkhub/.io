@@ -67,6 +67,24 @@ npm run dupcheck     # pairwise duplicate-content report (npm test fails above 2
 
 Edit a city in `content/city-posts/`, then run `npm run city-posts && npm test`.
 
+## SEO checklist, automatic fixes and /admin report
+
+Every build runs the full SEO checklist (70 checks from the "WP SEO Plugin" spec) and applies safe fixes automatically.
+
+| File | Role |
+|---|---|
+| `content/seo/rules.json` | **All SEO rules**: thresholds, weights, report sections, critical checks, and which auto-fixes are on |
+| `content/seo/squirrly.json` | Imported Squirrly data: focus keyphrases, per-URL settings, 16 redirects (2 looping ones skipped) |
+| `tools/seo-fix.mjs` | Auto-fixes: meta description, Open Graph, Twitter card, excerpt, missing JSON-LD (Organization, WebSite, Breadcrumb, Article/BlogPosting, Person, FAQPage), archive/tag headings, image alt + width/height |
+| `tools/seo-audit.mjs` | The checklist; writes `dist/admin/report.json`, `report.csv` and the `/admin` dashboard; fails the build on critical issues |
+| `tools/import-squirrly.mjs` | Re-import a Squirrly backup: `npm run import-squirrly -- path/to/export.jsonl.gz` |
+
+The build also writes `_redirects` (Squirrly redirects), `_headers` (security headers, noindex for /admin), `llms.txt` and a robots.txt that disallows `/admin/`.
+
+**/admin** (https://openinkhub.io/admin/) shows the report by section — Pages, Blog posts, SEO city guides, Categories/tags/archives — with SEO and readability scores, the full checklist per page, a Google result preview, the fixes applied and a CSV download. It is protected by **Cloudflare Access**: only `info@openinkhub.io` can sign in (one-time code sent by email).
+
+Core Web Vitals (LCP, INP, CLS, TTFB, FCP) are measured only when a PageSpeed Insights key is provided: `PSI_API_KEY=... npm run audit` (add it as a Cloudflare Pages environment variable to measure on every deploy).
+
 ## Editing content
 
 * Page/post text: edit `content_html` in `content/pages/<slug>.json`. Head tags live under `head`.

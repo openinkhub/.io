@@ -53,6 +53,20 @@ instructions Cloudflare shows. Check the `*.pages.dev` preview before switching 
 Cloudflare Pages serves `dist/404.html` for unknown URLs and redirects `/page` to `/page/`,
 matching the original WordPress URLs. (`dist/CNAME` is only used by GitHub Pages and is harmless here.)
 
+## SEO city guides (category "SEO", 100 posts)
+
+The 100 posts under `/category/seo-agency-by-city/` are written per city in `content/city-posts/*.json`
+(local economy, localities, search behaviour, SEO/AEO/GEO/AIO angles, FAQs, nearby cities).
+URLs, publish dates and authors are unchanged; titles, descriptions, body and JSON-LD
+(Article, FAQPage, Service with areaServed, BreadcrumbList) are generated from those files.
+
+```bash
+npm run city-posts   # write the city files into content/pages/*.json
+npm run dupcheck     # pairwise duplicate-content report (npm test fails above 25%)
+```
+
+Edit a city in `content/city-posts/`, then run `npm run city-posts && npm test`.
+
 ## Editing content
 
 * Page/post text: edit `content_html` in `content/pages/<slug>.json`. Head tags live under `head`.

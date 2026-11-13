@@ -6,7 +6,7 @@
   "sitemap": "categories",
   "lastmod": "2026-10-29T13:54:41+00:00",
   "head": {
-    "title": "SEO Agency by City - openink Hub",
+    "title": "SEO - openink Hub",
     "meta": [
       {
         "attr": "name",
@@ -31,12 +31,12 @@
       {
         "attr": "property",
         "key": "og:title",
-        "content": "SEO Agency by City - openink Hub"
+        "content": "SEO - openink Hub"
       },
       {
         "attr": "property",
         "key": "og:description",
-        "content": ""
+        "content": "City-by-city guides to SEO, answer engine optimization (AEO), generative engine optimization (GEO) and AI optimization (AIO) for businesses across India."
       },
       {
         "attr": "property",
@@ -71,12 +71,12 @@
       {
         "attr": "name",
         "key": "twitter:title",
-        "content": "SEO Agency by City - openink Hub"
+        "content": "SEO - openink Hub"
       },
       {
         "attr": "name",
         "key": "twitter:description",
-        "content": ""
+        "content": "City-by-city guides to SEO, answer engine optimization (AEO), generative engine optimization (GEO) and AI optimization (AIO) for businesses across India."
       },
       {
         "attr": "name",
@@ -107,6 +107,11 @@
         "attr": "name",
         "key": "msapplication-TileImage",
         "content": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "City-by-city guides to SEO, answer engine optimization (AEO), generative engine optimization (GEO) and AI optimization (AIO) for businesses across India."
       }
     ],
     "links": [
@@ -182,7 +187,7 @@
             "@type": "CollectionPage",
             "@id": "https://openinkhub.io/category/seo-agency-by-city/",
             "url": "https://openinkhub.io/category/seo-agency-by-city/",
-            "name": "SEO Agency by City Archives - openink Hub",
+            "name": "SEO Archives - openink Hub",
             "isPartOf": {
               "@id": "https://openinkhub.io/#website"
             },
@@ -221,7 +226,7 @@
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "SEO Agency by City"
+                "name": "SEO"
               }
             ]
           },
@@ -275,9 +280,9 @@
     ],
     "lang": "en-US"
   },
-  "h1": "Insights on digital growth, AI search, and automation for SMEs.",
+  "h1": "SEO guides by city: ranking on Google, answer engines and AI",
   "type": "category",
-  "title": "Insights on digital growth, AI search, and automation for SMEs.",
-  "content_html": "",
+  "title": "SEO",
+  "content_html": "<p>City-by-city guides to SEO, answer engine optimization (AEO), generative engine optimization (GEO) and AI optimization (AIO) for businesses across India.</p>",
   "faqs": []
 }

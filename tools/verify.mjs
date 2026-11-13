@@ -1,7 +1,7 @@
 /**
  * Verify dist/ against the URL inventory captured from the live WordPress site (content/urls.csv).
- * For every URL: the page exists at the identical path, and its <title>, meta description, canonical,
- * robots, og:title, og:image, JSON-LD block count match, with exactly one <h1>.
+ * For every URL: the page exists at the identical path with the same canonical and robots as the live site,
+ * its <title>, meta description, og:title, og:image and JSON-LD match the content files, and it has one <h1>.
  * Exits non-zero on any problem (CI gate before deploy).
  *
  *   npm run verify
@@ -44,21 +44,33 @@ const meta = (doc, key) => {
 };
 
 const rows = parseCsv(fs.readFileSync(path.join(ROOT, "content", "urls.csv"), "utf8").replace(/^﻿/, ""));
+// The intended head copy lives in content/pages (it may be deliberately rewritten, e.g. the city posts);
+// urls.csv is the frozen snapshot of the live WordPress site and guards the URL-level contract.
+const PAGES = path.join(ROOT, "content", "pages");
+const intended = new Map(fs.readdirSync(PAGES).filter((n) => n.endsWith(".json"))
+  .map((n) => JSON.parse(fs.readFileSync(path.join(PAGES, n), "utf8"))).map((r) => [r.path, r]));
+const metaOf = (rec, key) => rec?.head?.meta.find((m) => m.key === key)?.content ?? "";
 const errors = [];
+let rewritten = 0;
 for (const r of rows) {
   const p = new URL(r.url).pathname || "/";
   const f = path.join(DIST, ...p.split("/").filter(Boolean), "index.html");
   if (!fs.existsSync(f)) { errors.push(`MISSING  ${r.url}`); continue; }
   const doc = fs.readFileSync(f, "utf8");
   const canon = /<link rel="canonical" href="([^"]*)"/.exec(doc);
+  const rec = intended.get(p.endsWith("/") ? p : p + "/") || intended.get(p);
+  if (!rec) { errors.push(`NO SOURCE ${r.url}`); continue; }
+  if (rec.head.title !== r.title) rewritten++;
   const checks = {
-    title: [unescapeHtml(/<title>([\s\S]*?)<\/title>/.exec(doc)?.[1] ?? ""), r.title],
-    description: [meta(doc, "description"), r.meta_description],
+    // URL contract: must always match the live site exactly
     canonical: [canon ? unescapeHtml(canon[1]) : "", r.canonical],
     robots: [meta(doc, "robots"), r.robots],
-    "og:title": [meta(doc, "og:title"), r.og_title],
-    "og:image": [meta(doc, "og:image"), r.og_image],
-    "json-ld blocks": [String(doc.split('type="application/ld+json"').length - 1), r.jsonld_blocks],
+    // head copy: must match what the content files intend
+    title: [unescapeHtml(/<title>([\s\S]*?)<\/title>/.exec(doc)?.[1] ?? ""), rec.head.title],
+    description: [meta(doc, "description"), metaOf(rec, "description")],
+    "og:title": [meta(doc, "og:title"), metaOf(rec, "og:title")],
+    "og:image": [meta(doc, "og:image"), metaOf(rec, "og:image")],
+    "json-ld blocks": [String(doc.split('type="application/ld+json"').length - 1), String(rec.head.jsonld.length)],
   };
   for (const [k, [got, want]] of Object.entries(checks)) {
     if (got.trim() !== want.trim()) errors.push(`MISMATCH ${r.url}  ${k}: got ${JSON.stringify(got.slice(0, 80))} want ${JSON.stringify(want.slice(0, 80))}`);
@@ -69,6 +81,6 @@ for (const r of rows) {
 for (const extra of ["sitemap.xml", "robots.txt", "CNAME", "404.html"]) {
   if (!fs.existsSync(path.join(DIST, extra))) errors.push(`MISSING  /${extra}`);
 }
-console.log(`checked ${rows.length} URLs: ${errors.length} problem(s)`);
+console.log(`checked ${rows.length} URLs: ${errors.length} problem(s)  (${rewritten} with intentionally rewritten titles)`);
 for (const e of errors.slice(0, 60)) console.log("  " + e);
 process.exit(errors.length ? 1 : 0);

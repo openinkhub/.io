@@ -14,18 +14,21 @@ Every one of the 154 live URLs is kept at the **exact same path**, with its orig
 | `content/site-config.json` | Navigation, footer, contact details |
 | `content/site.json` | Categories, tags, menus as found on WordPress |
 | `static/` | Images at their original `/wp-content/uploads/...` paths, plus CSS/JS in `assets/` |
-| `tools/extract.py` | Re-crawls the live site (sitemaps + live HTML + WP REST API) into `content/` |
-| `tools/build.py` | Generates `dist/` (Python standard library only) |
-| `tools/verify.py` | Fails if any original URL or SEO tag is missing/changed in `dist/` |
+| `tools/build.mjs` | `npm run build` — generates `dist/` (Node 18+, zero dependencies) |
+| `tools/verify.mjs` | `npm run verify` — fails if any original URL or SEO tag is missing/changed in `dist/` |
+| `tools/serve.mjs` | `npm run preview` — local preview of `dist/` with GitHub Pages-style URLs |
+| `tools/extract.py` | One-time Python crawler that pulled the live WordPress site into `content/` |
 | `.github/workflows/deploy.yml` | Builds, verifies, and deploys to GitHub Pages on every push to `main` |
 
 ## Local
 
 ```bash
-python tools/build.py
-python tools/verify.py
-python -m http.server 8080 -d dist
+npm run build      # -> dist/
+npm run verify     # check all 154 original URLs + SEO tags
+npm run preview    # http://localhost:8080
 ```
+
+Any host that runs `npm run build` works: publish directory is `dist`. There are no dependencies to install.
 
 ## Deploy (GitHub Pages)
 

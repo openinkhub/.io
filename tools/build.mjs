@@ -298,7 +298,7 @@ function pageTpl(rec) {
   const crumb = len(rec.title) < 60 ? rec.title : cut(h1Txt, 60);
   return document_(rec, `<section class="page-hero${legal ? " page-hero-sm" : ""}">
   <div class="wrap ${heroImg ? "hero-split" : ""}">
-    <div>${breadcrumb([[crumb, null]])}
+    <div>${breadcrumb(rec.hub ? [["Website Design & Development", rec.hub], [rec.card_title || crumb, null]] : [[crumb, null]])}
     ${eyebrow ? `<span class="eyebrow">${E(eyebrow)}</span>` : ""}
     <h1>${h1}</h1>${lead}
     ${legal ? "" : `<div class="hero-ctas"><a class="btn btn-primary" href="${E(CFG.contact.demo_url)}" target="_blank" rel="noopener">Schedule a Free Demo</a><a class="btn btn-ghost" href="/contact-us/">Contact Us</a></div>`}
@@ -551,6 +551,7 @@ function seoFiles() {
       "", `Contact: ${CFG.contact.email} · ${CFG.contact.phone} · ${CFG.contact.address}`,
       ...group("Services and key pages", indexable.filter((r) => ["home", "page"].includes(r.type))),
       ...group("Guides and articles", indexable.filter((r) => r.type === "post" && !isCity(r))),
+      ...group("Website development guides", indexable.filter((r) => r.type === "guide")),
       ...group("SEO city guides", indexable.filter(isCity)),
     ].join("\n") + "\n");
   }

@@ -1,0 +1,152 @@
+{
+  "url": "https://openinkhub.io/website-maintenance-redesign/",
+  "path": "/website-maintenance-redesign/",
+  "status": 200,
+  "type": "guide",
+  "guide": true,
+  "draft": false,
+  "status_published": true,
+  "hub": "/website-design-agency/",
+  "card_title": "Website Maintenance",
+  "card_text": "Updates, backups and ongoing care after launch.",
+  "n": "14",
+  "title": "Website Maintenance Services: Checklist & Plans",
+  "h1": "Website maintenance: what to update and how often",
+  "date": "2026-11-13T18:05:49",
+  "modified": "2026-11-13T18:06:30",
+  "author": "Hiten Neotia",
+  "excerpt": "Website maintenance checklist and services: updates, security, backups, monitoring and SEO reviews, how often to do each, and hosting vs maintenance explained.",
+  "keyphrase_override": "website maintenance",
+  "keyphrase_secondary_override": [
+    "website redesign",
+    "website backup",
+    "website hosting vs maintenance"
+  ],
+  "categories": [],
+  "tags": [],
+  "faqs": [
+    {
+      "q": "What should be in a website maintenance checklist?",
+      "a": "<p>Updates and security patches, backups, uptime and malware monitoring, speed checks, broken links, form tests, content refreshes and SEO reviews.</p>"
+    },
+    {
+      "q": "How often should a website be updated?",
+      "a": "<p>Security updates monthly or sooner for critical fixes, backups daily or weekly, and content and SEO reviews every quarter.</p>"
+    },
+    {
+      "q": "How much does website maintenance cost?",
+      "a": "<p>Usually ₹1,500 to ₹25,000 a month in India, depending on site size and services.</p>"
+    },
+    {
+      "q": "What maintenance tasks can I do myself?",
+      "a": "<p>Updating text, images and blog posts through the CMS. Leave software updates, security and backups to someone who can test changes safely.</p>"
+    },
+    {
+      "q": "What is the difference between hosting and maintenance?",
+      "a": "<p>Hosting is the server your site runs on. Maintenance is the ongoing care: updates, security, backups and support.</p>"
+    }
+  ],
+  "featured_image": null,
+  "content_html": "<h1>Website maintenance: what to update and how often</h1>\n<p>Website maintenance keeps your site secure, fast and up to date after launch. A maintenance checklist covers software and plugin updates, security patches, backups, uptime and malware monitoring, speed checks, broken-link fixes, content refreshes, SEO reviews and form testing. Apply security updates at least monthly, and review content and SEO every quarter.</p>\n\n<h2>Website maintenance checklist: what to update and how often</h2>\n<div class=\"table-wrap\"><table>\n<thead><tr><th>Task</th><th>How often</th></tr></thead>\n<tbody>\n<tr><td>Security patches, CMS and plugin updates</td><td>Monthly, or as soon as critical fixes appear</td></tr>\n<tr><td>Backups</td><td>Daily or weekly, depending on how often content changes</td></tr>\n<tr><td>Uptime and malware monitoring</td><td>Continuous</td></tr>\n<tr><td>Contact forms and checkout tests</td><td>Monthly</td></tr>\n<tr><td>Speed and Core Web Vitals check</td><td>Monthly</td></tr>\n<tr><td>Broken links and 404 errors</td><td>Monthly</td></tr>\n<tr><td>Content refresh and SEO review</td><td>Quarterly</td></tr>\n<tr><td>Restore test from backup</td><td>Quarterly</td></tr>\n</tbody></table></div>\n\n<h2>Why website maintenance matters</h2>\n<ul>\n<li><strong>Security.</strong> Most hacks use known holes that an update would have closed.</li>\n<li><strong>Speed.</strong> Sites slow down over time as content and plugins pile up.</li>\n<li><strong>Rankings.</strong> Fresh, working pages keep search engines and visitors happy.</li>\n<li><strong>Leads.</strong> A broken form can quietly cost you enquiries for weeks.</li>\n</ul>\n\n<h2>Website backup and recovery best practices</h2>\n<ol>\n<li>Back up automatically, as often as your content changes.</li>\n<li>Keep copies off the server, in a separate location.</li>\n<li>Keep several versions, not just the latest one.</li>\n<li>Test a restore regularly, and write down the steps.</li>\n</ol>\n\n<h2>Website hosting vs website maintenance</h2>\n<p>Hosting is the server, storage and network your site runs on. Maintenance is the ongoing care: updates, security, backups, speed tuning and support. You need both, and they often come from different providers. Be clear about who is responsible for what.</p>\n\n<h2>What can you do yourself?</h2>\n<p>Many businesses update their own text, images and blog posts through the CMS. Leave software updates, security, backups and speed work to someone who can test changes safely and fix problems quickly.</p>\n\n<h2>How much does website maintenance cost?</h2>\n<p>In India, maintenance usually costs ₹1,500 to ₹25,000 a month, depending on the size of the site and the services included. A common rule of thumb is to budget 15 to 20 percent of the original build cost each year. See more in our <a href=\"/website-development-cost/\">website cost guide</a>.</p>\n\n<h2>When maintenance is no longer enough</h2>\n<p>If your site is slow, hard to update, looks dated or no longer converts, it may be time for a redesign rather than more patches. Read the signs in our <a href=\"/website-redesign/\">website redesign guide</a>.</p>\n\n<p>Want worry-free upkeep? Our team handles updates, <a href=\"/website-security/\">security</a>, backups and monitoring. See our <a href=\"/website-design-agency/\">website development services</a> or <a href=\"/contact-us/\">talk to us</a> about a maintenance plan.</p>\n<h2>Frequently asked questions</h2><h3>What should be in a website maintenance checklist?</h3><p>Updates and security patches, backups, uptime and malware monitoring, speed checks, broken links, form tests, content refreshes and SEO reviews.</p><h3>How often should a website be updated?</h3><p>Security updates monthly or sooner for critical fixes, backups daily or weekly, and content and SEO reviews every quarter.</p><h3>How much does website maintenance cost?</h3><p>Usually ₹1,500 to ₹25,000 a month in India, depending on site size and services.</p><h3>What maintenance tasks can I do myself?</h3><p>Updating text, images and blog posts through the CMS. Leave software updates, security and backups to someone who can test changes safely.</p><h3>What is the difference between hosting and maintenance?</h3><p>Hosting is the server your site runs on. Maintenance is the ongoing care: updates, security, backups and support.</p>",
+  "content_source": "articles",
+  "head": {
+    "title": "Website Maintenance Services: Checklist & Plans",
+    "lang": "en-US",
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "@id": "https://openinkhub.io/website-maintenance-redesign/#article",
+            "headline": "Website Maintenance Services: Checklist & Plans",
+            "description": "Website maintenance checklist and services: updates, security, backups, monitoring and SEO reviews, how often to do each, and hosting vs maintenance explained.",
+            "url": "https://openinkhub.io/website-maintenance-redesign/",
+            "datePublished": "2026-11-13T18:05:49+05:30",
+            "dateModified": "2026-11-13T18:06:30+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "Hiten Neotia"
+            },
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "image": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/website-maintenance-redesign/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Website Design & Development",
+                "item": "https://openinkhub.io/website-design-agency/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Website Maintenance",
+                "item": "https://openinkhub.io/website-maintenance-redesign/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/website-maintenance-redesign/"
+      }
+    ],
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "index, follow, max-image-preview:large"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "Website maintenance checklist and services: updates, security, backups, monitoring and SEO reviews, how often to do each, and hosting vs maintenance explained."
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "Website Maintenance Services: Checklist & Plans"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": "Website maintenance checklist and services: updates, security, backups, monitoring and SEO reviews, how often to do each, and hosting vs maintenance explained."
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/website-maintenance-redesign/"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      }
+    ]
+  }
+}

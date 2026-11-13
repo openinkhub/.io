@@ -4,28 +4,53 @@
   "status": 200,
   "type": "guide",
   "guide": true,
-  "draft": true,
-  "status_published": false,
+  "draft": false,
+  "status_published": true,
   "hub": "/website-design-agency/",
   "card_title": "Website Security",
   "card_text": "Protecting business websites, APIs and customer data.",
   "n": "13",
-  "title": "Website Security: Protecting Sites, APIs & Data",
-  "h1": "Website security: protecting your site, APIs and customer data",
-  "date": "2026-11-13T17:54:05",
-  "modified": "2026-11-13T17:54:05",
+  "title": "Website Security: Protect Your Business Website & APIs",
+  "h1": "Website security: how to protect a business website from cyber threats",
+  "date": "2026-11-13T18:05:49",
+  "modified": "2026-11-13T18:06:30",
   "author": "Hiten Neotia",
-  "excerpt": "Practical website security for businesses: HTTPS, updates, backups, protecting APIs and customer data, and what to do if you're hacked.",
+  "excerpt": "Website security for business: HTTPS and SSL, firewalls, updates, backups, API security and malware protection, plus a simple plan for responding to incidents.",
   "keyphrase_override": "website security",
-  "keyphrase_secondary_override": [],
+  "keyphrase_secondary_override": [
+    "API security",
+    "website malware protection",
+    "website SSL security"
+  ],
   "categories": [],
   "tags": [],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "How do I secure my business website?",
+      "a": "<p>Use HTTPS, keep software updated, protect logins with two-factor authentication, add a firewall, back up off-site, scan for malware and plan for incidents.</p>"
+    },
+    {
+      "q": "What are the biggest threats to business websites?",
+      "a": "<p>Outdated plugins, weak passwords, malware, spam, insecure forms and APIs, and traffic floods (DDoS).</p>"
+    },
+    {
+      "q": "How much does website security cost?",
+      "a": "<p>Basic security is often included in a maintenance plan; high-risk sites add premium firewalls, monitoring and periodic audits.</p>"
+    },
+    {
+      "q": "How do I monitor my website for threats?",
+      "a": "<p>Use uptime and malware monitoring, file-change alerts, login alerts and regular security scans.</p>"
+    },
+    {
+      "q": "What are common website security mistakes?",
+      "a": "<p>Skipping updates, keeping unused plugins and admin accounts, storing backups on the same server and having no monitoring.</p>"
+    }
+  ],
   "featured_image": null,
-  "content_html": "<h1>Website security: protecting your site, APIs and customer data</h1>\n<p><strong>This guide is being written.</strong> It will cover:</p><ul><li>Common threats to business websites</li><li>HTTPS, updates and backups</li><li>Securing logins and admin areas</li><li>Protecting APIs and customer data</li><li>What to do after a breach</li><li>FAQs</li></ul><p>In the meantime, see our <a href=\"/website-design-agency/\">website design and development services</a>.</p>",
+  "content_html": "<h1>Website security: how to protect a business website from cyber threats</h1>\n<p>Website security protects your site, your customers' data and your reputation. Secure a business website with HTTPS, a web application firewall, regular software and plugin updates, strong logins, backups, malware scanning, monitoring and a plan for incidents. Security is both technical and operational: budget for ongoing maintenance and occasional audits.</p>\n\n<h2>How to secure a business website from cyber threats</h2>\n<ol>\n<li><strong>Use HTTPS everywhere</strong> with a valid SSL/TLS certificate that renews automatically.</li>\n<li><strong>Keep everything updated:</strong> CMS, themes, plugins and server software.</li>\n<li><strong>Lock down logins</strong> with strong passwords, two-factor authentication and the fewest admin accounts possible.</li>\n<li><strong>Add a web application firewall (WAF)</strong> to block common attacks and bad bots.</li>\n<li><strong>Back up automatically</strong> and keep copies off the server.</li>\n<li><strong>Scan for malware</strong> and monitor uptime and file changes.</li>\n<li><strong>Have an incident plan</strong> so you know exactly what to do if something goes wrong.</li>\n</ol>\n\n<h2>The biggest threats to business websites</h2>\n<ul>\n<li>Outdated plugins and software with known holes.</li>\n<li>Weak or reused passwords and brute-force login attempts.</li>\n<li>Malware and injected spam links.</li>\n<li>Form and comment spam.</li>\n<li>Data breaches through insecure forms or APIs.</li>\n<li>Traffic floods (DDoS) that take a site offline.</li>\n</ul>\n\n<h2>HTTPS and SSL: the baseline</h2>\n<p>HTTPS encrypts data moving between a visitor's browser and your server. It protects forms and logins, avoids browser warnings and is a light ranking signal. Install a certificate, redirect all HTTP traffic to HTTPS, fix any “mixed content” and make sure the certificate renews automatically.</p>\n\n<h2>What is API security?</h2>\n<p>APIs connect your site to payments, CRMs and apps, so they need protection too. Good practice includes:</p>\n<ul>\n<li>authentication with OAuth or API keys;</li>\n<li>access limited to what each client needs;</li>\n<li>rate limiting and input validation;</li>\n<li>encryption in transit and at rest;</li>\n<li>logging and regular security testing.</li>\n</ul>\n<p>The <a href=\"https://owasp.org/www-project-api-security/\" target=\"_blank\" rel=\"noopener\">OWASP API Security Top 10</a> is a useful checklist.</p>\n\n<h2>Protecting against malware, spam and data breaches</h2>\n<p>Combine prevention with a fast recovery. Prevent problems with updates, strong logins, a WAF and spam controls on forms. Recover fast with tested backups and a written plan. Test your restores regularly. A backup you have never restored is only a hope.</p>\n\n<h2>How much does website security cost?</h2>\n<p>Basic security is often part of a maintenance plan. Larger or high-risk sites may add a premium firewall, monitoring and periodic audits. Treat it as an ongoing cost, not a one-time task. See typical plans in our <a href=\"/website-maintenance-redesign/\">website maintenance guide</a> and <a href=\"/website-development-cost/\">cost guide</a>.</p>\n\n<h2>Common website security mistakes</h2>\n<ul>\n<li>Leaving unused plugins and old admin accounts in place.</li>\n<li>Storing backups only on the same server.</li>\n<li>Skipping updates because “the site works fine”.</li>\n<li>No monitoring, so a hack goes unnoticed for weeks.</li>\n</ul>\n\n<p>We build security into every site we develop. See our <a href=\"/website-design-agency/\">website development services</a> and <a href=\"/backend-development/\">backend development</a>, or <a href=\"/contact-us/\">talk to us</a> about a security review.</p>\n<h2>Frequently asked questions</h2><h3>How do I secure my business website?</h3><p>Use HTTPS, keep software updated, protect logins with two-factor authentication, add a firewall, back up off-site, scan for malware and plan for incidents.</p><h3>What are the biggest threats to business websites?</h3><p>Outdated plugins, weak passwords, malware, spam, insecure forms and APIs, and traffic floods (DDoS).</p><h3>How much does website security cost?</h3><p>Basic security is often included in a maintenance plan; high-risk sites add premium firewalls, monitoring and periodic audits.</p><h3>How do I monitor my website for threats?</h3><p>Use uptime and malware monitoring, file-change alerts, login alerts and regular security scans.</p><h3>What are common website security mistakes?</h3><p>Skipping updates, keeping unused plugins and admin accounts, storing backups on the same server and having no monitoring.</p>",
   "content_source": "articles",
   "head": {
-    "title": "Website Security: Protecting Sites, APIs & Data | openink Hub",
+    "title": "Website Security: Protect Your Business Website & APIs",
     "lang": "en-US",
     "jsonld": [
       {
@@ -34,11 +59,11 @@
           {
             "@type": "Article",
             "@id": "https://openinkhub.io/website-security/#article",
-            "headline": "Website Security: Protecting Sites, APIs & Data",
-            "description": "Practical website security for businesses: HTTPS, updates, backups, protecting APIs and customer data, and what to do if you're hacked.",
+            "headline": "Website Security: Protect Your Business Website & APIs",
+            "description": "Website security for business: HTTPS and SSL, firewalls, updates, backups, API security and malware protection, plus a simple plan for responding to incidents.",
             "url": "https://openinkhub.io/website-security/",
-            "datePublished": "2026-11-13T17:54:05+05:30",
-            "dateModified": "2026-11-13T17:54:05+05:30",
+            "datePublished": "2026-11-13T18:05:49+05:30",
+            "dateModified": "2026-11-13T18:06:30+05:30",
             "author": {
               "@type": "Person",
               "name": "Hiten Neotia"
@@ -85,22 +110,22 @@
       {
         "attr": "name",
         "key": "robots",
-        "content": "noindex, nofollow"
+        "content": "index, follow, max-image-preview:large"
       },
       {
         "attr": "name",
         "key": "description",
-        "content": "Practical website security for businesses: HTTPS, updates, backups, protecting APIs and customer data, and what to do if you're hacked."
+        "content": "Website security for business: HTTPS and SSL, firewalls, updates, backups, API security and malware protection, plus a simple plan for responding to incidents."
       },
       {
         "attr": "property",
         "key": "og:title",
-        "content": "Website Security: Protecting Sites, APIs & Data"
+        "content": "Website Security: Protect Your Business Website & APIs"
       },
       {
         "attr": "property",
         "key": "og:description",
-        "content": "Practical website security for businesses: HTTPS, updates, backups, protecting APIs and customer data, and what to do if you're hacked."
+        "content": "Website security for business: HTTPS and SSL, firewalls, updates, backups, API security and malware protection, plus a simple plan for responding to incidents."
       },
       {
         "attr": "property",

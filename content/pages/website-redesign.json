@@ -1,0 +1,152 @@
+{
+  "url": "https://openinkhub.io/website-redesign/",
+  "path": "/website-redesign/",
+  "status": 200,
+  "type": "guide",
+  "guide": true,
+  "draft": false,
+  "status_published": true,
+  "hub": "/website-design-agency/",
+  "card_title": "Website Redesign",
+  "card_text": "When to redesign your website and how the process works.",
+  "n": "15",
+  "title": "Website Redesign Services: When & How to Redesign",
+  "h1": "Website redesign: signs you need one and how to do it safely",
+  "date": "2026-11-13T18:05:49",
+  "modified": "2026-11-13T18:06:30",
+  "author": "Hiten Neotia",
+  "excerpt": "Website redesign services: the signs your site needs a redesign, redesign vs refresh, the process, costs, and how to protect your SEO and URLs.",
+  "keyphrase_override": "website redesign",
+  "keyphrase_secondary_override": [
+    "website redesign",
+    "website backup",
+    "website hosting vs maintenance"
+  ],
+  "categories": [],
+  "tags": [],
+  "faqs": [
+    {
+      "q": "How do I know my website needs a redesign?",
+      "a": "<p>Poor mobile use, slow pages, a dated look, falling conversions, security gaps and content that is hard to update are the main signs.</p>"
+    },
+    {
+      "q": "What is the difference between a redesign and a refresh?",
+      "a": "<p>A refresh updates the look on the same structure; a redesign rethinks structure, content and often the technology.</p>"
+    },
+    {
+      "q": "How much does a website redesign cost?",
+      "a": "<p>Often 60 to 80 percent of a new build if content and structure are reused, and about the same as a new site if rebuilt from scratch.</p>"
+    },
+    {
+      "q": "Will a redesign hurt my SEO?",
+      "a": "<p>Not if you keep ranking URLs, add 301 redirects for changed ones, carry over meta data and remove staging blocks before launch.</p>"
+    },
+    {
+      "q": "How long does a website redesign take?",
+      "a": "<p>Usually six to twelve weeks for a business site, longer for large or complex sites.</p>"
+    }
+  ],
+  "featured_image": null,
+  "content_html": "<h1>Website redesign: signs you need one and how to do it safely</h1>\n<p>A website redesign rebuilds your site's design, structure and often its technology to fix problems updates can't solve. Common signs you need one are a poor mobile experience, slow pages, a dated look, falling conversions, security gaps and content that is hard to update. Plan the redesign carefully so you keep your rankings, URLs and analytics history.</p>\n\n<h2>Signs your business website needs a redesign</h2>\n<ul>\n<li>It is hard to use on a phone.</li>\n<li>Pages load slowly or fail Core Web Vitals.</li>\n<li>The design no longer matches your brand or looks dated.</li>\n<li>Visitors arrive but few contact you or buy.</li>\n<li>Updating content needs a developer every time.</li>\n<li>It runs on old software that is hard to secure.</li>\n<li>Your services or business model have changed.</li>\n</ul>\n\n<h2>Website redesign vs refresh</h2>\n<p>A <strong>refresh</strong> updates the look: colours, fonts, images and some layouts, on the same platform and structure. A <strong>redesign</strong> rethinks structure, content and often the technology too. Choose a refresh if the site works well but looks tired. Choose a redesign if the problems are in speed, structure, mobile use or how easily you can update it.</p>\n\n<h2>The website redesign process</h2>\n<ol>\n<li><strong>Audit.</strong> Review traffic, top pages, rankings, speed and what converts.</li>\n<li><strong>Plan.</strong> Set goals, map content and decide what to keep, merge or drop.</li>\n<li><strong>Map URLs.</strong> List every old URL and where it will go.</li>\n<li><strong>Design and build.</strong> New design, structure and technology.</li>\n<li><strong>Test.</strong> Check redirects, forms, speed, mobile and tracking before launch.</li>\n<li><strong>Launch and monitor.</strong> Watch rankings, traffic and errors closely for the first weeks.</li>\n</ol>\n\n<h2>How to keep your SEO safe during a redesign</h2>\n<p>Redesigns lose rankings when URLs change without redirects, pages disappear or the new site is accidentally blocked. To protect your SEO:</p>\n<ul>\n<li>keep URLs that already rank, wherever possible;</li>\n<li>add 301 redirects from every old URL that changes;</li>\n<li>carry over titles, meta descriptions and structured data;</li>\n<li>remove any “noindex” or staging blocks before launch;</li>\n<li>submit your new sitemap and watch Search Console.</li>\n</ul>\n<p>Learn more in our <a href=\"/website-seo-performance/\">website SEO and performance guide</a>.</p>\n\n<h2>How much does a website redesign cost?</h2>\n<p>A redesign often costs 60 to 80 percent of a new build if you reuse content and structure, and about the same as a new site if you rebuild from scratch. See typical budgets in our <a href=\"/website-development-cost/\">website development cost guide</a>.</p>\n\n<h2>After the redesign: keep it healthy</h2>\n<p>A new site still needs care. Plan regular updates, backups and security checks from day one with our <a href=\"/website-maintenance-redesign/\">website maintenance</a> checklist.</p>\n\n<p>Thinking about a redesign? See our <a href=\"/website-design-agency/\">website development services</a> or <a href=\"/contact-us/\">talk to us</a> for an honest audit of what your site needs.</p>\n<h2>Frequently asked questions</h2><h3>How do I know my website needs a redesign?</h3><p>Poor mobile use, slow pages, a dated look, falling conversions, security gaps and content that is hard to update are the main signs.</p><h3>What is the difference between a redesign and a refresh?</h3><p>A refresh updates the look on the same structure; a redesign rethinks structure, content and often the technology.</p><h3>How much does a website redesign cost?</h3><p>Often 60 to 80 percent of a new build if content and structure are reused, and about the same as a new site if rebuilt from scratch.</p><h3>Will a redesign hurt my SEO?</h3><p>Not if you keep ranking URLs, add 301 redirects for changed ones, carry over meta data and remove staging blocks before launch.</p><h3>How long does a website redesign take?</h3><p>Usually six to twelve weeks for a business site, longer for large or complex sites.</p>",
+  "content_source": "articles",
+  "head": {
+    "title": "Website Redesign Services: When & How to Redesign",
+    "lang": "en-US",
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "@id": "https://openinkhub.io/website-redesign/#article",
+            "headline": "Website Redesign Services: When & How to Redesign",
+            "description": "Website redesign services: the signs your site needs a redesign, redesign vs refresh, the process, costs, and how to protect your SEO and URLs.",
+            "url": "https://openinkhub.io/website-redesign/",
+            "datePublished": "2026-11-13T18:05:49+05:30",
+            "dateModified": "2026-11-13T18:06:30+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "Hiten Neotia"
+            },
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "image": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/website-redesign/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Website Design & Development",
+                "item": "https://openinkhub.io/website-design-agency/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Website Redesign",
+                "item": "https://openinkhub.io/website-redesign/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/website-redesign/"
+      }
+    ],
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "index, follow, max-image-preview:large"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "Website redesign services: the signs your site needs a redesign, redesign vs refresh, the process, costs, and how to protect your SEO and URLs."
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "Website Redesign Services: When & How to Redesign"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": "Website redesign services: the signs your site needs a redesign, redesign vs refresh, the process, costs, and how to protect your SEO and URLs."
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/website-redesign/"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      }
+    ]
+  }
+}

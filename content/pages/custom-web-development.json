@@ -4,28 +4,54 @@
   "status": 200,
   "type": "guide",
   "guide": true,
-  "draft": true,
-  "status_published": false,
+  "draft": false,
+  "status_published": true,
   "hub": "/website-design-agency/",
   "card_title": "Custom Web Development",
   "card_text": "Custom web applications, SaaS products and API integrations.",
   "n": "06",
-  "title": "Custom Web Development: Web Apps, SaaS & APIs",
-  "h1": "Custom web development: web applications, SaaS and APIs",
-  "date": "2026-11-13T17:54:05",
-  "modified": "2026-11-13T17:54:05",
+  "title": "Custom Web Development: Web Apps, SaaS & API Integration",
+  "h1": "Custom web development: web applications, SaaS and API integration",
+  "date": "2026-11-13T18:05:49",
+  "modified": "2026-11-13T18:06:30",
   "author": "Hiten Neotia",
-  "excerpt": "When you need custom web development: web applications, SaaS products and API integrations, plus how a custom build project runs.",
+  "excerpt": "Custom web development for web applications, SaaS products and API integrations: when you need it, what it costs and how a custom build project runs.",
   "keyphrase_override": "custom web development",
-  "keyphrase_secondary_override": [],
+  "keyphrase_secondary_override": [
+    "SaaS application development",
+    "custom web application development",
+    "API integration services",
+    "custom software vs ready-made software"
+  ],
   "categories": [],
   "tags": [],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "What is the difference between a website and a web application?",
+      "a": "<p>A website mainly presents information. A web application lets users do tasks such as logging in, booking, paying or using a dashboard.</p>"
+    },
+    {
+      "q": "Why does the difference matter for cost?",
+      "a": "<p>Web applications need user accounts, data, security and testing, so they cost more to build and maintain than content websites.</p>"
+    },
+    {
+      "q": "When should a business choose custom web development?",
+      "a": "<p>When workflows are unique, several systems must connect, security rules are strict, or you are building a product to sell.</p>"
+    },
+    {
+      "q": "What is API integration?",
+      "a": "<p>Connecting your website or app to other services such as payments, CRM, ERP or WhatsApp, so data moves automatically.</p>"
+    },
+    {
+      "q": "How much does custom web development cost?",
+      "a": "<p>Simple custom sites often start around ₹1 lakh; complex platforms and SaaS products can exceed ₹15 lakh, depending on scope.</p>"
+    }
+  ],
   "featured_image": null,
-  "content_html": "<h1>Custom web development: web applications, SaaS and APIs</h1>\n<p><strong>This guide is being written.</strong> It will cover:</p><ul><li>When a template isn't enough</li><li>Custom web applications</li><li>Building a SaaS product</li><li>API integrations</li><li>Project process and timelines</li><li>FAQs</li></ul><p>In the meantime, see our <a href=\"/website-design-agency/\">website design and development services</a>.</p>",
+  "content_html": "<h1>Custom web development: web applications, SaaS and API integration</h1>\n<p>Custom web development builds software around your exact workflows instead of fitting your business into a template. It covers web applications such as dashboards and portals, SaaS products and API integrations with your other systems. It costs more than a standard website, but gives you full ownership, room to scale and features your competitors can't copy easily.</p>\n\n<h2>Website vs web application: what's the difference?</h2>\n<p>A <strong>website</strong> mainly presents information: services, articles, contact details. A <strong>web application</strong> lets people do things: log in, manage accounts, book, pay, track orders or work with data in a dashboard. Websites are usually cheaper and content-led. Web apps are interactive and cost more to build and maintain. Many businesses need both, working together.</p>\n\n<h2>When does a business need custom web development?</h2>\n<ul>\n<li>Your process is unique and off-the-shelf tools force workarounds.</li>\n<li>You need several systems to talk to each other.</li>\n<li>Security or compliance rules are strict.</li>\n<li>You are building a product to sell, such as a SaaS platform.</li>\n<li>You expect fast growth and need software that scales.</li>\n</ul>\n\n<h2>Custom software vs ready-made software</h2>\n<div class=\"table-wrap\"><table>\n<thead><tr><th></th><th>Custom software</th><th>Ready-made software</th></tr></thead>\n<tbody>\n<tr><td>Fit</td><td>Built for your exact workflow</td><td>Standard features for everyone</td></tr>\n<tr><td>Cost and time</td><td>Higher upfront, longer build</td><td>Lower upfront, quick to start</td></tr>\n<tr><td>Control</td><td>You own the roadmap and code</td><td>Limited by the vendor's roadmap</td></tr>\n<tr><td>Best for</td><td>What makes your business different</td><td>Standard tasks like email or accounting</td></tr>\n</tbody></table></div>\n\n<h2>SaaS application development</h2>\n<p>A SaaS product is software customers use online for a subscription. Building one involves product strategy, UX design, full-stack development, subscription billing, user management, multi-tenancy, analytics and steady improvement after launch. Plan an MVP first, test it with real users, then grow. See the technology choices in <a href=\"/full-stack-database-development/\">full stack development</a>.</p>\n\n<h2>What is API integration?</h2>\n<p>An API integration connects your website or app to other services: payments, CRM, ERP, analytics, WhatsApp or AI tools. Data moves automatically, so your team stops copying it by hand and you can add new features. Our <a href=\"/whatsapp-ai-chatbot/\">WhatsApp automation</a> is one example of an integration that saves hours every week.</p>\n\n<h2>The custom web development process</h2>\n<ol>\n<li><strong>Discovery.</strong> Workflows, users, data and integrations.</li>\n<li><strong>Design.</strong> User flows, wireframes and interface design.</li>\n<li><strong>Build.</strong> Front end, back end, database and APIs, in short cycles.</li>\n<li><strong>Testing.</strong> Functional, security and performance testing.</li>\n<li><strong>Launch.</strong> Deployment, training and handover.</li>\n<li><strong>Maintenance.</strong> Updates, monitoring and new features.</li>\n</ol>\n\n<h2>How much does custom web development cost?</h2>\n<p>Simple custom sites often start around ₹1 lakh, while complex platforms can exceed ₹15 lakh. Cost depends on features, integrations, design, team size and timeline. Ask for an itemised scope and milestone-based payments. More detail is in our <a href=\"/website-development-cost/\">cost guide</a>.</p>\n\n<p>Planning an app or portal? Explore our <a href=\"/website-design-agency/\">development services</a> or <a href=\"/contact-us/\">talk to our team</a>.</p>\n<h2>Frequently asked questions</h2><h3>What is the difference between a website and a web application?</h3><p>A website mainly presents information. A web application lets users do tasks such as logging in, booking, paying or using a dashboard.</p><h3>Why does the difference matter for cost?</h3><p>Web applications need user accounts, data, security and testing, so they cost more to build and maintain than content websites.</p><h3>When should a business choose custom web development?</h3><p>When workflows are unique, several systems must connect, security rules are strict, or you are building a product to sell.</p><h3>What is API integration?</h3><p>Connecting your website or app to other services such as payments, CRM, ERP or WhatsApp, so data moves automatically.</p><h3>How much does custom web development cost?</h3><p>Simple custom sites often start around ₹1 lakh; complex platforms and SaaS products can exceed ₹15 lakh, depending on scope.</p>",
   "content_source": "articles",
   "head": {
-    "title": "Custom Web Development: Web Apps, SaaS & APIs | openink Hub",
+    "title": "Custom Web Development: Web Apps, SaaS & API Integration",
     "lang": "en-US",
     "jsonld": [
       {
@@ -34,11 +60,11 @@
           {
             "@type": "Article",
             "@id": "https://openinkhub.io/custom-web-development/#article",
-            "headline": "Custom Web Development: Web Apps, SaaS & APIs",
-            "description": "When you need custom web development: web applications, SaaS products and API integrations, plus how a custom build project runs.",
+            "headline": "Custom Web Development: Web Apps, SaaS & API Integration",
+            "description": "Custom web development for web applications, SaaS products and API integrations: when you need it, what it costs and how a custom build project runs.",
             "url": "https://openinkhub.io/custom-web-development/",
-            "datePublished": "2026-11-13T17:54:05+05:30",
-            "dateModified": "2026-11-13T17:54:05+05:30",
+            "datePublished": "2026-11-13T18:05:49+05:30",
+            "dateModified": "2026-11-13T18:06:30+05:30",
             "author": {
               "@type": "Person",
               "name": "Hiten Neotia"
@@ -85,22 +111,22 @@
       {
         "attr": "name",
         "key": "robots",
-        "content": "noindex, nofollow"
+        "content": "index, follow, max-image-preview:large"
       },
       {
         "attr": "name",
         "key": "description",
-        "content": "When you need custom web development: web applications, SaaS products and API integrations, plus how a custom build project runs."
+        "content": "Custom web development for web applications, SaaS products and API integrations: when you need it, what it costs and how a custom build project runs."
       },
       {
         "attr": "property",
         "key": "og:title",
-        "content": "Custom Web Development: Web Apps, SaaS & APIs"
+        "content": "Custom Web Development: Web Apps, SaaS & API Integration"
       },
       {
         "attr": "property",
         "key": "og:description",
-        "content": "When you need custom web development: web applications, SaaS products and API integrations, plus how a custom build project runs."
+        "content": "Custom web development for web applications, SaaS products and API integrations: when you need it, what it costs and how a custom build project runs."
       },
       {
         "attr": "property",

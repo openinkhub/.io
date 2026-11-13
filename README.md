@@ -85,19 +85,16 @@ The build also writes `_redirects` (Squirrly redirects), `_headers` (security he
 
 Core Web Vitals (LCP, INP, CLS, TTFB, FCP) are measured only when a PageSpeed Insights key is provided: `PSI_API_KEY=... npm run audit` (add it as a Cloudflare Pages environment variable to measure on every deploy).
 
-## Website development guides (17 pages)
+## Website development guides (17 published pages)
 
-Defined in `content/articles/website-development.json` and linked from the grid on `/website-design-agency/`.
-Each guide has its final URL, title, meta description, keyphrase and a suggested outline. Drafts are built but
-`noindex, nofollow`, left out of sitemaps, llms.txt and the SEO audit, and shown as "Coming soon" (not linked).
+Hub pages for content-plan clusters C02–C18 ("openink website dev page.xlsx"), linked from the grid on `/website-design-agency/`.
 
-To publish a guide: add its content as `body_html` (and optional `faqs`), set `"status": "published"`, then
+- Definitions (URL, title, description, keyphrase, related terms, FAQs, status): `content/articles/website-development.json`
+- Page text: `content/articles/website-development/<slug>.html`
+- The 120 article briefs and 61 PAA questions from the plan: `content/articles/website-development-briefs.json`
+  (in the source sheet, the "AEO Direct Answer" column for C17 and C18 is shifted one row; flagged as `answer_needs_review`)
 
-```bash
-npm run articles && npm test
-```
-
-The page becomes indexable, joins the sitemap and llms.txt, is audited, and its hub card links to it.
+Edit a page's HTML or FAQs, then `npm run articles && npm test`. Set `"status": "draft"` to unpublish (noindex, unlinked).
 
 ## Content removals and plain-language edits
 

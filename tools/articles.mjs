@@ -25,7 +25,11 @@ const E = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(
 let made = 0, published = 0;
 for (const file of fs.readdirSync(SRC).filter((n) => n.endsWith(".json"))) {
   const set = JSON.parse(fs.readFileSync(path.join(SRC, file), "utf8"));
+  if (!Array.isArray(set.items)) continue; // e.g. the briefs file
   for (const a of set.items) {
+    // body text may live in content/articles/<set>/<slug>.html instead of body_html
+    const htmlFile = path.join(SRC, file.replace(/\.json$/, ""), `${a.slug}.html`);
+    if (!String(a.body_html || "").trim() && fs.existsSync(htmlFile)) a.body_html = fs.readFileSync(htmlFile, "utf8");
     const p = `/${a.slug}/`, url = BASE + p;
     const target = path.join(PAGES, `${a.slug}.json`);
     const prev = fs.existsSync(target) ? JSON.parse(fs.readFileSync(target, "utf8")) : null;
@@ -46,7 +50,7 @@ for (const file of fs.readdirSync(SRC).filter((n) => n.endsWith(".json"))) {
       content_html: `<h1>${E(a.h1)}</h1>\n${body}`,
       content_source: "articles",
       head: {
-        title: `${a.title} | openink Hub`.length <= 65 ? `${a.title} | openink Hub` : a.title, lang: "en-US", jsonld: [],
+        title: `${a.title} | openink Hub`.length <= 60 ? `${a.title} | openink Hub` : a.title, lang: "en-US", jsonld: [],
         links: [{ rel: "canonical", href: url }],
         meta: [
           { attr: "name", key: "robots", content: isPub ? "index, follow, max-image-preview:large" : "noindex, nofollow" },

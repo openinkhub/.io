@@ -312,7 +312,11 @@ function audit(p) {
   const dens = wc ? Math.round((occ / wc) * 1000) / 10 : 0;
   c.keyword_density = !kpn || short ? r("na", short ? "too little text" : "no keyphrase") : r(dens >= T.keyphraseDensity.min && dens <= T.keyphraseDensity.max ? "pass" : "warn", `${dens}% (${occ}×)`, dens < T.keyphraseDensity.min ? "use the keyphrase a little more" : dens > T.keyphraseDensity.max ? "possible keyword stuffing" : "");
   const sem = (rec.keyphrase_secondary?.length ? rec.keyphrase_secondary : ["SEO", "AEO", "GEO", "AIO"]).slice(0, 8);
-  const semHit = sem.filter((x) => kpNorm(ctext).includes(kpNorm(x)));
+  // a related term counts as covered when ≥75% of its meaningful words appear (topic coverage, not exact phrase;
+  // simple stemming so "personalisation"/"personalization" and plurals match)
+  const stem = (w) => w.replace(/isation$|ization$/, "iz").replace(/ies$/, "y").replace(/(ing|ed|es|s)$/, "");
+  const ctoks = new Set(kpNorm(ctext + " " + title).split(" ").map(stem));
+  const semHit = sem.filter((x) => { const t = tokens(x).map(stem); return t.length && t.filter((w) => ctoks.has(w)).length / t.length >= 0.75; });
   c.semantic_coverage = isListing ? r("na", "listing page") : r(semHit.length / sem.length >= 0.6 ? "pass" : semHit.length ? "warn" : "fail", `${semHit.length}/${sem.length} related terms`, sem.filter((x) => !semHit.includes(x)).slice(0, 4).join(", "));
   const tn = kpNorm(kp + " " + title);
   const intent = W.informational.some((x) => tn.split(" ").includes(x)) ? "informational" : W.commercial.some((x) => tn.split(" ").includes(x)) ? "commercial" : "navigational";
@@ -332,8 +336,9 @@ function audit(p) {
   c.cannibalization = !kpn || isListing ? r("na", "no keyphrase") : r(same.length ? "warn" : "pass", same.length ? `${same.length} other page(s) target "${kp}"` : "unique keyphrase", same.join(", "));
   const faqQs = (rec.faqs || []).length || (content.match(/<summary>|<h3>[^<]*\?<\/h3>/g) || []).length;
   c.faq_optimization = isListing ? r("na", "—") : r(faqQs >= T.faq.minQuestions && typeSet.has("FAQPage") ? "pass" : faqQs ? "warn" : "warn", `${faqQs} question(s)${typeSet.has("FAQPage") ? " + FAQ schema" : ""}`, faqQs < T.faq.minQuestions ? `add ${T.faq.minQuestions}+ FAQs for answer engines` : "");
-  const ents = SITE.entities.filter((e) => kpNorm(ctext + " " + title).includes(kpNorm(e)));
-  c.entity_coverage = r(ents.length >= 3 ? "pass" : ents.length ? "warn" : "fail", `${ents.length}/${SITE.entities.length} entities`, ents.join(", "));
+  const entList = RULES.entities_by_section?.[p.section] || SITE.entities;
+  const ents = entList.filter((e) => kpNorm(ctext + " " + title).includes(kpNorm(e)));
+  c.entity_coverage = r(ents.length >= 3 ? "pass" : ents.length ? "warn" : "fail", `${ents.length}/${entList.length} entities`, ents.join(", "));
   const anchors = p.contentLinks.filter((l) => l.text);
   const generic = anchors.filter((l) => W.generic_anchors.includes(l.text.toLowerCase().replace(/[^a-z ]/g, "").trim()));
   c.anchor_text = !anchors.length ? r("na", "no links in content") : r(pct(generic.length, anchors.length) <= T.anchors.maxPercentGeneric ? "pass" : "warn", `${pct(generic.length, anchors.length)}% generic anchors`, generic.slice(0, 3).map((g) => `"${g.text}"`).join(", "));

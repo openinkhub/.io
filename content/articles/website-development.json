@@ -1,109 +1,845 @@
 {
-  "_note": "Website development guides linked from /website-design-agency/. To publish one: put its content in body_html (HTML) and optional faqs [[question, answer]], set status to \"published\", then `npm run articles && npm test`. Drafts are built but noindex, excluded from sitemaps/llms.txt and not linked.",
+  "_note": "Website development guides (hub pages for clusters C02–C18 of the content plan) linked from /website-design-agency/. Content for each lives in content/articles/website-development/<slug>.html; FAQs in `faqs`. To publish: set status to \"published\", then `npm run articles && npm test`.",
   "hub": "/website-design-agency/",
   "author": "Hiten Neotia",
   "items": [
-    { "n": "01", "slug": "website-design-and-development", "status": "draft",
-      "card_title": "Website Design & Development", "card_text": "How website design and development fit together: scope, process and what to expect.",
-      "title": "Website Design & Development: Scope, Process & Costs", "h1": "Website design and development: how it fits together",
-      "description": "How website design and development work together — scope, process, timelines and what to expect from a website project in India.",
+    {
+      "n": "01",
+      "slug": "website-design-development",
+      "status": "published",
+      "card_title": "Website Design & Development",
+      "card_text": "How website design and development fit together: scope, process and what to expect.",
+      "title": "Website Design & Development Services | Process & Scope",
+      "h1": "Website design and development services: how design and development fit together",
+      "description": "Website design and development explained: what each covers, the six-stage process, timelines and must-have features for a professional business website.",
       "keyphrase": "website design and development",
-      "outline": ["What website design covers", "What website development covers", "How the two work together", "The website project process step by step", "Timelines and what affects them", "How to brief a website agency", "FAQs"] },
-    { "n": "02", "slug": "business-website-development", "status": "draft",
-      "card_title": "Business & Corporate Websites", "card_text": "Features, structure and lead generation for business and corporate websites.",
-      "title": "Business & Corporate Website Development Guide", "h1": "Business and corporate websites: features, structure and lead generation",
-      "description": "What a business or corporate website needs: key pages, features, site structure and lead-generation tools that turn visitors into enquiries.",
+      "outline": [
+        "What website design covers",
+        "What website development covers",
+        "How the two work together",
+        "The website project process step by step",
+        "Timelines and what affects them",
+        "How to brief a website agency",
+        "FAQs"
+      ],
+      "cluster": "C02",
+      "faqs": [
+        [
+          "What is the difference between web design and web development?",
+          "Web design decides how a site looks and works for visitors: layout, visuals and user experience. Web development builds it in code and makes it fast, secure and functional. Most projects need both."
+        ],
+        [
+          "Which comes first in a website project?",
+          "Design comes first. Discovery and wireframes set the structure, the visual design is approved, and then developers build it. Fixing problems in design is much cheaper than in code."
+        ],
+        [
+          "How long does website design and development take?",
+          "A simple site takes two to four weeks, a business or ecommerce site six to twelve weeks, and a complex web app three to six months."
+        ],
+        [
+          "Do I need a custom website or will a template do?",
+          "A template suits standard needs on a small budget. Choose custom when you need unique features, complex integrations or long-term growth."
+        ],
+        [
+          "What are common mistakes when hiring for a website?",
+          "Hiring designers and developers who don't work together, skipping a written scope, and forgetting maintenance, SEO and content in the budget."
+        ]
+      ],
+      "secondary": [
+        "website development process",
+        "professional website features",
+        "responsive website design",
+        "custom website development",
+        "modern website design trends"
+      ]
+    },
+    {
+      "n": "02",
+      "slug": "business-corporate-websites",
+      "status": "published",
+      "card_title": "Business & Corporate Websites",
+      "card_text": "Features, structure and lead generation for business and corporate websites.",
+      "title": "Business & Corporate Website Development Services",
+      "h1": "Business and corporate website development that generates leads",
+      "description": "Business website development for small businesses and corporates: essential pages, features, lead generation and how to match the site to your business model.",
       "keyphrase": "business website development",
-      "outline": ["What makes a good business website", "Essential pages and site structure", "Features that build trust", "Lead generation: forms, WhatsApp and CTAs", "Corporate websites vs small business websites", "FAQs"] },
-    { "n": "03", "slug": "ecommerce-website-development", "status": "draft",
-      "card_title": "Ecommerce Development", "card_text": "Platforms, features and the build process for online stores.",
-      "title": "Ecommerce Website Development: Platforms & Features", "h1": "Ecommerce website development: platforms, features and process",
-      "description": "Choose the right ecommerce platform, plan must-have store features and understand the build process for an online store in India.",
+      "outline": [
+        "What makes a good business website",
+        "Essential pages and site structure",
+        "Features that build trust",
+        "Lead generation: forms, WhatsApp and CTAs",
+        "Corporate websites vs small business websites",
+        "FAQs"
+      ],
+      "cluster": "C03",
+      "faqs": [
+        [
+          "Why does a small business need a professional website?",
+          "It builds credibility, makes you visible 24/7, brings in leads, helps you rank in local search and lets you compete with bigger brands."
+        ],
+        [
+          "How much does a small business website cost?",
+          "In India, a basic site often costs ₹15,000 to ₹50,000, and a business site with a CMS, SEO and integrations usually ₹30,000 to ₹3 lakh."
+        ],
+        [
+          "What features should a business website have?",
+          "Clear service pages, contact forms, WhatsApp and click-to-call, reviews, fast mobile pages, HTTPS, analytics and a CMS your team can update."
+        ],
+        [
+          "How does a website help with local SEO?",
+          "Location pages, consistent business details and a linked Google Business Profile help you appear in local and 'near me' searches."
+        ],
+        [
+          "What are common small business website mistakes?",
+          "No clear call to action, slow mobile pages, one vague services page, outdated content and no tracking of where leads come from."
+        ]
+      ],
+      "secondary": [
+        "corporate website features",
+        "lead generation website",
+        "best website for startups",
+        "business website design ideas",
+        "business website development"
+      ]
+    },
+    {
+      "n": "03",
+      "slug": "ecommerce-development",
+      "status": "published",
+      "card_title": "Ecommerce Development",
+      "card_text": "Platforms, features and the build process for online stores.",
+      "title": "Ecommerce Website Development in India: Start & Scale",
+      "h1": "Ecommerce website development: how to start an online store in India",
+      "description": "Ecommerce website development in India: choose a platform, set up payments, GST and shipping, plan must-have store features and launch with a clear budget.",
       "keyphrase": "ecommerce website development",
-      "outline": ["Choosing an ecommerce platform", "Must-have store features", "Payments, shipping and taxes in India", "The build process", "Launch checklist", "FAQs"] },
-    { "n": "04", "slug": "website-development-cost-in-india", "status": "draft",
-      "card_title": "Website Cost & Pricing", "card_text": "What drives website development cost in India and how to plan your budget.",
-      "title": "Website Development Cost in India: Pricing Guide", "h1": "Website development cost in India: what drives the price",
-      "description": "What drives website development cost in India — type of site, design, features and integrations — and how to plan a realistic budget.",
-      "keyphrase": "website development cost in india",
-      "outline": ["What affects website cost", "Typical cost ranges by website type", "One-time vs ongoing costs", "How to plan your budget", "Questions to ask before you get a quote", "FAQs"] },
-    { "n": "05", "slug": "wordpress-cms-development", "status": "draft",
-      "card_title": "WordPress & CMS", "card_text": "WordPress, headless CMS and how to choose a content platform.",
-      "title": "WordPress & CMS Development: Choosing a Platform", "h1": "WordPress and CMS: how to choose a content platform",
-      "description": "WordPress, headless CMS or a static site? Compare content platforms on cost, speed, security and ease of editing to choose the right one.",
-      "keyphrase": "wordpress cms development",
-      "outline": ["What a CMS does", "WordPress: strengths and limits", "Headless CMS explained", "Static sites vs CMS", "How to choose", "FAQs"] },
-    { "n": "06", "slug": "custom-web-development", "status": "draft",
-      "card_title": "Custom Web Development", "card_text": "Custom web applications, SaaS products and API integrations.",
-      "title": "Custom Web Development: Web Apps, SaaS & APIs", "h1": "Custom web development: web applications, SaaS and APIs",
-      "description": "When you need custom web development: web applications, SaaS products and API integrations, plus how a custom build project runs.",
+      "outline": [
+        "Choosing an ecommerce platform",
+        "Must-have store features",
+        "Payments, shipping and taxes in India",
+        "The build process",
+        "Launch checklist",
+        "FAQs"
+      ],
+      "cluster": "C04",
+      "faqs": [
+        [
+          "How do I start an ecommerce website in India?",
+          "Choose a platform, register your business and GST, set up a payment gateway, plan shipping, build product and policy pages, then launch with SEO and analytics."
+        ],
+        [
+          "Which ecommerce platform should I choose?",
+          "Shopify for a fast, low-maintenance launch; WooCommerce for flexibility and content-led selling; a custom or headless build only for unique or very large needs."
+        ],
+        [
+          "How much does an ecommerce website cost in India?",
+          "A small Shopify store can start around ₹50,000, while custom or multi-vendor platforms can cost ₹10 lakh or more, plus ongoing fees."
+        ],
+        [
+          "How do I handle payments and shipping?",
+          "Use a gateway such as Razorpay, PayU or Stripe for UPI, cards and wallets, and a courier partner or aggregator with clear delivery zones and charges."
+        ],
+        [
+          "What are common ecommerce launch mistakes?",
+          "A slow site, a long checkout, few payment options, missing return and shipping policies, and poor product photos and descriptions."
+        ]
+      ],
+      "secondary": [
+        "Shopify vs WooCommerce",
+        "ecommerce website features",
+        "best ecommerce platform",
+        "ecommerce website development process",
+        "ecommerce conversion optimization",
+        "Shopify vs WordPress"
+      ]
+    },
+    {
+      "n": "04",
+      "slug": "website-development-cost",
+      "status": "published",
+      "card_title": "Website Cost & Pricing",
+      "card_text": "What drives website development cost in India and how to plan your budget.",
+      "title": "Website Development Cost in India: 2026 Pricing Guide",
+      "h1": "Website development cost in India: complete pricing guide",
+      "description": "Website development cost in India by website type, what drives the price, timelines and maintenance budgets, plus how to get an itemised, fair quote.",
+      "keyphrase": "website development cost",
+      "outline": [
+        "What affects website cost",
+        "Typical cost ranges by website type",
+        "One-time vs ongoing costs",
+        "How to plan your budget",
+        "Questions to ask before you get a quote",
+        "FAQs"
+      ],
+      "cluster": "C05",
+      "faqs": [
+        [
+          "How much does website development cost in India?",
+          "From about ₹15,000 for a basic site to ₹15 lakh or more for complex ecommerce or custom web apps, depending on scope and features."
+        ],
+        [
+          "What factors affect website cost?",
+          "Number of pages, design complexity, features, integrations, platform, multilingual content, SEO setup and ongoing maintenance."
+        ],
+        [
+          "How much does website maintenance cost?",
+          "Usually ₹1,500 to ₹25,000 a month in India, or about 15 to 20 percent of the build cost each year."
+        ],
+        [
+          "How can I reduce website development cost?",
+          "Write a clear brief, launch with the pages that matter most, use proven platforms, have content ready early and agree milestone-based payments."
+        ],
+        [
+          "What are common website pricing mistakes?",
+          "Comparing only the total price, ignoring maintenance and hosting, and not checking who owns the code, domain and accounts."
+        ]
+      ],
+      "secondary": [
+        "business website cost",
+        "ecommerce website development cost",
+        "WordPress website cost",
+        "custom website development cost",
+        "website redesign cost",
+        "website maintenance cost",
+        "website development timeline"
+      ]
+    },
+    {
+      "n": "05",
+      "slug": "wordpress-cms-development",
+      "status": "published",
+      "card_title": "WordPress & CMS",
+      "card_text": "WordPress, headless CMS and how to choose a content platform.",
+      "title": "WordPress & CMS Development Services | Headless CMS",
+      "h1": "WordPress and CMS development: choosing the right content platform",
+      "description": "WordPress development, Webflow and headless CMS compared on cost, SEO, security and editing, so you can choose the right content platform for your website.",
+      "keyphrase": "wordpress development",
+      "outline": [
+        "What a CMS does",
+        "WordPress: strengths and limits",
+        "Headless CMS explained",
+        "Static sites vs CMS",
+        "How to choose",
+        "FAQs"
+      ],
+      "cluster": "C06",
+      "faqs": [
+        [
+          "WordPress or custom website development: which is better?",
+          "WordPress is better for content-led, budget-conscious sites. Custom development is better for unique workflows, complex integrations and very high performance."
+        ],
+        [
+          "How do WordPress and custom websites compare on cost?",
+          "WordPress is usually cheaper and faster to launch because themes and plugins cover common features. Custom builds cost more upfront."
+        ],
+        [
+          "Which is better for SEO?",
+          "Both can rank well. WordPress is SEO-friendly out of the box; a custom site ranks well if it is built with technical SEO in mind."
+        ],
+        [
+          "Is WordPress secure?",
+          "Yes, when it is kept updated, uses few trusted plugins, strong logins and a firewall. Most WordPress hacks come from outdated plugins."
+        ],
+        [
+          "What is a headless CMS?",
+          "A CMS that stores content and delivers it through an API to any website or app, with the front end built separately for speed and flexibility."
+        ]
+      ],
+      "secondary": [
+        "WordPress website development",
+        "WordPress vs Webflow",
+        "headless CMS",
+        "traditional CMS vs headless CMS"
+      ]
+    },
+    {
+      "n": "06",
+      "slug": "custom-web-development",
+      "status": "published",
+      "card_title": "Custom Web Development",
+      "card_text": "Custom web applications, SaaS products and API integrations.",
+      "title": "Custom Web Development: Web Apps, SaaS & API Integration",
+      "h1": "Custom web development: web applications, SaaS and API integration",
+      "description": "Custom web development for web applications, SaaS products and API integrations: when you need it, what it costs and how a custom build project runs.",
       "keyphrase": "custom web development",
-      "outline": ["When a template isn't enough", "Custom web applications", "Building a SaaS product", "API integrations", "Project process and timelines", "FAQs"] },
-    { "n": "07", "slug": "frontend-development-technologies", "status": "draft",
-      "card_title": "Frontend Technologies", "card_text": "React, Next.js and other frontend frameworks compared.",
-      "title": "Frontend Technologies Compared: React, Next.js & More", "h1": "Frontend technologies: React, Next.js and other frameworks compared",
-      "description": "Compare React, Next.js and other frontend frameworks on speed, SEO, cost and hiring, and pick the right one for your website or app.",
-      "keyphrase": "frontend development technologies",
-      "outline": ["What the frontend does", "React", "Next.js", "Other frameworks worth knowing", "SEO and performance differences", "How to choose", "FAQs"] },
-    { "n": "08", "slug": "backend-development-technologies", "status": "draft",
-      "card_title": "Backend Technologies", "card_text": "Node.js, PHP, Python and backend frameworks compared.",
-      "title": "Backend Technologies Compared: Node.js, PHP & Python", "h1": "Backend technologies: Node.js, PHP, Python and frameworks compared",
-      "description": "Node.js, PHP or Python? Compare backend languages and frameworks on performance, cost, scalability and hiring for your next project.",
-      "keyphrase": "backend development technologies",
-      "outline": ["What the backend does", "Node.js", "PHP and Laravel", "Python, Django and FastAPI", "Choosing for scale, cost and hiring", "FAQs"] },
-    { "n": "09", "slug": "full-stack-development-databases", "status": "draft",
-      "card_title": "Full Stack & Databases", "card_text": "Full-stack approaches and how to choose the right database.",
-      "title": "Full Stack Development & Choosing a Database", "h1": "Full-stack development and how to choose the right database",
-      "description": "Understand full-stack development and compare SQL and NoSQL databases like PostgreSQL, MySQL and MongoDB to choose the right fit.",
+      "outline": [
+        "When a template isn't enough",
+        "Custom web applications",
+        "Building a SaaS product",
+        "API integrations",
+        "Project process and timelines",
+        "FAQs"
+      ],
+      "cluster": "C07",
+      "faqs": [
+        [
+          "What is the difference between a website and a web application?",
+          "A website mainly presents information. A web application lets users do tasks such as logging in, booking, paying or using a dashboard."
+        ],
+        [
+          "Why does the difference matter for cost?",
+          "Web applications need user accounts, data, security and testing, so they cost more to build and maintain than content websites."
+        ],
+        [
+          "When should a business choose custom web development?",
+          "When workflows are unique, several systems must connect, security rules are strict, or you are building a product to sell."
+        ],
+        [
+          "What is API integration?",
+          "Connecting your website or app to other services such as payments, CRM, ERP or WhatsApp, so data moves automatically."
+        ],
+        [
+          "How much does custom web development cost?",
+          "Simple custom sites often start around ₹1 lakh; complex platforms and SaaS products can exceed ₹15 lakh, depending on scope."
+        ]
+      ],
+      "secondary": [
+        "SaaS application development",
+        "custom web application development",
+        "API integration services",
+        "custom software vs ready-made software"
+      ]
+    },
+    {
+      "n": "07",
+      "slug": "frontend-development",
+      "status": "published",
+      "card_title": "Frontend Technologies",
+      "card_text": "React, Next.js and other frontend frameworks compared.",
+      "title": "Frontend Development Services: React, Next.js, Vue",
+      "h1": "Frontend development services: React, Next.js, Vue and more",
+      "description": "Frontend development with React, Next.js, Angular, Vue and TypeScript: how the frameworks compare and how to choose one for SEO, speed and maintainability.",
+      "keyphrase": "frontend development",
+      "outline": [
+        "What the frontend does",
+        "React",
+        "Next.js",
+        "Other frameworks worth knowing",
+        "SEO and performance differences",
+        "How to choose",
+        "FAQs"
+      ],
+      "cluster": "C08",
+      "faqs": [
+        [
+          "React vs Angular vs Vue: which is best?",
+          "None is best for everyone. React has the biggest ecosystem, Angular suits large structured teams, and Vue is light and easy to learn."
+        ],
+        [
+          "Which frontend framework is best for SEO?",
+          "Frameworks that render pages on the server or at build time, such as Next.js or Nuxt, are best for SEO-critical public websites."
+        ],
+        [
+          "What is the difference between Next.js and React?",
+          "React is a library for building interfaces. Next.js is a framework built on React that adds routing, server rendering and performance features."
+        ],
+        [
+          "Which framework is easiest to learn?",
+          "Vue is usually the easiest to start with; React is moderate; Angular has the steepest learning curve."
+        ],
+        [
+          "What are common framework selection mistakes?",
+          "Choosing for hype instead of team skills, ignoring SEO needs, and picking a stack nobody in your market can maintain."
+        ]
+      ],
+      "secondary": [
+        "Next.js vs React",
+        "Next.js website development",
+        "TypeScript web development",
+        "Tailwind CSS vs Bootstrap",
+        "Svelte vs React vs Vue"
+      ]
+    },
+    {
+      "n": "08",
+      "slug": "backend-development",
+      "status": "published",
+      "card_title": "Backend Technologies",
+      "card_text": "Node.js, PHP, Python and backend frameworks compared.",
+      "title": "Backend Development Services: Node.js, PHP, Python",
+      "h1": "Backend development services: Node.js, PHP, Python and frameworks",
+      "description": "Backend development with Node.js, PHP, Laravel, Python and Django: how they compare on performance, scale and cost, and how to choose the right one.",
+      "keyphrase": "backend development",
+      "outline": [
+        "What the backend does",
+        "Node.js",
+        "PHP and Laravel",
+        "Python, Django and FastAPI",
+        "Choosing for scale, cost and hiring",
+        "FAQs"
+      ],
+      "cluster": "C09",
+      "faqs": [
+        [
+          "Node.js vs PHP: which is better?",
+          "Node.js is better for real-time, high-traffic apps and JavaScript teams. PHP is better for content-led sites, WordPress and budget hosting."
+        ],
+        [
+          "How do Node.js and PHP compare on performance?",
+          "Node.js handles many simultaneous connections very efficiently. Modern PHP is fast for typical page requests and simple to host."
+        ],
+        [
+          "Which backend is best for AI features?",
+          "Python, with frameworks like Django or FastAPI, is usually the best fit for data-heavy and AI-driven applications."
+        ],
+        [
+          "Laravel or Django?",
+          "Laravel for fast, convention-driven business apps in PHP; Django for secure, data-heavy apps and machine learning in Python."
+        ],
+        [
+          "What are common backend technology mistakes?",
+          "Picking a language the team can't support, skipping security basics, and not planning for scale and maintenance."
+        ]
+      ],
+      "secondary": [
+        "Laravel vs Django",
+        "Node.js vs Python",
+        "best backend technology",
+        "NestJS development",
+        "Express.js vs NestJS"
+      ]
+    },
+    {
+      "n": "09",
+      "slug": "full-stack-database-development",
+      "status": "published",
+      "card_title": "Full Stack & Databases",
+      "card_text": "Full-stack approaches and how to choose the right database.",
+      "title": "Full Stack Development & Database Services | MERN, SQL",
+      "h1": "Full stack development and choosing the right database",
+      "description": "Full stack development explained: MERN vs MEAN stacks, SQL vs NoSQL, MySQL, PostgreSQL and MongoDB, Firebase vs Supabase, and how to choose a stack.",
       "keyphrase": "full stack development",
-      "outline": ["What full-stack development means", "Common full-stack combinations", "SQL vs NoSQL", "PostgreSQL, MySQL and MongoDB compared", "How to choose a database", "FAQs"] },
-    { "n": "10", "slug": "ai-website-development", "status": "draft",
-      "card_title": "AI Website Development", "card_text": "AI chatbots, personalization and assistants for business websites.",
-      "title": "AI Website Development: Chatbots & Personalization", "h1": "AI website development: chatbots, personalization and assistants",
-      "description": "How AI improves business websites: chatbots, personalized content and AI assistants that answer questions and capture leads 24/7.",
+      "outline": [
+        "What full-stack development means",
+        "Common full-stack combinations",
+        "SQL vs NoSQL",
+        "PostgreSQL, MySQL and MongoDB compared",
+        "How to choose a database",
+        "FAQs"
+      ],
+      "cluster": "C10",
+      "faqs": [
+        [
+          "What is full stack web development?",
+          "Building both the front end users see and the back end, database and APIs that power it, so one team can deliver a complete application."
+        ],
+        [
+          "What skills does a full stack developer need?",
+          "HTML, CSS and JavaScript or TypeScript, a front-end framework, a back-end language, databases, APIs, security basics and deployment."
+        ],
+        [
+          "Which stack should I choose?",
+          "Match it to your SEO needs, data and team. MERN, Next.js with Node.js, and Laravel or Django with React or Vue are proven options."
+        ],
+        [
+          "SQL or NoSQL: which database should I use?",
+          "SQL (MySQL, PostgreSQL) for orders, payments and strict consistency; NoSQL (MongoDB) for flexible, fast-changing data."
+        ],
+        [
+          "Firebase or Supabase?",
+          "Firebase for speed and Google Cloud integration; Supabase for open-source PostgreSQL, SQL flexibility and less vendor lock-in."
+        ]
+      ],
+      "secondary": [
+        "MERN vs MEAN stack",
+        "best database for web development",
+        "Firebase vs Supabase",
+        "SQL vs NoSQL"
+      ]
+    },
+    {
+      "n": "10",
+      "slug": "ai-website-development",
+      "status": "published",
+      "card_title": "AI Website Development",
+      "card_text": "AI chatbots, personalization and assistants for business websites.",
+      "title": "AI Website Development: Chatbots, RAG & Personalization",
+      "h1": "AI website development: how AI is transforming business websites",
+      "description": "AI website development for business: chatbots, RAG assistants, AI search, personalization and AI agents, with practical use cases, costs and risks to manage.",
       "keyphrase": "ai website development",
-      "outline": ["What an AI-powered website can do", "AI chatbots and WhatsApp assistants", "Personalization", "AI search readiness (AEO/GEO)", "Privacy and accuracy", "FAQs"] },
-    { "n": "11", "slug": "modern-web-architecture", "status": "draft",
-      "card_title": "Modern Architecture", "card_text": "Jamstack, rendering, progressive web apps and cloud deployment explained.",
-      "title": "Modern Web Architecture: Jamstack, PWAs & Cloud", "h1": "Modern web architecture: Jamstack, rendering, PWAs and the cloud",
-      "description": "Jamstack, server and static rendering, progressive web apps and cloud deployment explained in plain language for business owners.",
-      "keyphrase": "modern web architecture",
-      "outline": ["Why architecture matters", "Jamstack and static sites", "Server-side vs static rendering", "Progressive web apps", "Cloud hosting and CDNs", "FAQs"] },
-    { "n": "12", "slug": "website-seo-and-performance", "status": "draft",
-      "card_title": "Website SEO & Performance", "card_text": "How development choices affect SEO, speed and Core Web Vitals.",
-      "title": "Website SEO & Performance: Core Web Vitals Guide", "h1": "Website SEO and performance: how development choices matter",
-      "description": "How development choices affect SEO, page speed and Core Web Vitals — and what to build in from day one so your site ranks and loads fast.",
+      "outline": [
+        "What an AI-powered website can do",
+        "AI chatbots and WhatsApp assistants",
+        "Personalization",
+        "AI search readiness (AEO/GEO)",
+        "Privacy and accuracy",
+        "FAQs"
+      ],
+      "cluster": "C11",
+      "faqs": [
+        [
+          "How is AI transforming website development?",
+          "AI speeds up design, coding and testing, and adds chatbots, smarter search and personalisation to live websites."
+        ],
+        [
+          "What are practical AI use cases for business websites?",
+          "AI chatbots, RAG assistants that answer from your own content, AI search, personalised offers, AI agents and content drafting with human review."
+        ],
+        [
+          "How much does AI website development cost?",
+          "Simple chatbot add-ons cost little; custom RAG assistants, AI search and agents cost more, depending on data, integrations and usage."
+        ],
+        [
+          "What are the risks of AI on a website?",
+          "Wrong answers, data privacy issues and off-brand replies. Ground the AI in your own content, limit its data and keep humans in the loop."
+        ],
+        [
+          "What is a RAG-based AI assistant?",
+          "An assistant that first finds relevant passages in your own documents and then writes an answer from them, so replies stay accurate."
+        ]
+      ],
+      "secondary": [
+        "AI chatbot integration",
+        "AI website personalization",
+        "generative AI website integration",
+        "AI agent integration",
+        "RAG website assistant",
+        "AI-powered website search"
+      ]
+    },
+    {
+      "n": "11",
+      "slug": "web-architecture-cloud-development",
+      "status": "published",
+      "card_title": "Modern Architecture",
+      "card_text": "Jamstack, rendering, progressive web apps and cloud deployment explained.",
+      "title": "Web Architecture & Cloud Development: Jamstack to AWS",
+      "h1": "Web architecture and cloud development: Jamstack, rendering and hosting",
+      "description": "Modern web architecture and cloud development: Jamstack, SSR vs SSG, PWAs, serverless, microservices, and AWS vs Google Cloud vs Azure for hosting.",
+      "keyphrase": "web architecture and cloud development",
+      "outline": [
+        "Why architecture matters",
+        "Jamstack and static sites",
+        "Server-side vs static rendering",
+        "Progressive web apps",
+        "Cloud hosting and CDNs",
+        "FAQs"
+      ],
+      "cluster": "C12+C13",
+      "faqs": [
+        [
+          "What is Jamstack architecture?",
+          "An approach that pre-builds pages and serves them from a CDN, using APIs for dynamic features. It is fast, secure and simple to host."
+        ],
+        [
+          "SSR or SSG: which is better?",
+          "SSG is fastest for pages that change rarely, like marketing pages and blogs. SSR suits personalised or frequently changing pages."
+        ],
+        [
+          "AWS, Google Cloud or Azure: which is best for website hosting?",
+          "AWS has the widest services, Google Cloud is strong in data and Kubernetes, and Azure suits Microsoft-based businesses. Choose by stack, skills and price."
+        ],
+        [
+          "What is a progressive web app?",
+          "A website that works like an app: installable, fast and usable offline, without going through an app store."
+        ],
+        [
+          "Do small business websites need Kubernetes?",
+          "Usually not. Managed platforms like Vercel, Netlify or Cloudflare Pages are simpler and cheaper for most business websites."
+        ]
+      ],
+      "secondary": [
+        "SSR vs SSG",
+        "progressive web applications",
+        "serverless web development",
+        "microservices vs monolithic architecture",
+        "React Server Components",
+        "edge computing web development",
+        "Vercel vs traditional hosting",
+        "Docker web development"
+      ]
+    },
+    {
+      "n": "12",
+      "slug": "website-seo-performance",
+      "status": "published",
+      "card_title": "Website SEO & Performance",
+      "card_text": "How development choices affect SEO, speed and Core Web Vitals.",
+      "title": "Website SEO & Performance: Core Web Vitals & Tech SEO",
+      "h1": "Website SEO and performance: how development affects rankings",
+      "description": "How website development affects SEO and performance: Core Web Vitals, page speed, technical SEO, JavaScript rendering and site architecture done right.",
       "keyphrase": "website seo and performance",
-      "outline": ["Why speed affects rankings", "Core Web Vitals explained", "SEO-friendly site structure", "Images, scripts and hosting", "A launch checklist for SEO", "FAQs"] },
-    { "n": "13", "slug": "website-security", "status": "draft",
-      "card_title": "Website Security", "card_text": "Protecting business websites, APIs and customer data.",
-      "title": "Website Security: Protecting Sites, APIs & Data", "h1": "Website security: protecting your site, APIs and customer data",
-      "description": "Practical website security for businesses: HTTPS, updates, backups, protecting APIs and customer data, and what to do if you're hacked.",
+      "outline": [
+        "Why speed affects rankings",
+        "Core Web Vitals explained",
+        "SEO-friendly site structure",
+        "Images, scripts and hosting",
+        "A launch checklist for SEO",
+        "FAQs"
+      ],
+      "cluster": "C14",
+      "faqs": [
+        [
+          "How does website development affect SEO?",
+          "Site structure, speed, mobile design, rendering, HTTPS, structured data and internal links all depend on how the site is built, and all affect rankings."
+        ],
+        [
+          "Which technical factors matter most?",
+          "Crawlable, server-rendered pages, fast Core Web Vitals, mobile-friendliness, HTTPS, clean URLs, sitemaps and structured data."
+        ],
+        [
+          "What are good Core Web Vitals scores?",
+          "LCP of 2.5 seconds or less, INP of 200 ms or less, and CLS of 0.1 or less, according to Google."
+        ],
+        [
+          "How do I test my website's SEO?",
+          "Use Google Search Console, PageSpeed Insights and a technical SEO crawl to check indexing, speed, errors and structured data."
+        ],
+        [
+          "What are common SEO development mistakes?",
+          "Changing URLs without redirects, leaving noindex on, heavy images and scripts, JavaScript-only content and missing meta tags."
+        ]
+      ],
+      "secondary": [
+        "Core Web Vitals optimization",
+        "website speed optimization",
+        "technical SEO for websites",
+        "website architecture SEO",
+        "JavaScript SEO"
+      ]
+    },
+    {
+      "n": "13",
+      "slug": "website-security",
+      "status": "published",
+      "card_title": "Website Security",
+      "card_text": "Protecting business websites, APIs and customer data.",
+      "title": "Website Security: Protect Your Business Website & APIs",
+      "h1": "Website security: how to protect a business website from cyber threats",
+      "description": "Website security for business: HTTPS and SSL, firewalls, updates, backups, API security and malware protection, plus a simple plan for responding to incidents.",
       "keyphrase": "website security",
-      "outline": ["Common threats to business websites", "HTTPS, updates and backups", "Securing logins and admin areas", "Protecting APIs and customer data", "What to do after a breach", "FAQs"] },
-    { "n": "14", "slug": "website-maintenance-services", "status": "draft",
-      "card_title": "Website Maintenance", "card_text": "Updates, backups and ongoing care after launch.",
-      "title": "Website Maintenance Services: Updates & Backups", "h1": "Website maintenance: updates, backups and care after launch",
-      "description": "What website maintenance includes — updates, backups, security checks and content changes — and how to plan ongoing care after launch.",
-      "keyphrase": "website maintenance services",
-      "outline": ["Why maintenance matters", "What a maintenance plan includes", "How often to update and back up", "Monitoring speed and uptime", "Choosing a maintenance plan", "FAQs"] },
-    { "n": "15", "slug": "website-redesign-services", "status": "draft",
-      "card_title": "Website Redesign", "card_text": "When to redesign your website and how the process works.",
-      "title": "Website Redesign: When & How to Redesign Your Site", "h1": "Website redesign: when to do it and how the process works",
-      "description": "Signs your website needs a redesign, how the process works and how to keep your rankings and URLs safe while you rebuild.",
+      "outline": [
+        "Common threats to business websites",
+        "HTTPS, updates and backups",
+        "Securing logins and admin areas",
+        "Protecting APIs and customer data",
+        "What to do after a breach",
+        "FAQs"
+      ],
+      "cluster": "C15",
+      "faqs": [
+        [
+          "How do I secure my business website?",
+          "Use HTTPS, keep software updated, protect logins with two-factor authentication, add a firewall, back up off-site, scan for malware and plan for incidents."
+        ],
+        [
+          "What are the biggest threats to business websites?",
+          "Outdated plugins, weak passwords, malware, spam, insecure forms and APIs, and traffic floods (DDoS)."
+        ],
+        [
+          "How much does website security cost?",
+          "Basic security is often included in a maintenance plan; high-risk sites add premium firewalls, monitoring and periodic audits."
+        ],
+        [
+          "How do I monitor my website for threats?",
+          "Use uptime and malware monitoring, file-change alerts, login alerts and regular security scans."
+        ],
+        [
+          "What are common website security mistakes?",
+          "Skipping updates, keeping unused plugins and admin accounts, storing backups on the same server and having no monitoring."
+        ]
+      ],
+      "secondary": [
+        "API security",
+        "website malware protection",
+        "website SSL security"
+      ]
+    },
+    {
+      "n": "14",
+      "slug": "website-maintenance-redesign",
+      "status": "published",
+      "card_title": "Website Maintenance",
+      "card_text": "Updates, backups and ongoing care after launch.",
+      "title": "Website Maintenance Services: Checklist & Plans",
+      "h1": "Website maintenance: what to update and how often",
+      "description": "Website maintenance checklist and services: updates, security, backups, monitoring and SEO reviews, how often to do each, and hosting vs maintenance explained.",
+      "keyphrase": "website maintenance",
+      "outline": [
+        "Why maintenance matters",
+        "What a maintenance plan includes",
+        "How often to update and back up",
+        "Monitoring speed and uptime",
+        "Choosing a maintenance plan",
+        "FAQs"
+      ],
+      "cluster": "C16",
+      "faqs": [
+        [
+          "What should be in a website maintenance checklist?",
+          "Updates and security patches, backups, uptime and malware monitoring, speed checks, broken links, form tests, content refreshes and SEO reviews."
+        ],
+        [
+          "How often should a website be updated?",
+          "Security updates monthly or sooner for critical fixes, backups daily or weekly, and content and SEO reviews every quarter."
+        ],
+        [
+          "How much does website maintenance cost?",
+          "Usually ₹1,500 to ₹25,000 a month in India, depending on site size and services."
+        ],
+        [
+          "What maintenance tasks can I do myself?",
+          "Updating text, images and blog posts through the CMS. Leave software updates, security and backups to someone who can test changes safely."
+        ],
+        [
+          "What is the difference between hosting and maintenance?",
+          "Hosting is the server your site runs on. Maintenance is the ongoing care: updates, security, backups and support."
+        ]
+      ],
+      "secondary": [
+        "website redesign",
+        "website backup",
+        "website hosting vs maintenance"
+      ]
+    },
+    {
+      "n": "15",
+      "slug": "website-redesign",
+      "status": "published",
+      "card_title": "Website Redesign",
+      "card_text": "When to redesign your website and how the process works.",
+      "title": "Website Redesign Services: When & How to Redesign",
+      "h1": "Website redesign: signs you need one and how to do it safely",
+      "description": "Website redesign services: the signs your site needs a redesign, redesign vs refresh, the process, costs, and how to protect your SEO and URLs.",
       "keyphrase": "website redesign",
-      "outline": ["Signs you need a redesign", "Redesign vs refresh", "The redesign process", "Keeping SEO and URLs safe", "Measuring success after launch", "FAQs"] },
-    { "n": "16", "slug": "website-development-by-city", "status": "draft",
-      "card_title": "Location-Based Articles", "card_text": "Website development guides for Patna, Delhi, Mumbai, Bangalore and Hyderabad.",
-      "title": "Website Development Guides by City in India", "h1": "Website development guides by city",
-      "description": "Website development guides for businesses in Patna, Delhi, Mumbai, Bangalore and Hyderabad — local markets, costs and what to look for.",
-      "keyphrase": "website development by city",
-      "outline": ["Patna", "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Working with a remote website agency", "FAQs"] },
-    { "n": "17", "slug": "website-development-technologies", "status": "draft",
-      "card_title": "Technology Service Pages", "card_text": "Service pages for specific technologies, from React and Next.js to Node.js and Python.",
-      "title": "Website Development Technologies & Services", "h1": "Website development by technology: React, Next.js, Node.js and Python",
-      "description": "Our website and app development services by technology — React, Next.js, Node.js, Python and more — and when each is the right choice.",
-      "keyphrase": "website development technologies",
-      "outline": ["React development", "Next.js development", "Node.js development", "Python development", "Choosing the right stack", "FAQs"] }
+      "outline": [
+        "Signs you need a redesign",
+        "Redesign vs refresh",
+        "The redesign process",
+        "Keeping SEO and URLs safe",
+        "Measuring success after launch",
+        "FAQs"
+      ],
+      "cluster": "C16",
+      "faqs": [
+        [
+          "How do I know my website needs a redesign?",
+          "Poor mobile use, slow pages, a dated look, falling conversions, security gaps and content that is hard to update are the main signs."
+        ],
+        [
+          "What is the difference between a redesign and a refresh?",
+          "A refresh updates the look on the same structure; a redesign rethinks structure, content and often the technology."
+        ],
+        [
+          "How much does a website redesign cost?",
+          "Often 60 to 80 percent of a new build if content and structure are reused, and about the same as a new site if rebuilt from scratch."
+        ],
+        [
+          "Will a redesign hurt my SEO?",
+          "Not if you keep ranking URLs, add 301 redirects for changed ones, carry over meta data and remove staging blocks before launch."
+        ],
+        [
+          "How long does a website redesign take?",
+          "Usually six to twelve weeks for a business site, longer for large or complex sites."
+        ]
+      ],
+      "secondary": [
+        "website redesign",
+        "website backup",
+        "website hosting vs maintenance"
+      ]
+    },
+    {
+      "n": "16",
+      "slug": "website-development-location",
+      "status": "published",
+      "card_title": "Location-Based Articles",
+      "card_text": "Website development guides for Patna, Delhi, Mumbai, Bangalore and Hyderabad.",
+      "title": "Website Development Company in Your City: How to Choose",
+      "h1": "How to choose a website development company in your city",
+      "description": "How to choose a website development company in your city — Patna, Bihar, Delhi, Mumbai, Bangalore or Hyderabad: what to check, costs and red flags.",
+      "keyphrase": "website development company in your city",
+      "outline": [
+        "Patna",
+        "Delhi",
+        "Mumbai",
+        "Bangalore",
+        "Hyderabad",
+        "Working with a remote website agency",
+        "FAQs"
+      ],
+      "cluster": "C17",
+      "faqs": [
+        [
+          "How do I choose a website development company in my city?",
+          "Compare relevant portfolio work, technology, process, security and SEO skills, itemised pricing and post-launch support, and check references."
+        ],
+        [
+          "What should I check in an agency's portfolio?",
+          "Sites similar to yours, live speed and mobile use, real results, and whether past clients would hire them again."
+        ],
+        [
+          "How much do website development companies charge?",
+          "Costs vary by city and scope; a basic site often starts around ₹15,000 and business sites with SEO and integrations range up to a few lakh."
+        ],
+        [
+          "What local support should I expect?",
+          "Clear communication, agreed response times for fixes, regular updates and someone who understands your local market."
+        ],
+        [
+          "What are common red flags when hiring?",
+          "Guaranteed rankings, no written scope, the agency owning your domain, no live portfolio and no plan for support after launch."
+        ]
+      ],
+      "secondary": [
+        "website development company in Patna",
+        "website development company in Delhi",
+        "website development company in Mumbai",
+        "website development company in Bangalore",
+        "website development company in Hyderabad",
+        "small business in Bihar"
+      ]
+    },
+    {
+      "n": "17",
+      "slug": "technology-development-services",
+      "status": "published",
+      "card_title": "Technology Service Pages",
+      "card_text": "Service pages for specific technologies, from React and Next.js to Node.js and Python.",
+      "title": "Technology Development Services: React to Laravel",
+      "h1": "Technology development services: building with the right stack",
+      "description": "Technology development services for React, Next.js, Angular, Vue, Node.js, NestJS, Python, Laravel, Shopify, WooCommerce, Webflow and PWAs.",
+      "keyphrase": "technology development services",
+      "outline": [
+        "React development",
+        "Next.js development",
+        "Node.js development",
+        "Python development",
+        "Choosing the right stack",
+        "FAQs"
+      ],
+      "cluster": "C18",
+      "faqs": [
+        [
+          "What is React website development?",
+          "Building websites and apps with React's reusable components, often with Next.js for SEO and speed."
+        ],
+        [
+          "Is React good for SEO?",
+          "Yes, when pages are rendered on the server or at build time, for example with Next.js. Client-only React needs extra care."
+        ],
+        [
+          "How do I choose a development company for a specific technology?",
+          "Look for production experience in that stack, good Core Web Vitals on live work, testing practices, documentation and clear support terms."
+        ],
+        [
+          "Shopify, WooCommerce or Webflow?",
+          "Shopify for easy stores, WooCommerce for flexible WordPress stores, and Webflow for design-led marketing sites."
+        ],
+        [
+          "How long does a React or Next.js website take to build?",
+          "A marketing site usually takes four to eight weeks; complex web apps take three months or more."
+        ]
+      ],
+      "secondary": [
+        "Next.js development company",
+        "Angular development services",
+        "Bootstrap website development",
+        "Node.js development company",
+        "NestJS development company",
+        "Python web development company",
+        "Shopify development agency",
+        "WooCommerce development company"
+      ]
+    }
   ]
 }

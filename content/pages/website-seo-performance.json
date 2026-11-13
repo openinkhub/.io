@@ -1,0 +1,154 @@
+{
+  "url": "https://openinkhub.io/website-seo-performance/",
+  "path": "/website-seo-performance/",
+  "status": 200,
+  "type": "guide",
+  "guide": true,
+  "draft": false,
+  "status_published": true,
+  "hub": "/website-design-agency/",
+  "card_title": "Website SEO & Performance",
+  "card_text": "How development choices affect SEO, speed and Core Web Vitals.",
+  "n": "12",
+  "title": "Website SEO & Performance: Core Web Vitals & Tech SEO",
+  "h1": "Website SEO and performance: how development affects rankings",
+  "date": "2026-11-13T18:05:49",
+  "modified": "2026-11-13T18:06:30",
+  "author": "Hiten Neotia",
+  "excerpt": "How website development affects SEO and performance: Core Web Vitals, page speed, technical SEO, JavaScript rendering and site architecture done right.",
+  "keyphrase_override": "website seo and performance",
+  "keyphrase_secondary_override": [
+    "Core Web Vitals optimization",
+    "website speed optimization",
+    "technical SEO for websites",
+    "website architecture SEO",
+    "JavaScript SEO"
+  ],
+  "categories": [],
+  "tags": [],
+  "faqs": [
+    {
+      "q": "How does website development affect SEO?",
+      "a": "<p>Site structure, speed, mobile design, rendering, HTTPS, structured data and internal links all depend on how the site is built, and all affect rankings.</p>"
+    },
+    {
+      "q": "Which technical factors matter most?",
+      "a": "<p>Crawlable, server-rendered pages, fast Core Web Vitals, mobile-friendliness, HTTPS, clean URLs, sitemaps and structured data.</p>"
+    },
+    {
+      "q": "What are good Core Web Vitals scores?",
+      "a": "<p>LCP of 2.5 seconds or less, INP of 200 ms or less, and CLS of 0.1 or less, according to Google.</p>"
+    },
+    {
+      "q": "How do I test my website's SEO?",
+      "a": "<p>Use Google Search Console, PageSpeed Insights and a technical SEO crawl to check indexing, speed, errors and structured data.</p>"
+    },
+    {
+      "q": "What are common SEO development mistakes?",
+      "a": "<p>Changing URLs without redirects, leaving noindex on, heavy images and scripts, JavaScript-only content and missing meta tags.</p>"
+    }
+  ],
+  "featured_image": null,
+  "content_html": "<h1>Website SEO and performance: how development affects rankings</h1>\n<p>Website SEO and performance depend on how a site is built. Site structure, page speed, mobile design, JavaScript rendering, HTTPS, structured data and internal links all affect rankings. Poor development choices can block search engines or slow pages down. SEO-friendly development builds a fast, crawlable and secure foundation that helps every page rank.</p>\n\n<h2>How website development affects SEO rankings</h2>\n<p>Search engines must be able to find, load and understand your pages. Development decisions control all three. A clean structure helps crawlers find pages. Fast, stable pages pass Core Web Vitals. Server-rendered HTML lets search engines read content straight away. Structured data explains what each page is about. Get these right at build time, and later SEO work pays off much faster.</p>\n\n<h2>Core Web Vitals explained</h2>\n<div class=\"table-wrap\"><table>\n<thead><tr><th>Metric</th><th>What it measures</th><th>Good score</th></tr></thead>\n<tbody>\n<tr><td>LCP (Largest Contentful Paint)</td><td>How fast the main content loads</td><td>2.5 seconds or less</td></tr>\n<tr><td>INP (Interaction to Next Paint)</td><td>How quickly the page responds to clicks and taps</td><td>200 ms or less</td></tr>\n<tr><td>CLS (Cumulative Layout Shift)</td><td>How much the layout jumps while loading</td><td>0.1 or less</td></tr>\n</tbody></table></div>\n<p>These thresholds come from <a href=\"https://developers.google.com/search/docs/appearance/core-web-vitals\" target=\"_blank\" rel=\"noopener\">Google's Core Web Vitals guidance</a>. Check your scores in PageSpeed Insights and in Search Console.</p>\n\n<h2>How to improve website speed</h2>\n<ol>\n<li>Compress images, use modern formats like WebP and set their width and height.</li>\n<li>Serve the site from a CDN and enable browser caching.</li>\n<li>Minify CSS and JavaScript, and defer anything not needed straight away.</li>\n<li>Remove third-party scripts you don't really need.</li>\n<li>Load fonts efficiently and improve server response time.</li>\n</ol>\n\n<h2>What is technical SEO?</h2>\n<p>Technical SEO is the groundwork that helps search engines crawl, render and index your site. It includes HTTPS, XML sitemaps, robots.txt, canonical tags, structured data, mobile-friendliness, clean URLs and fast loading. It is easy to overlook and hard to fix after launch, so build it in from the start. Our <a href=\"/best-on-page-seo-services/\">SEO services</a> audit all of this against a 132-point checklist.</p>\n\n<h2>Site architecture and internal linking</h2>\n<p>Organise content into clear topics, with hub pages linking to related articles and back again. Keep important pages within a few clicks of the home page. Use descriptive link text instead of “click here”. This helps search engines understand your expertise and spreads authority across your site.</p>\n\n<h2>How JavaScript rendering affects SEO</h2>\n<p>If content only appears after JavaScript runs in the browser, search engines may index it late or miss it. Server-side rendering, static generation or prerendering send complete HTML from the start. Test important pages with Search Console's URL Inspection tool. See rendering options in <a href=\"/web-architecture-cloud-development/\">web architecture and cloud development</a>.</p>\n\n<h2>Common SEO development mistakes</h2>\n<ul>\n<li>Launching a redesign without redirects from old URLs.</li>\n<li>Blocking the site in robots.txt or leaving “noindex” on after launch.</li>\n<li>Huge images and too many plugins slowing every page.</li>\n<li>Content that only loads with JavaScript.</li>\n<li>Missing titles, meta descriptions and structured data.</li>\n</ul>\n\n<p>Want a site built for rankings and AI search? See our <a href=\"/website-design-agency/\">website development services</a> and <a href=\"/best-answer-engine-optimization-services/\">answer engine optimization</a>, or <a href=\"/contact-us/\">talk to us</a>.</p>\n<h2>Frequently asked questions</h2><h3>How does website development affect SEO?</h3><p>Site structure, speed, mobile design, rendering, HTTPS, structured data and internal links all depend on how the site is built, and all affect rankings.</p><h3>Which technical factors matter most?</h3><p>Crawlable, server-rendered pages, fast Core Web Vitals, mobile-friendliness, HTTPS, clean URLs, sitemaps and structured data.</p><h3>What are good Core Web Vitals scores?</h3><p>LCP of 2.5 seconds or less, INP of 200 ms or less, and CLS of 0.1 or less, according to Google.</p><h3>How do I test my website's SEO?</h3><p>Use Google Search Console, PageSpeed Insights and a technical SEO crawl to check indexing, speed, errors and structured data.</p><h3>What are common SEO development mistakes?</h3><p>Changing URLs without redirects, leaving noindex on, heavy images and scripts, JavaScript-only content and missing meta tags.</p>",
+  "content_source": "articles",
+  "head": {
+    "title": "Website SEO & Performance: Core Web Vitals & Tech SEO",
+    "lang": "en-US",
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "@id": "https://openinkhub.io/website-seo-performance/#article",
+            "headline": "Website SEO & Performance: Core Web Vitals & Tech SEO",
+            "description": "How website development affects SEO and performance: Core Web Vitals, page speed, technical SEO, JavaScript rendering and site architecture done right.",
+            "url": "https://openinkhub.io/website-seo-performance/",
+            "datePublished": "2026-11-13T18:05:49+05:30",
+            "dateModified": "2026-11-13T18:06:30+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "Hiten Neotia"
+            },
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "image": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/website-seo-performance/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Website Design & Development",
+                "item": "https://openinkhub.io/website-design-agency/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Website SEO & Performance",
+                "item": "https://openinkhub.io/website-seo-performance/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/website-seo-performance/"
+      }
+    ],
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "index, follow, max-image-preview:large"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "How website development affects SEO and performance: Core Web Vitals, page speed, technical SEO, JavaScript rendering and site architecture done right."
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "Website SEO & Performance: Core Web Vitals & Tech SEO"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": "How website development affects SEO and performance: Core Web Vitals, page speed, technical SEO, JavaScript rendering and site architecture done right."
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/website-seo-performance/"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      }
+    ]
+  }
+}

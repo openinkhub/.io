@@ -14,6 +14,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { fixRecord, fixHtml, listingLabel, RULES, SQUIRRLY } from "./seo-fix.mjs";
+import { makeCover, coverFigure } from "./covers.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const C = path.join(ROOT, "content");
@@ -577,7 +578,45 @@ function walk(dir) {
     d.isDirectory() ? walk(path.join(dir, d.name)) : [path.join(dir, d.name)]);
 }
 
+// Pages and guides with no image in their content get a branded title card (static/images/pages/<slug>.svg),
+// placed after the lead paragraph so it counts as a content image (hero_image + text_image_ratio checks).
+const NO_COVER = new Set(["contact-us", "report"]);
+function addCovers() {
+  for (const r of RECS) {
+    const slug = r.path.replace(/^\/+|\/+$/g, "");
+    if (!["page", "guide"].includes(r.type) || !slug || r.draft || LEGAL.has(slug) || NO_COVER.has(slug)) continue;
+    if (/<img\b/.test(r.content_html || "")) continue;
+    const h1 = stripTags(r.h1 || r.title || "");
+    const title = h1.length <= 90 ? h1 : stripTags(r.head?.title || r.title || h1).replace(/\s*[|–-]\s*openink Hub$/i, "");
+    const img = makeCover({ dir: "pages", slug, title, label: r.type === "guide" ? "Website development guide" : "openink Hub" });
+    const fig = coverFigure(img);
+    // after the first paragraph that follows the H1 (that paragraph becomes the hero lead)
+    r.content_html = r.content_html.replace(/(<\/h1>\s*(?:<p>[\s\S]*?<\/p>)?)/, `$1\n${fig}\n`);
+    if (!r.content_html.includes(fig)) r.content_html = fig + "\n" + r.content_html;
+  }
+}
+
+// Service pages with fewer than 3 internal links in their content get a short "Related services" list
+// (closest topics first, by shared title words), so visitors and crawlers can move between services.
+const RELATED_POOL = (RULES.related_services || []).map((x) => ({ ...x, words: new Set(x.topic.toLowerCase().split(/\W+/)) }));
+function addRelatedLinks() {
+  const min = RULES.thresholds.internalLinks.min;
+  for (const r of RECS) {
+    const slug = r.path.replace(/^\/+|\/+$/g, "");
+    if (r.type !== "page" || !slug || LEGAL.has(slug) || NO_COVER.has(slug)) continue;
+    const have = new Set([...(r.content_html || "").matchAll(/href="(\/[^"#?]*)"/g)].map((m) => m[1]));
+    if (have.size >= min) continue;
+    const mine = new Set(stripTags(`${r.title} ${r.h1}`).toLowerCase().split(/\W+/));
+    const picks = RELATED_POOL.filter((x) => x.path !== r.path && !have.has(x.path))
+      .map((x) => ({ x, s: [...x.words].filter((w) => w.length > 2 && mine.has(w)).length }))
+      .sort((a, b) => b.s - a.s).slice(0, 4).map(({ x }) => x);
+    r.content_html += `\n<h2>Related services</h2>\n<ul>${picks.map((x) => `<li><a href="${x.path}">${E(x.label)}</a></li>`).join("")}</ul>`;
+  }
+}
+
 function main() {
+  addCovers();
+  addRelatedLinks();
   fs.rmSync(DIST, { recursive: true, force: true });
   fs.cpSync(path.join(ROOT, "static"), DIST, { recursive: true });
   const byCat = {}, byTag = {}, byMonth = {};

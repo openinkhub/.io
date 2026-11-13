@@ -359,6 +359,10 @@ function audit(p) {
     c.faq_schema_validation = r(bad.length ? "fail" : invisible.length ? "warn" : "pass", `${qs.length} question(s)`, bad.length ? `${bad.length} incomplete` : invisible.length ? `${invisible.length} not visible on page` : "all valid and visible");
   }
 
+  // legal / utility pages (privacy, terms, refund...): marketing checks such as keyphrase, images and FAQs don't apply
+  const legal = RULES.legal || {};
+  if ((legal.paths || []).includes(rec.path)) for (const id of legal.skip || []) if (c[id] && c[id].status !== "pass") c[id] = r("na", "legal page", c[id].value || "");
+
   // scores
   const score = (ids) => { let t = 0, s = 0; for (const id of ids) { const x = c[id]; if (!x || !["pass", "warn", "fail"].includes(x.status)) continue; const wgt = RULES.weights[id] ?? 1; t += wgt; s += wgt * (x.status === "pass" ? 1 : x.status === "warn" ? 0.5 : 0); } return t ? Math.round((s / t) * 100) : null; };
   const seoScore = score(Object.keys(RULES.weights));

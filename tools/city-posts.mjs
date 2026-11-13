@@ -29,6 +29,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { makeCover, coverFigure } from "./covers.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "content", "city-posts");
@@ -61,57 +62,81 @@ const H = {
   faq: [(c) => `${c} SEO, AEO, GEO and AIO — FAQs`, (c) => `Frequently asked questions about SEO in ${c}`, (c) => `Questions ${c} business owners ask us`],
 };
 const LINKS = {
-  seo: [`Our <a href="/best-on-page-seo-services/">on-page and technical SEO process</a> covers this in detail.`,
-    `See how our <a href="/best-on-page-seo-services/">checklist-driven SEO service</a> handles these fixes.`,
-    `This is the core of our <a href="/best-on-page-seo-services/">SEO service</a>.`,
-    `The full method is on our <a href="/best-on-page-seo-services/">SEO services page</a>.`,
-    `We audit all of this in our <a href="/best-on-page-seo-services/">SEO engagements</a>.`],
-  aeo: [`More on our <a href="/best-answer-engine-optimization-services/">answer engine optimization</a> approach.`,
-    `Read how we run <a href="/best-answer-engine-optimization-services/">AEO engagements</a>.`,
-    `Our <a href="/best-answer-engine-optimization-services/">AEO service</a> is built around exactly this.`,
-    `<a href="/best-answer-engine-optimization-services/">Answer engine optimization</a> turns questions like these into visibility.`,
-    `We map and answer questions like these in our <a href="/best-answer-engine-optimization-services/">AEO work</a>.`],
-  geo: [`Learn more about <a href="/generative-engine-optimization/">generative engine optimization</a>.`,
-    `Our <a href="/generative-engine-optimization/">GEO service</a> explains the method.`,
-    `See the full <a href="/generative-engine-optimization/">GEO framework</a>.`,
-    `That is what <a href="/generative-engine-optimization/">generative engine optimization</a> is for.`],
-  aio: [`Explore <a href="/artificial-intelligence-optimization/">artificial intelligence optimization</a>.`,
-    `How our <a href="/artificial-intelligence-optimization/">AIO work</a> fits together.`,
-    `Details on our <a href="/artificial-intelligence-optimization/">AIO service</a>.`,
-    `More in our guide to <a href="/artificial-intelligence-optimization/">AI optimization</a>.`],
+  seo: [`For more detail, our <a href="/best-on-page-seo-services/">on-page and technical SEO process</a> covers each step.`,
+    `Next, see how our <a href="/best-on-page-seo-services/">checklist-driven SEO service</a> handles these fixes.`,
+    `In fact, this is the core of our <a href="/best-on-page-seo-services/">SEO service</a>.`,
+    `In short, the full method is on our <a href="/best-on-page-seo-services/">SEO services page</a>.`,
+    `As a result, we audit all of this in our <a href="/best-on-page-seo-services/">SEO engagements</a>.`],
+  aeo: [`For more, read about our <a href="/best-answer-engine-optimization-services/">answer engine optimization</a> approach.`,
+    `Next, read how we run <a href="/best-answer-engine-optimization-services/">AEO engagements</a>.`,
+    `In fact, our <a href="/best-answer-engine-optimization-services/">AEO service</a> is built around exactly this.`,
+    `In other words, <a href="/best-answer-engine-optimization-services/">answer engine optimization</a> turns questions like these into visibility.`,
+    `So we map and answer questions like these in our <a href="/best-answer-engine-optimization-services/">AEO work</a>.`],
+  geo: [`For more, learn about <a href="/generative-engine-optimization/">generative engine optimization</a>.`,
+    `Next, our <a href="/generative-engine-optimization/">GEO service</a> explains the method.`,
+    `In short, see the full <a href="/generative-engine-optimization/">GEO framework</a>.`,
+    `In fact, that is what <a href="/generative-engine-optimization/">generative engine optimization</a> is for.`],
+  aio: [`For more, explore <a href="/artificial-intelligence-optimization/">artificial intelligence optimization</a>.`,
+    `Next, see how our <a href="/artificial-intelligence-optimization/">AIO work</a> fits together.`,
+    `In addition, see details on our <a href="/artificial-intelligence-optimization/">AIO service</a>.`,
+    `For more, read our guide to <a href="/artificial-intelligence-optimization/">AI optimization</a>.`],
+};
+// Opening line, areas line and CTA use the focus keyphrase "SEO agency in <city>" naturally (keyphrase + density checks).
+const LEAD = [
+  (c) => `Looking for an SEO agency in ${c}? This guide shows how local businesses can get found on Google, in answer boxes and in AI assistants.`,
+  (c) => `Choosing an SEO agency in ${c} is easier when you know what local search really rewards. Here is how we approach it.`,
+  (c) => `If you are comparing an SEO agency in ${c}, start with how your customers search. This guide explains it step by step.`,
+  (c) => `A good SEO agency in ${c} should help you win on Google and in AI answers. Below, we explain how that works locally.`,
+  (c) => `Hiring an SEO agency in ${c}? First, see how search, answer engines and AI tools shape local buying decisions.`,
+];
+const AREAS = [
+  (c, a) => `As an SEO agency in ${c}, we also work with businesses in ${a}.`,
+  (c, a) => `In practice, our work as an SEO agency in ${c} covers ${a}.`,
+  (c, a) => `So we support clients of our SEO agency in ${c} across ${a}.`,
+];
+// Primary-source citations (authority signal), rotated per city
+const CITE = {
+  seo: [`In addition, Google's own <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener">SEO starter guide</a> sets out the same basics.`,
+    `Also, Google explains how relevance, distance and prominence decide local results in its <a href="https://support.google.com/business/answer/7091" target="_blank" rel="noopener">local ranking guide</a>.`,
+    `Speed also matters, as Google's <a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank" rel="noopener">Core Web Vitals documentation</a> explains.`],
+  aeo: [`In practice, marking up answers with <a href="https://schema.org/FAQPage" target="_blank" rel="noopener">FAQPage structured data</a> helps search engines read them.`,
+    `In addition, Google's <a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="noopener">structured data guide</a> shows how to label answers for search.`,
+    `After that, clear, people-first answers are what Google's <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">helpful content guidance</a> asks for.`],
 };
 const DEMO = `<a href="https://calendly.com/openinkhub/30min/">book a free 30-minute demo</a>`;
 const CONTACT = (t) => `<a href="/contact-us/">${t}</a>`;
 const CTA = [
-  (c) => `Want a plan for ${c}? ${CONTACT("Talk to the Openink Hub team")} or ${DEMO}.`,
-  (c) => `Ready to grow your visibility in ${c}? ${CONTACT("Get in touch")}, or ${DEMO} with our team.`,
-  (c) => `If you run a business in ${c}, we'd be glad to review your search presence — ${CONTACT("contact us")} or ${DEMO}.`,
-  (c) => `Curious where your ${c} business stands in Google and AI answers? ${CONTACT("Ask us for an audit")} or ${DEMO}.`,
-  (c) => `Planning your next step in ${c}? ${CONTACT("Message the Openink Hub team")} — or ${DEMO}.`,
+  (c) => `Want a plan from an SEO agency in ${c}? ${CONTACT("Talk to the Openink Hub team")} or ${DEMO}.`,
+  (c) => `Ready to work with an SEO agency in ${c}? ${CONTACT("Get in touch")}, or ${DEMO} with our team.`,
+  (c) => `If you run a business in ${c} and need an SEO agency in ${c}, we'd be glad to review your search presence. ${CONTACT("Contact us")} or ${DEMO}.`,
+  (c) => `Curious where your ${c} business stands in Google and AI answers? As an SEO agency in ${c}, we can tell you. ${CONTACT("Ask us for an audit")} or ${DEMO}.`,
+  (c) => `Planning your next step with an SEO agency in ${c}? ${CONTACT("Message the Openink Hub team")}, or ${DEMO}.`,
 ];
 
-function render(c) {
+function render(c, img) {
   const k = (s) => c.file + ":" + s;
   const h2 = (s) => `<h2>${E(pick(k(s), H[s])(c.city))}</h2>`;
   const near = (c.near || []).map((s) => {
     const f = path.join(PAGES, `best-seo-agency-in-${s}.json`);
     if (!fs.existsSync(f)) throw new Error(`${c.file}: unknown nearby city "${s}"`);
     const name = JSON.parse(fs.readFileSync(f, "utf8")).citylabel || s.replace(/-/g, " ").replace(/\b\w/g, (m) => m.toUpperCase());
-    return `<a href="/best-seo-agency-in-${s}/">SEO in ${E(name)}</a>`;
+    return `<a href="/best-seo-agency-in-${s}/">${E(name)} SEO guide</a>`;
   });
   return [
     `<h1>${T(c.h1)}</h1>`,
+    coverFigure(img),
+    `<p>${E(pick(k("lead"), LEAD)(c.city))}</p>`,
     ...c.intro.map((p) => `<p>${T(p)}</p>`),
     `<blockquote><p><strong>Quick answer:</strong> ${T(c.quick)}</p></blockquote>`,
     h2("market"), `<p>${T(c.market)}</p>`,
     `<ul>${c.sectors.map(([s, d]) => `<li><strong>${E(s)}:</strong> ${T(d)}</li>`).join("")}</ul>`,
-    h2("seo"), `<p>${T(c.seo)}</p>`, `<ul>${c.tactics.map((t) => `<li>${T(t)}</li>`).join("")}</ul>`, `<p>${pick(k("lseo"), LINKS.seo)}</p>`,
-    h2("aeo"), `<p>${T(c.aeo)}</p>`, `<ul>${c.questions.map((q) => `<li>${T(q)}</li>`).join("")}</ul>`, `<p>${pick(k("laeo"), LINKS.aeo)}</p>`,
+    h2("seo"), `<p>${T(c.seo)}</p>`, `<ul>${c.tactics.map((t) => `<li>${T(t)}</li>`).join("")}</ul>`, `<p>${pick(k("cseo"), CITE.seo)} ${pick(k("lseo"), LINKS.seo)}</p>`,
+    h2("aeo"), `<p>${T(c.aeo)}</p>`, `<ul>${c.questions.map((q) => `<li>${T(q)}</li>`).join("")}</ul>`, `<p>${pick(k("caeo"), CITE.aeo)} ${pick(k("laeo"), LINKS.aeo)}</p>`,
     h2("geo"), `<p>${T(c.geo)} ${pick(k("lgeo"), LINKS.geo)}</p>`,
     h2("aio"), `<p>${T(c.aio)} ${pick(k("laio"), LINKS.aio)}</p>`,
     h2("example"), `<p>${T(c.example)}</p>`,
-    h2("areas"), `<p>${E(c.areas.join(" · "))}${near.length ? "" : "."}</p>`,
-    near.length ? `<p>Nearby: ${near.join(", ")}.</p>` : "",
+    h2("areas"), `<p>${E(pick(k("areas"), AREAS)(c.city, c.areas.slice(0, -1).join(", ") + " and " + c.areas[c.areas.length - 1]))}</p>`,
+    near.length ? `<p>Also see nearby: ${near.join(", ")}.</p>` : "",
     h2("faq"), ...c.faqs.flatMap(([q, a]) => [`<h3>${E(q)}</h3>`, `<p>${T(a)}</p>`]),
     `<p>${pick(k("cta"), CTA)(E(c.city))}</p>`,
   ].filter(Boolean).join("\n");
@@ -168,7 +193,9 @@ function apply(c) {
   rec.title = c.title;
   rec.h1 = c.h1.replace(/\*\*/g, "");
   rec.excerpt = c.quick.replace(/\*\*/g, "");
-  rec.content_html = render(c);
+  const img = makeCover({ dir: "city", slug: c.file, title: c.title, label: `SEO · AEO · GEO · AIO · ${c.state}` });
+  rec.featured_image = img;
+  rec.content_html = render(c, img);
   rec.content_source = "city-posts";
   rec.modified = TODAY.slice(0, 19);
   rec.categories = [CATEGORY];

@@ -13,6 +13,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { makeCover } from "./covers.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const BRIEFS = path.join(ROOT, "content", "articles", "website-development-briefs.json");
@@ -26,21 +27,8 @@ const now = new Date().toISOString().slice(0, 19);
 const E = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const FILLER = /\b(guide|explained|benefits|examples|for business|cost)$/i;
 
-const COVERS = path.join(ROOT, "static", "images", "articles");
-const wrap = (t, n) => t.split(" ").reduce((ls, w) => { const l = ls[ls.length - 1]; (l && (l + " " + w).length <= n) ? ls[ls.length - 1] = l + " " + w : ls.push(w); return ls; }, []);
-// 1200x630 title card (brand colours), written to static/images/articles/<slug>.svg
-function cover(b) {
-  const lines = wrap(b.seo_title || b.title, 30).slice(0, 4), y0 = 315 - (lines.length - 1) * 38;
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="${E(b.seo_title || b.title)}">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1424"/><stop offset="1" stop-color="#0352a3"/></linearGradient></defs>
-<rect width="1200" height="630" fill="url(#g)"/><circle cx="1080" cy="110" r="180" fill="#046bd2" opacity=".25"/><circle cx="1130" cy="560" r="120" fill="#eef5fd" opacity=".08"/>
-<text x="80" y="110" fill="#9cc6f5" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="600" letter-spacing="2">WEBSITE DEVELOPMENT · ${E(b.role.toUpperCase())}</text>
-${lines.map((l, i) => `<text x="80" y="${y0 + i * 76}" fill="#fff" font-family="Segoe UI,Arial,sans-serif" font-size="60" font-weight="700">${E(l)}</text>`).join("\n")}
-<text x="80" y="560" fill="#cfe3fa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="600">openink Hub</text></svg>\n`;
-  fs.mkdirSync(COVERS, { recursive: true });
-  fs.writeFileSync(path.join(COVERS, `${b.slug}.svg`), svg);
-  return { src: `${BASE}/images/articles/${b.slug}.svg`, alt: b.seo_title || b.title, width: 1200, height: 630 };
-}
+// 1200x630 title card, written to static/images/articles/<slug>.svg
+const cover = (b) => makeCover({ dir: "articles", slug: b.slug, title: b.seo_title || b.title, label: `Website development · ${b.role}` });
 
 const data = JSON.parse(fs.readFileSync(BRIEFS, "utf8"));
 let made = 0;

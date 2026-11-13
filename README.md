@@ -79,6 +79,14 @@ Every build runs the full SEO checklist (70 checks from the "WP SEO Plugin" spec
 | `tools/seo-audit.mjs` | The checklist; writes `dist/admin/report.json`, `report.csv` and the `/admin` dashboard; fails the build on critical issues |
 | `tools/import-squirrly.mjs` | Re-import a Squirrly backup: `npm run import-squirrly -- path/to/export.jsonl.gz` |
 
+Reading the report: **"fixes applied"** are problems the build already corrected; **warnings** are what is left. Other build-time fixes:
+
+- meta descriptions over 160 characters are cut at the last full sentence (`metaDescriptionLength`); titles under 30 characters get the site name (`titleSiteName`)
+- pages and guides with no image in their content get a branded title card (`tools/covers.mjs`, written to `static/images/pages/`)
+- service pages with fewer than 3 internal links get a "Related services" list, picked from `related_services` in `rules.json`
+- legal pages listed under `legal` in `rules.json` report marketing checks (keyphrase, images, FAQs…) as n/a
+- `node tools/readability-runs.mjs /path-prefix/` shows which sentences trigger the "consecutive sentences" check
+
 The build also writes `_redirects` (Squirrly redirects), `_headers` (security headers, noindex for /admin), `llms.txt` and a robots.txt that disallows `/admin/`.
 
 **/admin** (https://openinkhub.io/admin/) shows the report by section — Pages, Blog posts, SEO city guides, Categories/tags/archives — with SEO and readability scores, the full checklist per page, a Google result preview, the fixes applied and a CSV download. It is protected by **Cloudflare Access**: only `info@openinkhub.io` can sign in (one-time code sent by email).

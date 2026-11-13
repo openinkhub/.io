@@ -176,6 +176,8 @@
   "autofix": {
     "_note": "Safe fixes applied automatically on every build. Set any to false to turn it off.",
     "metaDescription": true,
+    "metaDescriptionLength": true,
+    "titleSiteName": true,
     "listingHeadings": true,
     "plainLanguage": true,
     "openGraph": true,
@@ -400,5 +402,107 @@
       "CMS",
       "Core Web Vitals"
     ]
-  }
+  },
+  "legal": {
+    "_note": "Legal and utility pages: these checks are reported as n/a because keyphrases, images, FAQs and links to services do not apply to them.",
+    "paths": [
+      "/privacy-policy/",
+      "/terms/",
+      "/refund/",
+      "/shipping/",
+      "/disclaimer/",
+      "/cookie/"
+    ],
+    "skip": [
+      "keyphrase",
+      "keyword_density",
+      "hero_image",
+      "text_image_ratio",
+      "internal_links",
+      "faq_optimization",
+      "semantic_coverage",
+      "topical_relevance",
+      "entity_coverage",
+      "readability_score",
+      "transition_words",
+      "passive_voice",
+      "sentence_length",
+      "word_complexity",
+      "consecutive_sentences",
+      "search_intent",
+      "seo_title"
+    ]
+  },
+  "related_services": [
+    {
+      "path": "/best-on-page-seo-services/",
+      "label": "On-page and technical SEO services",
+      "topic": "seo on page technical audit ranking search"
+    },
+    {
+      "path": "/best-seo-services-in-india/",
+      "label": "SEO services in India",
+      "topic": "seo services india ranking search"
+    },
+    {
+      "path": "/best-answer-engine-optimization-services/",
+      "label": "Answer engine optimization (AEO) services",
+      "topic": "aeo answer engine optimization ai search expert"
+    },
+    {
+      "path": "/generative-engine-optimization/",
+      "label": "Generative engine optimization (GEO)",
+      "topic": "geo generative engine optimization ai chatgpt search"
+    },
+    {
+      "path": "/artificial-intelligence-optimization/",
+      "label": "AI optimization (AIO) services",
+      "topic": "aio artificial intelligence optimization ai automation"
+    },
+    {
+      "path": "/high-quality-backlinks/",
+      "label": "High-quality backlinks and off-page SEO",
+      "topic": "backlinks off page seo links authority"
+    },
+    {
+      "path": "/best-seo-audit-tools/",
+      "label": "Best SEO audit tools",
+      "topic": "seo audit tools"
+    },
+    {
+      "path": "/google-my-business/",
+      "label": "Google Business Profile optimization",
+      "topic": "google my business profile local seo gmb"
+    },
+    {
+      "path": "/social-media-optimization/",
+      "label": "Social media optimization",
+      "topic": "social media optimization marketing"
+    },
+    {
+      "path": "/whatsapp-ai-chatbot/",
+      "label": "WhatsApp AI chatbot",
+      "topic": "whatsapp ai chatbot automation"
+    },
+    {
+      "path": "/ai-voice-agent/",
+      "label": "AI voice agent",
+      "topic": "ai voice agent automation calls"
+    },
+    {
+      "path": "/application-tracking-system/",
+      "label": "Applicant tracking system (ATS)",
+      "topic": "application applicant tracking system ats hiring recruitment hr"
+    },
+    {
+      "path": "/human-resources-management/",
+      "label": "HR management software",
+      "topic": "human resources management hr hrms software"
+    },
+    {
+      "path": "/website-design-agency/",
+      "label": "Website design and development",
+      "topic": "website design development agency web"
+    }
+  ]
 }

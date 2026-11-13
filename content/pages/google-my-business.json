@@ -6,7 +6,7 @@
   "sitemap": "pages",
   "lastmod": "2026-07-29T16:42:58+00:00",
   "head": {
-    "title": "GMB Services | Optimize Your Google Business Profile",
+    "title": "Google My Business Optimization | GMB & Local SEO",
     "meta": [
       {
         "attr": "name",
@@ -463,5 +463,6 @@
       "q": "Can a Google Business Profile help generate more leads?",
       "a": "Yes. An optimized Google Business Profile can increase visibility in local searches, drive more website visits, phone calls, direction requests, and customer inquiries, making it an effective tool for lead generation."
     }
-  ]
+  ],
+  "keyphrase_override": "google my business"
 }

@@ -147,7 +147,7 @@ export function fixRecord(rec) {
     }
   }
 
-  const title = rec.head.title;
+  let title = rec.head.title;
 
   // excerpt + meta description
   if (FIX.excerpt && !rec.excerpt) {
@@ -162,6 +162,18 @@ export function fixRecord(rec) {
       desc = clip(`Articles from openink Hub ${what}: guides to SEO, answer engine optimization, generative engine optimization and AI automation.`, 155);
     }
     setIfEmpty(rec, "name", "description", desc, fixes, "meta");
+  }
+  // over-long descriptions: Google cuts them at ~160 chars, so end on the last full sentence that fits (or a word + "…")
+  const DMAX = RULES.thresholds.description.max, DMIN = RULES.thresholds.description.min;
+  if (FIX.metaDescriptionLength && desc && desc.length > DMAX) {
+    const s = strip(desc), head = s.slice(0, DMAX - 2);
+    const end = Math.max(head.lastIndexOf(". "), head.lastIndexOf("? "), head.lastIndexOf("! "));
+    const nd = end + 1 >= Math.max(DMIN, 100) ? s.slice(0, end + 1) : clip(s, DMAX - 4);
+    meta(rec, "description").content = nd; desc = nd; fixes.push("meta-length");
+  }
+  // very short titles (legal and listing pages): add the site name
+  if (FIX.titleSiteName && title.length < RULES.thresholds.title.min && !/openink/i.test(title)) {
+    rec.head.title = `${title} | ${SITE.name}`; title = rec.head.title; fixes.push("title-site-name");
   }
 
   // Open Graph / Twitter

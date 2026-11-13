@@ -1,0 +1,127 @@
+{
+  "url": "https://openinkhub.io/ecommerce-website-development/",
+  "path": "/ecommerce-website-development/",
+  "status": 200,
+  "type": "guide",
+  "guide": true,
+  "draft": true,
+  "status_published": false,
+  "hub": "/website-design-agency/",
+  "card_title": "Ecommerce Development",
+  "card_text": "Platforms, features and the build process for online stores.",
+  "n": "03",
+  "title": "Ecommerce Website Development: Platforms & Features",
+  "h1": "Ecommerce website development: platforms, features and process",
+  "date": "2026-11-13T17:54:05",
+  "modified": "2026-11-13T17:54:05",
+  "author": "Hiten Neotia",
+  "excerpt": "Choose the right ecommerce platform, plan must-have store features and understand the build process for an online store in India.",
+  "keyphrase_override": "ecommerce website development",
+  "keyphrase_secondary_override": [],
+  "categories": [],
+  "tags": [],
+  "faqs": [],
+  "featured_image": null,
+  "content_html": "<h1>Ecommerce website development: platforms, features and process</h1>\n<p><strong>This guide is being written.</strong> It will cover:</p><ul><li>Choosing an ecommerce platform</li><li>Must-have store features</li><li>Payments, shipping and taxes in India</li><li>The build process</li><li>Launch checklist</li><li>FAQs</li></ul><p>In the meantime, see our <a href=\"/website-design-agency/\">website design and development services</a>.</p>",
+  "content_source": "articles",
+  "head": {
+    "title": "Ecommerce Website Development: Platforms & Features | openink Hub",
+    "lang": "en-US",
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "@id": "https://openinkhub.io/ecommerce-website-development/#article",
+            "headline": "Ecommerce Website Development: Platforms & Features",
+            "description": "Choose the right ecommerce platform, plan must-have store features and understand the build process for an online store in India.",
+            "url": "https://openinkhub.io/ecommerce-website-development/",
+            "datePublished": "2026-11-13T17:54:05+05:30",
+            "dateModified": "2026-11-13T17:54:05+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "Hiten Neotia"
+            },
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "image": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/ecommerce-website-development/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Website Design & Development",
+                "item": "https://openinkhub.io/website-design-agency/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Ecommerce Development",
+                "item": "https://openinkhub.io/ecommerce-website-development/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/ecommerce-website-development/"
+      }
+    ],
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "noindex, nofollow"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "Choose the right ecommerce platform, plan must-have store features and understand the build process for an online store in India."
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "Ecommerce Website Development: Platforms & Features"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": "Choose the right ecommerce platform, plan must-have store features and understand the build process for an online store in India."
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/ecommerce-website-development/"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      }
+    ]
+  }
+}

@@ -306,7 +306,7 @@ function pageTpl(rec) {
   </div>
 </section>
 ${contact}
-<section class="section"><div class="wrap narrow prose"><!--seo:content-->${localizeBody(body)}<!--/seo:content--></div></section>
+<section class="section"><div class="wrap narrow prose"><!--seo:content-->${hubGrids(localizeBody(body))}<!--/seo:content--></div></section>
 ${faqs}`, "is-page" + (legal ? " is-legal" : ""));
 }
 
@@ -374,6 +374,24 @@ function listingTpl(rec, posts, label) {
   <div class="chips">${filters}</div>
 </div></section><!--/seo:content-->
 <section class="section"><div class="wrap"><div class="post-grid">${cards}</div></div></section>`, "is-archive");
+}
+
+/** Replace <!--hub:NAME--> with a card grid of the guides in content/articles/NAME.json.
+ *  Published guides are linked; drafts show "Coming soon" (no link, so search engines never find thin pages). */
+function hubGrids(html) {
+  return html.replace(/<!--hub:([a-z0-9-]+)-->/g, (m, name) => {
+    const f = path.join(C, "articles", `${name}.json`);
+    if (!fs.existsSync(f)) return "";
+    const items = load(f).items;
+    const byPath = new Map(RECS.map((r) => [r.path, r]));
+    return `<div class="guide-grid">${items.map((a) => {
+      const rec = byPath.get(`/${a.slug}/`);
+      const live = rec && !rec.draft;
+      const inner = `<span class="g-n">${E(a.n)}</span><strong>${E(a.card_title)}</strong><span class="g-t">${E(a.card_text)}</span>` +
+        `<span class="g-s">${live ? "Read the guide →" : "Coming soon"}</span>`;
+      return live ? `<a class="guide-card" href="/${E(a.slug)}/">${inner}</a>` : `<div class="guide-card is-soon">${inner}</div>`;
+    }).join("")}</div>`;
+  });
 }
 
 function contactCards() {

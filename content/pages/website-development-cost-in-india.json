@@ -1,0 +1,127 @@
+{
+  "url": "https://openinkhub.io/website-development-cost-in-india/",
+  "path": "/website-development-cost-in-india/",
+  "status": 200,
+  "type": "guide",
+  "guide": true,
+  "draft": true,
+  "status_published": false,
+  "hub": "/website-design-agency/",
+  "card_title": "Website Cost & Pricing",
+  "card_text": "What drives website development cost in India and how to plan your budget.",
+  "n": "04",
+  "title": "Website Development Cost in India: Pricing Guide",
+  "h1": "Website development cost in India: what drives the price",
+  "date": "2026-11-13T17:54:05",
+  "modified": "2026-11-13T17:54:05",
+  "author": "Hiten Neotia",
+  "excerpt": "What drives website development cost in India — type of site, design, features and integrations — and how to plan a realistic budget.",
+  "keyphrase_override": "website development cost in india",
+  "keyphrase_secondary_override": [],
+  "categories": [],
+  "tags": [],
+  "faqs": [],
+  "featured_image": null,
+  "content_html": "<h1>Website development cost in India: what drives the price</h1>\n<p><strong>This guide is being written.</strong> It will cover:</p><ul><li>What affects website cost</li><li>Typical cost ranges by website type</li><li>One-time vs ongoing costs</li><li>How to plan your budget</li><li>Questions to ask before you get a quote</li><li>FAQs</li></ul><p>In the meantime, see our <a href=\"/website-design-agency/\">website design and development services</a>.</p>",
+  "content_source": "articles",
+  "head": {
+    "title": "Website Development Cost in India: Pricing Guide | openink Hub",
+    "lang": "en-US",
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "@id": "https://openinkhub.io/website-development-cost-in-india/#article",
+            "headline": "Website Development Cost in India: Pricing Guide",
+            "description": "What drives website development cost in India — type of site, design, features and integrations — and how to plan a realistic budget.",
+            "url": "https://openinkhub.io/website-development-cost-in-india/",
+            "datePublished": "2026-11-13T17:54:05+05:30",
+            "dateModified": "2026-11-13T17:54:05+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "Hiten Neotia"
+            },
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "image": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/website-development-cost-in-india/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Website Design & Development",
+                "item": "https://openinkhub.io/website-design-agency/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Website Cost & Pricing",
+                "item": "https://openinkhub.io/website-development-cost-in-india/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/website-development-cost-in-india/"
+      }
+    ],
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "noindex, nofollow"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "What drives website development cost in India — type of site, design, features and integrations — and how to plan a realistic budget."
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "Website Development Cost in India: Pricing Guide"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": "What drives website development cost in India — type of site, design, features and integrations — and how to plan a realistic budget."
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/website-development-cost-in-india/"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      }
+    ]
+  }
+}

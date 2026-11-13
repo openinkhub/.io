@@ -105,10 +105,31 @@ function applyPlainLanguage(rec, fixes) {
   if (n) fixes.push(`plain-language:${n}`);
 }
 
+const RM_FILE = path.join(ROOT, "content", "seo", "removals.json");
+export const REMOVALS = fs.existsSync(RM_FILE) ? JSON.parse(fs.readFileSync(RM_FILE, "utf8")) : {};
+export const REMOVAL_MISSES = [];
+
+/** Remove (or replace) a span of content: from `from` (nth occurrence) up to, not including, `to`. */
+function applyRemovals(rec, fixes) {
+  const list = REMOVALS[rec.path];
+  if (!Array.isArray(list)) return;
+  let html = rec.content_html;
+  for (const r of list) {
+    let start = -1;
+    for (let k = 0; k < (r.occurrence || 1); k++) start = html.indexOf(r.from, start + 1);
+    const end = start < 0 ? -1 : html.indexOf(r.to, start + r.from.length);
+    if (start < 0 || end < 0) { REMOVAL_MISSES.push(`${rec.path}: ${r.note || r.from.slice(0, 40)}`); continue; }
+    html = html.slice(0, start) + (r.replace || "") + html.slice(end);
+    fixes.push(r.replace ? "content-replaced" : "content-removed");
+  }
+  rec.content_html = html;
+}
+
 export function fixRecord(rec) {
   if (rec._fixed) return rec;
   rec._fixed = true;
   const fixes = [];
+  applyRemovals(rec, fixes);
   applyPlainLanguage(rec, fixes);
   const url = rec.url?.replace(/\/?$/, rec.path === "/" ? "" : "/") || SITE.url + rec.path;
   const kp = keyphraseFor(rec);

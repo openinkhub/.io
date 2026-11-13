@@ -85,6 +85,26 @@ The build also writes `_redirects` (Squirrly redirects), `_headers` (security he
 
 Core Web Vitals (LCP, INP, CLS, TTFB, FCP) are measured only when a PageSpeed Insights key is provided: `PSI_API_KEY=... npm run audit` (add it as a Cloudflare Pages environment variable to measure on every deploy).
 
+## Website development guides (17 pages)
+
+Defined in `content/articles/website-development.json` and linked from the grid on `/website-design-agency/`.
+Each guide has its final URL, title, meta description, keyphrase and a suggested outline. Drafts are built but
+`noindex, nofollow`, left out of sitemaps, llms.txt and the SEO audit, and shown as "Coming soon" (not linked).
+
+To publish a guide: add its content as `body_html` (and optional `faqs`), set `"status": "published"`, then
+
+```bash
+npm run articles && npm test
+```
+
+The page becomes indexable, joins the sitemap and llms.txt, is audited, and its hub card links to it.
+
+## Content removals and plain-language edits
+
+`content/seo/removals.json` removes or replaces sections of imported WordPress pages (e.g. placeholder case studies,
+a duplicated article) and `content/seo/plain-language.json` holds readability rewrites. Both are applied at build time;
+the original imported pages in `content/pages` are not modified.
+
 ## Editing content
 
 * Page/post text: edit `content_html` in `content/pages/<slug>.json`. Head tags live under `head`.

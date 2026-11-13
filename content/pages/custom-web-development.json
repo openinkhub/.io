@@ -1,0 +1,127 @@
+{
+  "url": "https://openinkhub.io/custom-web-development/",
+  "path": "/custom-web-development/",
+  "status": 200,
+  "type": "guide",
+  "guide": true,
+  "draft": true,
+  "status_published": false,
+  "hub": "/website-design-agency/",
+  "card_title": "Custom Web Development",
+  "card_text": "Custom web applications, SaaS products and API integrations.",
+  "n": "06",
+  "title": "Custom Web Development: Web Apps, SaaS & APIs",
+  "h1": "Custom web development: web applications, SaaS and APIs",
+  "date": "2026-11-13T17:54:05",
+  "modified": "2026-11-13T17:54:05",
+  "author": "Hiten Neotia",
+  "excerpt": "When you need custom web development: web applications, SaaS products and API integrations, plus how a custom build project runs.",
+  "keyphrase_override": "custom web development",
+  "keyphrase_secondary_override": [],
+  "categories": [],
+  "tags": [],
+  "faqs": [],
+  "featured_image": null,
+  "content_html": "<h1>Custom web development: web applications, SaaS and APIs</h1>\n<p><strong>This guide is being written.</strong> It will cover:</p><ul><li>When a template isn't enough</li><li>Custom web applications</li><li>Building a SaaS product</li><li>API integrations</li><li>Project process and timelines</li><li>FAQs</li></ul><p>In the meantime, see our <a href=\"/website-design-agency/\">website design and development services</a>.</p>",
+  "content_source": "articles",
+  "head": {
+    "title": "Custom Web Development: Web Apps, SaaS & APIs | openink Hub",
+    "lang": "en-US",
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "@id": "https://openinkhub.io/custom-web-development/#article",
+            "headline": "Custom Web Development: Web Apps, SaaS & APIs",
+            "description": "When you need custom web development: web applications, SaaS products and API integrations, plus how a custom build project runs.",
+            "url": "https://openinkhub.io/custom-web-development/",
+            "datePublished": "2026-11-13T17:54:05+05:30",
+            "dateModified": "2026-11-13T17:54:05+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "Hiten Neotia"
+            },
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "image": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/custom-web-development/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Website Design & Development",
+                "item": "https://openinkhub.io/website-design-agency/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Custom Web Development",
+                "item": "https://openinkhub.io/custom-web-development/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/custom-web-development/"
+      }
+    ],
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "noindex, nofollow"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "When you need custom web development: web applications, SaaS products and API integrations, plus how a custom build project runs."
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "Custom Web Development: Web Apps, SaaS & APIs"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": "When you need custom web development: web applications, SaaS products and API integrations, plus how a custom build project runs."
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/custom-web-development/"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization-1.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      }
+    ]
+  }
+}

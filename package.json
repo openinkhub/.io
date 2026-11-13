@@ -16,6 +16,7 @@
     "preview": "node tools/serve.mjs",
     "dev": "npm run build && npm run preview",
     "audit": "node tools/seo-audit.mjs",
-    "import-squirrly": "node tools/import-squirrly.mjs"
+    "import-squirrly": "node tools/import-squirrly.mjs",
+    "articles": "node tools/articles.mjs"
   }
 }

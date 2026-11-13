@@ -86,6 +86,9 @@ function typesIn(node, out = []) {
 // ---------------------------------------------------------------- load
 const recs = fs.readdirSync(PAGES).filter((n) => n.endsWith(".json")).sort()
   .map((n) => fixRecord(JSON.parse(fs.readFileSync(path.join(PAGES, n), "utf8")))).filter((x) => x.status === 200 && x.head);
+// drafts are built but noindex and unlinked: list them, don't score them
+const drafts = recs.filter((x) => x.draft).map((x) => ({ path: x.path, title: x.head.title, n: x.n || "" }));
+recs.splice(0, recs.length, ...recs.filter((x) => !x.draft));
 const sectionOf = (rec) => {
   for (const s of RULES.sections) {
     const m = s.match, cats = (rec.categories || []).map((c) => c.path);
@@ -396,7 +399,7 @@ for (const x of results) for (const f of new Set(x.fixes.map((f) => f.split(":")
 const report = {
   generated: new Date().toISOString(), site: BASE, pages: results.length,
   avg_seo: avg(results.map((x) => x.seo_score)), avg_readability: avg(results.map((x) => x.readability_score)),
-  sections, issues, critical, fixes_applied: fixCounts,
+  sections, issues, critical, fixes_applied: fixCounts, drafts,
   site_checks: {
     robots_txt: robotsTxt, llms_txt_pages: llmsTxt.split("\n").filter((l) => l.startsWith("- [")).length,
     redirects: SQUIRRLY_REDIRECTS(), sitemap_urls: sitemapUrls.size, css_errors: cssErrors, cwv_measured: psi.size,
@@ -422,6 +425,7 @@ fs.copyFileSync(path.join(ROOT, "tools", "admin", "index.html"), path.join(ADMIN
 
 console.log(`SEO audit: ${results.length} URLs · avg SEO ${report.avg_seo}/100 · avg readability ${report.avg_readability}/100 · ${CHECKS.length} checks`);
 for (const s of sections) console.log(`  ${s.label.padEnd(30)} ${String(s.count).padStart(4)} · SEO ${s.avg_seo} · readability ${s.avg_readability ?? "—"} · ${s.fails} fails`);
+console.log(`  drafts (not audited): ${drafts.length}`);
 console.log(`  auto-fixes applied: ${Object.entries(fixCounts).map(([k, v]) => `${k} ${v}`).join(", ") || "none"}`);
 console.log(`  top issues: ${issues.slice(0, 6).map((i) => `${i.label} (${i.fail}✗ ${i.warn}!)`).join("; ")}`);
 if (critical.length) {

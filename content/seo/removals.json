@@ -1,0 +1,26 @@
+{
+  "_note": "Content removals/replacements applied at build time by tools/seo-fix.mjs (before plain-language edits). Each item removes the HTML from `from` up to (not including) `to`; `occurrence` picks which match of `from` (1 = first); `replace` inserts HTML in its place. Originals in content/pages stay untouched.",
+  "/artificial-intelligence-optimization/": [
+    {
+      "note": "Sample case studies with 'replace with your verified results' placeholders (removed on request)",
+      "from": "<p>Results &amp; insights</p><h2>Artificial Intelligence Optimization success stories</h2>",
+      "to": "<p>Benchmark dashboard</p>"
+    }
+  ],
+  "/ai-agentic-workflow-automation/": [
+    {
+      "note": "The article was published twice; the first copy is removed (the second has the corrected wording)",
+      "from": "<p>In an increasingly digital world",
+      "occurrence": 1,
+      "to": "<p>In an increasingly digital world"
+    }
+  ],
+  "/website-design-agency/": [
+    {
+      "note": "Text-only 'Coming soon' grid replaced by the generated website-development guides grid",
+      "from": "<p>\n01Website Design",
+      "to": "<p>Get started</p>",
+      "replace": "<!--hub:website-development-->"
+    }
+  ]
+}

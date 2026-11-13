@@ -15,6 +15,7 @@
     { "id": "pages", "label": "Pages", "match": { "type": ["home", "page"] } },
     { "id": "posts", "label": "Blog posts", "match": { "type": ["post"], "notCategory": "/category/seo-agency-by-city/" } },
     { "id": "city", "label": "SEO city guides", "match": { "type": ["post"], "category": "/category/seo-agency-by-city/" } },
+    { "id": "guides", "label": "Website development guides", "match": { "type": ["guide"] } },
     { "id": "listings", "label": "Categories, tags & archives", "match": { "type": ["category", "tag", "archive"] } }
   ],
 
@@ -28,7 +29,7 @@
     "title": { "min": 30, "max": 60 },
     "description": { "min": 70, "max": 160 },
     "slug": { "maxLength": 75, "maxWords": 8 },
-    "wordCount": { "page": 300, "post": 600, "home": 300, "category": 0, "tag": 0, "archive": 0 },
+    "wordCount": { "page": 300, "post": 600, "guide": 600, "home": 300, "category": 0, "tag": 0, "archive": 0 },
     "keyphraseDensity": { "min": 0.3, "max": 2.5 },
     "sentenceLength": { "longSentenceWords": 20, "maxPercentLong": 25 },
     "paragraphLength": { "maxWords": 150 },

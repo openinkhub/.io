@@ -1,0 +1,388 @@
+{
+  "url": "https://openinkhub.io/contact-us/",
+  "path": "/contact-us/",
+  "status": 200,
+  "final_url": "https://openinkhub.io/contact-us/",
+  "sitemap": "pages",
+  "lastmod": "2026-10-31T06:27:34+00:00",
+  "head": {
+    "title": "SEO Agency | Boost Rankings, Traffic & Online Growth",
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "index,follow"
+      },
+      {
+        "attr": "name",
+        "key": "googlebot",
+        "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+      },
+      {
+        "attr": "name",
+        "key": "bingbot",
+        "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "What is an SEO agency and what services do they provide? Learn how SEO agencies improve rankings, optimize websites, increase traffic, and grow online visibility."
+      },
+      {
+        "attr": "name",
+        "key": "keywords",
+        "content": "SEO Agency, SEO company, search engine optimization agency, digital marketing agency, SEO services, organic SEO, website optimization"
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/contact-us/"
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "SEO Agency for Higher Rankings & Business Growth"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": "Work with an experienced SEO agency to improve website visibility, attract qualified traffic, and achieve sustainable growth through data-driven SEO."
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp"
+      },
+      {
+        "attr": "property",
+        "key": "og:image:width",
+        "content": "500"
+      },
+      {
+        "attr": "property",
+        "key": "og:site_name",
+        "content": "openink Hub"
+      },
+      {
+        "attr": "property",
+        "key": "og:locale",
+        "content": "en_US"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:url",
+        "content": "https://openinkhub.io/contact-us/"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:title",
+        "content": "Professional SEO Agency for Online Success"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:description",
+        "content": "Improve your online presence with a trusted SEO agency that delivers effective strategies to increase rankings, traffic, and business growth."
+      },
+      {
+        "attr": "name",
+        "key": "twitter:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:domain",
+        "content": "openink Hub"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:creator",
+        "content": "@twitter"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:site",
+        "content": "@twitter"
+      },
+      {
+        "attr": "name",
+        "key": "msapplication-TileImage",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp"
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/contact-us/",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/sitemap.xml",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/comments/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fopeninkhub.io%2Fcontact-us%2F&format=xml",
+        "hreflang": null,
+        "type": "text/xml+oembed",
+        "sizes": null
+      },
+      {
+        "rel": "shortlink",
+        "href": "https://openinkhub.io/?p=126",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon-150x150.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": "32x32"
+      },
+      {
+        "rel": "icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": "192x192"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      }
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://openinkhub.io#WebSite",
+            "url": "https://openinkhub.io",
+            "name": "openink Hub",
+            "headline": "SEO Agency | Boost Rankings, Traffic & Online Growth",
+            "description": "What is an SEO agency and what services do they provide? Learn how SEO agencies improve rankings, optimize websites, increase traffic, and grow online visibility.",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://openinkhub.io#WebPage",
+              "url": "https://openinkhub.io"
+            },
+            "datePublished": "2026-07-09T15:57:14+05:30",
+            "dateModified": "2026-10-31T11:57:34+05:30",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://openinkhub.io/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            },
+            "thumbnailUrl": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp",
+            "image": {
+              "@type": "ImageObject",
+              "@id": "https://openinkhub.io/contact-us/#1f6ead355e",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp",
+              "width": 500,
+              "height": 500
+            },
+            "author": {
+              "@type": "Person",
+              "@id": "https://openinkhub.io/author/neotia-hitengmail-com/#fde02dfc42",
+              "url": "https://openinkhub.io/author/neotia-hitengmail-com/",
+              "name": "Hiten Neotia"
+            },
+            "publisher": {
+              "@type": "Person",
+              "@id": "https://openinkhub.io#person"
+            },
+            "keywords": "SEO Agency, SEO company, search engine optimization agency, digital marketing agency, SEO services, organic SEO, website optimization"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://openinkhub.io#person",
+            "url": "https://openinkhub.io",
+            "name": "Harish Neotia",
+            "description": "\"Chief Executive Officer responsible for the overall strategic direction, vision, and growth of openink Hub.\"",
+            "jobTitle": "CEO",
+            "telephone": "+7366904004",
+            "image": {
+              "@type": "ImageObject",
+              "@id": "https://openinkhub.io/contact-us/#32cec17871",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/google-my-business.webp"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://openinkhub.io#organization",
+            "url": "https://openinkhub.io",
+            "name": "Openink Hub",
+            "description": "Openink Hub is home to a complete AI search optimization stack — SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Artificial Intelligence Optimization (AIO), WhatsApp AI automation, Google Business Profile optimization, and AI voice agents — engineered to get your business found on Google, ChatGPT, Gemini, Perplexity, and every AI assistant in between.",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/agency_logo_3-1.webp"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/contact-us/#breadcrumblist",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://openinkhub.io",
+                  "name": "SEO Services | Boost Rankings, Traffic & Business Growth"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "https://openinkhub.io/contact-us/",
+                  "name": "SEO Agency | Boost Rankings, Traffic & Online Growth"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://openinkhub.io/contact-us/",
+            "url": "https://openinkhub.io/contact-us/",
+            "name": "Contact Openink Hub | Get a Tailored Growth Plan",
+            "isPartOf": {
+              "@id": "https://openinkhub.io/#website"
+            },
+            "datePublished": "2026-07-09T15:57:14+00:00",
+            "dateModified": "2026-10-31T06:27:34+00:00",
+            "description": "Tell us your goal, whether SEO, HRMS, WhatsApp automation or social media, and our team will point you to the right service and a plan.",
+            "breadcrumb": {
+              "@id": "https://openinkhub.io/contact-us/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://openinkhub.io/contact-us/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/contact-us/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact Us"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://openinkhub.io/#website",
+            "url": "https://openinkhub.io/",
+            "name": "Search Engine Optimization",
+            "description": "Automate.Engage.Optimize",
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "alternateName": "SEO",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://openinkhub.io/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://openinkhub.io/#organization",
+            "name": "openink Hub",
+            "url": "https://openinkhub.io/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://openinkhub.io/#/schema/logo/image/",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+              "contentUrl": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+              "width": 928,
+              "height": 234,
+              "caption": "openink Hub"
+            },
+            "image": {
+              "@id": "https://openinkhub.io/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    ],
+    "lang": "en-US"
+  },
+  "h1": "Tell us what you're trying to grow , and we'll show you exactly how we can help.",
+  "type": "page",
+  "wp_id": 126,
+  "slug": "contact-us",
+  "title": "Contact Us",
+  "date": "2026-07-09T15:57:14",
+  "modified": "2026-10-31T11:57:34",
+  "excerpt": "Contact Us | Openink Hub Contact Openink Hub Tell us what you’re trying to grow, and we’ll show you exactly […]",
+  "content_html": "<p>Contact Openink Hub</p><h1>Tell us what you're trying to <em>grow</em>, and we'll show you exactly how we can help.</h1><p>Whether you already know which service you need — SEO, HRMS, WhatsApp automation, or Social Media Optimization — or you're not sure where to start, this is the fastest way to reach our team and get a plan tailored to your business.</p><p><strong>Quick answer:</strong> To contact Openink Hub, use the enquiry form on this page and tell us what you want to grow. Whether you need SEO, HRMS, WhatsApp automation or social media, the team will point you to the right service and share a plan tailored to your business.</p><p>\n<a href=\"#contact-form\">Get in Touch →</a>\n<a href=\"#how-we-help\">See How We Work</a></p><p>How to contact us</p><h2>Reach us however works best for you</h2><p>Pick whichever channel is fastest for you — email, a direct WhatsApp message, or booking a slot straight onto our calendar. Every channel reaches the same team, usually within one business day.</p>\n<a href=\"mailto:info@openinkhub.io\"><p>@</p>\nEmail<h3>Write to us</h3>\ninfo@openinkhub.io<p>Best for detailed queries, proposals, or sharing documents.</p>\nOpen in Mail →\n</a>\n<a href=\"https://wa.me/919204135136\" rel=\"nofollow noopener\" target=\"_blank\"><p>Wa</p>\nCall or WhatsApp<h3>Message us instantly</h3>\n+91 9204135136<p>Fastest for quick questions or urgent onboarding requests.</p>\nClick to Chat on WhatsApp →\n</a><p>Lo</p><p>\nOffice</p><h3>Visit us</h3><p>\nRanchi, Jharkhand</p><p>203 Liya Complex, Main Road, Ranchi, Jharkhand, India.</p><p>Hr</p><p>\nWorking hours</p><h3>When we're online</h3><p>\nMon – Sat, 10 AM – 8 PM</p><p>IST. Messages outside these hours are answered the next business day.</p>\n<a href=\"https://calendly.com/openinkhub/30min/\" rel=\"nofollow noopener\" target=\"_blank\"><p>Mt</p>\nSchedule a meeting<h3>Book a 30-min call</h3>\nPick a time that suits you<p>Skip the back-and-forth — grab a slot directly on our calendar.</p>\nSchedule on Calendly →\n</a><p>How we can take your services</p><h2>From first message to a live, working system</h2><p>Here's exactly what happens after you reach out — no guesswork about what onboarding with Openink Hub looks like.</p><p>01</p><h3>You tell us what you need</h3><p>Fill out the form below, email us, or call directly. Share your business type, current challenges, and which services you're considering — SEO, GMB, WhatsApp automation, HRMS, or Social Media Optimization.</p><p>02</p><h3>We assess &amp; recommend a plan</h3><p>Our team reviews your current setup — website, socials, or internal processes — and comes back with a specific recommendation, not a generic pitch, usually within 1–2 business days.</p><p>03</p><h3>We walk you through it live</h3><p>A short call or demo where we show the relevant dashboard, explain pricing, and answer every question before you commit to anything.</p><p>04</p><h3>Onboarding &amp; setup</h3><p>Once you're ready, we handle account provisioning, integrations (Google, Meta, WhatsApp, your CMS), and initial configuration — typically live within 24–48 hours.</p><p>05</p><h3>Ongoing support &amp; reporting</h3><p>You get a dedicated point of contact, regular performance reporting, and continuous optimization — not a one-time handoff.</p><p>Not sure where to start?</p><h2>Tell us your goal, we'll point you to the right service</h2><h3>Want more website traffic?</h3><p>Ask about our SEO &amp; workflow automation and AEO/GEO services.</p><h3>Want more local customers?</h3><p>Ask about Google Business Profile (GMB) automation.</p><h3>Want faster customer replies?</h3><p>Ask about our WhatsApp Business API automation.</p><h3>Want a stronger social presence?</h3><p>Ask about Social Media Optimization across LinkedIn, Instagram, Facebook, Threads &amp; YouTube.</p><h3>Want HR off spreadsheets?</h3><p>Ask about our full Human Resource Management System (HRMS).</p><h3>Not sure yet?</h3><p>Tell us your business goal in the form below — we'll recommend where to start.</p><p>Send us a message</p><h2>Get a response within one business day</h2><p>Share a few details and we'll come back with next steps tailored to your business.</p><p>\nDirect details</p><p>Email <a href=\"mailto:info@openinkhub.io\">info@openinkhub.io</a></p><p>Call / WhatsApp <a href=\"https://wa.me/919204135136\" rel=\"nofollow noopener\" target=\"_blank\">+91 9204135136</a></p><p>Office 203 Liya Complex, Main Road, Ranchi, Jharkhand, India</p><p>Hours Mon–Sat, 10 AM–8 PM IST</p><p>Schedule a call <a href=\"https://calendly.com/openinkhub/30min/\" rel=\"nofollow noopener\" target=\"_blank\">Book on Calendly</a></p><p>Services we cover</p><p>\nSEO &amp; Workflow Automation\n AEO / GEO / AIO\n GMB Automation\n WhatsApp Business API\n Social Media Optimization\n LinkedIn Management\n Instagram &amp; Facebook Ads\n YouTube &amp; Threads\n Meta Ads\n Google Ads\n HRMS\n Payroll Automation\n AI Blog Automation\n Chatbot Development</p><p>\n<a href=\"https://calendly.com/openinkhub/30min/\" rel=\"nofollow noopener\" target=\"_blank\">Prefer to talk it through? Book a Call</a></p><p>Before you reach out</p><h2>Quick answers</h2><h3>How soon will I hear back?</h3><p>Within one business day for most enquiries. Phone and WhatsApp messages during working hours are usually answered same-day.</p><h3>Do I need to know exactly which service I want?</h3><p>Not at all. Tell us your goal — more traffic, more local customers, faster HR, better engagement — and we'll recommend the right service.</p><h3>Is the initial consultation free?</h3><p>Yes. The first call or demo is free and comes with no obligation to sign up.</p><h3>How fast can we actually get started?</h3><p>Most accounts are provisioned and live within 24–48 hours of onboarding, depending on the service and any third-party approvals needed (like WhatsApp API access).</p>",
+  "content_source": "live",
+  "featured_image": null,
+  "author": "Hiten Neotia",
+  "categories": [],
+  "tags": [],
+  "faqs": []
+}

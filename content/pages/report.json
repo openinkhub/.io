@@ -1,0 +1,373 @@
+{
+  "url": "https://openinkhub.io/report/",
+  "path": "/report/",
+  "status": 200,
+  "final_url": "https://openinkhub.io/report/",
+  "sitemap": "pages",
+  "lastmod": "2026-07-23T20:26:42+00:00",
+  "head": {
+    "title": "Report - openink Hub",
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "index,follow"
+      },
+      {
+        "attr": "name",
+        "key": "googlebot",
+        "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+      },
+      {
+        "attr": "name",
+        "key": "bingbot",
+        "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/report/"
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "Report - openink Hub"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": ""
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp"
+      },
+      {
+        "attr": "property",
+        "key": "og:image:width",
+        "content": "500"
+      },
+      {
+        "attr": "property",
+        "key": "og:site_name",
+        "content": "openink Hub"
+      },
+      {
+        "attr": "property",
+        "key": "og:locale",
+        "content": "en_US"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:url",
+        "content": "https://openinkhub.io/report/"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:title",
+        "content": "Report - openink Hub"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:description",
+        "content": ""
+      },
+      {
+        "attr": "name",
+        "key": "twitter:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:domain",
+        "content": "openink Hub"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:creator",
+        "content": "@twitter"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:site",
+        "content": "@twitter"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "Get professional SEO services to improve your website ranking, increase organic traffic, and grow your business online."
+      },
+      {
+        "attr": "name",
+        "key": "msapplication-TileImage",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp"
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/report/",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/sitemap.xml",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/comments/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fopeninkhub.io%2Freport%2F&format=xml",
+        "hreflang": null,
+        "type": "text/xml+oembed",
+        "sizes": null
+      },
+      {
+        "rel": "shortlink",
+        "href": "https://openinkhub.io/?p=963",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon-150x150.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": "32x32"
+      },
+      {
+        "rel": "icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": "192x192"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      }
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://openinkhub.io#WebSite",
+            "url": "https://openinkhub.io",
+            "name": "openink Hub",
+            "headline": "Report - openink Hub",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://openinkhub.io#WebPage",
+              "url": "https://openinkhub.io"
+            },
+            "datePublished": "2026-07-21T23:29:03+05:30",
+            "dateModified": "2026-07-24T01:56:42+05:30",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://openinkhub.io/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            },
+            "author": {
+              "@type": "Person",
+              "@id": "https://openinkhub.io/author/neotia-hitengmail-com/#fde02dfc42",
+              "url": "https://openinkhub.io/author/neotia-hitengmail-com/",
+              "name": "Hiten Neotia"
+            },
+            "publisher": {
+              "@type": "Person",
+              "@id": "https://openinkhub.io#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://openinkhub.io#person",
+            "url": "https://openinkhub.io",
+            "name": "Harish Neotia",
+            "description": "\"Chief Executive Officer responsible for the overall strategic direction, vision, and growth of openink Hub.\"",
+            "jobTitle": "CEO",
+            "telephone": "+7366904004",
+            "image": {
+              "@type": "ImageObject",
+              "@id": "https://openinkhub.io/report/#32cec17871",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/google-my-business.webp"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://openinkhub.io#organization",
+            "url": "https://openinkhub.io",
+            "name": "Openink Hub",
+            "description": "Openink Hub is home to a complete AI search optimization stack — SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Artificial Intelligence Optimization (AIO), WhatsApp AI automation, Google Business Profile optimization, and AI voice agents — engineered to get your business found on Google, ChatGPT, Gemini, Perplexity, and every AI assistant in between.",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/agency_logo_3-1.webp"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/report/#breadcrumblist",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://openinkhub.io",
+                  "name": "SEO Services | Boost Rankings, Traffic & Business Growth"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "https://openinkhub.io/report/",
+                  "name": "Report - openink Hub"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://openinkhub.io/report/",
+            "url": "https://openinkhub.io/report/",
+            "name": "SEO Services to Grow Your Business Online | Openink Hub",
+            "isPartOf": {
+              "@id": "https://openinkhub.io/#website"
+            },
+            "datePublished": "2026-07-21T17:59:03+00:00",
+            "dateModified": "2026-07-23T20:26:42+00:00",
+            "description": "Get professional SEO services to improve your website ranking, increase organic traffic, and grow your business online.",
+            "breadcrumb": {
+              "@id": "https://openinkhub.io/report/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://openinkhub.io/report/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/report/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Report"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://openinkhub.io/#website",
+            "url": "https://openinkhub.io/",
+            "name": "Search Engine Optimization",
+            "description": "Automate.Engage.Optimize",
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "alternateName": "SEO",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://openinkhub.io/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://openinkhub.io/#organization",
+            "name": "openink Hub",
+            "url": "https://openinkhub.io/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://openinkhub.io/#/schema/logo/image/",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+              "contentUrl": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+              "width": 928,
+              "height": 234,
+              "caption": "openink Hub"
+            },
+            "image": {
+              "@id": "https://openinkhub.io/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    ],
+    "lang": "en-US"
+  },
+  "h1": "",
+  "type": "page",
+  "wp_id": 963,
+  "slug": "report",
+  "title": "Report",
+  "date": "2026-07-21T23:29:03",
+  "modified": "2026-07-24T01:56:42",
+  "excerpt": "[aeo_visibility_report]",
+  "content_html": "<p>[aeo_visibility_report]</p>",
+  "content_source": "live",
+  "featured_image": null,
+  "author": "Hiten Neotia",
+  "categories": [],
+  "tags": [],
+  "faqs": []
+}

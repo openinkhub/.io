@@ -1,0 +1,374 @@
+{
+  "url": "https://openinkhub.io/terms/",
+  "path": "/terms/",
+  "status": 200,
+  "final_url": "https://openinkhub.io/terms/",
+  "sitemap": "pages",
+  "lastmod": "2026-07-30T07:41:29+00:00",
+  "head": {
+    "title": "Terms & Condition - openink Hub",
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "index,follow"
+      },
+      {
+        "attr": "name",
+        "key": "googlebot",
+        "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+      },
+      {
+        "attr": "name",
+        "key": "bingbot",
+        "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "Terms & Conditions | Openink Hub Legal • Openink Hub The ground rules for using our automation platform. These Terms govern your access to openinkhub.io and the automated marketing, SEO, and messaging platforms we operate. By using our site or services, you agree to be bound by them — if you don't"
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/terms/"
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "Terms & Condition - openink Hub"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": "Terms & Conditions | Openink Hub Legal • Openink Hub The ground rules for using our automation platform. These Terms govern your access to openinkhub.io and the automated marketing, SEO, a"
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp"
+      },
+      {
+        "attr": "property",
+        "key": "og:image:width",
+        "content": "500"
+      },
+      {
+        "attr": "property",
+        "key": "og:site_name",
+        "content": "openink Hub"
+      },
+      {
+        "attr": "property",
+        "key": "og:locale",
+        "content": "en_US"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:url",
+        "content": "https://openinkhub.io/terms/"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:title",
+        "content": "Terms & Condition - openink Hub"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:description",
+        "content": "Terms & Conditions | Openink Hub Legal • Openink Hub The ground rules for using our automation platform. These Terms govern your access to openinkhub.io and the automated marketing, SEO, and messaging platforms we operate. By using our site or services, you agree to b"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:domain",
+        "content": "openink Hub"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:creator",
+        "content": "@twitter"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:site",
+        "content": "@twitter"
+      },
+      {
+        "attr": "name",
+        "key": "msapplication-TileImage",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp"
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/terms/",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/sitemap.xml",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/comments/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fopeninkhub.io%2Fterms%2F&format=xml",
+        "hreflang": null,
+        "type": "text/xml+oembed",
+        "sizes": null
+      },
+      {
+        "rel": "shortlink",
+        "href": "https://openinkhub.io/?p=839",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon-150x150.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": "32x32"
+      },
+      {
+        "rel": "icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": "192x192"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      }
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://openinkhub.io#WebSite",
+            "url": "https://openinkhub.io",
+            "name": "openink Hub",
+            "headline": "Terms & Condition - openink Hub",
+            "description": "Terms & Conditions | Openink Hub Legal • Openink Hub The ground rules for using our automation platform. These Terms govern your access to openinkhub.io and the automated marketing, SEO, and messaging platforms we operate. By using our site or services, you agree to be bound by them — if you don't",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://openinkhub.io#WebPage",
+              "url": "https://openinkhub.io"
+            },
+            "datePublished": "2026-07-14T07:55:08+05:30",
+            "dateModified": "2026-07-30T13:11:29+05:30",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://openinkhub.io/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            },
+            "author": {
+              "@type": "Person",
+              "@id": "https://openinkhub.io/author/neotia-hitengmail-com/#fde02dfc42",
+              "url": "https://openinkhub.io/author/neotia-hitengmail-com/",
+              "name": "Hiten Neotia"
+            },
+            "publisher": {
+              "@type": "Person",
+              "@id": "https://openinkhub.io#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://openinkhub.io#person",
+            "url": "https://openinkhub.io",
+            "name": "Harish Neotia",
+            "description": "\"Chief Executive Officer responsible for the overall strategic direction, vision, and growth of openink Hub.\"",
+            "jobTitle": "CEO",
+            "telephone": "+7366904004",
+            "image": {
+              "@type": "ImageObject",
+              "@id": "https://openinkhub.io/terms/#32cec17871",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/google-my-business.webp"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://openinkhub.io#organization",
+            "url": "https://openinkhub.io",
+            "name": "Openink Hub",
+            "description": "Openink Hub is home to a complete AI search optimization stack — SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Artificial Intelligence Optimization (AIO), WhatsApp AI automation, Google Business Profile optimization, and AI voice agents — engineered to get your business found on Google, ChatGPT, Gemini, Perplexity, and every AI assistant in between.",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/agency_logo_3-1.webp"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/terms/#breadcrumblist",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://openinkhub.io",
+                  "name": "SEO Services | Boost Rankings, Traffic & Business Growth"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "https://openinkhub.io/terms/",
+                  "name": "Terms & Condition - openink Hub"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://openinkhub.io/terms/",
+            "url": "https://openinkhub.io/terms/",
+            "name": "Terms & Conditions | Openink Hub",
+            "isPartOf": {
+              "@id": "https://openinkhub.io/#website"
+            },
+            "datePublished": "2026-07-14T07:55:08+00:00",
+            "dateModified": "2026-07-30T07:41:29+00:00",
+            "description": "The terms that govern your use of openinkhub.io and Openink Hub's automated marketing, SEO and messaging platforms.",
+            "breadcrumb": {
+              "@id": "https://openinkhub.io/terms/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://openinkhub.io/terms/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/terms/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Terms &#038; Condition"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://openinkhub.io/#website",
+            "url": "https://openinkhub.io/",
+            "name": "Search Engine Optimization",
+            "description": "Automate.Engage.Optimize",
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "alternateName": "SEO",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://openinkhub.io/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://openinkhub.io/#organization",
+            "name": "openink Hub",
+            "url": "https://openinkhub.io/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://openinkhub.io/#/schema/logo/image/",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+              "contentUrl": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+              "width": 928,
+              "height": 234,
+              "caption": "openink Hub"
+            },
+            "image": {
+              "@id": "https://openinkhub.io/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    ],
+    "lang": "en-US"
+  },
+  "h1": "The ground rules for using our automation platform .",
+  "type": "page",
+  "wp_id": 839,
+  "slug": "terms",
+  "title": "Terms & Condition",
+  "date": "2026-07-14T07:55:08",
+  "modified": "2026-07-30T13:11:29",
+  "excerpt": "Terms & Conditions | Openink Hub Legal • Openink Hub The ground rules for using our automation platform. These Terms […]",
+  "content_html": "<p>Legal • Openink Hub</p><h1>The ground rules for using our <em>automation platform</em>.</h1><p>These Terms govern your access to openinkhub.io and the automated marketing, SEO, and messaging platforms we operate. By using our site or services, you agree to be bound by them — if you don't agree, please don't use our services.</p><p>Effective date</p><p>13 July 2026</p><p>Governing law</p><p>India / Ranchi, Jharkhand</p><p>Contact</p><p>info@openinkhub.io</p><p>Section 1</p><h2>What we provide</h2><p>Openink Hub builds smart marketing and automation workflows across several connected modules.</p><p>Growth</p><h3>SEO &amp; workflow automation</h3><p>Smart workflows for tracking, optimizing, and managing your website's content and performance.</p><p>Local</p><h3>GMB automation</h3><p>Local SEO automation covering Google Business Profile listings, reviews, and scheduled updates.</p><p>Messaging</p><h3>WhatsApp Business API</h3><p>Automated messaging frameworks, chatbots, and customer engagement tools.</p><p>Content</p><h3>AI blog &amp; social automation</h3><p>AI-driven content creation, scheduling, and distribution — including modules still in development.</p><p>Section 2</p><h2>The key clauses</h2><p>01</p><h3>Account registration &amp; security</h3><p>Where a dashboard requires registration, you agree to give accurate, current, and complete information, and you're responsible for keeping your credentials confidential and for activity under your account. Tell us right away if you spot unauthorized use or a security breach.</p><p>02</p><h3>Third-party integrations &amp; API usage</h3><p>Our platforms connect to outside networks like Google and Meta. Using our GMB or WhatsApp tools means complying with their respective terms — Google's API Services User Data Policy and Meta's WhatsApp Business Terms among them. We aren't responsible for disruptions, suspensions, or functionality changes those third parties make on their end.</p><p>03</p><h3>Your responsibilities &amp; acceptable use</h3><p>You agree that your use of our tools won't break any applicable law. Specifically for WhatsApp:</p><ul><li><b>You are the Data Controller</b> — you must obtain proper, legally compliant opt-in consent from end-users before automated messages go out.</li><li>Spamming, messaging unconsented numbers in bulk, or broadcasting prohibited content leads to immediate termination.</li></ul><p>You keep ownership of the data and content you feed into our systems; you grant us only a limited license to process, format, and transmit it to run your campaigns.</p><p>04</p><h3>Fees, billing &amp; subscriptions</h3><p>Services are billed on a subscription or project basis, as agreed during onboarding. Payments run through our approved channels, and late payment may lead to automated suspension of your API access and dashboards. Refund and cancellation eligibility follows our separate Refund &amp; Cancellation Policy.</p><p>05</p><h3>Intellectual property</h3><p>The Site, its source code, databases, functionality, AI workflow configurations, designs, and graphics are Openink Hub's property, protected under copyright and trademark law. Your active subscription grants you a limited, non-exclusive license to use the platform for your own internal business operations.</p><p>06</p><h3>Liability &amp; disclaimers</h3><p>Our tools are provided on an \"as-is\" and \"as-available\" basis. We don't guarantee that SEO or GMB rankings will move by any specific amount — those algorithms sit entirely with third parties like Google. To the fullest extent the law allows, we're not liable for indirect, incidental, or consequential damages, including lost profits, data, or business opportunities arising from your use of our systems.</p><p>07</p><h3>Termination</h3><p>We may suspend or terminate your access without notice if you breach these Terms, leave balances unpaid, or engage in activity that threatens our infrastructure's stability.</p><p>08</p><h3>Governing law</h3><p>These Terms are governed by the laws of India. Any dispute arising under them is handled exclusively by the courts in Ranchi, Jharkhand, India.</p><p>Section 3</p><h2>Questions about these Terms?</h2><p>Get in touch and we'll clarify any clause.</p><p>Email</p><p>info@openinkhub.io</p><p>Phone</p><p>+91 9204135136</p><p>Address</p><p>203 Liya Complex, Main Road, Ranchi, Jharkhand, India</p>",
+  "content_source": "live",
+  "featured_image": null,
+  "author": "Hiten Neotia",
+  "categories": [],
+  "tags": [],
+  "faqs": []
+}

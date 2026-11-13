@@ -1,0 +1,374 @@
+{
+  "url": "https://openinkhub.io/refund/",
+  "path": "/refund/",
+  "status": 200,
+  "final_url": "https://openinkhub.io/refund/",
+  "sitemap": "pages",
+  "lastmod": "2026-07-30T07:39:04+00:00",
+  "head": {
+    "title": "Refund & Cancellation - openink Hub",
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "index,follow"
+      },
+      {
+        "attr": "name",
+        "key": "googlebot",
+        "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+      },
+      {
+        "attr": "name",
+        "key": "bingbot",
+        "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "Refund & Cancellation Policy | Openink Hub Legal • Openink Hub A refund policy that's straightforward, because our setup work starts the moment you subscribe. The instant you subscribe, we commit server capacity, API allocations across WhatsApp, GMB, and AI infrastructure, and hands-on onboarding hours"
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/refund/"
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "Refund & Cancellation - openink Hub"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": "Refund & Cancellation Policy | Openink Hub Legal • Openink Hub A refund policy that's straightforward, because our setup work starts the moment you subscribe. The instant you s"
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp"
+      },
+      {
+        "attr": "property",
+        "key": "og:image:width",
+        "content": "500"
+      },
+      {
+        "attr": "property",
+        "key": "og:site_name",
+        "content": "openink Hub"
+      },
+      {
+        "attr": "property",
+        "key": "og:locale",
+        "content": "en_US"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:url",
+        "content": "https://openinkhub.io/refund/"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:title",
+        "content": "Refund & Cancellation - openink Hub"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:description",
+        "content": "Refund & Cancellation Policy | Openink Hub Legal • Openink Hub A refund policy that's straightforward, because our setup work starts the moment you subscribe. The instant you subscribe, we commit server capacity, API allocations across WhatsApp, GMB, and AI i"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:domain",
+        "content": "openink Hub"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:creator",
+        "content": "@twitter"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:site",
+        "content": "@twitter"
+      },
+      {
+        "attr": "name",
+        "key": "msapplication-TileImage",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp"
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/refund/",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/sitemap.xml",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/comments/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fopeninkhub.io%2Frefund%2F&format=xml",
+        "hreflang": null,
+        "type": "text/xml+oembed",
+        "sizes": null
+      },
+      {
+        "rel": "shortlink",
+        "href": "https://openinkhub.io/?p=841",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon-150x150.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": "32x32"
+      },
+      {
+        "rel": "icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": "192x192"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      }
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://openinkhub.io#WebSite",
+            "url": "https://openinkhub.io",
+            "name": "openink Hub",
+            "headline": "Refund & Cancellation - openink Hub",
+            "description": "Refund & Cancellation Policy | Openink Hub Legal • Openink Hub A refund policy that's straightforward, because our setup work starts the moment you subscribe. The instant you subscribe, we commit server capacity, API allocations across WhatsApp, GMB, and AI infrastructure, and hands-on onboarding hours",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://openinkhub.io#WebPage",
+              "url": "https://openinkhub.io"
+            },
+            "datePublished": "2026-07-14T07:55:18+05:30",
+            "dateModified": "2026-07-30T13:09:04+05:30",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://openinkhub.io/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            },
+            "author": {
+              "@type": "Person",
+              "@id": "https://openinkhub.io/author/neotia-hitengmail-com/#fde02dfc42",
+              "url": "https://openinkhub.io/author/neotia-hitengmail-com/",
+              "name": "Hiten Neotia"
+            },
+            "publisher": {
+              "@type": "Person",
+              "@id": "https://openinkhub.io#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://openinkhub.io#person",
+            "url": "https://openinkhub.io",
+            "name": "Harish Neotia",
+            "description": "\"Chief Executive Officer responsible for the overall strategic direction, vision, and growth of openink Hub.\"",
+            "jobTitle": "CEO",
+            "telephone": "+7366904004",
+            "image": {
+              "@type": "ImageObject",
+              "@id": "https://openinkhub.io/refund/#32cec17871",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/google-my-business.webp"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://openinkhub.io#organization",
+            "url": "https://openinkhub.io",
+            "name": "Openink Hub",
+            "description": "Openink Hub is home to a complete AI search optimization stack — SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Artificial Intelligence Optimization (AIO), WhatsApp AI automation, Google Business Profile optimization, and AI voice agents — engineered to get your business found on Google, ChatGPT, Gemini, Perplexity, and every AI assistant in between.",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/agency_logo_3-1.webp"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/refund/#breadcrumblist",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://openinkhub.io",
+                  "name": "SEO Services | Boost Rankings, Traffic & Business Growth"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "https://openinkhub.io/refund/",
+                  "name": "Refund & Cancellation - openink Hub"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://openinkhub.io/refund/",
+            "url": "https://openinkhub.io/refund/",
+            "name": "Refund & Cancellation Policy | Openink Hub",
+            "isPartOf": {
+              "@id": "https://openinkhub.io/#website"
+            },
+            "datePublished": "2026-07-14T07:55:18+00:00",
+            "dateModified": "2026-07-30T07:39:04+00:00",
+            "description": "Clear refund terms for monthly, quarterly and annual plans, and how to cancel your Openink Hub subscription.",
+            "breadcrumb": {
+              "@id": "https://openinkhub.io/refund/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://openinkhub.io/refund/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/refund/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Refund &#038; Cancellation"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://openinkhub.io/#website",
+            "url": "https://openinkhub.io/",
+            "name": "Search Engine Optimization",
+            "description": "Automate.Engage.Optimize",
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "alternateName": "SEO",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://openinkhub.io/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://openinkhub.io/#organization",
+            "name": "openink Hub",
+            "url": "https://openinkhub.io/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://openinkhub.io/#/schema/logo/image/",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+              "contentUrl": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+              "width": 928,
+              "height": 234,
+              "caption": "openink Hub"
+            },
+            "image": {
+              "@id": "https://openinkhub.io/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    ],
+    "lang": "en-US"
+  },
+  "h1": "A refund policy that's straightforward , because our setup work starts the moment you subscribe.",
+  "type": "page",
+  "wp_id": 841,
+  "slug": "refund",
+  "title": "Refund & Cancellation",
+  "date": "2026-07-14T07:55:18",
+  "modified": "2026-07-30T13:09:04",
+  "excerpt": "Refund & Cancellation Policy | Openink Hub Legal • Openink Hub A refund policy that’s straightforward, because our setup work […]",
+  "content_html": "<p>Legal • Openink Hub</p><h1>A refund policy that's <em>straightforward</em>, because our setup work starts the moment you subscribe.</h1><p>The instant you subscribe, we commit server capacity, API allocations across WhatsApp, GMB, and AI infrastructure, and hands-on onboarding hours to stand up your workspace. That's why our refund terms are clear and fairly strict — please read them before you purchase.</p><p>Effective date</p><p>14 July 2026</p><p>Website</p><p>openinkhub.io</p><p>Contact</p><p>info@openinkhub.io</p><p>Section 1</p><h2>Monthly plans</h2><p>Our simplest tier comes with the simplest rule: no refunds, cancel whenever suits you.</p><p>\nNon-refundable</p><h3>Monthly subscriptions, milestones &amp; trials</h3><p>Monthly subscription plans, one-off project milestones such as isolated SEO audits or standalone setup work, and trial runs are all non-refundable.</p><p>\nCancel anytime</p><h3>No lock-in on monthly billing</h3><p>You can cancel a monthly subscription whenever you like. Your access stays live through the end of the current billing cycle, and you won't be charged again after that.</p><p>Section 2</p><h2>Quarterly &amp; annual plans</h2><p>Refund requests are only considered for clients on our Quarterly (3-month) or Annual (12-month) plans — and only under the conditions below.</p><p>01</p><h3>Once setup is complete, refunds generally close</h3><p>As a standard rule, once your automated system, dashboard login, custom API bridge, or onboarding sequence is fully provisioned, refunds are generally not available. Delivering credentials or confirming that your backend tools are functional by email is treated as a completed setup.</p><p>02</p><h3>Genuine exceptions, reviewed case by case</h3><p>We recognize that unexpected business disruptions happen. In verified, genuine cases — decided solely at Openink Hub's discretion — a partial refund may be approved if:</p><ul><li><b>A written request</b> explaining the genuine reason is emailed to info@openinkhub.io.</li><li><b>The refund is calculated pro-rata</b>, covering only the remaining unused full months of your subscription.</li><li><b>Certain costs are deducted first</b> — the setup fee, months already used (charged at the standard non-discounted rate), and non-recoverable third-party API costs such as Meta WhatsApp messaging charges — before any balance is returned.</li></ul><p>Section 3</p><h2>Cancelling your subscription</h2><p>Two easy ways to stop future billing before your next renewal.</p><p>\nOption A</p><h3>From your dashboard</h3><p>Log into your workspace at openinkhub.io and head to Account Billing to cancel directly.</p><p>\nOption B</p><h3>By email</h3><p>Send a cancellation request to info@openinkhub.io at least 3 business days before your next renewal date. Your automated workflows, AI blogging pipelines, and GMB scheduling stay active through the end of your paid term.</p><p>Section 4</p><h2>Processing an approved refund</h2><p>\nTimeline</p><p>Once our compliance team approves a pro-rated refund, the credit is returned to your original payment method within 7 to 10 business days. Openink Hub isn't responsible for delays caused by your bank or payment gateway on their end.</p><p>Section 5</p><h2>Need to raise a cancellation or exception request?</h2><p>Our team handles cancellations, downgrades, and exception requests directly.</p><p>Email</p><p>info@openinkhub.io</p><p>Phone / WhatsApp</p><p>+91 9204135136</p><p>Address</p><p>203 Liya Complex, Main Road, Ranchi, Jharkhand, India</p>",
+  "content_source": "live",
+  "featured_image": null,
+  "author": "Hiten Neotia",
+  "categories": [],
+  "tags": [],
+  "faqs": []
+}

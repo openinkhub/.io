@@ -68,10 +68,48 @@ function firstParagraph(html) {
   return m ? strip(m[1]) : "";
 }
 
+const PL_FILE = path.join(ROOT, "content", "seo", "plain-language.json");
+export const PLAIN = fs.existsSync(PL_FILE) ? JSON.parse(fs.readFileSync(PL_FILE, "utf8")) : {};
+export const PLAIN_MISSES = [];
+const squash = (s) => String(s).replace(/\s+/g, " ").trim();
+
+/** Swap hard paragraphs/list items for their plain-language versions (content/seo/plain-language.json).
+ *  Each edit is [start of the original block's HTML, new HTML]. FAQ schema answers are kept in sync. */
+function applyPlainLanguage(rec, fixes) {
+  const edits = PLAIN[rec.path];
+  if (!FIX.plainLanguage || !Array.isArray(edits)) return;
+  let html = rec.content_html, n = 0;
+  const swaps = [];
+  for (const [prefix, next] of edits) {
+    const want = squash(prefix);
+    let hit = false; // every matching block is replaced (some WordPress pages repeat sections)
+    html = html.replace(/<(p|li)>([\s\S]*?)<\/\1>/g, (whole, tag, inner) => {
+      if (!squash(inner).startsWith(want)) return whole;
+      hit = true; n++; swaps.push([strip(inner), strip(next)]);
+      return `<${tag}>${next}</${tag}>`;
+    });
+    if (!hit) PLAIN_MISSES.push(`${rec.path}: "${prefix.slice(0, 50)}"`);
+  }
+  rec.content_html = html;
+  const syncText = (node) => {
+    if (Array.isArray(node)) node.forEach(syncText);
+    else if (node && typeof node === "object") {
+      for (const [k, v] of Object.entries(node)) {
+        if (typeof v === "string") { const sv = strip(v); const s = swaps.find(([a]) => a === sv); if (s) node[k] = s[1]; }
+        else syncText(v);
+      }
+    }
+  };
+  syncText(rec.head.jsonld);
+  if (rec.faqs) for (const f of rec.faqs) { const s = swaps.find(([a]) => a === strip(f.a)); if (s) f.a = `<p>${s[1]}</p>`; }
+  if (n) fixes.push(`plain-language:${n}`);
+}
+
 export function fixRecord(rec) {
   if (rec._fixed) return rec;
   rec._fixed = true;
   const fixes = [];
+  applyPlainLanguage(rec, fixes);
   const url = rec.url?.replace(/\/?$/, rec.path === "/" ? "" : "/") || SITE.url + rec.path;
   const kp = keyphraseFor(rec);
   rec.keyphrase = kp.keyphrase; rec.keyphrase_source = kp.source; rec.keyphrase_secondary = kp.secondary;

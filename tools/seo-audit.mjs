@@ -184,7 +184,11 @@ function audit(p) {
   const isPost = rec.type === "post", isListing = ["category", "tag", "archive"].includes(rec.type);
   const ctext = text(content);
   const w = words(ctext); const wc = w.length;
-  const sents = sentencesOf(ctext);
+  // Every block element (heading, paragraph, list item, cell, button…) ends a sentence, as in Yoast/Flesch tools;
+  // otherwise headings and link lists without full stops merge into giant fake "sentences".
+  const blocks = content.replace(/<\/(h[1-6]|p|li|td|th|dt|dd|summary|blockquote|figcaption|button|a|span|strong|div|section|article|header|footer|figure|ul|ol|tr)>/gi, " ¶ ")
+    .replace(/<br\s*\/?>/gi, " ¶ ");
+  const sents = text(blocks).split("¶").flatMap((b) => sentencesOf(b.trim()));
   const h1s = [...p.html.matchAll(/<h1[^>]*>([\s\S]*?)<\/h1>/g)].map((m) => text(m[1]));
   const subheads = [...content.matchAll(/<h[23][^>]*>([\s\S]*?)<\/h[23]>/g)].map((m) => text(m[1]));
   const paras = [...content.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].map((m) => text(m[1])).filter(Boolean);

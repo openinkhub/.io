@@ -53,6 +53,7 @@
     "_note": "Safe fixes applied automatically on every build. Set any to false to turn it off.",
     "metaDescription": true,
     "listingHeadings": true,
+    "plainLanguage": true,
     "openGraph": true,
     "twitterCard": true,
     "excerpt": true,

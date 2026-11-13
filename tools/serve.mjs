@@ -1,5 +1,5 @@
 /**
- * Tiny static server for previewing dist/ locally, with GitHub Pages-like behaviour:
+ * Tiny static server for previewing dist/ locally, with Cloudflare Pages-like behaviour:
  * /foo -> 301 /foo/, /foo/ -> foo/index.html, unknown paths -> 404.html.
  *
  *   npm run preview            (PORT=3000 npm run preview to change the port)

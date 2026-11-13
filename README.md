@@ -1,6 +1,6 @@
 # openinkhub.io — static site
 
-A fast, static rebuild of openinkhub.io (previously WordPress + Elementor), deployed with **GitHub Pages**.
+A fast, static rebuild of openinkhub.io (previously WordPress + Elementor), deployed with **Cloudflare Pages**.
 Every one of the 154 live URLs is kept at the **exact same path**, with its original SEO head
 (title, meta description, keywords, robots, canonical, Open Graph, Twitter, Google verification, JSON-LD).
 
@@ -16,9 +16,9 @@ Every one of the 154 live URLs is kept at the **exact same path**, with its orig
 | `static/` | Images at their original `/wp-content/uploads/...` paths, plus CSS/JS in `assets/` |
 | `tools/build.mjs` | `npm run build` — generates `dist/` (Node 18+, zero dependencies) |
 | `tools/verify.mjs` | `npm run verify` — fails if any original URL or SEO tag is missing/changed in `dist/` |
-| `tools/serve.mjs` | `npm run preview` — local preview of `dist/` with GitHub Pages-style URLs |
+| `tools/serve.mjs` | `npm run preview` — local preview of `dist/` with the same URL handling as the live host |
 | `tools/extract.py` | One-time Python crawler that pulled the live WordPress site into `content/` |
-| `.github/workflows/deploy.yml` | Builds, verifies, and deploys to GitHub Pages on every push to `main` |
+| `.github/workflows/verify.yml` | Safety check on every push/PR: builds and verifies all original URLs + SEO tags (no deploy) |
 
 ## Local
 
@@ -30,15 +30,28 @@ npm run preview    # http://localhost:8080
 
 Any host that runs `npm run build` works: publish directory is `dist`. There are no dependencies to install.
 
-## Deploy (GitHub Pages)
+## Deploy (Cloudflare Pages)
 
-1. Push this folder to a GitHub repo (branch `main`).
-2. Repo **Settings → Pages → Source: GitHub Actions**.
-3. **Settings → Pages → Custom domain:** `openinkhub.io` (a `CNAME` file is already emitted), then tick *Enforce HTTPS*.
-4. At your DNS provider, point the apex domain to GitHub Pages:
-   `A` records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   (and `AAAA` → `2606:50c0:8000::153`, `…8001::153`, `…8002::153`, `…8003::153`); `www` → `CNAME <user>.github.io`.
-5. After cut-over, resubmit `https://openinkhub.io/sitemap.xml` in Google Search Console.
+Cloudflare Pages builds and publishes the site automatically on every push to `main`.
+
+**Build settings** (Workers & Pages → the project → Settings → Build):
+
+| Setting | Value |
+|---|---|
+| Framework preset | `None` |
+| Build command | `npm test` (build + URL/SEO check, so a broken build never goes live) |
+| Build output directory | `dist` |
+| Root directory | *(empty)* |
+| Environment variable | `NODE_VERSION` = `20` (optional) |
+
+**Custom domain:** the project → **Custom domains** → add `openinkhub.io` and `www.openinkhub.io`.
+If the domain's DNS is on Cloudflare, the records are created for you; otherwise follow the CNAME
+instructions Cloudflare shows. Check the `*.pages.dev` preview before switching the domain.
+
+**After cut-over:** resubmit `https://openinkhub.io/sitemap.xml` in Google Search Console.
+
+Cloudflare Pages serves `dist/404.html` for unknown URLs and redirects `/page` to `/page/`,
+matching the original WordPress URLs. (`dist/CNAME` is only used by GitHub Pages and is harmless here.)
 
 ## Editing content
 

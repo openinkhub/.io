@@ -1,0 +1,27 @@
+name: Build & verify
+
+# Deployment is handled by Cloudflare Pages (build command: npm test, output: dist).
+# This workflow is a safety check on every push and pull request: it fails if any
+# original URL or SEO tag from the old WordPress site is missing from the build.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build site
+        run: npm run build
+      - name: Verify every original URL + SEO tags are present
+        run: npm run verify

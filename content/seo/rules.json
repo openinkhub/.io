@@ -31,6 +31,16 @@
       }
     },
     {
+      "id": "articles",
+      "label": "Website development articles",
+      "match": {
+        "type": [
+          "post"
+        ],
+        "has": "brief_hub"
+      }
+    },
+    {
       "id": "posts",
       "label": "Blog posts",
       "match": {
@@ -371,6 +381,16 @@
   },
   "entities_by_section": {
     "guides": [
+      "Openink Hub",
+      "website",
+      "India",
+      "SEO",
+      "WordPress",
+      "ecommerce",
+      "CMS",
+      "Core Web Vitals"
+    ],
+    "articles": [
       "Openink Hub",
       "website",
       "India",

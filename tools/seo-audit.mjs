@@ -95,6 +95,7 @@ const sectionOf = (rec) => {
     if (m.type && !m.type.includes(rec.type)) continue;
     if (m.category && !cats.includes(m.category)) continue;
     if (m.notCategory && cats.includes(m.notCategory)) continue;
+    if (m.has && !rec[m.has]) continue;
     return s.id;
   }
   return "pages";

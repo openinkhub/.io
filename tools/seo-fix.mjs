@@ -233,6 +233,11 @@ export function imageSize(file) {
       else if (kind === "VP8 ") r = { w: b.readUInt16LE(26) & 0x3fff, h: b.readUInt16LE(28) & 0x3fff };
     } else if (b.readUInt32BE(0) === 0x89504e47) r = { w: b.readUInt32BE(16), h: b.readUInt32BE(20) };
     else if (b.toString("ascii", 0, 3) === "GIF") r = { w: b.readUInt16LE(6), h: b.readUInt16LE(8) };
+    else if (/^\s*<svg\b/.test(b.toString("utf8", 0, 200))) {
+      const head = /<svg\b[^>]*>/.exec(b.toString("utf8", 0, 600))?.[0] || "";
+      const w = +(/\bwidth="(\d+)"/.exec(head) || [])[1], h = +(/\bheight="(\d+)"/.exec(head) || [])[1];
+      if (w && h) r = { w, h };
+    }
     else if (b[0] === 0xff && b[1] === 0xd8) {
       let i = 2;
       while (i < b.length) {

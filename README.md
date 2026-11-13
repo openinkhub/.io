@@ -96,6 +96,17 @@ Hub pages for content-plan clusters C02–C18 ("openink website dev page.xlsx"),
 
 Edit a page's HTML or FAQs, then `npm run articles && npm test`. Set `"status": "draft"` to unpublish (noindex, unlinked).
 
+### Content-plan articles (the 120 briefs)
+
+`tools/brief-posts.mjs` (`npm run brief-posts`) publishes briefs as blog posts in the Blogs category:
+
+- a brief is published when it has `"status": "published"`, `slug`, `description`, `faqs` ([question, answer] pairs) and a body at
+  `content/articles/website-development-posts/<slug>.html`; optional `seo_title` (when the sheet title is over 60 chars) and
+  `keyphrase` (natural form of the sheet keyword)
+- each post gets a generated 1200×630 cover at `static/images/articles/<slug>.svg`, BlogPosting + breadcrumb schema and FAQ schema
+- the hub page named in the brief lists its articles under "Articles on this topic"; related posts prefer the same hub/cluster
+- the audit reports them as their own section, "Website development articles"
+
 ## Content removals and plain-language edits
 
 `content/seo/removals.json` removes or replaces sections of imported WordPress pages (e.g. placeholder case studies,

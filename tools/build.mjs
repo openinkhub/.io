@@ -212,7 +212,7 @@ function breadcrumb(trail) {
 
 function postCard(r) {
   const img = r.featured_image;
-  const im = img ? `<img src="${E(rel(img.src))}" alt="${E(img.alt || r.title)}" loading="lazy" decoding="async">`
+  const im = img ? `<img src="${E(rel(img.src))}" alt="${E(img.alt || r.title)}"${img.width && img.height ? ` width="${img.width}" height="${img.height}"` : ""} loading="lazy" decoding="async">`
     : `<div class="card-ph">${icon("spark")}</div>`;
   const cat = r.categories?.length ? r.categories[0].name : "Article";
   const ex = r.excerpt || "";
@@ -280,6 +280,15 @@ const contentHasFaq = (content, faqs) =>
 // ---------------------------------------------------------------- templates
 const LEGAL = new Set(["privacy-policy", "terms", "refund", "shipping", "disclaimer", "cookie", "report"]);
 
+// "Articles on this topic" list on hub pages that content-plan posts point to (brief_hub)
+function hubArticles(rec) {
+  const list = POSTS.filter((p) => p.brief_hub === rec.path).sort((x, y) => (x.brief_id || 0) - (y.brief_id || 0));
+  if (!list.length) return "";
+  return `<section class="section"><div class="wrap narrow prose"><h2>Articles on this topic</h2><ul>${list.map((p) =>
+    `<li><a href="${E(p.path)}">${E(p.title)}</a></li>`).join("")}</ul></div></section>
+`;
+}
+
 function pageTpl(rec) {
   let [eyebrow, h1, body] = splitH1(rec.content_html || "", rec.h1 || rec.title);
   const h1Txt = stripTags(h1);
@@ -307,12 +316,18 @@ function pageTpl(rec) {
 </section>
 ${contact}
 <section class="section"><div class="wrap narrow prose"><!--seo:content-->${hubGrids(localizeBody(body))}<!--/seo:content--></div></section>
-${faqs}`, "is-page" + (legal ? " is-legal" : ""));
+${hubArticles(rec)}${faqs}`, "is-page" + (legal ? " is-legal" : ""));
 }
 
 function related(rec, n = 3) {
   const cats = new Set((rec.categories || []).map((c) => c.path));
   const pool = POSTS.filter((p) => p.path !== rec.path && (p.categories || []).some((c) => cats.has(c.path)));
+  // content-plan articles: same hub first, then same cluster
+  if (rec.brief_hub) {
+    const score = (p) => (p.brief_hub === rec.brief_hub ? 2 : 0) + (p.cluster && p.cluster === rec.cluster ? 1 : 0);
+    const near = pool.filter((p) => score(p) > 0).sort((x, y) => score(y) - score(x) || (x.brief_id || 0) - (y.brief_id || 0));
+    if (near.length >= n) return near.slice(0, n);
+  }
   // prefer non-city articles, oldest first (matches the original ordering)
   pool.sort((a, b) => (a.path.includes("best-seo-agency-in-") - b.path.includes("best-seo-agency-in-")) ||
     (a.date || "").localeCompare(b.date || ""));

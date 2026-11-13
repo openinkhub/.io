@@ -622,7 +622,32 @@
       ],
       "aeo_direct_answer": "Responsive website design makes a site adapt to any screen size using fluid grids, flexible images and CSS media queries. It matters because most traffic is mobile, Google indexes the mobile version first, and poor mobile UX hurts rankings, conversions and brand trust. Test on real devices and check Core Web Vitals.",
       "answer_needs_review": false,
-      "status": "brief"
+      "status": "published",
+      "slug": "responsive-website-design",
+      "seo_title": "Responsive Website Design: Why Mobile-Friendly Matters",
+      "description": "Responsive website design explained: how it works, why mobile-friendly sites rank and convert better, and how to test your own site.",
+      "faqs": [
+        [
+          "What is responsive website design?",
+          "Responsive website design makes one site adapt to any screen size using fluid grids, flexible images and CSS media queries."
+        ],
+        [
+          "Why does mobile-friendliness matter for SEO?",
+          "Google uses mobile-first indexing, so it mainly ranks the mobile version of your pages. Missing content or slow pages on mobile can hurt rankings."
+        ],
+        [
+          "How much does responsive design cost?",
+          "For a new site it should be part of the standard build. Converting an old fixed-width site can cost close to a redesign."
+        ],
+        [
+          "How do I test if my site is responsive?",
+          "Test key pages on real phones, resize your browser, check mobile speed in PageSpeed Insights and try forms and menus with your thumb."
+        ],
+        [
+          "What are common responsive design mistakes?",
+          "Common mistakes are hiding content on mobile, serving huge images, full-screen pop-ups, tiny text and testing only on desktop."
+        ]
+      ]
     },
     {
       "id": 12,
@@ -650,7 +675,32 @@
       ],
       "aeo_direct_answer": "Custom website development gives full control over design, features, integrations and performance, but costs more and takes longer than templates. Choose custom when you need unique workflows, complex integrations, strict security or long-term scalability; choose templates for fast, low-budget launches where standard features suffice.",
       "answer_needs_review": false,
-      "status": "brief"
+      "status": "published",
+      "slug": "custom-website-development-vs-templates",
+      "seo_title": "Custom Website Development vs Website Templates",
+      "description": "Custom website development vs ready-made templates: compare cost, flexibility, SEO, speed and scaling to pick the right option.",
+      "faqs": [
+        [
+          "Custom website development vs templates: which is better?",
+          "Neither is always better. Custom suits unique workflows, integrations, strict security and growth; templates suit fast, low-budget launches with standard features."
+        ],
+        [
+          "How much does each cost?",
+          "Templates cost less upfront. Custom builds cost more at the start but can cost less to extend, so compare cost over three years."
+        ],
+        [
+          "How flexible is each option?",
+          "Templates are flexible within the theme's limits. Custom builds have no fixed limits, so features and layouts can change as you grow."
+        ],
+        [
+          "How do they compare on SEO and performance?",
+          "Both can rank well. Custom sites usually load faster because they carry only the code they need, and they give exact control over SEO markup."
+        ],
+        [
+          "What are common mistakes when choosing?",
+          "Avoid over-customising a template, going custom for a very simple site, ignoring maintenance and choosing on looks alone."
+        ]
+      ]
     },
     {
       "id": 13,
@@ -678,7 +728,32 @@
       ],
       "aeo_direct_answer": "Modern website design trends in 2026 include AI-driven personalization, performance-first layouts, accessible design meeting WCAG, subtle motion and micro-interactions, dark mode, voice and conversational UI, privacy-first analytics and conversion-focused design patterns. Adopt trends only when they improve usability, speed and measurable outcomes.",
       "answer_needs_review": false,
-      "status": "brief"
+      "status": "published",
+      "slug": "modern-website-design-trends",
+      "seo_title": "Modern Website Design Trends for Businesses in 2026",
+      "description": "Modern website design trends for 2026: AI personalisation, performance-first layouts, accessibility, motion, dark mode and more.",
+      "faqs": [
+        [
+          "What are the top modern website design trends in 2026?",
+          "Key trends are AI personalisation, performance-first layouts, accessible design, micro-interactions, dark mode, conversational UI, privacy-first analytics and conversion-focused patterns."
+        ],
+        [
+          "Why do these trends matter for business?",
+          "They focus on speed, clarity and trust, which help visitors act and help search and AI tools understand your pages."
+        ],
+        [
+          "How much does a trend-driven redesign cost?",
+          "Small updates fit into normal maintenance. A full visual refresh or AI personalisation is closer to a redesign project."
+        ],
+        [
+          "How do I adopt trends without hurting performance?",
+          "Set a speed budget, use motion sparingly, compress images, load chat and personalisation scripts late and measure Core Web Vitals."
+        ],
+        [
+          "What are common design mistakes to avoid?",
+          "Avoid copying trends without a user need, heavy animations, low-contrast text and chatbots that block content."
+        ]
+      ]
     },
     {
       "id": 14,
@@ -706,7 +781,32 @@
       ],
       "aeo_direct_answer": "A professional website gives small businesses credibility, 24/7 visibility, lead generation, local SEO presence, customer support and a platform for marketing. It also levels the playing field against larger competitors. Costs range from a few hundred dollars for a simple site to several thousand for ecommerce or custom builds.",
       "answer_needs_review": false,
-      "status": "brief"
+      "status": "published",
+      "slug": "small-business-website-development",
+      "seo_title": "Small Business Website Development: Why It Matters",
+      "description": "Small business website development: why a professional site matters, what features it needs, what it costs and mistakes to avoid.",
+      "faqs": [
+        [
+          "Why does a small business need a professional website?",
+          "A professional website builds credibility, works for you around the clock, generates leads, supports local SEO and gives your marketing a home you own."
+        ],
+        [
+          "How much does a small business website cost?",
+          "A simple brochure site costs relatively little. Online stores, booking systems and custom tools cost more, plus ongoing domain, hosting and update costs."
+        ],
+        [
+          "What features should a small business website have?",
+          "Include clear service pages, contact details, click-to-call and WhatsApp buttons, reviews, real photos, an easy CMS, fast loading and HTTPS."
+        ],
+        [
+          "How does a website help with local SEO?",
+          "Your site lists services, locations and reviews clearly and works with your Google Business Profile, which helps you appear in local results."
+        ],
+        [
+          "What are common mistakes for small business websites?",
+          "Avoid free platforms that limit SEO, one page for all services, no call to action, stale content and a domain in someone else's name."
+        ]
+      ]
     },
     {
       "id": 15,
@@ -734,7 +834,32 @@
       ],
       "aeo_direct_answer": "Essential corporate website features include brand-aligned design, clear information architecture, CMS for updates, multilingual support, accessibility meeting WCAG, security with HTTPS and WAF, investor and careers sections, lead capture, analytics, structured data and fast performance across devices.",
       "answer_needs_review": false,
-      "status": "brief"
+      "status": "published",
+      "slug": "corporate-website-features",
+      "seo_title": "Essential Corporate Website Features",
+      "description": "Corporate website features every company needs: CMS, security, accessibility, investor and careers sections, lead capture and speed.",
+      "faqs": [
+        [
+          "What features should a corporate website have?",
+          "Brand-aligned design, clear structure, an enterprise CMS, multilingual support, accessibility, strong security, investor and careers sections, lead capture, analytics, structured data and fast performance."
+        ],
+        [
+          "Why are these features essential?",
+          "Corporate sites serve buyers, investors, candidates and media at once, and larger brands face more security and compliance risk."
+        ],
+        [
+          "How much do corporate website features cost?",
+          "Cost grows with audiences, languages, integrations and approval rules. Rank features by business value, then estimate each one."
+        ],
+        [
+          "How do I prioritize features?",
+          "Map each audience's top tasks, rank features by how many tasks they support, launch the core set first and add the rest in phases."
+        ],
+        [
+          "What are common mistakes with corporate websites?",
+          "Avoid menus organised by department, pages with no owner, late accessibility work and too many tracking scripts."
+        ]
+      ]
     },
     {
       "id": 16,
@@ -762,7 +887,32 @@
       ],
       "aeo_direct_answer": "A lead-generating business website combines clear value propositions, conversion-focused landing pages, short forms, CRM integration, trust signals, fast performance, mobile-first UX and analytics. Test headlines, offers and form lengths; track cost per lead, not just traffic, to prove ROI.",
       "answer_needs_review": false,
-      "status": "brief"
+      "status": "published",
+      "slug": "lead-generation-website",
+      "seo_title": "How to Build a Lead Generation Website",
+      "description": "Build a lead generation website that turns visitors into enquiries: landing pages, forms, CRM integration, trust signals and tracking.",
+      "faqs": [
+        [
+          "How do I build a lead-generating website?",
+          "Define a qualified lead, write a clear value proposition, create focused landing pages, add short forms and CRM integration, track conversions and test improvements."
+        ],
+        [
+          "What features improve lead generation?",
+          "Clear headlines, one main call to action, short forms, trust signals, fast mobile pages and lead magnets such as guides or audits."
+        ],
+        [
+          "How much does a lead-generation website cost?",
+          "The base site costs about the same as any professional business site. Extra landing pages, integrations, lead magnets and testing tools add cost."
+        ],
+        [
+          "How do I measure lead generation performance?",
+          "Track conversion rate, cost per lead, lead quality and revenue per lead, not just traffic."
+        ],
+        [
+          "What are common lead generation mistakes?",
+          "Avoid sending all traffic to the home page, long forms, slow follow-up and measuring traffic instead of leads and sales."
+        ]
+      ]
     },
     {
       "id": 17,
@@ -790,7 +940,32 @@
       ],
       "aeo_direct_answer": "The best website type for a startup depends on stage and goal: a landing page for validation, a corporate site for credibility, ecommerce for product sales, SaaS marketing sites for subscriptions, and web apps for core product delivery. Start lean, measure demand and upgrade as the business grows.",
       "answer_needs_review": false,
-      "status": "brief"
+      "status": "published",
+      "slug": "best-website-for-startups",
+      "seo_title": "Best Website for Startups: Types by Growth Stage",
+      "description": "Find the best website for startups at each stage: landing pages, company sites, ecommerce, SaaS marketing sites and web apps.",
+      "faqs": [
+        [
+          "What type of website is best for a startup?",
+          "It depends on stage and goal: a landing page to validate demand, a company site for credibility, a store for products, a SaaS site for subscriptions or a web app for the product itself."
+        ],
+        [
+          "How much does a startup website cost?",
+          "A landing page costs least, then company sites, then ecommerce stores, while web apps are full software projects."
+        ],
+        [
+          "When should a startup upgrade its website?",
+          "Upgrade when buyers keep asking questions the current site cannot answer, you need pages for different audiences, or you start fundraising or enterprise sales."
+        ],
+        [
+          "How do I choose a platform for a startup website?",
+          "Match the platform to the goal, check you can export content later, make sure founders can edit pages and confirm speed and SEO basics."
+        ],
+        [
+          "What are common startup website mistakes?",
+          "Avoid building a large site before validating demand, vague headlines, no analytics and platforms that are hard to leave."
+        ]
+      ]
     },
     {
       "id": 18,
@@ -818,7 +993,32 @@
       ],
       "aeo_direct_answer": "Good business website design varies by industry: healthcare needs trust, accessibility and appointment booking; SaaS needs product tours and pricing; retail needs search, filters and checkout; professional services need credentials and case studies. Match layout, content and CTAs to how your buyers evaluate and decide.",
       "answer_needs_review": false,
-      "status": "brief"
+      "status": "published",
+      "slug": "business-website-design-ideas",
+      "seo_title": "Business Website Design Ideas by Industry",
+      "description": "Business website design ideas for healthcare, SaaS, retail, professional services, manufacturing and education websites.",
+      "faqs": [
+        [
+          "What are good website design ideas for my industry?",
+          "Match design to how your buyers decide: trust and booking for healthcare, product tours and pricing for SaaS, search and checkout for retail, credentials and case studies for services."
+        ],
+        [
+          "What features work best by industry?",
+          "Healthcare needs doctor profiles and booking, SaaS needs pricing and trials, retail needs filters and reviews, and manufacturing needs specs and quote forms."
+        ],
+        [
+          "How much does an industry-specific website cost?",
+          "Cost rises with industry features such as booking systems, product configurators and member portals."
+        ],
+        [
+          "How do I choose a design that converts?",
+          "List buyers' top questions, answer them in order, give each page one main call to action and test with real users."
+        ],
+        [
+          "What are common industry website mistakes?",
+          "Avoid generic templates, hiding expected details such as prices, stock photos instead of real work and copying competitors without testing."
+        ]
+      ]
     },
     {
       "id": 19,
@@ -846,7 +1046,33 @@
       ],
       "aeo_direct_answer": "Choose your website type by how customers buy: B2B needs credibility, case studies and lead capture; B2C needs product discovery and checkout; marketplaces need multi-vendor infrastructure; SaaS needs trials and subscription billing; local services need location pages and booking. Match architecture and budget to the model.",
       "answer_needs_review": false,
-      "status": "brief"
+      "status": "published",
+      "slug": "choose-website-for-business-model",
+      "seo_title": "How to Choose a Website for Your Business Model",
+      "keyphrase": "website for your business model",
+      "description": "Choose the right website for your business model: what B2B, B2C, marketplace, SaaS and local service websites each need.",
+      "faqs": [
+        [
+          "How do I choose the right website for my business model?",
+          "Start with how customers buy, then pick the website type and features that support each step of that journey."
+        ],
+        [
+          "What website types fit each model?",
+          "B2B fits corporate or lead generation sites, B2C fits ecommerce, marketplaces need multi-vendor platforms, SaaS needs a marketing site plus web app, and local services need location pages and booking."
+        ],
+        [
+          "How much does each type cost?",
+          "Local and B2B sites usually cost least, ecommerce stores more, and SaaS apps and marketplaces most because they are full software products."
+        ],
+        [
+          "How do I plan for growth?",
+          "Choose a platform you will not outgrow soon, keep content portable and build in phases as revenue grows."
+        ],
+        [
+          "What are common mistakes when choosing a website type?",
+          "Avoid copying competitors with different models, building marketplaces on simple store platforms and B2B sites with no lead capture."
+        ]
+      ]
     },
     {
       "id": 20,
@@ -874,7 +1100,33 @@
       ],
       "aeo_direct_answer": "To start an ecommerce website in India, choose a platform such as Shopify, WooCommerce or custom, register your business and GST, set up payments via Razorpay, PayU or Stripe, configure shipping, build catalogue and product pages, add trust and policy pages, and launch with SEO, analytics and marketing. Budget ₹50,000 to ₹5 lakh or more depending on scope.",
       "answer_needs_review": false,
-      "status": "brief"
+      "status": "published",
+      "slug": "start-ecommerce-website-in-india",
+      "seo_title": "How to Start an Ecommerce Website in India",
+      "keyphrase": "start an ecommerce website in India",
+      "description": "How to start an ecommerce website in India: platform choice, GST, payment gateways, shipping, product pages, costs and launch tips.",
+      "faqs": [
+        [
+          "How do I start an ecommerce website in India?",
+          "Pick products, register your business and GST where required, choose a platform, set up payments and shipping, build your catalogue, add policy pages and launch with SEO and analytics."
+        ],
+        [
+          "Which platform should I choose?",
+          "Shopify suits fast launches, WooCommerce suits content-led stores wanting control, and custom builds suit unique workflows or large scale."
+        ],
+        [
+          "How much does an ecommerce website cost in India?",
+          "A typical budget runs from about ₹50,000 to ₹5 lakh or more depending on platform, design, products and integrations, plus monthly running costs."
+        ],
+        [
+          "How do I handle payments and shipping?",
+          "Use a gateway that supports UPI, cards, net banking and wallets, and a shipping aggregator to compare couriers and track orders."
+        ],
+        [
+          "What are common ecommerce launch mistakes?",
+          "Avoid thin product pages, missing return policies, platforms you will soon outgrow and slow mobile pages."
+        ]
+      ]
     },
     {
       "id": 21,

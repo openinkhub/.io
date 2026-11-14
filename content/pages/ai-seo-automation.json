@@ -481,7 +481,16 @@
       "path": "/category/best-seo-content-agency/"
     }
   ],
-  "tags": [],
+  "tags": [
+    {
+      "name": "seo",
+      "path": "/tag/seo/"
+    },
+    {
+      "name": "seo tools",
+      "path": "/tag/seo-tools/"
+    }
+  ],
   "faqs": [],
   "keyphrase_secondary_override": [
     "keyword research",

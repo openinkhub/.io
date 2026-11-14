@@ -650,7 +650,8 @@ function categoryTpl(rec, posts, x, cards, filters) {
     let body = "";
     if (s.cards) body = `<div class="svc-grid svc-cards-auto">${s.cards.map((c) => `<article class="svc-card"><h3>${E(c.title)}</h3><p>${E(c.text)}</p>${c.links ? `<ul class="card-links">${c.links.map((l) => `<li>${link(l)}</li>`).join("")}</ul>` : ""}</article>`).join("")}</div>`;
     else if (s.table) body = `<div class="c-card"><div class="table-wrap"><table><thead><tr>${s.table.head.map((h) => `<th>${E(h)}</th>`).join("")}</tr></thead><tbody>${s.table.rows.map((r) => `<tr>${r.map((c, k) => `<td>${k ? c : `<strong>${E(c)}</strong>`}</td>`).join("")}</tr>`).join("")}</tbody></table></div></div>`;
-    else if (s.steps) body = `<ol class="steps">${s.steps.map((t) => `<li>${E(t)}</li>`).join("")}</ol>`;
+    else if (s.lessons) body = `<div class="svc-grid svc-cards-auto lesson-grid">${s.lessons.map((l) => `<a class="svc-card svc-link" href="${E(l.href)}"><span class="num">${E(l.n)}</span><h3>${E(l.title)}</h3><p>${E(l.text)}</p><span class="link-arrow">Start lesson${icon("arrow")}</span></a>`).join("")}</div>`;
+    else if (s.steps) body =`<ol class="steps">${s.steps.map((t) => `<li>${E(t)}</li>`).join("")}</ol>`;
     out += `<section class="${secOpen()}"><div class="wrap${s.steps ? " narrow" : ""}"><!--seo:content-->${head(s)}${body}<!--/seo:content--></div></section>`;
   }
   if (rec.faqs?.length) out += `<section class="${secOpen()}"><div class="wrap narrow"><!--seo:content-->${head({ eyebrow: "FAQ", title: "Frequently Asked Questions" })}<div class="faq-list">${rec.faqs.map((f) => `<div class="faq-card"><h3>${E(stripTags(f.q))}</h3><div class="faq-a">${localizeBody(f.a)}</div></div>`).join("")}</div><!--/seo:content--></div></section>`;

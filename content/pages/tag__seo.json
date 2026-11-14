@@ -6,7 +6,7 @@
   "sitemap": "tags",
   "lastmod": "2026-08-04T13:46:00+00:00",
   "head": {
-    "title": "SEO: Articles, Guides and Tips - openink Hub",
+    "title": "SEO Guides | Learn How to Rank on Google and AI",
     "meta": [
       {
         "attr": "name",
@@ -31,12 +31,12 @@
       {
         "attr": "property",
         "key": "og:title",
-        "content": "SEO: Articles, Guides and Tips - openink Hub"
+        "content": "SEO Guides | Learn How to Rank on Google and AI (2026)"
       },
       {
         "attr": "property",
         "key": "og:description",
-        "content": ""
+        "content": "Our 9 SEO guides in one place: SEO basics, on-page SEO, links, Google Business Profile, AI search and how to choose an SEO agency in India."
       },
       {
         "attr": "property",
@@ -71,12 +71,12 @@
       {
         "attr": "name",
         "key": "twitter:title",
-        "content": "SEO: Articles, Guides and Tips - openink Hub"
+        "content": "SEO Guides | Learn How to Rank on Google and AI (2026)"
       },
       {
         "attr": "name",
         "key": "twitter:description",
-        "content": ""
+        "content": "Our 9 SEO guides in one place: SEO basics, on-page SEO, links, Google Business Profile, AI search and how to choose an SEO agency in India."
       },
       {
         "attr": "name",
@@ -107,6 +107,11 @@
         "attr": "name",
         "key": "msapplication-TileImage",
         "content": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "Our 9 SEO guides in one place: SEO basics, on-page SEO, links, Google Business Profile, AI search and how to choose an SEO agency in India."
       }
     ],
     "links": [
@@ -268,9 +273,30 @@
     ],
     "lang": "en-US"
   },
-  "h1": "Insights on digital growth, AI search, and automation for SMEs.",
+  "h1": "SEO Guides: How to Rank on Google and in AI Answers in 2026",
   "type": "tag",
   "title": "Insights on digital growth, AI search, and automation for SMEs.",
   "content_html": "",
-  "faqs": []
+  "faqs": [
+    {
+      "q": "What is SEO?",
+      "a": "<p>SEO means making your site easy for search engines to find, read and trust. As a result, your pages show up when people search for what you sell.</p>"
+    },
+    {
+      "q": "How long does SEO take to work?",
+      "a": "<p>Most sites see the first gains in 3 to 6 months. Local searches and new pages with little competition can move faster.</p>"
+    },
+    {
+      "q": "What is the difference between SEO and AEO?",
+      "a": "<p>SEO aims for the blue links on Google. AEO aims for direct answers, such as featured snippets, People Also Ask boxes and voice answers.</p>"
+    },
+    {
+      "q": "Can I do SEO myself?",
+      "a": "<p>Yes, for a small site. Our <a href=\"/tag/seo-course/\">free SEO course</a> and the free tools in our <a href=\"/tag/seo-tools/\">SEO tools guide</a> cover the basics.</p>"
+    },
+    {
+      "q": "Which SEO guide should I read first?",
+      "a": "<p>Start with the SEO beginner's guide. Then use the four questions on this page to pick your next step.</p>"
+    }
+  ]
 }

@@ -470,3 +470,4 @@ a.svc-card.svc-link h3{color:var(--ink)}
 .state-cities a{color:var(--blue);font-weight:600;white-space:nowrap}
 @media (min-width:601px){.is-category .about-stats{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}}
 @media (min-width:1021px){.is-category .svc-grid{grid-template-columns:repeat(3,1fr)}}
+.lesson-grid .num{display:inline-block;font:800 22px/1 var(--f-head);color:var(--blue);margin-bottom:10px}

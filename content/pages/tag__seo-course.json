@@ -6,7 +6,7 @@
   "sitemap": "tags",
   "lastmod": "2026-08-04T13:46:00+00:00",
   "head": {
-    "title": "SEO Course: Articles and Guides - openink Hub",
+    "title": "Free SEO Course | 5 Step-by-Step SEO Lessons",
     "meta": [
       {
         "attr": "name",
@@ -31,12 +31,12 @@
       {
         "attr": "property",
         "key": "og:title",
-        "content": "SEO Course: Articles and Guides - openink Hub"
+        "content": "Free SEO Course | 5 Step-by-Step SEO Lessons (2026)"
       },
       {
         "attr": "property",
         "key": "og:description",
-        "content": ""
+        "content": "A free SEO course in 5 lessons: SEO basics, on-page SEO, profile links, Google Business Profile and ranking in AI search. One lesson a day."
       },
       {
         "attr": "property",
@@ -71,12 +71,12 @@
       {
         "attr": "name",
         "key": "twitter:title",
-        "content": "SEO Course: Articles and Guides - openink Hub"
+        "content": "Free SEO Course | 5 Step-by-Step SEO Lessons (2026)"
       },
       {
         "attr": "name",
         "key": "twitter:description",
-        "content": ""
+        "content": "A free SEO course in 5 lessons: SEO basics, on-page SEO, profile links, Google Business Profile and ranking in AI search. One lesson a day."
       },
       {
         "attr": "name",
@@ -107,6 +107,11 @@
         "attr": "name",
         "key": "msapplication-TileImage",
         "content": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "A free SEO course in 5 lessons: SEO basics, on-page SEO, profile links, Google Business Profile and ranking in AI search. One lesson a day."
       }
     ],
     "links": [
@@ -268,9 +273,30 @@
     ],
     "lang": "en-US"
   },
-  "h1": "Insights on digital growth, AI search, and automation for SMEs.",
+  "h1": "Free SEO Course: 5 Lessons From Basics to AI Search (2026)",
   "type": "tag",
   "title": "Insights on digital growth, AI search, and automation for SMEs.",
   "content_html": "",
-  "faqs": []
+  "faqs": [
+    {
+      "q": "Is this SEO course really free?",
+      "a": "<p>Yes. Every lesson is a public guide on our blog, with no sign-up and no fee.</p>"
+    },
+    {
+      "q": "Who is this course for?",
+      "a": "<p>It suits owners, marketers and new team members at small and mid-sized firms. You do not need any tech skills to start.</p>"
+    },
+    {
+      "q": "How long does the course take?",
+      "a": "<p>Each lesson takes about an hour to read and try. So at one lesson a day, you finish in a week.</p>"
+    },
+    {
+      "q": "Do I get a certificate?",
+      "a": "<p>No. The course is a set of guides, not a paid program. Instead, you get a site that is in better shape after each lesson.</p>"
+    },
+    {
+      "q": "What should I do after the course?",
+      "a": "<p>Run a <a href=\"/report/\">free SEO audit</a> on your site. It shows which fixes will make the biggest difference next.</p>"
+    }
+  ]
 }

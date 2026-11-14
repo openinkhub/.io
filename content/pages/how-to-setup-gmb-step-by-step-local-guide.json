@@ -481,7 +481,20 @@
       "path": "/category/best-seo-content-agency/"
     }
   ],
-  "tags": [],
+  "tags": [
+    {
+      "name": "seo",
+      "path": "/tag/seo/"
+    },
+    {
+      "name": "seo course",
+      "path": "/tag/seo-course/"
+    },
+    {
+      "name": "seo tools",
+      "path": "/tag/seo-tools/"
+    }
+  ],
   "faqs": [],
   "keyphrase_override": "gmb",
   "keyphrase_secondary_override": [

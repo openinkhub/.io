@@ -579,7 +579,12 @@
       "path": "/category/best-seo-content-agency/"
     }
   ],
-  "tags": [],
+  "tags": [
+    {
+      "name": "seo",
+      "path": "/tag/seo/"
+    }
+  ],
   "faqs": [],
   "keyphrase_override": "seo services company in patna",
   "keyphrase_secondary_override": [

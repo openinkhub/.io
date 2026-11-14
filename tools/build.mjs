@@ -114,10 +114,10 @@ function localizeBody(h) {
 }
 
 // ---------------------------------------------------------------- <head>
-function headHtml(rec) {
+function headHtml(rec, tags = "") {
   const hd = rec.head;
   const out = ['<meta charset="UTF-8">', '<meta name="viewport" content="width=device-width, initial-scale=1">',
-    `<title>${E(hd.title, false)}</title>`];
+    tags.trim(), `<title>${E(hd.title, false)}</title>`].filter(Boolean); // charset + viewport stay first; then tracking tags
   for (const m of hd.meta) out.push(`<meta ${m.attr}="${E(m.key)}" content="${E(m.content)}">`);
   // dead WordPress links (feeds, oEmbed, shortlink, sitemap-as-RSS) are dropped; the sitemap gets rel="sitemap"
   const dead = (l) => l.rel === "shortlink" || (l.rel === "alternate" && /\/feed\/|wp-json|oembed|sitemap\.xml/.test(l.href));
@@ -219,6 +219,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM}');</script>
 <!-- End Google Tag Manager -->
 ` : "";
+// AdSense (analytics.adsense): account meta tag + async auto-ads script (Google's site code); ads.txt written in main()
+const ADSENSE = /^ca-pub-\d{16}$/.test(CFG.analytics?.adsense || "") ? CFG.analytics.adsense : "";
+const adsHead = ADSENSE ? `<meta name="google-adsense-account" content="${ADSENSE}">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE}" crossorigin="anonymous"></script>
+` : "";
 // GA4 loaded directly (analytics.ga4); it shares the same dataLayer as GTM
 const GA4 = /^G-[A-Z0-9]+$/.test(CFG.analytics?.ga4 || "") ? CFG.analytics.ga4 : "";
 const ga4Head = GA4 ? `<!-- Google tag (gtag.js) -->
@@ -234,7 +239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 const document_ = (rec, body, bodyClass = "") => `<!DOCTYPE html>
 <html lang="en-IN">
 <head>
-${gtmHead}${ga4Head}${headHtml(rec)}
+${headHtml(rec, gtmHead + ga4Head + adsHead)}
 </head>
 <body class="${bodyClass}">
 ${gtmBody}
@@ -1055,6 +1060,7 @@ function main() {
   sitemaps();
   notFound();
   write("/CNAME", "openinkhub.io\n");
+  if (ADSENSE) write("/ads.txt", `google.com, ${ADSENSE.replace(/^ca-/, "")}, DIRECT, f08c47fec0942fa0\n`);
   write("/.nojekyll", "");
   seoFiles();
   fs.mkdirSync(path.join(DIST, "admin"), { recursive: true });

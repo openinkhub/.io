@@ -228,6 +228,7 @@
     "gtm": "GTM-TWSLJ8JZ",
     "ga4": "G-C3HG2W710F",
     "ga4_property": "516898450",
-    "_note": "GA4 is loaded directly on the site (gtag.js). Do NOT also add a GA4 Google tag inside GTM, or every visit is counted twice. GTM is for other tags."
+    "_note": "GA4 is loaded directly on the site (gtag.js). Do NOT also add a GA4 Google tag inside GTM, or every visit is counted twice. GTM is for other tags.",
+    "adsense": "ca-pub-9752386624996275"
   }
 }

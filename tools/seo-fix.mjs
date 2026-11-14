@@ -20,6 +20,10 @@ const SQ_FILE = path.join(ROOT, "content", "seo", "squirrly.json");
 export const SQUIRRLY = fs.existsSync(SQ_FILE) ? JSON.parse(fs.readFileSync(SQ_FILE, "utf8")) : { pages: {}, redirects: [] };
 const FIX = RULES.autofix;
 const SITE = RULES.site;
+// Service pages (Services menu + hub, not About) for Service schema
+const CFG_NAV = JSON.parse(fs.readFileSync(path.join(ROOT, "content", "site-config.json"), "utf8")).nav || [];
+const SVC_MENU = CFG_NAV.find((n) => n.label === "Services") || {};
+const SERVICE_PATHS = new Set([SVC_MENU.href, ...(SVC_MENU.children || []).map((c) => c.href)].filter((p) => p && p !== "/best-expert-in-answer-engine-optimization/"));
 
 const strip = (h) => String(h || "").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&#x27;|&#039;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, " ").trim();
 const clip = (s, n) => { s = strip(s); if (s.length <= n) return s; const cut = s.slice(0, n - 1); return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:—-]+$/, "") + "…"; };
@@ -312,6 +316,39 @@ export function fixRecord(rec) {
   if (FIX.faqSchema && rec.faqs?.length && !present.has("FAQPage")) {
     graph.push({ "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: rec.faqs.map((f) => ({ "@type": "Question", name: strip(f.q),
       acceptedAnswer: { "@type": "Answer", text: strip(f.a) } })) });
+  }
+  // Entity data: every Organization node gets contactPoint, address and sameAs (social profiles); service pages
+  // get a Service node; the home and contact pages get a local ProfessionalService node (Ranchi office).
+  if (FIX.entitySchema) {
+    const B = RULES.business || {};
+    const address = B.address ? { "@type": "PostalAddress", ...B.address } : undefined;
+    const contactPoint = B.phone ? [{ "@type": "ContactPoint", telephone: B.phone, email: B.email, contactType: "customer service",
+      areaServed: "IN", availableLanguage: ["English", "Hindi"] }] : undefined;
+    const enrich = (n) => {
+      if (!n || typeof n !== "object") return;
+      if (Array.isArray(n)) return n.forEach(enrich);
+      const t = [].concat(n["@type"] || []);
+      if (t.includes("Organization")) {
+        if (!n.contactPoint && contactPoint) n.contactPoint = contactPoint;
+        if (!n.address && address) n.address = address;
+        if (B.sameAs?.length) n.sameAs = [...new Set([...(n.sameAs || []), ...B.sameAs])];
+        if (!n.email && B.email) n.email = B.email;
+        if (!n.telephone && B.phone) n.telephone = B.phone;
+      }
+      for (const v of Object.values(n)) if (v && typeof v === "object") enrich(v);
+    };
+    enrich(rec.head.jsonld); enrich(graph);
+    if (SERVICE_PATHS.has(rec.path) && !present.has("Service")) {
+      graph.push({ "@type": "Service", "@id": `${url}#service`, name: strip(rec.h1 || title), serviceType: strip(title).split(/\s*[|:(]\s*/)[0],
+        description: desc || undefined, url, provider: { "@id": orgId }, areaServed: { "@type": "Country", name: "India" },
+        ...(image ? { image } : {}) });
+    }
+    if (["/", "/contact-us/"].includes(rec.path) && !present.has("ProfessionalService") && address) {
+      graph.push({ "@type": "ProfessionalService", "@id": `${SITE.url}/#localbusiness`, name: SITE.legalName || SITE.name, url: SITE.url + "/",
+        image: SITE.logo, logo: SITE.logo, telephone: B.phone, email: B.email, address, priceRange: B.priceRange,
+        openingHoursSpecification: B.hours ? [{ "@type": "OpeningHoursSpecification", dayOfWeek: B.hours.days, opens: B.hours.opens, closes: B.hours.closes }] : undefined,
+        hasMap: B.mapUrl, areaServed: { "@type": "Country", name: "India" }, sameAs: B.sameAs, parentOrganization: { "@id": orgId } });
+    }
   }
   if (graph.length) {
     rec.head.jsonld.push({ "@context": "https://schema.org", "@graph": JSON.parse(JSON.stringify(graph)) });

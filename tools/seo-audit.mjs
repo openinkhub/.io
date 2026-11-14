@@ -202,7 +202,7 @@ function audit(p) {
   const sents = text(blocks).split("¶").flatMap((b) => sentencesOf(b.trim()));
   const h1s = [...p.html.matchAll(/<h1[^>]*>([\s\S]*?)<\/h1>/g)].map((m) => text(m[1]));
   const subheads = [...content.matchAll(/<h[23][^>]*>([\s\S]*?)<\/h[23]>/g)].map((m) => text(m[1]));
-  const paras = [...content.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].map((m) => text(m[1])).filter(Boolean);
+  const paras = [...content.matchAll(/<p(?:\s[^>]*)?>([\s\S]*?)<\/p>/g)].map((m) => text(m[1])).filter(Boolean); // not <path>/<picture>
   const imgs = [...p.main.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
   // logos and icons are decoration, not illustrations, so they don't count towards the text-to-image ratio
   const contentImgs = [...content.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]).filter((t) => !/alt="[^"]*\blogo\b/i.test(t) && !/class="[^"]*\b(logo|client|icon)/i.test(t));
@@ -286,7 +286,7 @@ function audit(p) {
   c.text_image_ratio = contentImgs.length ? r(wc / contentImgs.length >= T.textToImage.minWordsPerImage ? "pass" : "warn", `${Math.round(wc / contentImgs.length)} words per image`) : r(isListing ? "info" : "warn", "no images in content", "add at least one relevant image");
 
   // schema & social
-  const std = new Set(["Organization", "WebSite", "WebPage", "Article", "BlogPosting", "BreadcrumbList", "ListItem", "Person", "FAQPage", "Question", "Answer", "ImageObject", "CollectionPage", "Service", "City", "State", "PostalAddress", "Thing", "SearchAction", "EntryPoint", "PropertyValueSpecification", "ReadAction", "Place", "LocalBusiness", "ProfessionalService"]);
+  const std = new Set(["Organization", "WebSite", "WebPage", "Article", "BlogPosting", "BreadcrumbList", "ListItem", "Person", "FAQPage", "Question", "Answer", "ImageObject", "CollectionPage", "Service", "City", "State", "PostalAddress", "ContactPoint", "OpeningHoursSpecification", "Country", "Thing", "SearchAction", "EntryPoint", "PropertyValueSpecification", "ReadAction", "Place", "LocalBusiness", "ProfessionalService"]);
   c.schema_jsonld = !p.jsonldOk ? r("fail", "invalid JSON-LD") : p.jsonld.length ? r("pass", [...typeSet].filter((t) => !["ListItem", "Question", "Answer", "ImageObject", "EntryPoint", "SearchAction", "PropertyValueSpecification", "ReadAction"].includes(t)).join(", ")) : r("fail", "no JSON-LD");
   const custom = [...typeSet].filter((t) => !std.has(t));
   c.custom_schema = r("info", custom.length ? custom.join(", ") : "none");

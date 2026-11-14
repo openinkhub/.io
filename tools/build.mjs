@@ -92,6 +92,10 @@ const ICONS = {
   map: '<path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/>',
   menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
   clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  instagram: '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8"/>',
+  facebook: '<path d="M14 8.5V7c0-.8.5-1.2 1.2-1.2H17V3h-2.6C11.8 3 11 4.8 11 7v1.5H9V11.5h2V21h3v-9.5h2.5l.5-3Z"/>',
+  linkedin: '<rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 10.5V16M8 7.8v.1M11.5 16v-3.2c0-1.5.9-2.3 2-2.3s2 .8 2 2.3V16M11.5 10.5V16"/>',
+  x: '<path d="M4 4l16 16M20 4 4 20"/>',
   calendar: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
 };
 const icon = (name, cls = "ico") =>
@@ -115,13 +119,21 @@ function headHtml(rec) {
   const out = ['<meta charset="UTF-8">', '<meta name="viewport" content="width=device-width, initial-scale=1">',
     `<title>${E(hd.title, false)}</title>`];
   for (const m of hd.meta) out.push(`<meta ${m.attr}="${E(m.key)}" content="${E(m.content)}">`);
+  // dead WordPress links (feeds, oEmbed, shortlink, sitemap-as-RSS) are dropped; the sitemap gets rel="sitemap"
+  const dead = (l) => l.rel === "shortlink" || (l.rel === "alternate" && /\/feed\/|wp-json|oembed|sitemap\.xml/.test(l.href));
   for (const l of hd.links) {
-    const extra = ["hreflang", "type", "sizes"].filter((k) => l[k]).map((k) => ` ${k}="${E(l[k])}"`).join("");
+    if (dead(l) || l.hreflang) continue;
+    const extra = ["type", "sizes"].filter((k) => l[k]).map((k) => ` ${k}="${E(l[k])}"`).join("");
     out.push(`<link rel="${E(l.rel)}" href="${E(l.href)}"${extra}>`);
   }
+  const canon = hd.links.find((l) => l.rel === "canonical")?.href;
+  if (canon) out.push(`<link rel="alternate" hreflang="en-IN" href="${E(canon)}">`, `<link rel="alternate" hreflang="x-default" href="${E(canon)}">`);
+  out.push('<link rel="sitemap" type="application/xml" href="/sitemap.xml">');
   out.push('<meta name="theme-color" content="#046bd2">');
   out.push('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>');
-  out.push('<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">');
+  // fonts load without blocking the first paint (mobile speed); system fonts show until they arrive
+  const FONTS = "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap";
+  out.push(`<link rel="preload" as="style" href="${FONTS}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${FONTS}"></noscript>`);
   out.push(`<link rel="stylesheet" href="/assets/css/site.css?v=${VERSION}">`);
   for (const j of hd.jsonld) {
     out.push("_raw" in j ? `<script type="application/ld+json">${j._raw}</script>`
@@ -160,6 +172,8 @@ function header(p) {
 
 function footer() {
   const c = CFG.contact;
+  const SOC = { "instagram.com": ["instagram", "Instagram"], "facebook.com": ["facebook", "Facebook"], "linkedin.com": ["linkedin", "LinkedIn"], "x.com": ["x", "X (Twitter)"] };
+  const social = (RULES.business?.sameAs || []).map((u) => { const k = Object.keys(SOC).find((d) => u.includes(d)); return k ? `<li><a href="${E(u)}" target="_blank" rel="noopener" aria-label="Openink Hub on ${SOC[k][1]}">${icon(SOC[k][0])}</a></li>` : ""; }).join("");
   const cols = CFG.footer.columns.map((col) =>
     `<div><h3>${E(col.title)}</h3><ul>${col.links.map((l) => `<li><a href="${E(l.href)}"${/^https?:/.test(l.href) ? " target=\"_blank\" rel=\"noopener\"" : ""}>${E(l.label)}</a></li>`).join("")}</ul></div>`).join("");
   return `<section class="cta-band">
@@ -182,12 +196,13 @@ function footer() {
         <li>${icon("phone")}<a href="tel:${E(c.phone_raw)}">${E(c.phone)}</a></li>
         <li>${icon("mail")}<a href="mailto:${E(c.email)}">${E(c.email)}</a></li>
       </ul>
+      ${social ? `<ul class="social-list" aria-label="Openink Hub on social media">${social}</ul>` : ""}
     </div>
     ${cols}
   </div>
   <div class="foot-bar"><div class="wrap foot-bottom">
     <span>© ${now.getFullYear()} ${E(CFG.name)}. All rights reserved.</span>
-    <span class="legal">${CFG.footer.legal.map((l) => `<a href="${E(l.href)}">${E(l.label)}</a>`).join(" · ")}</span>
+    <span class="legal"><a href="/best-expert-in-answer-engine-optimization/">About Us</a> · <a href="/contact-us/">Contact Us</a> · ${CFG.footer.legal.map((l) => `<a href="${E(l.href)}">${E(l.label)}</a>`).join(" · ")}</span>
   </div></div>
 </footer>
 <a class="wa-float" href="${E(c.whatsapp)}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">${icon("wa")}</a>
@@ -195,7 +210,7 @@ function footer() {
 }
 
 const document_ = (rec, body, bodyClass = "") => `<!DOCTYPE html>
-<html lang="${E(rec.head.lang || "en-US")}">
+<html lang="en-IN">
 <head>
 ${headHtml(rec)}
 </head>
@@ -815,6 +830,7 @@ function homeTpl(rec) {
       <p class="lead">${E(hero.lead)}</p>
       <div class="hero-ctas">${ctas}</div>
       <div class="quick-answer"><strong>Quick answer:</strong> ${E(hero.quick_answer)}</div>
+      ${hero.takeaways?.length ? `<div class="key-takeaways"><strong>Key takeaways</strong><ul>${hero.takeaways.map((t) => `<li>${icon("check")}<span>${E(t)}</span></li>`).join("")}</ul></div>` : ""}
     </div>
     <div class="hero-visual">
       <img src="${E(hero.image.src)}" alt="${E(hero.image.alt)}" width="1024" height="576" fetchpriority="high">
@@ -911,7 +927,7 @@ function seoFiles() {
   const retired = fs.existsSync(retiredFile) ? load(retiredFile).redirects || [] : [];
   if ((RULES.autofix.redirects && SQUIRRLY.redirects?.length) || retired.length) {
     const lines = (RULES.autofix.redirects ? SQUIRRLY.redirects || [] : []).flatMap((r) => [`${r.from} ${r.to} ${r.code}`, `${r.from}/ ${r.to} ${r.code}`]);
-    const ret = retired.flatMap((r) => [`${r.from} ${r.to} ${r.code}`, `${r.from.replace(/\/$/, "")} ${r.to} ${r.code}`]);
+    const ret = [...new Set(retired.flatMap((r) => [`${r.from} ${r.to} ${r.code}`, `${r.from.replace(/\/$/, "")} ${r.to} ${r.code}`]))];
     write("/_redirects", "# Imported from Squirrly SEO (content/seo/squirrly.json). Live URLs are never redirected.\n" + lines.join("\n") + "\n" +
       (ret.length ? "# Retired on purpose (content/seo/retired.json)\n" + ret.join("\n") + "\n" : ""));
   }

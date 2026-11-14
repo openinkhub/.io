@@ -500,3 +500,15 @@ a.svc-card.svc-link h3{color:var(--ink)}
 @media (max-width:600px){.is-contact .svc-grid.contact-cards,.is-contact .svc-grid.goal-cards,.is-contact .svc-grid.process-cards{grid-template-columns:1fr}}
 .is-contact .about-stats{grid-template-columns:repeat(4,1fr)}
 @media (max-width:1020px){.is-contact .about-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* home: key takeaways under the quick answer */
+.key-takeaways{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px 18px;box-shadow:var(--shadow)}
+.key-takeaways strong{display:block;font:700 15px var(--f-head);color:var(--ink);margin-bottom:8px}
+.key-takeaways ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.key-takeaways li{display:flex;gap:8px;align-items:flex-start;font-size:15px;color:var(--ink-2);line-height:1.5}
+.key-takeaways .ico{flex:0 0 18px;width:18px;height:18px;color:var(--blue);margin-top:3px}
+/* footer social icons */
+.social-list{list-style:none;margin:16px 0 0;padding:0;display:flex;gap:10px}
+.social-list a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);color:var(--ink);transition:.2s}
+.social-list a:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-50)}
+.social-list .ico{width:18px;height:18px}
+.key-takeaways{max-width:620px}

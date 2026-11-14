@@ -18,7 +18,7 @@
       "Google Business Profile",
       "Ranchi"
     ],
-    "twitterHandle": ""
+    "twitterHandle": "@Openinkhub"
   },
   "sections": [
     {
@@ -202,6 +202,7 @@
     "imageDimensions": true,
     "breadcrumbSchema": true,
     "organizationSchema": true,
+    "entitySchema": true,
     "websiteSchema": true,
     "articleSchema": true,
     "authorSchema": true,
@@ -554,7 +555,39 @@
       "/website-design-development/": "Website Design & Development Services (2026)",
       "/website-development-agency-vs-freelancer/": "Website Development Agency vs Freelancer (2026)",
       "/website-development-location/": "Website Development Company in Your City (2026)",
-      "/best-seo-agency-in-tiruchirappalli/": "SEO Agency in Tiruchirappalli (2026): Education & Temples"
+      "/best-seo-agency-in-tiruchirappalli/": "SEO Agency in Tiruchirappalli (2026): Education & Temples",
+      "/": "AI Search Optimization for SMEs | SEO, AEO, GEO, AIO (2026)"
     }
+  },
+  "business": {
+    "_note": "Entity data for Organization / ProfessionalService schema and footer social links (seo-fix.mjs, build.mjs).",
+    "phone": "+91-9204135136",
+    "email": "info@openinkhub.io",
+    "address": {
+      "streetAddress": "203, Liya Complex, Main Road",
+      "addressLocality": "Ranchi",
+      "addressRegion": "Jharkhand",
+      "postalCode": "834001",
+      "addressCountry": "IN"
+    },
+    "hours": {
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Liya+Complex+Main+Road+Ranchi",
+    "sameAs": [
+      "https://www.instagram.com/openinkhub",
+      "https://www.facebook.com/openinkhub.io",
+      "https://www.linkedin.com/company/openinkhub/",
+      "https://x.com/Openinkhub"
+    ]
   }
 }

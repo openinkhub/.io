@@ -74,7 +74,8 @@ for (const r of rows) {
   if (rec.head.title !== r.title) rewritten++;
   const checks = {
     // URL contract: must always match the live site exactly
-    canonical: [canon ? unescapeHtml(canon[1]) : "", r.canonical],
+    // (the site root with or without its trailing slash is the same URL; the slash form avoids "canonical points elsewhere")
+    canonical: [canon ? unescapeHtml(canon[1]).replace(/^(https:\/\/[^/]+)\/$/, "$1") : "", r.canonical.replace(/^(https:\/\/[^/]+)\/$/, "$1")],
     robots: [meta(doc, "robots"), r.robots],
     // head copy: must match what the content files intend
     title: [unescapeHtml(/<title>([\s\S]*?)<\/title>/.exec(doc)?.[1] ?? ""), rec.head.title],

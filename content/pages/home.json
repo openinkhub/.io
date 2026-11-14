@@ -6,7 +6,7 @@
   "sitemap": "home",
   "lastmod": "2026-11-08T08:57:12+00:00",
   "head": {
-    "title": "AI Search Optimization: SEO, AEO, GEO & AIO | openink Hub",
+    "title": "AI Search Optimization for SMEs | SEO, AEO, GEO, AIO (2026)",
     "meta": [
       {
         "attr": "name",
@@ -31,12 +31,12 @@
       {
         "attr": "name",
         "key": "keywords",
-        "content": "seo,seo tools,seo services,what is seo,seo full form,seo services near me"
+        "content": "ai search optimization,seo company in ranchi,seo agency ranchi,digital marketing agency ranchi jharkhand,local seo services india,aeo services,geo services,aio services,google business profile optimization,whatsapp ai chatbot"
       },
       {
         "attr": "property",
         "key": "og:url",
-        "content": "https://openinkhub.io"
+        "content": "https://openinkhub.io/"
       },
       {
         "attr": "property",
@@ -81,7 +81,7 @@
       {
         "attr": "name",
         "key": "twitter:url",
-        "content": "https://openinkhub.io"
+        "content": "https://openinkhub.io/"
       },
       {
         "attr": "name",
@@ -132,7 +132,7 @@
     "links": [
       {
         "rel": "canonical",
-        "href": "https://openinkhub.io",
+        "href": "https://openinkhub.io/",
         "hreflang": null,
         "type": null,
         "sizes": null

@@ -477,6 +477,10 @@
   "author": "Hiten Neotia",
   "categories": [
     {
+      "name": "HRMS & ATS",
+      "path": "/category/hr-software/"
+    },
+    {
       "name": "Blogs",
       "path": "/category/best-seo-content-agency/"
     }

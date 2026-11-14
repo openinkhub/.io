@@ -769,5 +769,449 @@
         ]
       }
     ]
+  },
+  "/category/seo-services/": {
+    "eyebrow": "Blog category",
+    "h1": "SEO Articles: Guides to Rank Higher on Google in 2026",
+    "lead": "Our SEO articles on rankings, on-page fixes, links and hiring the right agency.",
+    "quick": "This category holds our core SEO articles. Read them in order: SEO basics, on-page SEO, profile links, then how to choose an SEO agency in India.",
+    "ctas": [
+      {
+        "label": "See SEO services",
+        "href": "/best-seo-services-in-india/"
+      },
+      {
+        "label": "Get a free audit",
+        "href": "/report/"
+      }
+    ],
+    "stats": [
+      {
+        "value": "4",
+        "label": "Articles"
+      },
+      {
+        "value": "2026",
+        "label": "Updated for this year"
+      },
+      {
+        "value": "Free",
+        "label": "To read, no sign-up"
+      }
+    ],
+    "browse": {
+      "eyebrow": "SEO",
+      "title": "All SEO articles",
+      "lead": "Newest first. Use the chips to switch to another service."
+    },
+    "sections": [
+      {
+        "eyebrow": "Next step",
+        "title": "Turn reading into results",
+        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "cards": [
+          {
+            "title": "SEO services",
+            "text": "See how Openink Hub delivers this service, what it costs and what you get.",
+            "links": [
+              [
+                "Explore SEO services",
+                "/best-seo-services-in-india/"
+              ]
+            ]
+          },
+          {
+            "title": "Free audit",
+            "text": "Get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "links": [
+              [
+                "Get your free audit",
+                "/report/"
+              ]
+            ]
+          },
+          {
+            "title": "All articles",
+            "text": "Browse every guide on the blog, grouped by service.",
+            "links": [
+              [
+                "Back to the blog",
+                "/category/best-seo-content-agency/"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "/category/ai-search/": {
+    "eyebrow": "Blog category",
+    "h1": "AEO, GEO and AIO Articles: How to Rank in AI Search in 2026",
+    "lead": "Our articles on answer engines and AI search, so ChatGPT, Gemini and Perplexity name your brand.",
+    "quick": "This category covers AI search. One guide shows how to rank in AI answers, and the other shows how AI tools speed up everyday SEO work.",
+    "ctas": [
+      {
+        "label": "See GEO services",
+        "href": "/generative-engine-optimization/"
+      },
+      {
+        "label": "Get a free audit",
+        "href": "/report/"
+      }
+    ],
+    "stats": [
+      {
+        "value": "2",
+        "label": "Articles"
+      },
+      {
+        "value": "2026",
+        "label": "Updated for this year"
+      },
+      {
+        "value": "Free",
+        "label": "To read, no sign-up"
+      }
+    ],
+    "browse": {
+      "eyebrow": "AEO, GEO & AIO",
+      "title": "All AEO, GEO & AIO articles",
+      "lead": "Newest first. Use the chips to switch to another service."
+    },
+    "sections": [
+      {
+        "eyebrow": "Next step",
+        "title": "Turn reading into results",
+        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "cards": [
+          {
+            "title": "GEO services",
+            "text": "See how Openink Hub delivers this service, what it costs and what you get.",
+            "links": [
+              [
+                "Explore GEO services",
+                "/generative-engine-optimization/"
+              ]
+            ]
+          },
+          {
+            "title": "Free audit",
+            "text": "Get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "links": [
+              [
+                "Get your free audit",
+                "/report/"
+              ]
+            ]
+          },
+          {
+            "title": "All articles",
+            "text": "Browse every guide on the blog, grouped by service.",
+            "links": [
+              [
+                "Back to the blog",
+                "/category/best-seo-content-agency/"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "/category/local-seo/": {
+    "eyebrow": "Blog category",
+    "h1": "Local SEO Articles: Google Business Profile and Local Search in 2026",
+    "lead": "Our articles on Google Business Profile and Google Maps, so more buyers near you can find you.",
+    "quick": "This category covers local search: setting up Google Business Profile, geo targeting and a local SEO example from Patna. Also, for city-by-city plans, see our 100 SEO city guides.",
+    "ctas": [
+      {
+        "label": "See Google Business Profile help",
+        "href": "/google-my-business/"
+      },
+      {
+        "label": "Get a free audit",
+        "href": "/report/"
+      }
+    ],
+    "stats": [
+      {
+        "value": "3",
+        "label": "Articles"
+      },
+      {
+        "value": "2026",
+        "label": "Updated for this year"
+      },
+      {
+        "value": "Free",
+        "label": "To read, no sign-up"
+      }
+    ],
+    "browse": {
+      "eyebrow": "Local SEO & GMB",
+      "title": "All Local SEO & GMB articles",
+      "lead": "Newest first. Use the chips to switch to another service."
+    },
+    "sections": [
+      {
+        "eyebrow": "Next step",
+        "title": "Turn reading into results",
+        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "cards": [
+          {
+            "title": "Google Business Profile help",
+            "text": "See how Openink Hub delivers this service, what it costs and what you get.",
+            "links": [
+              [
+                "Explore Google Business Profile help",
+                "/google-my-business/"
+              ]
+            ]
+          },
+          {
+            "title": "Free audit",
+            "text": "Get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "links": [
+              [
+                "Get your free audit",
+                "/report/"
+              ]
+            ]
+          },
+          {
+            "title": "All articles",
+            "text": "Browse every guide on the blog, grouped by service.",
+            "links": [
+              [
+                "Back to the blog",
+                "/category/best-seo-content-agency/"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "/category/website-development/": {
+    "eyebrow": "Blog category",
+    "h1": "Website Development Articles: Plan, Build and Hire in 2026",
+    "lead": "Our 20 articles on planning, building and hiring for a business website.",
+    "quick": "This category holds 20 website guides. They cover which site you need, key features, design trends, custom builds versus templates, the build process and how to hire a web company.",
+    "ctas": [
+      {
+        "label": "See Website development services",
+        "href": "/website-design-agency/"
+      },
+      {
+        "label": "Get a free audit",
+        "href": "/report/"
+      }
+    ],
+    "stats": [
+      {
+        "value": "20",
+        "label": "Articles"
+      },
+      {
+        "value": "2026",
+        "label": "Updated for this year"
+      },
+      {
+        "value": "Free",
+        "label": "To read, no sign-up"
+      }
+    ],
+    "browse": {
+      "eyebrow": "Website Development",
+      "title": "All Website Development articles",
+      "lead": "Newest first. Use the chips to switch to another service."
+    },
+    "sections": [
+      {
+        "eyebrow": "Next step",
+        "title": "Turn reading into results",
+        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "cards": [
+          {
+            "title": "Website development services",
+            "text": "See how Openink Hub delivers this service, what it costs and what you get.",
+            "links": [
+              [
+                "Explore Website development services",
+                "/website-design-agency/"
+              ]
+            ]
+          },
+          {
+            "title": "Free audit",
+            "text": "Get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "links": [
+              [
+                "Get your free audit",
+                "/report/"
+              ]
+            ]
+          },
+          {
+            "title": "All articles",
+            "text": "Browse every guide on the blog, grouped by service.",
+            "links": [
+              [
+                "Back to the blog",
+                "/category/best-seo-content-agency/"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "/category/whatsapp-automation/": {
+    "eyebrow": "Blog category",
+    "h1": "WhatsApp and AI Automation Articles: Sell and Serve Faster in 2026",
+    "lead": "Our articles on the WhatsApp API, bulk senders and AI workflows for lean teams.",
+    "quick": "This category covers automation: the WhatsApp Business API, choosing a B2B WhatsApp sender and AI agent workflows that run routine tasks.",
+    "ctas": [
+      {
+        "label": "See WhatsApp AI chatbot",
+        "href": "/whatsapp-ai-chatbot/"
+      },
+      {
+        "label": "Get a free audit",
+        "href": "/report/"
+      }
+    ],
+    "stats": [
+      {
+        "value": "3",
+        "label": "Articles"
+      },
+      {
+        "value": "2026",
+        "label": "Updated for this year"
+      },
+      {
+        "value": "Free",
+        "label": "To read, no sign-up"
+      }
+    ],
+    "browse": {
+      "eyebrow": "WhatsApp & AI Automation",
+      "title": "All WhatsApp & AI Automation articles",
+      "lead": "Newest first. Use the chips to switch to another service."
+    },
+    "sections": [
+      {
+        "eyebrow": "Next step",
+        "title": "Turn reading into results",
+        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "cards": [
+          {
+            "title": "WhatsApp AI chatbot",
+            "text": "See how Openink Hub delivers this service, what it costs and what you get.",
+            "links": [
+              [
+                "Explore WhatsApp AI chatbot",
+                "/whatsapp-ai-chatbot/"
+              ]
+            ]
+          },
+          {
+            "title": "Free audit",
+            "text": "Get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "links": [
+              [
+                "Get your free audit",
+                "/report/"
+              ]
+            ]
+          },
+          {
+            "title": "All articles",
+            "text": "Browse every guide on the blog, grouped by service.",
+            "links": [
+              [
+                "Back to the blog",
+                "/category/best-seo-content-agency/"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "/category/hr-software/": {
+    "eyebrow": "Blog category",
+    "h1": "HRMS and ATS Articles: HR Software for Small Firms in 2026",
+    "lead": "Our articles on HR software and applicant tracking for growing teams.",
+    "quick": "This category covers HR software: how an HRMS automates payroll, leave and records, and how to pick an applicant tracking system for a small business.",
+    "ctas": [
+      {
+        "label": "See HRMS",
+        "href": "/human-resources-management/"
+      },
+      {
+        "label": "Get a free audit",
+        "href": "/report/"
+      }
+    ],
+    "stats": [
+      {
+        "value": "2",
+        "label": "Articles"
+      },
+      {
+        "value": "2026",
+        "label": "Updated for this year"
+      },
+      {
+        "value": "Free",
+        "label": "To read, no sign-up"
+      }
+    ],
+    "browse": {
+      "eyebrow": "HRMS & ATS",
+      "title": "All HRMS & ATS articles",
+      "lead": "Newest first. Use the chips to switch to another service."
+    },
+    "sections": [
+      {
+        "eyebrow": "Next step",
+        "title": "Turn reading into results",
+        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "cards": [
+          {
+            "title": "HRMS",
+            "text": "See how Openink Hub delivers this service, what it costs and what you get.",
+            "links": [
+              [
+                "Explore HRMS",
+                "/human-resources-management/"
+              ]
+            ]
+          },
+          {
+            "title": "Free audit",
+            "text": "Get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "links": [
+              [
+                "Get your free audit",
+                "/report/"
+              ]
+            ]
+          },
+          {
+            "title": "All articles",
+            "text": "Browse every guide on the blog, grouped by service.",
+            "links": [
+              [
+                "Back to the blog",
+                "/category/best-seo-content-agency/"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

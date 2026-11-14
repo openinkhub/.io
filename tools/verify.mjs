@@ -52,10 +52,20 @@ const intended = new Map(fs.readdirSync(PAGES).filter((n) => n.endsWith(".json")
   .map((n) => fixRecord(JSON.parse(fs.readFileSync(path.join(PAGES, n), "utf8")))).map((r) => [r.path, r]));
 const metaOf = (rec, key) => rec?.head?.meta.find((m) => m.key === key)?.content ?? "";
 const errors = [];
-let rewritten = 0;
+let rewritten = 0, retiredOk = 0;
+const RETIRED_FILE = path.join(ROOT, "content", "seo", "retired.json");
+const RETIRED = new Map(fs.existsSync(RETIRED_FILE) ? JSON.parse(fs.readFileSync(RETIRED_FILE, "utf8")).redirects.map((x) => [x.from, x.to]) : []);
 for (const r of rows) {
   const p = new URL(r.url).pathname || "/";
   const f = path.join(DIST, ...p.split("/").filter(Boolean), "index.html");
+  if (RETIRED.has(p)) { // retired on purpose: must 301 to a page that exists, and must not still be built
+    const red = fs.existsSync(path.join(DIST, "_redirects")) ? fs.readFileSync(path.join(DIST, "_redirects"), "utf8") : "";
+    const to = RETIRED.get(p);
+    if (!red.includes(`${p} ${to} 301`)) errors.push(`RETIRED  ${r.url} has no 301 to ${to}`);
+    if (!fs.existsSync(path.join(DIST, ...to.split("/").filter(Boolean), "index.html"))) errors.push(`RETIRED  ${r.url} -> ${to} (target missing)`);
+    if (fs.existsSync(f)) errors.push(`RETIRED  ${r.url} is still built`);
+    retiredOk++; continue;
+  }
   if (!fs.existsSync(f)) { errors.push(`MISSING  ${r.url}`); continue; }
   const doc = fs.readFileSync(f, "utf8");
   const canon = /<link rel="canonical" href="([^"]*)"/.exec(doc);
@@ -82,6 +92,6 @@ for (const r of rows) {
 for (const extra of ["sitemap.xml", "robots.txt", "CNAME", "404.html"]) {
   if (!fs.existsSync(path.join(DIST, extra))) errors.push(`MISSING  /${extra}`);
 }
-console.log(`checked ${rows.length} URLs: ${errors.length} problem(s)  (${rewritten} with intentionally rewritten titles)`);
+console.log(`checked ${rows.length} URLs: ${errors.length} problem(s)  (${rewritten} with intentionally rewritten titles, ${retiredOk} retired with 301)`);
 for (const e of errors.slice(0, 60)) console.log("  " + e);
 process.exit(errors.length ? 1 : 0);

@@ -1,0 +1,9 @@
+{
+  "_note": "Live URLs retired on purpose. Each gets a permanent (301) redirect in _redirects; verify.mjs accepts them instead of expecting a page.",
+  "redirects": [
+    { "from": "/2026/07/", "to": "/category/best-seo-content-agency/", "code": 301, "why": "month archives replaced by service categories" },
+    { "from": "/2026/08/", "to": "/category/best-seo-content-agency/", "code": 301, "why": "month archives replaced by service categories" },
+    { "from": "/2026/10/", "to": "/category/best-seo-content-agency/", "code": 301, "why": "month archives replaced by service categories" },
+    { "from": "/2026/11/", "to": "/category/best-seo-content-agency/", "code": 301, "why": "month archives replaced by service categories" }
+  ]
+}

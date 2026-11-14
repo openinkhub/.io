@@ -830,9 +830,13 @@ function notFound() {
 
 /** _redirects (from Squirrly), _headers (security + noindex for /admin), llms.txt (for AI crawlers). */
 function seoFiles() {
-  if (RULES.autofix.redirects && SQUIRRLY.redirects?.length) {
-    const lines = SQUIRRLY.redirects.flatMap((r) => [`${r.from} ${r.to} ${r.code}`, `${r.from}/ ${r.to} ${r.code}`]);
-    write("/_redirects", "# Imported from Squirrly SEO (content/seo/squirrly.json). Live URLs are never redirected.\n" + lines.join("\n") + "\n");
+  const retiredFile = path.join(C, "seo", "retired.json");
+  const retired = fs.existsSync(retiredFile) ? load(retiredFile).redirects || [] : [];
+  if ((RULES.autofix.redirects && SQUIRRLY.redirects?.length) || retired.length) {
+    const lines = (RULES.autofix.redirects ? SQUIRRLY.redirects || [] : []).flatMap((r) => [`${r.from} ${r.to} ${r.code}`, `${r.from}/ ${r.to} ${r.code}`]);
+    const ret = retired.flatMap((r) => [`${r.from} ${r.to} ${r.code}`, `${r.from.replace(/\/$/, "")} ${r.to} ${r.code}`]);
+    write("/_redirects", "# Imported from Squirrly SEO (content/seo/squirrly.json). Live URLs are never redirected.\n" + lines.join("\n") + "\n" +
+      (ret.length ? "# Retired on purpose (content/seo/retired.json)\n" + ret.join("\n") + "\n" : ""));
   }
   if (RULES.autofix.securityHeaders) {
     write("/_headers", [

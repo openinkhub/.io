@@ -605,6 +605,10 @@
   "author": "Hiten Neotia",
   "categories": [
     {
+      "name": "SEO",
+      "path": "/category/seo-services/"
+    },
+    {
       "name": "Blogs",
       "path": "/category/best-seo-content-agency/"
     }

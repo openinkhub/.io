@@ -132,17 +132,71 @@
       "count": 14,
       "description": "",
       "link": "https://openinkhub.io/category/best-seo-content-agency/",
-      "name": "Blogs",
+      "name": "All articles",
       "slug": "best-seo-content-agency",
       "parent": 0,
       "path": "/category/best-seo-content-agency/"
+    },
+    {
+      "count": 4,
+      "name": "SEO",
+      "slug": "seo-services",
+      "path": "/category/seo-services/",
+      "link": "https://openinkhub.io/category/seo-services/",
+      "parent": 0,
+      "description": ""
+    },
+    {
+      "count": 2,
+      "name": "AEO, GEO & AIO",
+      "slug": "ai-search",
+      "path": "/category/ai-search/",
+      "link": "https://openinkhub.io/category/ai-search/",
+      "parent": 0,
+      "description": ""
+    },
+    {
+      "count": 3,
+      "name": "Local SEO & GMB",
+      "slug": "local-seo",
+      "path": "/category/local-seo/",
+      "link": "https://openinkhub.io/category/local-seo/",
+      "parent": 0,
+      "description": ""
+    },
+    {
+      "count": 20,
+      "name": "Website Development",
+      "slug": "website-development",
+      "path": "/category/website-development/",
+      "link": "https://openinkhub.io/category/website-development/",
+      "parent": 0,
+      "description": ""
+    },
+    {
+      "count": 3,
+      "name": "WhatsApp & AI Automation",
+      "slug": "whatsapp-automation",
+      "path": "/category/whatsapp-automation/",
+      "link": "https://openinkhub.io/category/whatsapp-automation/",
+      "parent": 0,
+      "description": ""
+    },
+    {
+      "count": 2,
+      "name": "HRMS & ATS",
+      "slug": "hr-software",
+      "path": "/category/hr-software/",
+      "link": "https://openinkhub.io/category/hr-software/",
+      "parent": 0,
+      "description": ""
     },
     {
       "id": 32,
       "count": 100,
       "description": "",
       "link": "https://openinkhub.io/category/seo-agency-by-city/",
-      "name": "SEO",
+      "name": "SEO by City",
       "slug": "seo-agency-by-city",
       "parent": 0,
       "path": "/category/seo-agency-by-city/"

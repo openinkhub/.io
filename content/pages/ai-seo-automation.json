@@ -477,6 +477,10 @@
   "author": "Hiten Neotia",
   "categories": [
     {
+      "name": "AEO, GEO & AIO",
+      "path": "/category/ai-search/"
+    },
+    {
       "name": "Blogs",
       "path": "/category/best-seo-content-agency/"
     }

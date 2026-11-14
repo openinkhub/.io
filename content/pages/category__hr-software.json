@@ -1,12 +1,12 @@
 {
-  "url": "https://openinkhub.io/2026/08/",
-  "path": "/2026/08/",
+  "url": "https://openinkhub.io/category/hr-software/",
+  "path": "/category/hr-software/",
   "status": 200,
-  "final_url": "https://openinkhub.io/2026/08/",
-  "sitemap": "archives",
-  "lastmod": "2026-08-06T20:19:27+00:00",
+  "final_url": "https://openinkhub.io/category/hr-software/",
+  "sitemap": "categories",
+  "lastmod": "2026-11-14T10:00:00+05:30",
   "head": {
-    "title": "2026-01-08T05:30:00+05:30 - openink Hub",
+    "title": "HRMS and ATS Articles | HR Software for Small Firms",
     "meta": [
       {
         "attr": "name",
@@ -24,19 +24,24 @@
         "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
       },
       {
+        "attr": "name",
+        "key": "description",
+        "content": "Openink Hub articles on HRMS and applicant tracking software: what to look for, how they save time and which suits a small business."
+      },
+      {
         "attr": "property",
         "key": "og:url",
-        "content": "https://openinkhub.io/2026/08/"
+        "content": "https://openinkhub.io/category/hr-software/"
       },
       {
         "attr": "property",
         "key": "og:title",
-        "content": "2026-01-08T05:30:00+05:30 - openink Hub"
+        "content": "HRMS and ATS Articles | HR Software for Small Firms (2026)"
       },
       {
         "attr": "property",
         "key": "og:description",
-        "content": ""
+        "content": "Openink Hub articles on HRMS and applicant tracking software: what to look for, how they save time and which suits a small business."
       },
       {
         "attr": "property",
@@ -66,17 +71,17 @@
       {
         "attr": "name",
         "key": "twitter:url",
-        "content": "https://openinkhub.io/2026/08/"
+        "content": "https://openinkhub.io/category/hr-software/"
       },
       {
         "attr": "name",
         "key": "twitter:title",
-        "content": "2026-01-08T05:30:00+05:30 - openink Hub"
+        "content": "HRMS and ATS Articles | HR Software for Small Firms (2026)"
       },
       {
         "attr": "name",
         "key": "twitter:description",
-        "content": ""
+        "content": "Openink Hub articles on HRMS and applicant tracking software: what to look for, how they save time and which suits a small business."
       },
       {
         "attr": "name",
@@ -112,7 +117,14 @@
     "links": [
       {
         "rel": "canonical",
-        "href": "https://openinkhub.io/2026/08/",
+        "href": "https://openinkhub.io/category/hr-software/",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "next",
+        "href": "https://openinkhub.io/category/hr-software/page/2/",
         "hreflang": null,
         "type": null,
         "sizes": null
@@ -134,6 +146,13 @@
       {
         "rel": "alternate",
         "href": "https://openinkhub.io/comments/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/category/hr-software/feed/",
         "hreflang": null,
         "type": "application/rss+xml",
         "sizes": null
@@ -165,119 +184,39 @@
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "WebSite",
-            "@id": "https://openinkhub.io#WebSite",
-            "url": "https://openinkhub.io",
-            "name": "openink Hub",
-            "headline": "2026-01-08T05:30:00+05:30 - openink Hub",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://openinkhub.io#WebPage",
-              "url": "https://openinkhub.io"
-            },
-            "datePublished": "2026-01-08T00:00:00+05:30",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://openinkhub.io/?s={search_term_string}",
-              "query-input": "required name=search_term_string"
-            },
-            "image": {
-              "@type": "ImageObject",
-              "@id": "https://openinkhub.io/2026/08/#5c7ae0339a",
-              "url": "https://openinkhub.io/wp-content/uploads/2026/08/seo-agency-in-patna.webp",
-              "width": 1408,
-              "height": 768
-            },
-            "publisher": {
-              "@type": "Person",
-              "@id": "https://openinkhub.io#person"
-            }
-          },
-          {
-            "@type": "Person",
-            "@id": "https://openinkhub.io#person",
-            "url": "https://openinkhub.io",
-            "name": "Harish Neotia",
-            "description": "\"Chief Executive Officer responsible for the overall strategic direction, vision, and growth of openink Hub.\"",
-            "jobTitle": "CEO",
-            "telephone": "+7366904004",
-            "image": {
-              "@type": "ImageObject",
-              "@id": "https://openinkhub.io/2026/08/#32cec17871",
-              "url": "https://openinkhub.io/wp-content/uploads/2026/07/google-my-business.webp"
-            }
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://openinkhub.io#organization",
-            "url": "https://openinkhub.io",
-            "name": "Openink Hub",
-            "description": "Openink Hub is home to a complete AI search optimization stack — SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Artificial Intelligence Optimization (AIO), WhatsApp AI automation, Google Business Profile optimization, and AI voice agents — engineered to get your business found on Google, ChatGPT, Gemini, Perplexity, and every AI assistant in between.",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://openinkhub.io/wp-content/uploads/2026/07/agency_logo_3-1.webp"
-            }
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://openinkhub.io/2026/08/#breadcrumblist",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": "https://openinkhub.io",
-                  "name": "SEO Services | Boost Rankings, Traffic & Business Growth"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": "https://openinkhub.io/2026/08/",
-                  "name": "2026-01-08T05:30:00+05:30 - openink Hub"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
             "@type": "CollectionPage",
-            "@id": "https://openinkhub.io/2026/08/",
-            "url": "https://openinkhub.io/2026/08/",
-            "name": "August 2026 - openink Hub",
+            "@id": "https://openinkhub.io/category/hr-software/",
+            "url": "https://openinkhub.io/category/hr-software/",
+            "name": "HRMS and ATS Articles | HR Software for Small Firms",
             "isPartOf": {
               "@id": "https://openinkhub.io/#website"
             },
             "primaryImageOfPage": {
-              "@id": "https://openinkhub.io/2026/08/#primaryimage"
+              "@id": "https://openinkhub.io/category/hr-software/#primaryimage"
             },
             "image": {
-              "@id": "https://openinkhub.io/2026/08/#primaryimage"
+              "@id": "https://openinkhub.io/category/hr-software/#primaryimage"
             },
-            "thumbnailUrl": "https://openinkhub.io/wp-content/uploads/2026/08/seo-agency-in-patna.webp",
+            "thumbnailUrl": "https://openinkhub.io/wp-content/uploads/2026/11/Best-WhatsApp-Sender-for-B2B-India.webp",
             "breadcrumb": {
-              "@id": "https://openinkhub.io/2026/08/#breadcrumb"
+              "@id": "https://openinkhub.io/category/hr-software/#breadcrumb"
             },
-            "inLanguage": "en-US"
+            "inLanguage": "en-US",
+            "description": "Openink Hub articles on HRMS and applicant tracking software: what to look for, how they save time and which suits a small business."
           },
           {
             "@type": "ImageObject",
             "inLanguage": "en-US",
-            "@id": "https://openinkhub.io/2026/08/#primaryimage",
-            "url": "https://openinkhub.io/wp-content/uploads/2026/08/seo-agency-in-patna.webp",
-            "contentUrl": "https://openinkhub.io/wp-content/uploads/2026/08/seo-agency-in-patna.webp",
-            "width": 1408,
+            "@id": "https://openinkhub.io/category/hr-software/#primaryimage",
+            "url": "https://openinkhub.io/wp-content/uploads/2026/11/Best-WhatsApp-Sender-for-B2B-India.webp",
+            "contentUrl": "https://openinkhub.io/wp-content/uploads/2026/11/Best-WhatsApp-Sender-for-B2B-India.webp",
+            "width": 1376,
             "height": 768,
-            "caption": "seo agency in patna"
+            "caption": "Best WhatsApp Sender for B2B India"
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://openinkhub.io/2026/08/#breadcrumb",
+            "@id": "https://openinkhub.io/category/hr-software/#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
@@ -288,7 +227,7 @@
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Archives for August 2026"
+                "name": "Blogs"
               }
             ]
           },
@@ -342,9 +281,22 @@
     ],
     "lang": "en-US"
   },
-  "h1": "Insights on digital growth, AI search, and automation for SMEs.",
-  "type": "archive",
-  "title": "Insights on digital growth, AI search, and automation for SMEs.",
+  "h1": "HRMS and ATS Articles: HR Software for Small Firms in 2026",
+  "type": "category",
+  "title": "HRMS & ATS",
   "content_html": "",
-  "faqs": []
+  "faqs": [
+    {
+      "q": "What is the difference between an HRMS and an ATS?",
+      "a": "<p>An HRMS manages staff you already have. An ATS manages job posts and candidates before they join.</p>"
+    },
+    {
+      "q": "Does a small business need HR software?",
+      "a": "<p>As a team grows, manual payroll, leave and hiring work grows fast. So software usually pays off well before you need an HR department.</p>"
+    },
+    {
+      "q": "Does Openink Hub offer HR software?",
+      "a": "<p>Yes. See our <a href=\"/human-resources-management/\">HRMS</a> and <a href=\"/application-tracking-system/\">applicant tracking system</a>.</p>"
+    }
+  ]
 }

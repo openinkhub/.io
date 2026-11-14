@@ -1,0 +1,100 @@
+{
+  "url": "https://openinkhub.io/geo-framework/",
+  "path": "/geo-framework/",
+  "status": 200,
+  "type": "post",
+  "title": "GEO Framework: 6 Steps to Get Cited by AI Answers",
+  "h1": "GEO Framework: A 6-Step Plan to Get Cited by AI Answers",
+  "date": "2026-11-14T19:10:00",
+  "modified": "2026-11-14T19:10:00",
+  "author": "Hiten Neotia",
+  "excerpt": "A GEO framework is a repeatable plan for generative engine optimization: making your brand easy for AI tools such as ChatGPT, Gemini, Perplexity and Google AI Overviews to find, trust and cite. Our…",
+  "keyphrase_override": "geo framework",
+  "keyphrase_secondary_override": [
+    "generative engine optimization",
+    "ai citations",
+    "ai visibility"
+  ],
+  "categories": [
+    {
+      "name": "GEO",
+      "path": "/category/geo/"
+    },
+    {
+      "name": "AIO",
+      "path": "/category/aio/"
+    },
+    {
+      "name": "Blogs",
+      "path": "/category/best-seo-content-agency/"
+    }
+  ],
+  "tags": [],
+  "faqs": [
+    {
+      "q": "What is a GEO framework?",
+      "a": "<p>It is a step-by-step plan for generative engine optimization. It helps AI tools find, trust and cite your brand in their answers.</p>"
+    },
+    {
+      "q": "How long does the GEO framework take?",
+      "a": "<p>The first full cycle usually takes about 30 days. After that, a monthly check keeps it up to date.</p>"
+    },
+    {
+      "q": "Do I need SEO before GEO?",
+      "a": "<p>Yes, ideally. AI tools often draw on pages that already rank and load well, so SEO gives GEO a strong base.</p>"
+    },
+    {
+      "q": "How do I measure GEO results?",
+      "a": "<p>Ask the same buyer questions in AI tools each month. Then track how often your brand is named, which pages are cited and how accurate the answers are.</p>"
+    }
+  ],
+  "featured_image": {
+    "src": "https://openinkhub.io/images/articles/geo-framework.svg",
+    "alt": "GEO Framework: 6 Steps to Get Cited by AI Answers",
+    "width": 1200,
+    "height": 630
+  },
+  "content_source": "extra-posts",
+  "head": {
+    "title": "GEO Framework: 6 Steps to Get Cited by AI Answers",
+    "lang": "en-US",
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/geo-framework/",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      }
+    ],
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "index, follow, max-image-preview:large"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "A 6-step GEO framework to get your brand cited by ChatGPT, Gemini and Perplexity: audit, entity, answers, evidence, structure and tracking."
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/geo-framework/"
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      }
+    ],
+    "jsonld": []
+  },
+  "content_html": "<h1>GEO Framework: A 6-Step Plan to Get Cited by AI Answers</h1>\n<figure><img src=\"https://openinkhub.io/images/articles/geo-framework.svg\" alt=\"GEO Framework: 6 Steps to Get Cited by AI Answers\" width=\"1200\" height=\"630\"></figure>\n<p>A GEO framework is a repeatable plan for generative engine optimization: making your brand easy for AI tools such as ChatGPT, Gemini, Perplexity and Google AI Overviews to find, trust and cite. Our GEO framework has six steps: audit, entity, answers, evidence, structure and tracking. Most businesses can run the first full cycle in about 30 days.</p>\n<p>This guide explains each step, what to check, and how GEO fits with SEO, AEO and AIO.</p>\n\n<h2>Why you need a GEO framework</h2>\n<p>AI tools now answer many questions before anyone clicks a link. So if your brand is not part of those answers, buyers may never see you. A framework helps in three ways:</p>\n<ul>\n<li>It turns GEO from guesswork into a checklist your team can repeat</li>\n<li>GEO work then links to the SEO, AEO and AIO work you already do</li>\n<li>A monthly score shows your progress</li>\n</ul>\n\n<h2>The 6-step GEO framework at a glance</h2>\n<table>\n<thead><tr><th>Step</th><th>Goal</th><th>Key actions</th><th>Tools</th></tr></thead>\n<tbody>\n<tr><td>1. Audit</td><td>See how AI describes you today</td><td>Ask 20–30 buyer questions in each AI tool</td><td>ChatGPT, Gemini, Perplexity</td></tr>\n<tr><td>2. Entity</td><td>Make your brand facts clear and consistent</td><td>Same name, address and services everywhere</td><td>Google Business Profile, LinkedIn</td></tr>\n<tr><td>3. Answers</td><td>Give AI short answers to quote</td><td>Question headings with 40–60 word answers</td><td>Google Search Console, AlsoAsked</td></tr>\n<tr><td>4. Evidence</td><td>Earn trust signals</td><td>Data, case studies, reviews and mentions</td><td>Review sites, PR, industry blogs</td></tr>\n<tr><td>5. Structure</td><td>Make pages easy to read for machines</td><td>Schema, clean HTML, fast pages, llms.txt</td><td>Rich Results Test, PageSpeed Insights</td></tr>\n<tr><td>6. Tracking</td><td>Measure citations over time</td><td>Repeat the audit monthly and log changes</td><td>A simple sheet or a GEO tracking tool</td></tr>\n</tbody>\n</table>\n\n<h2>Step-by-step: running the GEO framework</h2>\n<h3>Step 1: Audit your AI visibility</h3>\n<p>First, list the questions buyers ask before they choose a firm like yours. Then ask each one in ChatGPT, Gemini and Perplexity. Note whether you are named, which rivals appear and which sources are cited.</p>\n<h3>Step 2: Fix your entity data</h3>\n<p>AI tools merge facts from many sites. So your brand name, address, phone and service list must match on your website, Google Business Profile, LinkedIn and directories.</p>\n<h3>Step 3: Write answer-first content</h3>\n<p>Use real questions as H2 or H3 headings. Then answer each one in the first 40–60 words, and add detail below.</p>\n<h3>Step 4: Add evidence and mentions</h3>\n<p>Publish your own numbers, client results and expert quotes. Also, earn mentions on trusted industry sites, because AI tools lean on sources others already trust.</p>\n<h3>Step 5: Structure pages for machines</h3>\n<p>Add Organization, Service and FAQ schema, and test it in Google's Rich Results Test. Keep pages fast, and consider an <a href=\"https://llmstxt.org/\">llms.txt file</a> that lists your key pages. Google's own guide to <a href=\"https://developers.google.com/search/docs/appearance/ai-features\">AI features and your website</a> confirms that normal SEO best practice still applies.</p>\n<h3>Step 6: Track and repeat</h3>\n<p>Finally, rerun your question list every month. Track how often you are named and cited, then fix the gaps you find.</p>\n\n<h2>GEO vs SEO, AEO and AIO</h2>\n<table>\n<thead><tr><th>Approach</th><th>Main target</th><th>Success looks like</th></tr></thead>\n<tbody>\n<tr><td>SEO</td><td>Blue links on Google and Bing</td><td>Higher rankings and clicks</td></tr>\n<tr><td>AEO</td><td>Featured snippets and voice answers</td><td>Your answer shown at the top</td></tr>\n<tr><td>GEO</td><td>AI chat answers</td><td>Your brand named and cited</td></tr>\n<tr><td>AIO</td><td>Any AI system that reads your site</td><td>AI describes you correctly</td></tr>\n</tbody>\n</table>\n<p>These approaches support each other. For example, strong SEO pages are more likely to be used as AI sources, and clean AIO data helps GEO work faster.</p>\n\n<h2>How to choose where to start</h2>\n<ul>\n<li><strong>AI tools describe you wrongly:</strong> start with Step 2, entity data.</li>\n<li><strong>Rivals are named and you are not:</strong> start with Steps 3 and 4, answers and evidence.</li>\n<li><strong>You have content but no schema:</strong> start with Step 5, structure.</li>\n<li><strong>You are not sure:</strong> start with Step 1 and let the audit decide.</li>\n</ul>\n<p>Our <a href=\"/generative-engine-optimization/\">GEO services</a> run this framework for you. You can also start with a free <a href=\"/report/\">SEO, AEO, GEO and AIO audit</a>, or read more in our <a href=\"/category/geo/\">GEO articles</a>.</p>\n\n<h2>Frequently asked questions</h2>\n<h3>What is a GEO framework?</h3>\n<p>It is a step-by-step plan for generative engine optimization. It helps AI tools find, trust and cite your brand in their answers.</p>\n<h3>How long does the GEO framework take?</h3>\n<p>The first full cycle usually takes about 30 days. After that, a monthly check keeps it up to date.</p>\n<h3>Do I need SEO before GEO?</h3>\n<p>Yes, ideally. AI tools often draw on pages that already rank and load well, so SEO gives GEO a strong base.</p>\n<h3>How do I measure GEO results?</h3>\n<p>Ask the same buyer questions in AI tools each month. Then track how often your brand is named, which pages are cited and how accurate the answers are.</p>"
+}

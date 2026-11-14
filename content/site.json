@@ -129,7 +129,7 @@
   "categories": [
     {
       "id": 8,
-      "count": 51,
+      "count": 55,
       "description": "",
       "link": "https://openinkhub.io/category/best-seo-content-agency/",
       "name": "All articles",
@@ -147,7 +147,7 @@
       "description": ""
     },
     {
-      "count": 2,
+      "count": 3,
       "name": "AEO",
       "slug": "aeo",
       "path": "/category/aeo/",
@@ -156,7 +156,7 @@
       "description": ""
     },
     {
-      "count": 2,
+      "count": 3,
       "name": "GEO",
       "slug": "geo",
       "path": "/category/geo/",
@@ -165,7 +165,7 @@
       "description": ""
     },
     {
-      "count": 2,
+      "count": 3,
       "name": "AIO",
       "slug": "aio",
       "path": "/category/aio/",
@@ -219,7 +219,7 @@
       "description": ""
     },
     {
-      "count": 3,
+      "count": 5,
       "name": "Articles",
       "slug": "articles",
       "path": "/category/articles/",

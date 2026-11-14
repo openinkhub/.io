@@ -17,7 +17,8 @@
       "WhatsApp",
       "Google Business Profile",
       "Ranchi"
-    ]
+    ],
+    "twitterHandle": ""
   },
   "sections": [
     {
@@ -195,6 +196,7 @@
     "linkText": true,
     "openGraph": true,
     "twitterCard": true,
+    "socialSync": true,
     "excerpt": true,
     "imageAlt": true,
     "imageDimensions": true,

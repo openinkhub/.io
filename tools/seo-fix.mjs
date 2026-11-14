@@ -250,6 +250,39 @@ export function fixRecord(rec) {
     setIfEmpty(rec, "name", "twitter:description", desc, fixes, "twitter");
     setIfEmpty(rec, "name", "twitter:image", image, fixes, "twitter");
   }
+  // Social sync: share cards always show the page's own title and meta description (the imported WordPress /
+  // Squirrly social copy was stale), plus image alt text; the WordPress default "@twitter" handle is dropped.
+  if (FIX.socialSync) {
+    const put = (attr, key, value) => {
+      if (!value) return;
+      const m = meta(rec, key);
+      if (m) { if (m.content !== value) { m.content = value; fixes.push("social-sync"); } }
+      else { rec.head.meta.push({ attr, key, content: value }); fixes.push("social-sync"); }
+    };
+    const plainTitle = strip(title);
+    put("property", "og:title", plainTitle); put("name", "twitter:title", plainTitle);
+    put("property", "og:description", desc); put("name", "twitter:description", desc);
+    // share image: the page's own photo if it has one (SVG covers do not render on X/Facebook/LinkedIn), else the
+    // current raster og:image, else the site default; width/height are read from the real file
+    const isRaster = (u) => u && !/\.svg(\?|$)/i.test(u);
+    const own = rec.featured_image?.src;
+    const cur = meta(rec, "og:image")?.content;
+    const img = isRaster(own) ? (own.startsWith("http") ? own : SITE.url + own) : isRaster(cur) ? cur : SITE.defaultImage;
+    put("property", "og:image", img); put("name", "twitter:image", img);
+    let dim = null;
+    try { const pth = new URL(img).pathname; if (img.startsWith(SITE.url)) dim = imageSize(path.join(ROOT, "static", ...pth.split("/").filter(Boolean))); } catch {}
+    rec.head.meta = rec.head.meta.filter((m) => !/^og:image:(width|height)$/.test(m.key));
+    if (dim?.w && dim?.h) { rec.head.meta.push({ attr: "property", key: "og:image:width", content: String(dim.w) }, { attr: "property", key: "og:image:height", content: String(dim.h) }); }
+    put("property", "og:locale", SITE.locale || "en_IN");
+    put("name", "twitter:domain", new URL(SITE.url).hostname);
+    const alt = strip(isRaster(own) ? rec.featured_image?.alt || "" : "") || plainTitle;
+    put("property", "og:image:alt", alt); put("name", "twitter:image:alt", alt);
+    for (const k of ["twitter:site", "twitter:creator"]) {
+      const m = meta(rec, k);
+      if (SITE.twitterHandle) put("name", k, SITE.twitterHandle);
+      else if (m && /^@?twitter$/i.test(String(m.content).trim())) rec.head.meta = rec.head.meta.filter((x) => x !== m);
+    }
+  }
 
   // JSON-LD: add only what is missing, as ONE extra block
   const present = typesIn(rec.head.jsonld);

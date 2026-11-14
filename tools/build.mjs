@@ -876,8 +876,19 @@ ${H.work?.items?.length ? `<section class="section section-alt" id="recent-work"
     <a class="work-shot" href="${E(w.url)}" target="_blank" rel="noopener" aria-label="Visit the ${E(w.name)} website"><img src="${E(w.img)}" alt="${E(w.alt)}" width="1280" height="800" loading="lazy" decoding="async"></a>
     <div class="work-body"><span class="tag">${E(w.industry)}</span><h3>${E(w.name)}</h3><p>${E(w.text)}</p>
     <ul class="work-services">${w.services.map((s) => `<li>${E(s)}</li>`).join("")}</ul>
-    ${w.pagespeed ? `<dl class="work-scores" title="${E(H.work.scores_note || "Google PageSpeed Insights scores")}">${[["performance", "Performance"], ["accessibility", "Accessibility"], ["best_practices", "Best practices"], ["seo", "SEO"]]
-      .filter(([k]) => w.pagespeed[k] != null).map(([k, l]) => `<div class="${w.pagespeed[k] >= 90 ? "is-good" : w.pagespeed[k] >= 50 ? "is-ok" : "is-poor"}"><dt>${l}</dt><dd>${w.pagespeed[k]}</dd></div>`).join("")}</dl>` : ""}
+    ${w.pagespeed ? (() => {
+      // PageSpeed-style gauges: ring filled to the score; green 90-100, orange 50-89, red 0-49; DA in brand blue
+      const kpis = [["performance", "Performance"], ["accessibility", "Accessibility"], ["best_practices", "Best Practices"], ["seo", "SEO"], ["da", "Domain Authority"], ["rd", "Referring Domains"]]
+        .filter(([k]) => w.pagespeed[k] != null && (!["da", "rd"].includes(k) || w.pagespeed[k] > 0));
+      const C = 2 * Math.PI * 24;
+      const ring = (k, l, v) => {
+        // scores 0-100 fill the ring to their value; referring domains is a count, so its ring is a plain circle
+        const cls = k === "da" ? "is-da" : k === "rd" ? "is-count" : v >= 90 ? "is-good" : v >= 50 ? "is-ok" : "is-poor";
+        const arc = k === "rd" ? "" : `<circle class="kpi-arc" cx="28" cy="28" r="24" stroke-dasharray="${(C * Math.min(v, 100) / 100).toFixed(1)} ${C.toFixed(1)}" transform="rotate(-90 28 28)"/>`;
+        return `<div class="kpi ${cls}"><svg viewBox="0 0 56 56" aria-hidden="true"><circle class="kpi-bg" cx="28" cy="28" r="24"/>${arc}<text x="28" y="33" text-anchor="middle">${v}</text></svg><span>${l}</span></div>`;
+      };
+      return `<div class="work-kpis kpi-n${kpis.length}" role="img" aria-label="${E(w.name)}: ${kpis.map(([k, l]) => `${l} ${w.pagespeed[k]}`).join(", ")}">${kpis.map(([k, l]) => ring(k, l, w.pagespeed[k])).join("")}</div>`;
+    })() : ""}
     <a class="link-arrow" href="${E(w.url)}" target="_blank" rel="noopener">Visit ${E(w.url.replace(/^https?:\/\/(www\.)?|\/$/g, ""))}${icon("arrow")}</a></div>
   </article>`).join("")}</div>
   ${H.work.items.some((w) => w.pagespeed) ? `<p class="work-note">Scores: ${E(H.work.scores_note || "Google PageSpeed Insights")}.</p>` : ""}

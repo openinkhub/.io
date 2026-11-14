@@ -1,7 +1,7 @@
 /**
  * Take website screenshots with the local headless Chrome (no npm dependencies; uses the DevTools protocol).
  *
- *   node tools/shoot.mjs <url> <out.webp> [width=1280] [height=800]
+ *   node tools/shoot.mjs <url> <out.webp> [width=1280] [height=800] [css-selector]
  *
  * Saves a WebP (quality 72) of the first screen, after the page and its images have loaded.
  */
@@ -38,7 +38,24 @@ for (let i = 0; i < 100 && !events.includes("Page.loadEventFired"); i++) await s
 await sleep(4000);
 await send("Runtime.evaluate", { expression: `document.querySelectorAll('[class*=cookie] button,[id*=cookie] button').forEach(b=>{if(/accept|agree|ok|got it/i.test(b.textContent))b.click()})` });
 await sleep(800);
-const shot = await send("Page.captureScreenshot", { format: "webp", quality: 72, clip: { x: 0, y: 0, width: +W, height: +H, scale: 1 } });
+// optional 5th argument: CSS selector of one element to capture (e.g. "#recent-work") instead of the first screen
+const sel = process.argv[6];
+let clip = { x: 0, y: 0, width: +W, height: +H, scale: 1 };
+if (sel) {
+  // make the viewport as tall as the element, scroll it to the top, then capture the viewport
+  const q = JSON.stringify(sel);
+  const r = await send("Runtime.evaluate", { returnByValue: true, expression: `(() => { document.querySelectorAll('.reveal').forEach(e => e.classList.add('in'));
+    document.querySelectorAll('img[loading=lazy]').forEach(i => i.loading = 'eager');
+    return Math.ceil(document.querySelector(${q}).getBoundingClientRect().height); })()` });
+  const h = Math.min(r.result.value || +H, 6000);
+  await send("Emulation.setDeviceMetricsOverride", { width: +W, height: h, deviceScaleFactor: 1, mobile: +W < 600 });
+  await sleep(500);
+  await send("Runtime.evaluate", { expression: `window.scrollTo(0, document.querySelector(${q}).getBoundingClientRect().top + scrollY)` });
+  await sleep(2500);
+  clip = null;
+}
+const shot = await send("Page.captureScreenshot", { format: "webp", quality: 72, ...(clip ? { clip } : {}) });
+if (!shot.result) { console.error(JSON.stringify(shot.error || shot)); process.exit(1); }
 fs.mkdirSync(path.dirname(out), { recursive: true });
 fs.writeFileSync(out, Buffer.from(shot.result.data, "base64"));
 ws.close(); chrome.kill();

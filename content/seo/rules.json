@@ -130,7 +130,9 @@
       "maxPercent": 10
     },
     "transitionWords": {
-      "minPercent": 20
+      "minPercent": 20,
+      "minSentenceWords": 6,
+      "_note": "share of prose sentences (6+ words) that contain a transition word; shorter fragments such as labels and table cells are skipped"
     },
     "consecutiveSentences": {
       "maxRun": 2
@@ -180,6 +182,8 @@
     "titleSiteName": true,
     "listingHeadings": true,
     "plainLanguage": true,
+    "copyEdits": true,
+    "faqAdditions": true,
     "openGraph": true,
     "twitterCard": true,
     "excerpt": true,

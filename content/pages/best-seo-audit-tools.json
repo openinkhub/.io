@@ -6,7 +6,7 @@
   "sitemap": "pages",
   "lastmod": "2026-07-29T19:15:31+00:00",
   "head": {
-    "title": "SEO Audit Tool | Analyze & Improve Website Performance",
+    "title": "Enterprise Brand Audit | SEO, AEO, GEO & AI Visibility",
     "meta": [
       {
         "attr": "name",
@@ -26,7 +26,7 @@
       {
         "attr": "name",
         "key": "description",
-        "content": "SEO audit tools for mobile SEO testing. Analyze mobile performance, fix technical SEO issues, improve page speed, and boost search rankings across all devices."
+        "content": "An enterprise brand audit across SEO, answer engines, AI assistants, social, reviews and paid channels, with a clear plan to improve visibility."
       },
       {
         "attr": "name",
@@ -46,7 +46,7 @@
       {
         "attr": "property",
         "key": "og:description",
-        "content": "Use an SEO Audit Tool to uncover technical issues, optimize on-page SEO, improve website health, and increase organic search visibility."
+        "content": "An enterprise brand audit across SEO, answer engines, AI assistants, social, reviews and paid channels, with a clear plan to improve visibility."
       },
       {
         "attr": "property",
@@ -86,7 +86,7 @@
       {
         "attr": "name",
         "key": "twitter:description",
-        "content": "Scan your website, detect SEO issues, and improve rankings with a powerful SEO Audit Tool built for better performance and organic growth."
+        "content": "An enterprise brand audit across SEO, answer engines, AI assistants, social, reviews and paid channels, with a clear plan to improve visibility."
       },
       {
         "attr": "name",
@@ -463,5 +463,6 @@
       "q": "What are the signs that a business needs a brand audit?",
       "a": "Common signs include declining website traffic, lower search rankings, inconsistent branding across channels, reduced customer engagement, negative online reviews, falling conversion rates, or increased competition in the market."
     }
-  ]
+  ],
+  "keyphrase_override": "enterprise brand audit"
 }

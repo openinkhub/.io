@@ -6,7 +6,7 @@
   "sitemap": "home",
   "lastmod": "2026-11-08T08:57:12+00:00",
   "head": {
-    "title": "SEO Services | Boost Rankings, Traffic & Business Growth",
+    "title": "AI Search Optimization: SEO, AEO, GEO & AIO | openink Hub",
     "meta": [
       {
         "attr": "name",
@@ -26,7 +26,7 @@
       {
         "attr": "name",
         "key": "description",
-        "content": "What are SEO services and how do they work? Explore how SEO strategies improve website rankings, increase organic traffic, generate leads, and grow online visibility."
+        "content": "Openink Hub is an AI-powered growth platform for SMEs: SEO, answer engine, generative engine and AI optimization, plus WhatsApp and HR automation."
       },
       {
         "attr": "name",
@@ -46,7 +46,7 @@
       {
         "attr": "property",
         "key": "og:description",
-        "content": "Get expert SEO services to improve search rankings, attract qualified traffic, and grow your business with data-driven optimization strategies."
+        "content": "Openink Hub is an AI-powered growth platform for SMEs: SEO, answer engine, generative engine and AI optimization, plus WhatsApp and HR automation."
       },
       {
         "attr": "property",
@@ -91,7 +91,7 @@
       {
         "attr": "name",
         "key": "twitter:description",
-        "content": "Boost your website's visibility and organic traffic with expert SEO services tailored to help your business grow."
+        "content": "Openink Hub is an AI-powered growth platform for SMEs: SEO, answer engine, generative engine and AI optimization, plus WhatsApp and HR automation."
       },
       {
         "attr": "name",
@@ -469,5 +469,6 @@
       "q": "What is WhatsApp automation?",
       "a": "WhatsApp automation uses automated messages, chatbots, and workflows to handle customer inquiries, send updates, collect information, and provide support 24/7. To Know more click here"
     }
-  ]
+  ],
+  "keyphrase_override": "ai search optimization"
 }

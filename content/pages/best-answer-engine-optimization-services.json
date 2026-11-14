@@ -455,5 +455,6 @@
       "q": "How can businesses get started with Answer Engine Optimization?",
       "a": "Businesses should identify common customer questions, create high-quality answer-focused content, use structured headings and schema markup, optimize for search intent, and regularly update content to ensure accuracy and relevance."
     }
-  ]
+  ],
+  "keyphrase_override": "answer engine optimization"
 }

@@ -103,6 +103,26 @@ const CITE = {
     `In addition, Google's <a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="noopener">structured data guide</a> shows how to label answers for search.`,
     `After that, clear, people-first answers are what Google's <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">helpful content guidance</a> asks for.`],
 };
+// "Key steps" list: short, transition-led sentences built from each city's own data (readability + transitions)
+const STEPS_H = [(c) => `Key steps for ${c} businesses`, (c) => `Where to start in ${c}`, (c) => `A simple plan for ${c}`, (c) => `Your first five moves in ${c}`];
+const STEP_GBP = ["After that, keep your Google Business Profile, photos and reviews up to date.",
+  "After that, reply to reviews and post fresh photos on your Google Business Profile.",
+  "After that, check that your name, address and phone match everywhere online."];
+const STEP_TRACK = ["Finally, track calls, WhatsApp chats and form leads, not just rankings.",
+  "Finally, measure enquiries and sales, not only traffic.",
+  "Finally, review the results every month and fix the weakest page first."];
+function steps(c, k) {
+  const lc = (x) => x.charAt(0).toLowerCase() + x.slice(1);
+  const sec = c.sectors.slice(0, 2).map(([n]) => lc(n));
+  const q = c.questions[0].replace(/\*\*/g, "").trim();
+  return [
+    `First, focus on the searches that matter most here, such as ${sec.join(" and ")}.`,
+    `Next, name the areas you serve, like ${c.areas[0]} and ${c.areas[1]}, on your service pages.`,
+    `Then answer the questions people ask, for example: “${q}”`,
+    pick(k("sgbp"), STEP_GBP),
+    pick(k("strk"), STEP_TRACK),
+  ];
+}
 const DEMO = `<a href="https://calendly.com/openinkhub/30min/">book a free 30-minute demo</a>`;
 const CONTACT = (t) => `<a href="/contact-us/">${t}</a>`;
 const CTA = [
@@ -137,6 +157,7 @@ function render(c, img) {
     h2("example"), `<p>${T(c.example)}</p>`,
     h2("areas"), `<p>${E(pick(k("areas"), AREAS)(c.city, c.areas.slice(0, -1).join(", ") + " and " + c.areas[c.areas.length - 1]))}</p>`,
     near.length ? `<p>Also see nearby: ${near.join(", ")}.</p>` : "",
+    `<h2>${E(pick(k("steps"), STEPS_H)(c.city))}</h2>`, `<ul>${steps(c, k).map((x) => `<li>${E(x)}</li>`).join("")}</ul>`,
     h2("faq"), ...c.faqs.flatMap(([q, a]) => [`<h3>${E(q)}</h3>`, `<p>${T(a)}</p>`]),
     `<p>${pick(k("cta"), CTA)(E(c.city))}</p>`,
   ].filter(Boolean).join("\n");

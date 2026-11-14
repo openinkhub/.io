@@ -249,8 +249,10 @@ function audit(p) {
     const complex = pct(w.filter((x) => syllables(x) >= 3).length, wc);
     c.word_complexity = r(complex <= T.wordComplexity.maxPercentComplex ? "pass" : "warn", `${complex}% complex words`);
     const tw = new RegExp(`\\b(${W.transition.map((x) => x.replace(/ /g, "\\s+")).join("|")})\\b`, "i");
-    const trans = pct(sents.filter((s) => tw.test(s)).length, sents.length);
-    c.transition_words = r(trans >= T.transitionWords.minPercent ? "pass" : "warn", `${trans}% of sentences`);
+    // measured on prose: short fragments (labels, table cells, buttons, step names) are not sentences
+    const prose = sents.filter((s) => words(s).length >= (T.transitionWords.minSentenceWords || 1));
+    const trans = pct(prose.filter((s) => tw.test(s)).length, prose.length);
+    c.transition_words = r(trans >= T.transitionWords.minPercent ? "pass" : "warn", `${trans}% of ${prose.length} sentences`);
     const passive = pct(sents.filter((s) => /\b(is|are|was|were|be|been|being|get|gets|got)\s+(\w+ly\s+)?\w+(ed|en)\b/i.test(s)).length, sents.length);
     c.passive_voice = r(passive <= T.passiveVoice.maxPercent ? "pass" : "warn", `${passive}% of sentences`);
     let run = 1, maxRun = 1, prev = "";

@@ -463,5 +463,6 @@
       "q": "What features should I look for in an ATS?",
       "a": "Key features include resume parsing, AI candidate screening, interview scheduling, job posting, candidate tracking, collaboration tools, analytics, automated communication, reporting, and integration with existing HR systems."
     }
-  ]
+  ],
+  "keyphrase_override": "application tracking system"
 }

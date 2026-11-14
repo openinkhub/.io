@@ -2,24 +2,80 @@
   "name": "openink Hub",
   "logo": "/wp-content/uploads/2026/07/openinkhub-favicon.webp",
   "nav": [
-    {"label": "Home", "href": "/"},
-    {"label": "About Us", "href": "/best-expert-in-answer-engine-optimization/"},
-    {"label": "Services", "href": "/best-seo-services-in-india/", "children": [
-      {"label": "WhatsApp AI Chatbot", "href": "/whatsapp-ai-chatbot/"},
-      {"label": "On-Page SEO", "href": "/best-on-page-seo-services/"},
-      {"label": "Answer Engine Optimization", "href": "/best-answer-engine-optimization-services/"},
-      {"label": "Generative Engine Optimization", "href": "/generative-engine-optimization/"},
-      {"label": "AI Optimization (AIO)", "href": "/artificial-intelligence-optimization/"},
-      {"label": "Google My Business", "href": "/google-my-business/"},
-      {"label": "AI Voice Agent", "href": "/ai-voice-agent/"},
-      {"label": "HRMS", "href": "/human-resources-management/"},
-      {"label": "Applicant Tracking System", "href": "/application-tracking-system/"},
-      {"label": "Social Media Optimization", "href": "/social-media-optimization/"},
-      {"label": "High Quality Backlinks", "href": "/high-quality-backlinks/"},
-      {"label": "Website Development", "href": "/website-design-agency/"}
-    ]},
-    {"label": "Blogs", "href": "/category/best-seo-content-agency/"},
-    {"label": "Contact Us", "href": "/contact-us/"}
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About Us",
+      "href": "/best-expert-in-answer-engine-optimization/"
+    },
+    {
+      "label": "Services",
+      "href": "/best-seo-services-in-india/",
+      "children": [
+        {
+          "label": "WhatsApp AI Chatbot",
+          "href": "/whatsapp-ai-chatbot/"
+        },
+        {
+          "label": "SEO / AEO / GEO / AIO Audit",
+          "href": "/report/"
+        },
+        {
+          "label": "On-Page SEO",
+          "href": "/best-on-page-seo-services/"
+        },
+        {
+          "label": "Answer Engine Optimization",
+          "href": "/best-answer-engine-optimization-services/"
+        },
+        {
+          "label": "Generative Engine Optimization",
+          "href": "/generative-engine-optimization/"
+        },
+        {
+          "label": "AI Optimization (AIO)",
+          "href": "/artificial-intelligence-optimization/"
+        },
+        {
+          "label": "Google My Business",
+          "href": "/google-my-business/"
+        },
+        {
+          "label": "AI Voice Agent",
+          "href": "/ai-voice-agent/"
+        },
+        {
+          "label": "HRMS",
+          "href": "/human-resources-management/"
+        },
+        {
+          "label": "Applicant Tracking System",
+          "href": "/application-tracking-system/"
+        },
+        {
+          "label": "Social Media Optimization",
+          "href": "/social-media-optimization/"
+        },
+        {
+          "label": "High Quality Backlinks",
+          "href": "/high-quality-backlinks/"
+        },
+        {
+          "label": "Website Development",
+          "href": "/website-design-agency/"
+        }
+      ]
+    },
+    {
+      "label": "Blogs",
+      "href": "/category/best-seo-content-agency/"
+    },
+    {
+      "label": "Contact Us",
+      "href": "/contact-us/"
+    }
   ],
   "contact": {
     "phone": "+91 9204 135136",
@@ -33,37 +89,119 @@
   "footer": {
     "about": "Our services include SEO, WhatsApp API, AI voice agents, HRMS, ATS, GMB optimization, content writing, SMO, and workflow automation. Every solution is designed to save time, increase efficiency, and deliver measurable results.",
     "columns": [
-      {"title": "Services", "links": [
-        {"label": "AIO", "href": "/artificial-intelligence-optimization/"},
-        {"label": "AEO", "href": "/best-answer-engine-optimization-services/"},
-        {"label": "GEO", "href": "/generative-engine-optimization/"},
-        {"label": "SEO", "href": "/best-on-page-seo-services/"},
-        {"label": "GMB", "href": "/google-my-business/"},
-        {"label": "WhatsApp", "href": "/whatsapp-ai-chatbot/"}
-      ]},
-      {"title": "SEO by City", "links": [
-        {"label": "Delhi", "href": "/best-seo-agency-in-delhi/"},
-        {"label": "Kolkata", "href": "/best-seo-agency-in-kolkata/"},
-        {"label": "Mumbai", "href": "/best-seo-agency-in-mumbai/"},
-        {"label": "Chennai", "href": "/best-seo-agency-in-chennai/"},
-        {"label": "Hyderabad", "href": "/best-seo-agency-in-hyderabad/"},
-        {"label": "Bangalore", "href": "/best-seo-agency-in-bangalore/"},
-        {"label": "All cities →", "href": "/category/seo-agency-by-city/"}
-      ]},
-      {"title": "Company", "links": [
-        {"label": "About Us", "href": "/best-expert-in-answer-engine-optimization/"},
-        {"label": "All Services", "href": "/best-seo-services-in-india/"},
-        {"label": "Blogs", "href": "/category/best-seo-content-agency/"},
-        {"label": "Contact Us", "href": "/contact-us/"}
-      ]}
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AIO",
+            "href": "/artificial-intelligence-optimization/"
+          },
+          {
+            "label": "AEO",
+            "href": "/best-answer-engine-optimization-services/"
+          },
+          {
+            "label": "GEO",
+            "href": "/generative-engine-optimization/"
+          },
+          {
+            "label": "SEO",
+            "href": "/best-on-page-seo-services/"
+          },
+          {
+            "label": "GMB",
+            "href": "/google-my-business/"
+          },
+          {
+            "label": "WhatsApp",
+            "href": "/whatsapp-ai-chatbot/"
+          },
+          {
+            "label": "Audit Report",
+            "href": "/report/"
+          }
+        ]
+      },
+      {
+        "title": "SEO by City",
+        "links": [
+          {
+            "label": "Delhi",
+            "href": "/best-seo-agency-in-delhi/"
+          },
+          {
+            "label": "Kolkata",
+            "href": "/best-seo-agency-in-kolkata/"
+          },
+          {
+            "label": "Mumbai",
+            "href": "/best-seo-agency-in-mumbai/"
+          },
+          {
+            "label": "Chennai",
+            "href": "/best-seo-agency-in-chennai/"
+          },
+          {
+            "label": "Hyderabad",
+            "href": "/best-seo-agency-in-hyderabad/"
+          },
+          {
+            "label": "Bangalore",
+            "href": "/best-seo-agency-in-bangalore/"
+          },
+          {
+            "label": "All cities →",
+            "href": "/category/seo-agency-by-city/"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About Us",
+            "href": "/best-expert-in-answer-engine-optimization/"
+          },
+          {
+            "label": "All Services",
+            "href": "/best-seo-services-in-india/"
+          },
+          {
+            "label": "Blogs",
+            "href": "/category/best-seo-content-agency/"
+          },
+          {
+            "label": "Contact Us",
+            "href": "/contact-us/"
+          }
+        ]
+      }
     ],
     "legal": [
-      {"label": "Privacy", "href": "/privacy-policy/"},
-      {"label": "Refunds & Cancellation", "href": "/refund/"},
-      {"label": "Shipping & Delivery", "href": "/shipping/"},
-      {"label": "Terms & Condition", "href": "/terms/"},
-      {"label": "Disclaimer", "href": "/disclaimer/"},
-      {"label": "Cookies", "href": "/cookie/"}
+      {
+        "label": "Privacy",
+        "href": "/privacy-policy/"
+      },
+      {
+        "label": "Refunds & Cancellation",
+        "href": "/refund/"
+      },
+      {
+        "label": "Shipping & Delivery",
+        "href": "/shipping/"
+      },
+      {
+        "label": "Terms & Condition",
+        "href": "/terms/"
+      },
+      {
+        "label": "Disclaimer",
+        "href": "/disclaimer/"
+      },
+      {
+        "label": "Cookies",
+        "href": "/cookie/"
+      }
     ]
   }
 }

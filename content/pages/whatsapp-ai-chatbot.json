@@ -6,7 +6,7 @@
   "sitemap": "pages",
   "lastmod": "2026-07-29T16:29:44+00:00",
   "head": {
-    "title": "WhatsApp API Solutions for Business Automation",
+    "title": "WhatsApp AI Chatbot & WhatsApp API Automation",
     "meta": [
       {
         "attr": "name",
@@ -26,7 +26,7 @@
       {
         "attr": "name",
         "key": "description",
-        "content": "What is WhatsApp API and how does it work? Learn how businesses automate messaging, customer support, notifications, and engagement with the WhatsApp Business API."
+        "content": "Automate WhatsApp with an AI chatbot on the official WhatsApp API: answer customers, qualify leads, send broadcasts and hand off to live agents."
       },
       {
         "attr": "name",
@@ -46,7 +46,7 @@
       {
         "attr": "property",
         "key": "og:description",
-        "content": "Leverage the WhatsApp API to automate business messaging, manage customer interactions, and deliver personalized communication at scale."
+        "content": "Automate WhatsApp with an AI chatbot on the official WhatsApp API: answer customers, qualify leads, send broadcasts and hand off to live agents."
       },
       {
         "attr": "property",
@@ -86,7 +86,7 @@
       {
         "attr": "name",
         "key": "twitter:description",
-        "content": "Automate customer support, notifications, and conversations with the WhatsApp API to improve engagement and streamline business communication."
+        "content": "Automate WhatsApp with an AI chatbot on the official WhatsApp API: answer customers, qualify leads, send broadcasts and hand off to live agents."
       },
       {
         "attr": "name",
@@ -463,5 +463,6 @@
       "q": "Is the WhatsApp Business API secure?",
       "a": "Yes. The WhatsApp Business API uses end-to-end encryption for personal messages where applicable and follows Meta's security standards. Businesses should also implement secure authentication, access controls, and comply with privacy regulations to protect customer data."
     }
-  ]
+  ],
+  "keyphrase_override": "whatsapp ai chatbot"
 }

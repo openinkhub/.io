@@ -486,5 +486,6 @@
       "q": "How does AI improve SEO?",
       "a": "AI analyzes search trends, identifies keyword opportunities, optimizes content structure, and helps create content that better matches user search intent."
     }
-  ]
+  ],
+  "keyphrase_override": "answer engine optimization expert"
 }

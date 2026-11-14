@@ -463,5 +463,6 @@
       "q": "How does an HRMS improve employee management?",
       "a": "An HRMS centralizes employee information, automates routine processes, tracks performance, simplifies communication, and provides managers with actionable insights to make informed workforce decisions."
     }
-  ]
+  ],
+  "keyphrase_override": "human resources management"
 }

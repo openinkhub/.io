@@ -71,6 +71,21 @@ function firstParagraph(html) {
 const PL_FILE = path.join(ROOT, "content", "seo", "plain-language.json");
 export const PLAIN = fs.existsSync(PL_FILE) ? JSON.parse(fs.readFileSync(PL_FILE, "utf8")) : {};
 export const PLAIN_MISSES = [];
+// Small wording edits on imported pages (content/seo/copy-edits.json): { "/path/": [[exact text, replacement], ...] }.
+// Used to add transition words, keyphrases and plainer wording without touching the page file. Misses fail the build.
+const CE_FILE = path.join(ROOT, "content", "seo", "copy-edits.json");
+export const COPY_EDITS = fs.existsSync(CE_FILE) ? JSON.parse(fs.readFileSync(CE_FILE, "utf8")) : {};
+export const COPY_MISSES = [];
+function applyCopyEdits(rec, fixes) {
+  const edits = COPY_EDITS[rec.path];
+  if (!FIX.copyEdits || !Array.isArray(edits)) return;
+  let n = 0;
+  for (const [find, repl] of edits) {
+    if (!rec.content_html.includes(find)) { COPY_MISSES.push(`${rec.path}: "${find.slice(0, 60)}"`); continue; }
+    rec.content_html = rec.content_html.split(find).join(repl); n++;
+  }
+  if (n) fixes.push(`copy-edits:${n}`);
+}
 const squash = (s) => String(s).replace(/\s+/g, " ").trim();
 
 /** Swap hard paragraphs/list items for their plain-language versions (content/seo/plain-language.json).
@@ -125,12 +140,29 @@ function applyRemovals(rec, fixes) {
   rec.content_html = html;
 }
 
+// Extra FAQs for imported pages (content/seo/faqs.json): added to rec.faqs (FAQ schema) and shown in the content.
+const FQ_FILE = path.join(ROOT, "content", "seo", "faqs.json");
+export const FAQ_ADD = fs.existsSync(FQ_FILE) ? JSON.parse(fs.readFileSync(FQ_FILE, "utf8")) : {};
+function applyFaqs(rec, fixes) {
+  const add = FAQ_ADD[rec.path];
+  if (!FIX.faqAdditions || !Array.isArray(add) || !add.length) return;
+  const have = new Set((rec.faqs || []).map((f) => squash(strip(f.q)).toLowerCase()));
+  rec.faqs = [...(rec.faqs || []), ...add.filter(([q]) => !have.has(squash(q).toLowerCase())).map(([q, a]) => ({ q, a: `<p>${a}</p>` }))];
+  // show every FAQ that is not already visible in the content
+  const body = squash(strip(rec.content_html)).toLowerCase();
+  const missing = rec.faqs.filter((f) => !body.includes(squash(strip(f.q)).toLowerCase().slice(0, 40)));
+  if (missing.length) rec.content_html += `\n<h2>Frequently asked questions</h2>\n` + missing.map((f) => `<h3>${f.q}</h3>${f.a}`).join("\n");
+  fixes.push(`faqs:${add.length}`);
+}
+
 export function fixRecord(rec) {
   if (rec._fixed) return rec;
   rec._fixed = true;
   const fixes = [];
   applyRemovals(rec, fixes);
   applyPlainLanguage(rec, fixes);
+  applyCopyEdits(rec, fixes);
+  applyFaqs(rec, fixes);
   const url = rec.url?.replace(/\/?$/, rec.path === "/" ? "" : "/") || SITE.url + rec.path;
   const kp = keyphraseFor(rec);
   rec.keyphrase = kp.keyphrase; rec.keyphrase_source = kp.source; rec.keyphrase_secondary = kp.secondary;

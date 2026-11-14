@@ -6,7 +6,7 @@
   "sitemap": "pages",
   "lastmod": "2026-11-07T15:37:39+00:00",
   "head": {
-    "title": "Content Writing Services | SEO-Optimized Content",
+    "title": "AI Blog Writing Service | Keyword to Ranked Content",
     "meta": [
       {
         "attr": "name",
@@ -26,7 +26,7 @@
       {
         "attr": "name",
         "key": "description",
-        "content": "What are AI writing tools and how do they work? Discover how AI-powered writing tools create content, improve productivity, enhance SEO, and simplify content creation."
+        "content": "Openink Hub's AI blog service turns researched keywords into intent-matched, SEO-ready posts that are published, checked and syndicated."
       },
       {
         "attr": "name",
@@ -46,7 +46,7 @@
       {
         "attr": "property",
         "key": "og:description",
-        "content": "Create compelling, SEO-optimized content that improves search rankings, engages your audience, and helps your business achieve sustainable growth"
+        "content": "Openink Hub's AI blog service turns researched keywords into intent-matched, SEO-ready posts that are published, checked and syndicated."
       },
       {
         "attr": "property",
@@ -86,7 +86,7 @@
       {
         "attr": "name",
         "key": "twitter:description",
-        "content": "Boost traffic and conversions with expert content writing services that deliver engaging, SEO-friendly blogs, website copy, and marketing content."
+        "content": "Openink Hub's AI blog service turns researched keywords into intent-matched, SEO-ready posts that are published, checked and syndicated."
       },
       {
         "attr": "name",
@@ -463,5 +463,6 @@
       "q": "Is AI content suitable for all types of businesses?",
       "a": "Absolutely. Businesses across industries can use AI to create educational articles, product guides, FAQs, case studies, and thought leadership content, helping them publish consistently while maintaining a strong online presence."
     }
-  ]
+  ],
+  "keyphrase_override": "ai blog"
 }

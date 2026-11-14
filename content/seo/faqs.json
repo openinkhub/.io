@@ -1,0 +1,78 @@
+{
+  "_note": "FAQs added to imported pages at build time: { \"/path/\": [[question, answer HTML], ...] }. They are appended to the content under 'Frequently asked questions' and get FAQPage schema. Answers may link to primary sources.",
+  "/ai-agentic-workflow-automation/": [
+    ["What is agentic workflow automation?", "It uses AI agents that can plan and carry out multi-step tasks, such as reading an enquiry, updating the CRM and sending a reply, instead of following one fixed rule at a time."],
+    ["How is it different from normal automation?", "Normal automation follows set if-then rules. An AI agent can decide the next step from context, so it handles more varied requests, with a person checking the cases it is unsure about."],
+    ["Is agentic automation safe for customer data?", "It can be, if access is limited to the data each task needs and every action is logged. The <a href=\"https://www.cisa.gov/ai\" target=\"_blank\" rel=\"noopener\">CISA guidance on AI</a> is a useful starting point for safe use."]
+  ],
+  "/ai-seo-automation/": [
+    ["What parts of SEO can AI automate?", "AI can speed up keyword research, content briefs, technical audits, internal linking suggestions and reporting. Strategy, fact-checking and final edits still need a person."],
+    ["Does Google penalise AI-written content?", "Google says it rewards helpful, people-first content however it is produced. See its <a href=\"https://developers.google.com/search/docs/fundamentals/using-gen-ai-content\" target=\"_blank\" rel=\"noopener\">guidance on AI-generated content</a>."],
+    ["Will AI SEO automation replace an SEO team?", "No. It removes repetitive work so the team can spend more time on strategy, content quality and results."]
+  ],
+  "/artificial-intelligence-optimization-strategy-how-to-rank-in-ai/": [
+    ["What is an AI optimization strategy?", "It is a plan to make your brand easy for AI search tools to find, understand and cite, using clear answers, structured data and consistent brand facts."],
+    ["How do I get cited in AI Overviews?", "Publish direct, accurate answers, use clear headings and structured data, and build authority on the topic. Google explains how <a href=\"https://developers.google.com/search/docs/appearance/ai-features\" target=\"_blank\" rel=\"noopener\">AI features in Search</a> work."],
+    ["How do I measure AI search visibility?", "Track brand mentions and citations in AI answers, referral traffic from AI tools and branded searches over time."]
+  ],
+  "/best-ats-software-for-small-business-2026-guide/": [
+    ["What is ATS software?", "An applicant tracking system collects applications, moves candidates through hiring stages and keeps notes and messages in one place."],
+    ["Does a small business need an ATS?", "If you hire regularly or get many applications per role, an ATS saves time, keeps hiring fair and stops good candidates from slipping through."],
+    ["What should I look for in ATS software for small business?", "Look for easy job posting, a simple pipeline, interview scheduling, email or WhatsApp updates, reports and fair pricing for small teams."]
+  ],
+  "/best-seo-agency/": [
+    ["How do I choose the best SEO agency in India?", "Check live results in your sector, a clear process, transparent reporting, technical and content skills, and readiness for AI search."],
+    ["How long does SEO take to show results?", "Most sites see early movement in three to six months, depending on competition, site health and how much content and link work is done."],
+    ["What should an SEO agency report each month?", "Rankings, organic traffic, leads or sales from search, and the work completed. Google's <a href=\"https://developers.google.com/search/docs/fundamentals/do-i-need-seo\" target=\"_blank\" rel=\"noopener\">guide to hiring an SEO</a> lists good questions to ask."]
+  ],
+  "/best-whatsapp-sender-for-b2b-india/": [
+    ["What is a WhatsApp sender for B2B?", "It is a tool that sends approved WhatsApp messages, such as updates, offers and reminders, to business contacts who have opted in."],
+    ["Is bulk WhatsApp messaging allowed?", "Yes, through the official WhatsApp Business Platform with opted-in contacts and approved templates. See <a href=\"https://developers.facebook.com/docs/whatsapp\" target=\"_blank\" rel=\"noopener\">Meta's WhatsApp Business Platform docs</a>."],
+    ["How do I avoid getting my number blocked?", "Message only people who opted in, use approved templates, keep messages relevant and make it easy to opt out."]
+  ],
+  "/boost-your-business-with-geo-targeting-marketing/": [
+    ["What is geo targeting marketing?", "It means showing ads, offers or content to people based on their location, such as a city, area or distance from your store."],
+    ["Which channels support geo targeting?", "Search ads, social ads, Google Business Profile, location pages on your website and local SEO all support location-based targeting."],
+    ["How do I measure geo targeting results?", "Track calls, direction requests, store visits and sales by location, and compare them with your spend in each area."]
+  ],
+  "/how-to-setup-gmb-step-by-step-local-guide/": [
+    ["How do I set up GMB?", "Sign in to Google, add your business name, category, location and contact details, then verify the profile. Google's <a href=\"https://support.google.com/business/answer/2911778\" target=\"_blank\" rel=\"noopener\">official setup guide</a> walks through each step."],
+    ["How long does GMB verification take?", "It depends on the method Google offers. Some businesses verify within minutes, while others wait several days for a code or video check."],
+    ["How do I rank higher in the local map pack?", "Choose the right categories, complete every field, add real photos, collect and reply to reviews, and keep your details consistent online."]
+  ],
+  "/seo-agency-in-patna-top-seo-services-company/": [
+    ["Why hire an SEO services company in Patna?", "A local team understands how Patna customers search, which areas and languages matter, and how to win the local map pack."],
+    ["How much does SEO cost in Patna?", "Cost depends on competition, the number of pages and locations, and the work included. Ask for a monthly plan with clear deliverables."],
+    ["What results can a Patna business expect?", "Better local rankings, more calls and enquiries from Google Maps and search, and steady growth in organic traffic over several months."]
+  ],
+  "/top-hrms-solutions-automate-your-hr-workflow/": [
+    ["What does an HRMS do?", "An HR management system brings hiring, employee records, attendance, leave, payroll and reports into one place."],
+    ["Which HR tasks should I automate first?", "Start with attendance and leave, payroll inputs and onboarding paperwork, because they are frequent, repetitive and error-prone."],
+    ["How do I choose an HRMS for a growing business?", "Check that it covers your core processes, works on mobile, integrates with payroll and accounting, and keeps employee data secure."]
+  ],
+  "/what-is-on-page-seo-step-by-step-optimization/": [
+    ["What is on-page SEO?", "On-page SEO means optimising the content and code of each page, such as titles, headings, content, images, links and structured data, so search engines understand and rank it."],
+    ["What is the difference between on-page and off-page SEO?", "On-page SEO is work on your own pages. Off-page SEO is about signals elsewhere, such as backlinks, reviews and brand mentions."],
+    ["Where should I start with on-page SEO?", "Start with unique titles and descriptions, one clear H1, helpful content that matches search intent and clean internal links. Google's <a href=\"https://developers.google.com/search/docs/fundamentals/seo-starter-guide\" target=\"_blank\" rel=\"noopener\">SEO starter guide</a> covers the basics."]
+  ],
+  "/what-is-profile-creation/": [
+    ["What is profile creation in SEO?", "Profile creation means setting up business profiles on trusted directories, social sites and platforms, with consistent details and a link to your website."],
+    ["Do profile creation backlinks help rankings?", "They help mostly through brand visibility and consistent business details. Low-quality, spammy profiles do not help and can hurt, so focus on relevant, trusted sites."],
+    ["Which profiles matter most for a local business?", "Your Google Business Profile comes first, followed by major social networks, industry directories and local listings. See Google's <a href=\"https://support.google.com/business/answer/7091\" target=\"_blank\" rel=\"noopener\">local ranking guide</a>."]
+  ],
+  "/what-is-seo-the-ultimate-beginners-guide-to-ranking/": [
+    ["What is SEO in simple words?", "SEO is the work of making your website easy for search engines to find, understand and show to people searching for what you offer."],
+    ["How long does SEO take?", "Most sites see early results in three to six months. Competitive keywords and new websites can take longer."],
+    ["Can I do SEO myself?", "Yes, you can handle the basics yourself: clear titles, helpful content, a fast mobile site and a Google Business Profile. Larger or competitive sites usually benefit from expert help."]
+  ],
+  "/whatsapp-api-automation-tool-scale-your-sales-10x/": [
+    ["What is a WhatsApp API automation tool?", "It connects to the official WhatsApp Business Platform to automate replies, notifications, broadcasts and lead follow-up from one dashboard."],
+    ["Do I need the official WhatsApp API?", "Yes, for automation at scale. It is the approved way to message customers in bulk. See <a href=\"https://developers.facebook.com/docs/whatsapp\" target=\"_blank\" rel=\"noopener\">Meta's WhatsApp Business Platform docs</a>."],
+    ["How does WhatsApp automation increase sales?", "It replies instantly, follows up on every lead, sends reminders and offers at the right time, and hands warm leads to your sales team."]
+  ],
+  "/contact-us/": [
+    ["How can I contact Openink Hub?", "Call or WhatsApp us, email info@openinkhub.io, or send the form on this page. Tell us what you want to grow and we will suggest the right next step."],
+    ["Can I book a demo before I decide?", "Yes. You can book a free demo to see how our SEO, AEO, GEO, AIO and automation services would work for your business."],
+    ["Do you work with businesses outside Ranchi?", "Yes. We work with startups and SMEs across India and abroad, online and by video call."]
+  ]
+}

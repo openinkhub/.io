@@ -13,7 +13,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { fixRecord, fixHtml, listingLabel, RULES, SQUIRRLY } from "./seo-fix.mjs";
+import { fixRecord, fixHtml, listingLabel, RULES, SQUIRRLY, COPY_MISSES } from "./seo-fix.mjs";
 import { makeCover, coverFigure } from "./covers.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -279,7 +279,7 @@ const contentHasFaq = (content, faqs) =>
   Boolean(faqs?.length) && faqs.slice(0, 2).every((f) => squash(content).includes(cut(squash(f.q), 40)));
 
 // ---------------------------------------------------------------- templates
-const LEGAL = new Set(["privacy-policy", "terms", "refund", "shipping", "disclaimer", "cookie", "report"]);
+const LEGAL = new Set(["privacy-policy", "terms", "refund", "shipping", "disclaimer", "cookie"]);
 
 // "Articles on this topic" list on hub pages that content-plan posts point to (brief_hub)
 function hubArticles(rec) {
@@ -580,7 +580,7 @@ function walk(dir) {
 
 // Pages and guides with no image in their content get a branded title card (static/images/pages/<slug>.svg),
 // placed after the lead paragraph so it counts as a content image (hero_image + text_image_ratio checks).
-const NO_COVER = new Set(["contact-us", "report"]);
+const NO_COVER = new Set(["contact-us"]);
 function addCovers() {
   for (const r of RECS) {
     const slug = r.path.replace(/^\/+|\/+$/g, "");
@@ -615,6 +615,7 @@ function addRelatedLinks() {
 }
 
 function main() {
+  if (COPY_MISSES.length) { console.error("copy-edits.json: text not found (page changed?)\n  " + COPY_MISSES.join("\n  ")); process.exit(1); }
   addCovers();
   addRelatedLinks();
   fs.rmSync(DIST, { recursive: true, force: true });

@@ -477,8 +477,16 @@
   "author": "Hiten Neotia",
   "categories": [
     {
-      "name": "AEO, GEO & AIO",
-      "path": "/category/ai-search/"
+      "name": "AIO",
+      "path": "/category/aio/"
+    },
+    {
+      "name": "AEO",
+      "path": "/category/aeo/"
+    },
+    {
+      "name": "GEO",
+      "path": "/category/geo/"
     },
     {
       "name": "Blogs",

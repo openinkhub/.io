@@ -1,0 +1,302 @@
+{
+  "url": "https://openinkhub.io/category/geo/",
+  "path": "/category/geo/",
+  "status": 200,
+  "final_url": "https://openinkhub.io/category/geo/",
+  "sitemap": "categories",
+  "lastmod": "2026-11-14T12:00:00+05:30",
+  "head": {
+    "title": "GEO Articles | Get Cited in AI Answers",
+    "meta": [
+      {
+        "attr": "name",
+        "key": "robots",
+        "content": "index,follow"
+      },
+      {
+        "attr": "name",
+        "key": "googlebot",
+        "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+      },
+      {
+        "attr": "name",
+        "key": "bingbot",
+        "content": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+      },
+      {
+        "attr": "name",
+        "key": "description",
+        "content": "Openink Hub articles on generative engine optimization (GEO): how ChatGPT, Gemini and Perplexity pick sources, and how to get your brand cited."
+      },
+      {
+        "attr": "property",
+        "key": "og:url",
+        "content": "https://openinkhub.io/category/geo/"
+      },
+      {
+        "attr": "property",
+        "key": "og:title",
+        "content": "GEO Articles | Get Cited in AI Answers (2026)"
+      },
+      {
+        "attr": "property",
+        "key": "og:description",
+        "content": "Openink Hub articles on generative engine optimization (GEO): how ChatGPT, Gemini and Perplexity pick sources, and how to get your brand cited."
+      },
+      {
+        "attr": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "attr": "property",
+        "key": "og:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp"
+      },
+      {
+        "attr": "property",
+        "key": "og:image:width",
+        "content": "500"
+      },
+      {
+        "attr": "property",
+        "key": "og:site_name",
+        "content": "openink Hub"
+      },
+      {
+        "attr": "property",
+        "key": "og:locale",
+        "content": "en_US"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:url",
+        "content": "https://openinkhub.io/category/geo/"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:title",
+        "content": "GEO Articles | Get Cited in AI Answers (2026)"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:description",
+        "content": "Openink Hub articles on generative engine optimization (GEO): how ChatGPT, Gemini and Perplexity pick sources, and how to get your brand cited."
+      },
+      {
+        "attr": "name",
+        "key": "twitter:image",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/business-process-optimization.webp"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:domain",
+        "content": "openink Hub"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:creator",
+        "content": "@twitter"
+      },
+      {
+        "attr": "name",
+        "key": "twitter:site",
+        "content": "@twitter"
+      },
+      {
+        "attr": "name",
+        "key": "msapplication-TileImage",
+        "content": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp"
+      }
+    ],
+    "links": [
+      {
+        "rel": "canonical",
+        "href": "https://openinkhub.io/category/geo/",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "next",
+        "href": "https://openinkhub.io/category/geo/page/2/",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/sitemap.xml",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/comments/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "alternate",
+        "href": "https://openinkhub.io/category/geo/feed/",
+        "hreflang": null,
+        "type": "application/rss+xml",
+        "sizes": null
+      },
+      {
+        "rel": "icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon-150x150.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": "32x32"
+      },
+      {
+        "rel": "icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": "192x192"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "href": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-favicon.webp",
+        "hreflang": null,
+        "type": null,
+        "sizes": null
+      }
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://openinkhub.io/category/geo/",
+            "url": "https://openinkhub.io/category/geo/",
+            "name": "GEO Articles | Get Cited in AI Answers",
+            "isPartOf": {
+              "@id": "https://openinkhub.io/#website"
+            },
+            "primaryImageOfPage": {
+              "@id": "https://openinkhub.io/category/geo/#primaryimage"
+            },
+            "image": {
+              "@id": "https://openinkhub.io/category/geo/#primaryimage"
+            },
+            "thumbnailUrl": "https://openinkhub.io/wp-content/uploads/2026/11/Best-WhatsApp-Sender-for-B2B-India.webp",
+            "breadcrumb": {
+              "@id": "https://openinkhub.io/category/geo/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "description": "Openink Hub articles on generative engine optimization (GEO): how ChatGPT, Gemini and Perplexity pick sources, and how to get your brand cited."
+          },
+          {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://openinkhub.io/category/geo/#primaryimage",
+            "url": "https://openinkhub.io/wp-content/uploads/2026/11/Best-WhatsApp-Sender-for-B2B-India.webp",
+            "contentUrl": "https://openinkhub.io/wp-content/uploads/2026/11/Best-WhatsApp-Sender-for-B2B-India.webp",
+            "width": 1376,
+            "height": 768,
+            "caption": "Best WhatsApp Sender for B2B India"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://openinkhub.io/category/geo/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://openinkhub.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blogs"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://openinkhub.io/#website",
+            "url": "https://openinkhub.io/",
+            "name": "Search Engine Optimization",
+            "description": "Automate.Engage.Optimize",
+            "publisher": {
+              "@id": "https://openinkhub.io/#organization"
+            },
+            "alternateName": "SEO",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://openinkhub.io/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://openinkhub.io/#organization",
+            "name": "openink Hub",
+            "url": "https://openinkhub.io/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://openinkhub.io/#/schema/logo/image/",
+              "url": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+              "contentUrl": "https://openinkhub.io/wp-content/uploads/2026/07/openinkhub-2.webp",
+              "width": 928,
+              "height": 234,
+              "caption": "openink Hub"
+            },
+            "image": {
+              "@id": "https://openinkhub.io/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    ],
+    "lang": "en-US"
+  },
+  "h1": "GEO Articles: Get Cited by ChatGPT, Gemini and Perplexity in 2026",
+  "type": "category",
+  "title": "GEO",
+  "content_html": "",
+  "faqs": [
+    {
+      "q": "What is GEO?",
+      "a": "<p>GEO means making your brand easy for AI chat tools to find, trust and quote when they answer a question.</p>"
+    },
+    {
+      "q": "How do AI tools pick which sources to cite?",
+      "a": "<p>They favour clear facts, trusted sites, consistent brand details and content that answers the question directly.</p>"
+    },
+    {
+      "q": "Can Openink Hub help with GEO?",
+      "a": "<p>Yes. See our <a href=\"/generative-engine-optimization/\">GEO services</a>.</p>"
+    }
+  ]
+}

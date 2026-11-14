@@ -4,7 +4,7 @@
   "status": 200,
   "final_url": "https://openinkhub.io/category/seo-services/",
   "sitemap": "categories",
-  "lastmod": "2026-11-14T10:00:00+05:30",
+  "lastmod": "2026-11-14T12:00:00+05:30",
   "head": {
     "title": "SEO Articles | Guides to Rank Higher on Google",
     "meta": [
@@ -26,7 +26,7 @@
       {
         "attr": "name",
         "key": "description",
-        "content": "Openink Hub SEO articles: how Google ranks pages, on-page SEO, profile links and how to choose an SEO agency in India."
+        "content": "Openink Hub SEO articles and 100 city guides: how Google ranks pages, on-page SEO, choosing an SEO agency and local SEO plans for Indian cities."
       },
       {
         "attr": "property",
@@ -41,7 +41,7 @@
       {
         "attr": "property",
         "key": "og:description",
-        "content": "Openink Hub SEO articles: how Google ranks pages, on-page SEO, profile links and how to choose an SEO agency in India."
+        "content": "Openink Hub SEO articles and 100 city guides: how Google ranks pages, on-page SEO, choosing an SEO agency and local SEO plans for Indian cities."
       },
       {
         "attr": "property",
@@ -81,7 +81,7 @@
       {
         "attr": "name",
         "key": "twitter:description",
-        "content": "Openink Hub SEO articles: how Google ranks pages, on-page SEO, profile links and how to choose an SEO agency in India."
+        "content": "Openink Hub SEO articles and 100 city guides: how Google ranks pages, on-page SEO, choosing an SEO agency and local SEO plans for Indian cities."
       },
       {
         "attr": "name",
@@ -202,7 +202,7 @@
               "@id": "https://openinkhub.io/category/seo-services/#breadcrumb"
             },
             "inLanguage": "en-US",
-            "description": "Openink Hub SEO articles: how Google ranks pages, on-page SEO, profile links and how to choose an SEO agency in India."
+            "description": "Openink Hub SEO articles and 100 city guides: how Google ranks pages, on-page SEO, choosing an SEO agency and local SEO plans for Indian cities."
           },
           {
             "@type": "ImageObject",
@@ -288,11 +288,11 @@
   "faqs": [
     {
       "q": "What will I learn from these SEO articles?",
-      "a": "<p>How Google finds and ranks pages, how to fix each page, how to earn links and how to judge an agency.</p>"
+      "a": "<p>How Google finds and ranks pages, how to fix each page and how to judge an SEO agency.</p>"
     },
     {
-      "q": "Which SEO article should I read first?",
-      "a": "<p>Start with the SEO beginner's guide. Then read the on-page SEO guide.</p>"
+      "q": "Where are the SEO city guides?",
+      "a": "<p>They are grouped by state on this page. You can also browse all 100 on the <a href=\"/category/seo-agency-by-city/\">SEO by City page</a>.</p>"
     },
     {
       "q": "Can Openink Hub do SEO for my business?",

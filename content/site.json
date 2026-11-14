@@ -138,7 +138,7 @@
       "path": "/category/best-seo-content-agency/"
     },
     {
-      "count": 4,
+      "count": 3,
       "name": "SEO",
       "slug": "seo-services",
       "path": "/category/seo-services/",
@@ -148,19 +148,55 @@
     },
     {
       "count": 2,
-      "name": "AEO, GEO & AIO",
-      "slug": "ai-search",
-      "path": "/category/ai-search/",
-      "link": "https://openinkhub.io/category/ai-search/",
+      "name": "AEO",
+      "slug": "aeo",
+      "path": "/category/aeo/",
+      "link": "https://openinkhub.io/category/aeo/",
+      "parent": 0,
+      "description": ""
+    },
+    {
+      "count": 2,
+      "name": "GEO",
+      "slug": "geo",
+      "path": "/category/geo/",
+      "link": "https://openinkhub.io/category/geo/",
+      "parent": 0,
+      "description": ""
+    },
+    {
+      "count": 2,
+      "name": "AIO",
+      "slug": "aio",
+      "path": "/category/aio/",
+      "link": "https://openinkhub.io/category/aio/",
       "parent": 0,
       "description": ""
     },
     {
       "count": 3,
-      "name": "Local SEO & GMB",
+      "name": "Local SEO",
       "slug": "local-seo",
       "path": "/category/local-seo/",
       "link": "https://openinkhub.io/category/local-seo/",
+      "parent": 0,
+      "description": ""
+    },
+    {
+      "count": 1,
+      "name": "GMB",
+      "slug": "gmb",
+      "path": "/category/gmb/",
+      "link": "https://openinkhub.io/category/gmb/",
+      "parent": 0,
+      "description": ""
+    },
+    {
+      "count": 2,
+      "name": "Backlinks",
+      "slug": "backlinks",
+      "path": "/category/backlinks/",
+      "link": "https://openinkhub.io/category/backlinks/",
       "parent": 0,
       "description": ""
     },
@@ -174,8 +210,8 @@
       "description": ""
     },
     {
-      "count": 3,
-      "name": "WhatsApp & AI Automation",
+      "count": 2,
+      "name": "WhatsApp Automation",
       "slug": "whatsapp-automation",
       "path": "/category/whatsapp-automation/",
       "link": "https://openinkhub.io/category/whatsapp-automation/",
@@ -183,17 +219,17 @@
       "description": ""
     },
     {
-      "count": 2,
-      "name": "HRMS & ATS",
-      "slug": "hr-software",
-      "path": "/category/hr-software/",
-      "link": "https://openinkhub.io/category/hr-software/",
+      "count": 3,
+      "name": "Articles",
+      "slug": "articles",
+      "path": "/category/articles/",
+      "link": "https://openinkhub.io/category/articles/",
       "parent": 0,
       "description": ""
     },
     {
       "id": 32,
-      "count": 100,
+      "count": 0,
       "description": "",
       "link": "https://openinkhub.io/category/seo-agency-by-city/",
       "name": "SEO by City",

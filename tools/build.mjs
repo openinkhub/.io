@@ -219,6 +219,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM}');</script>
 <!-- End Google Tag Manager -->
 ` : "";
+// GA4 loaded directly (analytics.ga4); it shares the same dataLayer as GTM
+const GA4 = /^G-[A-Z0-9]+$/.test(CFG.analytics?.ga4 || "") ? CFG.analytics.ga4 : "";
+const ga4Head = GA4 ? `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=${GA4}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4}');</script>
+` : "";
 const gtmBody = GTM ? `<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -228,7 +234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 const document_ = (rec, body, bodyClass = "") => `<!DOCTYPE html>
 <html lang="en-IN">
 <head>
-${gtmHead}${headHtml(rec)}
+${gtmHead}${ga4Head}${headHtml(rec)}
 </head>
 <body class="${bodyClass}">
 ${gtmBody}

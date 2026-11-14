@@ -226,6 +226,8 @@
   },
   "analytics": {
     "gtm": "GTM-TWSLJ8JZ",
-    "_note": "Google Tag Manager container; GA4 and other tags are configured inside GTM."
+    "ga4": "G-C3HG2W710F",
+    "ga4_property": "516898450",
+    "_note": "GA4 is loaded directly on the site (gtag.js). Do NOT also add a GA4 Google tag inside GTM, or every visit is counted twice. GTM is for other tags."
   }
 }

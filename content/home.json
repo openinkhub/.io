@@ -102,24 +102,37 @@
       {
         "name": "Harish Neotia",
         "role": "CEO",
-        "img": "/wp-content/uploads/2026/07/google-my-business.webp"
+        "img": "/wp-content/uploads/2026/07/google-my-business.webp",
+        "experience": "25+ years",
+        "specialization": "Management",
+        "highlight": "Handled 300+ dealer channels"
       },
       {
         "name": "Tanya Raj",
         "role": "CMO",
-        "img": "/wp-content/uploads/2026/07/workflow.webp"
+        "img": "/wp-content/uploads/2026/07/workflow.webp",
+        "experience": "11+ years",
+        "specialization": "Digital marketing",
+        "highlight": "Handled ₹5 Cr+ ad budget"
       },
       {
         "name": "Yash Manghnani",
         "role": "CTO",
-        "img": "/wp-content/uploads/2026/07/workflow-automation.webp"
+        "img": "/wp-content/uploads/2026/07/workflow-automation.webp",
+        "experience": "7+ years",
+        "specialization": "Technology",
+        "highlight": "Handled 25+ web projects"
       },
       {
         "name": "Hiten Neotia",
         "role": "CPO",
-        "img": "/wp-content/uploads/2026/07/lead-management.webp"
+        "img": "/wp-content/uploads/2026/07/lead-management.webp",
+        "experience": "1+ year",
+        "specialization": "Content creation",
+        "highlight": "Handled 255 web and blog content pieces"
       }
-    ]
+    ],
+    "_note": "Shown on the About Us page (team cards). Not shown on the home page."
   },
   "platform": {
     "h2": "Complete AI Solutions for Digital Growth",

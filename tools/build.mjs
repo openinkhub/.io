@@ -320,7 +320,94 @@ function hubArticles(rec) {
 `;
 }
 
+// ---------------------------------------------------------------- About Us (home-page style)
+// The page linked as "About Us" in the menu: home-style hero, every H2 section as a card grid (or one card for prose),
+// the team as person cards (data in content/home.json -> team), FAQs as open cards.
+const ABOUT_PATH = (CFG.nav.find((n) => /about/i.test(n.label)) || {}).href || "";
+function teamSection(H) {
+  const t = H.team;
+  const people = t.people.map((p) => `<figure class="person">
+  <img src="${E(rel(p.img))}" alt="${E(p.name)}, ${E(p.role)} at Openink Hub" loading="lazy" width="400" height="279">
+  <figcaption><strong>${E(p.name)}</strong><span>${E(p.role)}</span>
+  ${p.experience ? `<ul class="p-meta"><li><b>${E(p.experience)}</b> experience</li><li><b>${E(p.specialization)}</b></li><li>${E(p.highlight)}</li></ul>` : ""}
+  </figcaption></figure>`).join("");
+  return `<section class="section section-alt" id="team"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Our team</span><h2 class="sec-title">${E(t.h2)}</h2><p>${E(t.intro)}</p></div>
+  <div class="team-grid">${people}</div>
+</div></section>`;
+}
+function aboutTpl(rec) {
+  let [eyebrow, h1, body] = splitH1(rec.content_html || "", rec.h1 || rec.title);
+  if (RULES.autofix.linkText) body = fixLinks(body, titleOf);
+  if (RULES.autofix.plainFaq) body = openDetails(body);
+  let lead = "";
+  const m = /^\s*<p>([\s\S]*?)<\/p>/.exec(body);
+  if (m && len(m[1].replace(/<[^>]+>/g, "")) < 420) { lead = m[1]; body = body.slice(m[0].length); }
+  // hero image: the first figure/image in the content (cover), removed from the body
+  let heroImg = "";
+  const fig = /<figure>\s*(<img\b[^>]*>)\s*<\/figure>/.exec(body);
+  if (fig) { heroImg = fig[1].replace(/<img\b/, '<img fetchpriority="high"'); body = body.replace(fig[0], ""); }
+  // otherwise the home page hero image, so the hero has the same two-column look as the home page
+  if (!heroImg && HOME.hero?.image?.src) heroImg = `<img src="${E(rel(HOME.hero.image.src))}" alt="${E(HOME.hero.image.alt || "Openink Hub")}" width="1024" height="576" fetchpriority="high">`;
+  const quick = /<p>\s*<strong>Quick answer:<\/strong>([\s\S]*?)<\/p>/.exec(body);
+  if (quick) body = body.replace(quick[0], "");
+  const chunks = body.split(/(?=<h2[\s>])/);
+  const intro = chunks.shift();
+  let alt = false, out = "";
+  const kicker = (html) => { const k = /<p>([^<]{2,40})<\/p>\s*$/.exec(html); return k && k[1].trim().split(/\s+/).length <= 4 ? [html.slice(0, k.index), k[1].trim()] : [html, ""]; };
+  let nextEyebrow = kicker(intro)[1];
+  const introBody = kicker(intro)[0].replace(/<p>\s*<\/p>/g, "").trim();
+  if (stripTags(introBody).length > 40) out += `<section class="section"><div class="wrap narrow prose"><div class="c-card">${localizeBody(introBody)}</div></div></section>`;
+  for (const raw of chunks) {
+    const [chunk, eb] = kicker(raw);
+    const title = stripTags((/<h2[^>]*>([\s\S]*?)<\/h2>/.exec(chunk) || [])[1] || "");
+    const rest = chunk.replace(/<h2[^>]*>[\s\S]*?<\/h2>/, "");
+    const cls = (alt = !alt) ? "section" : "section section-alt";
+    const head = `<div class="sec-head">${nextEyebrow ? `<span class="eyebrow">${E(nextEyebrow)}</span>` : ""}<h2 class="sec-title">${E(title)}</h2>`;
+    nextEyebrow = eb;
+    if (/meet the experts|our team/i.test(title)) { out += teamSection(HOME); alt = false; continue; }
+    const parts = rest.split(/(?=<h3[\s>])/);
+    const pre = parts.shift().trim();
+    if (/frequently asked/i.test(title)) {
+      out += `<section class="${cls}"><div class="wrap narrow">${head}</div><div class="faq-list">${parts.map((p) => {
+        const q = stripTags((/<h3[^>]*>([\s\S]*?)<\/h3>/.exec(p) || [])[1] || "");
+        return `<div class="faq-card"><h3>${E(q)}</h3><div class="faq-a">${localizeBody(p.replace(/<h3[^>]*>[\s\S]*?<\/h3>/, ""))}</div></div>`;
+      }).join("")}</div></div></section>`;
+      continue;
+    }
+    if (parts.length >= 3) {
+      const cards = parts.map((p) => `<article class="svc-card">${localizeBody(p.replace(/<h3([^>]*)>/, "<h3$1>"))}</article>`).join("");
+      out += `<section class="${cls}"><div class="wrap">${head}${pre ? `<div class="sec-intro prose">${localizeBody(pre)}</div>` : ""}</div>
+  <div class="svc-grid about-grid">${cards}</div></div></section>`;
+    } else {
+      out += `<section class="${cls}"><div class="wrap narrow">${head}</div><div class="prose c-card">${localizeBody(pre + parts.join(""))}</div></div></section>`;
+    }
+  }
+  // nothing about the team in the content? still show the team
+  if (!/id="team"/.test(out)) out += teamSection(HOME);
+  const k = kitFor(rec, body, false);
+  const faqs = /frequently asked/i.test(body) || contentHasFaq(body, rec.faqs) ? "" : faqBlock(rec.faqs);
+  const crumb = len(rec.title) < 60 ? rec.title : cut(stripTags(h1), 60);
+  return document_(rec, `<section class="hero hero-about">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">${breadcrumb([[crumb, null]])}
+      ${eyebrow ? `<span class="eyebrow">${E(eyebrow)}</span>` : ""}
+      <h1>${h1}</h1>
+      <!--seo:content-->${lead ? `<p class="lead">${lead}</p>` : ""}<!--/seo:content-->
+      <div class="hero-ctas"><a class="btn btn-primary" href="${E(CFG.contact.demo_url)}" target="_blank" rel="noopener">Schedule a Free Demo${icon("arrow")}</a><a class="btn btn-ghost" href="/contact-us/">Contact Us</a></div>
+      ${quick ? `<div class="quick-answer"><strong>Quick answer:</strong>${quick[1]}</div>` : ""}
+    </div>
+    ${heroImg ? `<div class="hero-visual">${heroImg}</div>` : ""}
+  </div>
+</section>
+<!--seo:content-->${out}<!--/seo:content-->
+${k ? `<section class="section kit"><div class="wrap narrow prose">${localizeBody(k)}</div></section>` : ""}
+${faqs}`, "is-page is-about");
+}
+
 function pageTpl(rec) {
+  if (rec.path === ABOUT_PATH) return aboutTpl(rec);
   let [eyebrow, h1, body] = splitH1(rec.content_html || "", rec.h1 || rec.title);
   const h1Txt = stripTags(h1);
   const legal = LEGAL.has(rec.path.replace(/^\/+|\/+$/g, ""));
@@ -468,8 +555,6 @@ function homeTpl(rec) {
 <p>${E(s.text)}</p><a class="link-arrow" href="${E(s.href)}">${E(s.cta)}${icon("arrow")}</a></article>`).join("");
   const era = H.era.items.map((x, i) => `<div class="era-item"><span class="num">0${i + 1}</span><h3>${E(x.title)}</h3><p>${E(x.text)}</p></div>`).join("");
   const missionItems = H.mission.items.map((x) => `<li>${icon("check")}<div><strong>${E(x.title)}</strong><span>${E(x.text)}</span></div></li>`).join("");
-  const team = H.team.people.map((p) => `<figure class="person"><img src="${E(p.img)}" alt="${E(p.name)}, ${E(p.role)} at Openink Hub" loading="lazy">` +
-    `<figcaption><strong>${E(p.name)}</strong><span>${E(p.role)}</span></figcaption></figure>`).join("");
   const testi = H.testimonials.items.map((t) => `<figure class="quote"><blockquote>“${E(t.quote)}”</blockquote><figcaption>` +
     `<img src="${E(t.img)}" alt="${E(t.name)}" loading="lazy" width="48" height="48"><strong>${E(t.name)}</strong></figcaption></figure>`).join("");
   const wa = H.whatsapp.items.map((x) => `<div class="wa-item">${icon("check")}<div><h3>${E(x.title)}</h3><p>${E(x.text)}</p></div></div>`).join("");
@@ -507,10 +592,6 @@ function homeTpl(rec) {
 <section class="section"><div class="wrap split">
   <div><h2 class="sec-title">${E(H.mission.h2)}</h2>${H.mission.paras.map((p) => `<p>${E(p)}</p>`).join("")}</div>
   <ul class="check-list">${missionItems}</ul>
-</div></section>
-<section class="section section-alt"><div class="wrap">
-  <div class="sec-head"><h2 class="sec-title">${E(H.team.h2)}</h2><p>${E(H.team.intro)}</p></div>
-  <div class="team-grid">${team}</div>
 </div></section>
 <section class="section"><div class="wrap platform">
   <div><h2 class="sec-title">${E(H.platform.h2)}</h2><p>${E(H.platform.text)}</p>

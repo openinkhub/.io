@@ -365,3 +365,18 @@ a.guide-card:hover{border-color:var(--blue);box-shadow:var(--shadow);transform:t
 .prose .svc-cards .svc-card h3{margin:0 0 8px;font-size:1.08rem}
 .prose .svc-cards .svc-card p{font-size:15px;margin:0 0 14px}
 .prose .svc-cards .svc-card .btn{align-self:flex-start;margin:0}
+
+/* ---- About Us (home-page style) ---- */
+.hero-about .crumbs{margin-bottom:14px}
+.hero-about .hero-visual img{aspect-ratio:auto}
+.is-about .person{box-shadow:var(--shadow);transition:.25s}
+.is-about .person:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.person .p-meta{list-style:none;margin:10px 0 0;padding:10px 0 0;border-top:1px solid var(--line);display:grid;gap:4px;font-size:13.5px;color:var(--slate)}
+.person .p-meta b{color:var(--ink);font-weight:700}
+.about-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.about-grid .svc-card h3{margin:0 0 8px;font-size:1.08rem}
+.about-grid .svc-card p{font-size:15px;margin:0 0 8px}
+.about-grid .svc-card ul{margin:0;padding-left:1.1em;font-size:14.5px}
+.is-about .sec-intro{max-width:760px;margin:0 auto;text-align:center}
+.is-about .section .wrap.narrow>.prose.c-card{margin-top:8px}
+.is-about .faq-list{max-width:820px;margin:0 auto}

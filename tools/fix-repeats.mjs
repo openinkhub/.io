@@ -7,7 +7,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { fixRecord } from "./seo-fix.mjs";
+import { fixRecord, RULES as FIXRULES } from "./seo-fix.mjs";
+// copy edits apply to the original wording: build the page text with the later rewrite rules switched off
+const sourceHtml = (rec) => { const A = FIXRULES.autofix, keep = { ...A }; for (const k of ["summaries", "faqAdditions", "simpleWords", "shortSentences", "longParagraphs"]) A[k] = false; const h = fixRecord(JSON.parse(JSON.stringify(rec))).content_html; Object.assign(A, keep); return h; };
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const RULES = JSON.parse(fs.readFileSync(path.join(ROOT, "content", "seo", "rules.json"), "utf8"));
@@ -25,7 +27,7 @@ const byPath = new Map(fs.readdirSync(path.join(ROOT, "content", "pages")).filte
 let total = 0;
 for (const p of REPORT.results.filter((x) => x.checks.consecutive_sentences?.status === "warn")) {
   const rec = byPath.get(p.path); if (!rec) continue;
-  const html = fixRecord(JSON.parse(JSON.stringify(rec))).content_html;
+  const html = sourceHtml(rec);
   const blocks = html.replace(/<\/(h[1-6]|p|li|td|th|dt|dd|summary|blockquote|figcaption|button|a|span|strong|div|section|article|header|footer|figure|ul|ol|tr)>/gi, " ¶ ");
   const sents = text(blocks).split("¶").flatMap((b) => sentencesOf(b.trim())).filter((s) => words(s).length >= MINW);
   const list = (edits[p.path] ||= []);

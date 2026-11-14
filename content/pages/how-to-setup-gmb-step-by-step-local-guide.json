@@ -483,5 +483,11 @@
   ],
   "tags": [],
   "faqs": [],
-  "keyphrase_override": "gmb"
+  "keyphrase_override": "gmb",
+  "keyphrase_secondary_override": [
+    "Google Business Profile",
+    "verification",
+    "reviews",
+    "local search"
+  ]
 }

@@ -83,8 +83,12 @@ export function fixLinks(html, titleOf) {
     const href = (/href="([^"]*)"/.exec(attrs) || [])[1] || "";
     const t = strip(inner).replace(/[→»]/g, "").trim();
     const name = () => titleOf(href) || (() => { try { return new URL(href).hostname.replace(/^www\./, ""); } catch { return ""; } })();
-    // image-only link: keep the image, add a readable caption
-    if (!t && /<img\b/.test(inner)) { const n = name(); return n ? `<a${attrs} class="img-link">${inner}<span>${E(n)}</span></a>` : m; }
+    // image-only link: the image's alt text is the link text, so make sure it names the target page
+    if (!t && /<img\b/.test(inner)) {
+      if (/\salt="[^"]{3,}"/.test(inner)) return m;
+      const n = name(); if (!n) return m;
+      return `<a${attrs}>${inner.replace(/<img\b([^>]*?)(\s+alt="[^"]*")?(\s*\/?)>/, (x, a, alt, end) => `<img${a} alt="${E(n)}"${end}>`)}</a>`;
+    }
     // bare URL or generic words -> target page name
     if (/^(https?:\/\/|www\.)/i.test(t) || GENERIC.test(t)) { const n = name(); return n ? `<a${attrs}>${E(n)}</a>` : m; }
     // "Do something →" -> CTA button

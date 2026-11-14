@@ -64,7 +64,11 @@ const READABILITY = ["word_complexity", "transition_words", "passive_voice", "co
 const un = (s) => String(s || "").replace(/&amp;/g, "&").replace(/&#x27;|&#039;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&nbsp;/g, " ");
 const text = (h) => un(String(h || "").replace(/<(script|style)[\s\S]*?<\/\1>/g, " ").replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
 const words = (t) => (t.match(/[A-Za-z0-9][A-Za-z0-9'’-]*/g) || []);
-const syllables = (w) => { w = w.toLowerCase().replace(/[^a-z]/g, ""); if (w.length <= 3) return 1; w = w.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, "").replace(/^y/, ""); return Math.max(1, (w.match(/[aeiouy]{1,2}/g) || []).length); };
+// Syllable estimate. Exceptions: common words the vowel-group rule miscounts (silent letters), e.g. business = biz-ness.
+const SYL = { business: 2, businesses: 3, every: 2, everything: 3, everyone: 3, everywhere: 3, everyday: 3, several: 2, interest: 2, interested: 3, interesting: 3, different: 2, family: 2, camera: 2, evening: 2, average: 2, favorite: 2, chocolate: 2, vegetable: 3, comfortable: 3, temperature: 3, restaurant: 2, separate: 2, actually: 3, usually: 3, generally: 3, basically: 3, naturally: 3, especially: 3, finally: 3, really: 2 };
+const syllables = (w) => { w = w.toLowerCase().replace(/[^a-z]/g, ""); if (SYL[w]) return SYL[w]; if (w.length <= 3) return 1;
+  w = w.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e|[aeiou]le|[aeiou]les)$/, (m) => (/le?s?$/.test(m) && /^[aeiou]/.test(m) ? m[0] + "l" : "")).replace(/^y/, ""); // silent e in -ile/-ole/-ale (profile, mobile)
+  return Math.max(1, (w.match(/[aeiouy]{1,2}/g) || []).length); };
 const sentencesOf = (t) => t.split(/(?<=[.!?])\s+(?=[A-Z0-9“"'])/).map((s) => s.trim()).filter((s) => words(s).length >= 3);
 const pct = (a, b) => (b ? Math.round((a / b) * 1000) / 10 : 0);
 const r = (status, value, note = "") => ({ status, value, note }); // status: pass | warn | fail | info | na
@@ -89,6 +93,9 @@ const recs = fs.readdirSync(PAGES).filter((n) => n.endsWith(".json")).sort()
 // drafts are built but noindex and unlinked: list them, don't score them
 const drafts = recs.filter((x) => x.draft).map((x) => ({ path: x.path, title: x.head.title, n: x.n || "" }));
 recs.splice(0, recs.length, ...recs.filter((x) => !x.draft));
+// paths of the original live site (content/urls.csv): those URLs are kept exactly as they were
+const LIVE = new Set(fs.existsSync(path.join(ROOT, "content", "urls.csv")) ? fs.readFileSync(path.join(ROOT, "content", "urls.csv"), "utf8").split("\n").slice(1)
+  .map((l) => (l.split(",")[0] || "").replace(/^https?:\/\/[^/]+/, "")).filter(Boolean) : []);
 const sectionOf = (rec) => {
   for (const s of RULES.sections) {
     const m = s.match, cats = (rec.categories || []).map((c) => c.path);
@@ -145,9 +152,9 @@ const exists = (h) => {
   return redirects.some((r) => r.from === p || r.from === p.replace(/\/$/, ""));
 };
 
-// uniqueness: 8-word shingles on content text
+// uniqueness: 8-word shingles on content text (navigation link lists such as the city chips are not content)
 const shingles = new Map(pages.map((p) => {
-  const w = words(text(p.content).toLowerCase()); const s = new Set();
+  const w = words(text(p.content.replace(/<ul class="chips">[\s\S]*?<\/ul>/g, " ")).toLowerCase()); const s = new Set();
   for (let i = 0; i + 8 <= w.length; i++) s.add(w.slice(i, i + 8).join(" "));
   return [p.rec.path, s];
 }));
@@ -197,7 +204,8 @@ function audit(p) {
   const subheads = [...content.matchAll(/<h[23][^>]*>([\s\S]*?)<\/h[23]>/g)].map((m) => text(m[1]));
   const paras = [...content.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].map((m) => text(m[1])).filter(Boolean);
   const imgs = [...p.main.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
-  const contentImgs = [...content.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
+  // logos and icons are decoration, not illustrations, so they don't count towards the text-to-image ratio
+  const contentImgs = [...content.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]).filter((t) => !/alt="[^"]*\blogo\b/i.test(t) && !/class="[^"]*\b(logo|client|icon)/i.test(t));
   const types = typesIn(p.jsonld); const typeSet = new Set(types.map((t) => t.type));
   const short = wc < 150; // readability metrics are meaningless on very short pages
 
@@ -208,7 +216,8 @@ function audit(p) {
     : r(title.length >= T.title.min && title.length <= T.title.max ? "pass" : "warn", `${title.length} chars`, title.length > T.title.max ? `longer than ${T.title.max}; may be truncated in Google` : title.length < T.title.min ? `shorter than ${T.title.min}` : "");
   const slug = rec.path.split("/").filter(Boolean).pop() || "";
   const slugOk = rec.path === "/" || (/^[a-z0-9-]+$/.test(slug) && slug.length <= T.slug.maxLength && slug.split("-").length <= T.slug.maxWords);
-  c.slug = r(slugOk ? "pass" : "warn", rec.path, slugOk ? "" : `use lowercase words and hyphens, ≤${T.slug.maxWords} words`);
+  c.slug = slugOk ? r("pass", rec.path) : LIVE.has(rec.path) ? r("info", rec.path, "original live URL kept (URLs are never changed)")
+    : r("warn", rec.path, `use lowercase words and hyphens, ≤${T.slug.maxWords} words`);
   c.meta_description = !desc ? r("fail", "missing")
     : r(desc.length >= T.description.min && desc.length <= T.description.max ? "pass" : "warn", `${desc.length} chars`, desc.length > T.description.max ? "may be truncated" : desc.length < T.description.min ? "too short" : "");
   const inTitle = kpTok.every((t) => kpNorm(title).includes(t)), inDesc = kpTok.every((t) => kpNorm(desc).includes(t));
@@ -244,13 +253,15 @@ function audit(p) {
   // readability
   if (short) for (const id of [...READABILITY, "readability_score"]) c[id] = r("na", "too little text", `${wc} words`);
   else {
-    const syl = w.reduce((t, x) => t + syllables(x), 0);
-    const flesch = Math.round(206.835 - 1.015 * (wc / Math.max(1, sents.length)) - 84.6 * (syl / wc));
-    const complex = pct(w.filter((x) => syllables(x) >= 3).length, wc);
+    // all readability scores are measured on prose: short fragments (menu labels, table cells, buttons, step names,
+    // card titles) are not sentences, so they are left out of Flesch, word complexity, transitions and repeats alike
+    const prose = sents.filter((s) => words(s).length >= (T.transitionWords.minSentenceWords || 1));
+    const pw = prose.flatMap((s) => words(s)), pwc = Math.max(1, pw.length);
+    const syl = pw.reduce((t, x) => t + syllables(x), 0);
+    const flesch = Math.round(206.835 - 1.015 * (pwc / Math.max(1, prose.length)) - 84.6 * (syl / pwc));
+    const complex = pct(pw.filter((x) => syllables(x) >= 3).length, pwc);
     c.word_complexity = r(complex <= T.wordComplexity.maxPercentComplex ? "pass" : "warn", `${complex}% complex words`);
     const tw = new RegExp(`\\b(${W.transition.map((x) => x.replace(/ /g, "\\s+")).join("|")})\\b`, "i");
-    // measured on prose: short fragments (labels, table cells, buttons, step names) are not sentences
-    const prose = sents.filter((s) => words(s).length >= (T.transitionWords.minSentenceWords || 1));
     const trans = pct(prose.filter((s) => tw.test(s)).length, prose.length);
     c.transition_words = r(trans >= T.transitionWords.minPercent ? "pass" : "warn", `${trans}% of ${prose.length} sentences`);
     const passive = pct(sents.filter((s) => /\b(is|are|was|were|be|been|being|get|gets|got)\s+(\w+ly\s+)?\w+(ed|en)\b/i.test(s)).length, sents.length);
@@ -334,7 +345,7 @@ function audit(p) {
   let maxOv = 0, twin = "";
   const mine = shingles.get(rec.path);
   if (mine.size > 20) for (const [k, s] of shingles) { if (k === rec.path || s.size < 20) continue; let x = 0; for (const a of mine) if (s.has(a)) x++; const v = x / Math.min(mine.size, s.size); if (v > maxOv) { maxOv = v; twin = k; } }
-  c.content_uniqueness = mine.size <= 20 ? r("na", "too little text") : r(maxOv >= T.uniqueness.maxOverlapFail ? "fail" : maxOv >= T.uniqueness.maxOverlapWarn ? "warn" : "pass", `${Math.round(maxOv * 100)}% max overlap`, maxOv >= T.uniqueness.maxOverlapWarn ? `with ${twin}` : "");
+  c.content_uniqueness = isListing ? r("na", "listing page (lists other pages)") : mine.size <= 20 ? r("na", "too little text") : r(maxOv >= T.uniqueness.maxOverlapFail ? "fail" : maxOv >= T.uniqueness.maxOverlapWarn ? "warn" : "pass", `${Math.round(maxOv * 100)}% max overlap`, maxOv >= T.uniqueness.maxOverlapWarn ? `with ${twin}` : "");
   const same = (kpGroups.get(kpn) || []).filter((x) => x !== rec.path);
   c.cannibalization = !kpn || isListing ? r("na", "no keyphrase") : r(same.length ? "warn" : "pass", same.length ? `${same.length} other page(s) target "${kp}"` : "unique keyphrase", same.join(", "));
   const faqQs = (rec.faqs || []).length || (content.match(/<summary>|<h3>[^<]*\?<\/h3>/g) || []).length;

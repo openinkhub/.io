@@ -23,6 +23,10 @@
           "href": "/report/"
         },
         {
+          "label": "AI Blogs & Articles",
+          "href": "/ai-blog-article-writing/"
+        },
+        {
           "label": "On-Page SEO",
           "href": "/best-on-page-seo-services/"
         },
@@ -119,6 +123,10 @@
           {
             "label": "Audit Report",
             "href": "/report/"
+          },
+          {
+            "label": "AI Blogs & Articles",
+            "href": "/ai-blog-article-writing/"
           }
         ]
       },

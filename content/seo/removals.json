@@ -22,5 +22,89 @@
       "to": "<p>Get started</p>",
       "replace": "<!--hub:website-development-->"
     }
+  ],
+  "/best-seo-agency-in-delhi/": [
+    {
+      "note": "uniqueness: shared service descriptions -> compact service links",
+      "from": "<h3>Technical and on-page SEO</h3>",
+      "to": "<h3>WhatsApp and lead automation</h3>",
+      "replace": "<p>Our core services for this market: <a href=\"/best-on-page-seo-services/\">technical and on-page SEO</a>, <a href=\"/best-answer-engine-optimization-services/\">AEO</a>, <a href=\"/generative-engine-optimization/\">GEO</a>, <a href=\"/artificial-intelligence-optimization/\">AIO</a>, <a href=\"/high-quality-backlinks/\">high-quality backlinks</a> and a <a href=\"/report/\">full audit report</a>.</p>"
+    },
+    {
+      "note": "uniqueness: city-specific four steps",
+      "from": "<h3>1. Audit</h3>",
+      "to": "<p>Questions</p>",
+      "replace": "<ol class=\"steps\"><li><strong>Audit:</strong> We check your site, your Google profiles for Delhi, Gurugram and Noida, and what AI tools say about you.</li><li><strong>Plan:</strong> Next, we choose the NCR areas, the searches and the mix of English, Hindi and Hinglish that bring you buyers.</li><li><strong>Build:</strong> Then we fix weak pages, add a page for each NCR market you serve and set up WhatsApp lead tracking.</li><li><strong>Report:</strong> Each month you get calls and leads broken down by area, and we move effort to the markets that respond.</li></ol>"
+    }
+  ],
+  "/best-seo-agency-in-mumbai/": [
+    {
+      "note": "uniqueness: shared service descriptions -> compact service links",
+      "from": "<h3>Technical and on-page SEO</h3>",
+      "to": "<h3>WhatsApp and lead automation</h3>",
+      "replace": "<p>Our core services for this market: <a href=\"/best-on-page-seo-services/\">technical and on-page SEO</a>, <a href=\"/best-answer-engine-optimization-services/\">AEO</a>, <a href=\"/generative-engine-optimization/\">GEO</a>, <a href=\"/artificial-intelligence-optimization/\">AIO</a>, <a href=\"/high-quality-backlinks/\">high-quality backlinks</a> and a <a href=\"/report/\">full audit report</a>.</p>"
+    },
+    {
+      "note": "uniqueness: city-specific four steps",
+      "from": "<h3>1. Audit</h3>",
+      "to": "<p>Questions</p>",
+      "replace": "<ol class=\"steps\"><li><strong>Audit:</strong> We look at your site, your profiles for each part of the city and how AI answers describe your brand.</li><li><strong>Plan:</strong> Next, we plan around Mumbai's districts, from South Mumbai to the western suburbs and Navi Mumbai.</li><li><strong>Build:</strong> Then we build district pages, sharpen service pages and connect enquiries to WhatsApp and your CRM.</li><li><strong>Report:</strong> You see leads by district every month, so budget goes to the parts of the city that convert.</li></ol>"
+    }
+  ],
+  "/best-seo-agency-in-bangalore/": [
+    {
+      "note": "uniqueness: shared service descriptions -> compact service links",
+      "from": "<h3>Technical and on-page SEO</h3>",
+      "to": "<h3>WhatsApp and lead automation</h3>",
+      "replace": "<p>Our core services for this market: <a href=\"/best-on-page-seo-services/\">technical and on-page SEO</a>, <a href=\"/best-answer-engine-optimization-services/\">AEO</a>, <a href=\"/generative-engine-optimization/\">GEO</a>, <a href=\"/artificial-intelligence-optimization/\">AIO</a>, <a href=\"/high-quality-backlinks/\">high-quality backlinks</a> and a <a href=\"/report/\">full audit report</a>.</p>"
+    },
+    {
+      "note": "uniqueness: city-specific four steps",
+      "from": "<h3>1. Audit</h3>",
+      "to": "<p>Questions</p>",
+      "replace": "<ol class=\"steps\"><li><strong>Audit:</strong> We review your site, product pages and profiles, and test how AI tools answer questions about your category.</li><li><strong>Plan:</strong> Next, we split the plan between local searches in Bengaluru and the national searches SaaS and IT buyers make.</li><li><strong>Build:</strong> Then we publish comparison pages, case studies and location pages, and track demo and enquiry forms.</li><li><strong>Report:</strong> Monthly reports show sign-ups, demos and enquiries, not just rankings, so the plan follows real pipeline.</li></ol>"
+    }
+  ],
+  "/best-seo-agency-in-chennai/": [
+    {
+      "note": "uniqueness: shared service descriptions -> compact service links",
+      "from": "<h3>Technical and on-page SEO</h3>",
+      "to": "<h3>WhatsApp and lead automation</h3>",
+      "replace": "<p>Our core services for this market: <a href=\"/best-on-page-seo-services/\">technical and on-page SEO</a>, <a href=\"/best-answer-engine-optimization-services/\">AEO</a>, <a href=\"/generative-engine-optimization/\">GEO</a>, <a href=\"/artificial-intelligence-optimization/\">AIO</a>, <a href=\"/high-quality-backlinks/\">high-quality backlinks</a> and a <a href=\"/report/\">full audit report</a>.</p>"
+    },
+    {
+      "note": "uniqueness: city-specific four steps",
+      "from": "<h3>1. Audit</h3>",
+      "to": "<p>Questions</p>",
+      "replace": "<ol class=\"steps\"><li><strong>Audit:</strong> We audit your site and profiles and check how you appear for Tamil and English searches and in AI answers.</li><li><strong>Plan:</strong> Next, we map the searches of Chennai's manufacturers, hospitals and retailers to the pages you need.</li><li><strong>Build:</strong> Then we build product and service pages with specifications, add Tamil headings where they help and track calls.</li><li><strong>Report:</strong> Each month you see enquiries by product line and area, and we adjust the content plan around them.</li></ol>"
+    }
+  ],
+  "/best-seo-agency-in-hyderabad/": [
+    {
+      "note": "uniqueness: shared service descriptions -> compact service links",
+      "from": "<h3>Technical and on-page SEO</h3>",
+      "to": "<h3>WhatsApp and lead automation</h3>",
+      "replace": "<p>Our core services for this market: <a href=\"/best-on-page-seo-services/\">technical and on-page SEO</a>, <a href=\"/best-answer-engine-optimization-services/\">AEO</a>, <a href=\"/generative-engine-optimization/\">GEO</a>, <a href=\"/artificial-intelligence-optimization/\">AIO</a>, <a href=\"/high-quality-backlinks/\">high-quality backlinks</a> and a <a href=\"/report/\">full audit report</a>.</p>"
+    },
+    {
+      "note": "uniqueness: city-specific four steps",
+      "from": "<h3>1. Audit</h3>",
+      "to": "<p>Questions</p>",
+      "replace": "<ol class=\"steps\"><li><strong>Audit:</strong> We review your site and profiles and test how AI tools describe you for HITEC City, Gachibowli and beyond.</li><li><strong>Plan:</strong> Next, we split local searches for clinics and retailers from the wider searches made by IT and pharma buyers.</li><li><strong>Build:</strong> Then we build area pages, sharpen service pages and set up lead tracking on forms, calls and WhatsApp.</li><li><strong>Report:</strong> Monthly reports show leads by area and service line, and we shift effort to what is working.</li></ol>"
+    }
+  ],
+  "/best-seo-agency-in-kolkata/": [
+    {
+      "note": "uniqueness: shared service descriptions -> compact service links",
+      "from": "<h3>Technical and on-page SEO</h3>",
+      "to": "<h3>WhatsApp and lead automation</h3>",
+      "replace": "<p>Our core services for this market: <a href=\"/best-on-page-seo-services/\">technical and on-page SEO</a>, <a href=\"/best-answer-engine-optimization-services/\">AEO</a>, <a href=\"/generative-engine-optimization/\">GEO</a>, <a href=\"/artificial-intelligence-optimization/\">AIO</a>, <a href=\"/high-quality-backlinks/\">high-quality backlinks</a> and a <a href=\"/report/\">full audit report</a>.</p>"
+    },
+    {
+      "note": "uniqueness: city-specific four steps",
+      "from": "<h3>1. Audit</h3>",
+      "to": "<p>Questions</p>",
+      "replace": "<ol class=\"steps\"><li><strong>Audit:</strong> We audit your site and profiles and check how you appear in Bengali and English searches and AI answers.</li><li><strong>Plan:</strong> Next, we plan for Kolkata's trade hubs, schools and clinics, from Burrabazar to Salt Lake.</li><li><strong>Build:</strong> Then we build locality pages, write plain answers to common questions and connect WhatsApp enquiries.</li><li><strong>Report:</strong> You see enquiries by locality each month, and we update the plan as new searches appear.</li></ol>"
+    }
   ]
 }

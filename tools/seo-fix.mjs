@@ -12,7 +12,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { simpleWords, longParagraphs, titleYear } from "./content-rules.mjs";
+import { simpleWords, longParagraphs, titleYear, shortSentences, realHeadings } from "./content-rules.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 export const RULES = JSON.parse(fs.readFileSync(path.join(ROOT, "content", "seo", "rules.json"), "utf8"));
@@ -162,7 +162,8 @@ export const SUMMARIES = fs.existsSync(SUM_FILE) ? JSON.parse(fs.readFileSync(SU
 function applySummaries(rec, fixes) {
   const s = SUMMARIES[rec.path];
   if (!FIX.summaries || !s) return;
-  const block = `\n<h2>In summary</h2>\n<p>${s}</p>\n`;
+  const topic = rec.keyphrase_override ? `: ${rec.keyphrase_override.replace(/\b(seo|aeo|geo|aio|ai|ats|hrms|gmb)\b/gi, (m) => m.toUpperCase()).replace(/\b(india|patna|ranchi|delhi|mumbai|chennai|kolkata|bangalore|hyderabad|openink|hub|whatsapp)\b/gi, (m) => m.charAt(0).toUpperCase() + m.slice(1))}` : "";
+  const block = `\n<h2>In short${topic}</h2>\n<p>${s}</p>\n`;
   const i = rec.content_html.search(/<h2[^>]*>\s*Frequently asked questions/i);
   rec.content_html = i >= 0 ? rec.content_html.slice(0, i) + block + rec.content_html.slice(i) : rec.content_html + block;
   fixes.push("summary");
@@ -181,7 +182,9 @@ export function fixRecord(rec) {
   const kp = keyphraseFor(rec);
   rec.keyphrase = kp.keyphrase; rec.keyphrase_source = kp.source; rec.keyphrase_secondary = kp.secondary;
   // plain words (keyphrases kept) and paragraph length - see tools/content-rules.mjs
+  if (FIX.realHeadings) realHeadings(rec, fixes);
   if (FIX.simpleWords) simpleWords(rec, fixes, RULES.simpleWords || {});
+  if (FIX.shortSentences) shortSentences(rec, fixes, RULES.thresholds.sentenceLength.splitOver || 22);
   if (FIX.longParagraphs) longParagraphs(rec, fixes, RULES.thresholds.paragraphLength.maxWords);
 
   // archive / tag pages: unique H1 + repair WordPress's broken archive <title> (e.g. "2026-01-07T05:30:00+05:30")

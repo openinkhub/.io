@@ -487,5 +487,11 @@
       "a": "AI analyzes search trends, identifies keyword opportunities, optimizes content structure, and helps create content that better matches user search intent."
     }
   ],
-  "keyphrase_override": "answer engine optimization expert"
+  "keyphrase_override": "aeo expert",
+  "keyphrase_secondary_override": [
+    "AI search",
+    "SEO",
+    "GEO",
+    "automation"
+  ]
 }

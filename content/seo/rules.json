@@ -118,7 +118,8 @@
     },
     "sentenceLength": {
       "longSentenceWords": 20,
-      "maxPercentLong": 25
+      "maxPercentLong": 25,
+      "splitOver": 16
     },
     "paragraphLength": {
       "maxWords": 120
@@ -185,6 +186,7 @@
     "copyEdits": true,
     "faqAdditions": true,
     "simpleWords": true,
+    "shortSentences": true,
     "longParagraphs": true,
     "titleYear": true,
     "topicKits": true,
@@ -206,7 +208,8 @@
     "redirects": true,
     "robotsDisallowAdmin": true,
     "securityHeaders": true,
-    "summaries": true
+    "summaries": true,
+    "realHeadings": true
   },
   "critical": [
     "seo_title",
@@ -309,7 +312,8 @@
       "overall",
       "ultimately",
       "in practice",
-      "for that reason"
+      "for that reason",
+      "plus"
     ],
     "generic_anchors": [
       "click here",
@@ -515,6 +519,11 @@
       "path": "/website-design-agency/",
       "label": "Website design and development",
       "topic": "website design development agency web"
+    },
+    {
+      "path": "/ai-blog-article-writing/",
+      "label": "AI blogs and articles writing service",
+      "topic": "ai blog article writing content seo"
     }
   ],
   "simpleWords": {
@@ -530,7 +539,7 @@
       "/best-seo-agency-in-aizawl/": "SEO Agency in Aizawl (2026): Local & AI Search, Mizoram",
       "/best-seo-agency-in-allahabad/": "SEO Agency in Prayagraj (2026): Local & AI Search",
       "/best-seo-agency-in-amravati/": "SEO Agency in Amravati (2026): Vidarbha Local & AI Search",
-      "/best-seo-agency-in-aurangabad/": "SEO Agency in Sambhajinagar (2026): Auto & Tourism",
+      "/best-seo-agency-in-aurangabad/": "SEO Agency in Chhatrapati Sambhajinagar (2026)",
       "/best-seo-agency-in-bilaspur/": "SEO Agency in Bilaspur (2026): Local & B2B Search",
       "/best-seo-agency-in-chandigarh/": "SEO Agency in Chandigarh (2026): Tricity Local & AI Search",
       "/best-seo-agency-in-guwahati/": "SEO Agency in Guwahati (2026): Northeast Local & B2B SEO",
@@ -542,7 +551,8 @@
       "/responsive-website-design/": "Responsive Website Design (2026): Why Mobile Matters",
       "/website-design-development/": "Website Design & Development Services (2026)",
       "/website-development-agency-vs-freelancer/": "Website Development Agency vs Freelancer (2026)",
-      "/website-development-location/": "Website Development Company in Your City (2026)"
+      "/website-development-location/": "Website Development Company in Your City (2026)",
+      "/best-seo-agency-in-tiruchirappalli/": "SEO Agency in Tiruchirappalli (2026): Education & Temples"
     }
   }
 }

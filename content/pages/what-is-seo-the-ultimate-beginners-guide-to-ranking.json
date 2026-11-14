@@ -501,5 +501,11 @@
     }
   ],
   "faqs": [],
-  "keyphrase_override": "what is seo"
+  "keyphrase_override": "what is seo",
+  "keyphrase_secondary_override": [
+    "keywords",
+    "search engines",
+    "backlinks",
+    "content"
+  ]
 }

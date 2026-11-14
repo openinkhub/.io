@@ -483,5 +483,11 @@
   ],
   "tags": [],
   "faqs": [],
-  "keyphrase_override": "geo targeting"
+  "keyphrase_override": "geo targeting",
+  "keyphrase_secondary_override": [
+    "local ads",
+    "location",
+    "targeting",
+    "customers"
+  ]
 }

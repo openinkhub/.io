@@ -483,5 +483,11 @@
   ],
   "tags": [],
   "faqs": [],
-  "keyphrase_override": "hrms solutions"
+  "keyphrase_override": "hrms solutions",
+  "keyphrase_secondary_override": [
+    "payroll",
+    "attendance",
+    "onboarding",
+    "HR automation"
+  ]
 }

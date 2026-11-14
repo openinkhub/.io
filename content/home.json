@@ -2,9 +2,9 @@
   "_note": "Homepage content extracted verbatim from https://openinkhub.io (live site, 2026-11-13). Edit text here; SEO head tags come from content/pages/home.json.",
   "hero": {
     "eyebrow": "SEO · AEO · GEO · AIO · Automation",
-    "h1": "The AI-powered growth engine for SME ready to rank everywhere search happens",
+    "h1": "AI search optimization for SMEs ready to rank everywhere search happens",
     "lead": "Openink Hub is home to a complete AI search optimization stack — SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Artificial Intelligence Optimization (AIO), WhatsApp AI automation, Google Business Profile optimization, and AI voice agents — engineered to get your business found on Google, ChatGPT, Gemini, Perplexity, and every AI assistant in between.",
-    "quick_answer": "Openink Hub is an AI-powered digital growth ecosystem based in Ranchi, India. It combines SEO, answer engine, generative engine and AI optimization with WhatsApp AI automation, Google Business Profile optimization and AI voice agents, helping startups and SMEs get found, trusted and chosen across search engines and AI platforms.",
+    "quick_answer": "Openink Hub is an AI-powered digital growth ecosystem based in Ranchi, India. It combines SEO, AEO, GEO and AIO with WhatsApp AI automation, Google Business Profile optimization and AI voice agents, helping startups and SMEs get found, trusted and chosen across search engines and AI platforms.",
     "image": {
       "src": "/wp-content/uploads/2026/07/business-process-optimization-1.webp",
       "alt": "seo services"
@@ -24,7 +24,7 @@
   },
   "services": {
     "h2": "Everything your business needs to be found — automated",
-    "intro": "Four core services businesses come to Openink Hub for. Explore each to see the full scope.",
+    "intro": "Four core services businesses come to Openink Hub for. Next, explore each to see the full scope.",
     "items": [
       {
         "icon": "chat",
@@ -70,7 +70,7 @@
       },
       {
         "title": "Early Movers Compound the Advantage",
-        "text": "Brands optimizing for AI search now build authority and citation history that's far harder for competitors to catch up on later."
+        "text": "As a result, brands optimizing for AI search now build authority and citation history that's far harder for competitors to catch up on later."
       }
     ]
   },
@@ -78,7 +78,7 @@
     "h2": "Building the Future of Marketing Automation",
     "paras": [
       "To give startups and SMEs enterprise-grade SEO, AEO, GEO, and AIO capability — powered by an AI-driven, all-in-one automation platform — so every business can be found, trusted, and chosen across traditional search engines and AI-powered search experiences, without the cost and complexity of a dozen disconnected tools.",
-      "We're not just building a product — we're defining the standard for intelligent SME business processes worldwide. Our vision is a future where smart, cost-effective automation, and AI-ready visibility across every search and answer engine, is the standard for every business on the planet."
+      "We're not just building a product — we're defining the standard for intelligent SME business processes worldwide. Ultimately, our vision is a future where smart, cost-effective automation, and AI-ready visibility across every search and answer engine, is the standard for every business on the planet."
     ],
     "items": [
       {
@@ -213,7 +213,7 @@
   },
   "solutions": {
     "h2": "Automate. Engage. Optimize.",
-    "text": "Openink Hub is an AI-powered growth engine and all-in-one automation platform built for startups and SMEs. It integrates a complete search optimization stack with advanced business automation tools to help brands scale efficiently across traditional search engines and AI assistants.",
+    "text": "Openink Hub is an AI-powered growth engine and all-in-one automation platform built for startups and SMEs. In addition, it integrates a complete search optimization stack with advanced business automation tools to help brands scale efficiently across traditional search engines and AI assistants.",
     "links": [
       {
         "label": "WhatsApp AI Automation",

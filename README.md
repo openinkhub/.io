@@ -127,6 +127,14 @@ Edit a page's HTML or FAQs, then `npm run articles && npm test`. Set `"status": 
 | `plainFaq` | FAQs shown open (no click-to-expand), with FAQPage schema | `tools/layout.mjs` |
 | `linkText` | bare-URL, "click here" and image-only links get the target page's name; "… →" links become buttons | `tools/layout.mjs` |
 | `copyEdits`, `summaries`, `faqAdditions` | wording edits, "In summary" sections and extra FAQs for imported pages | `content/seo/copy-edits.json`, `summaries.json`, `faqs.json` |
+| `shortSentences` | splits sentences over 16 words at natural clause breaks (`;`, dash, `, but`, `, so`, `, while`, `, which…`, `, and <subject>`) | `tools/content-rules.mjs` |
+| `realHeadings` | WordPress pseudo-headings (bold-only or short Title Case lines) become real H3s; H4–H6 section headings become H3 | `tools/content-rules.mjs` |
+
+
+Link check: `npm run check-links` (part of `npm test`) verifies every internal link, CTA, in-page anchor, redirect target, phone/email link, link text and image alt text on the built site; `npm run check-links -- --external` also requests every external URL.
+
+Readability is scored on prose (sentences of 6+ words); menu labels, table cells and button text are left out. Pages that keep their original live URL report the slug check as "kept".
+
 
 Helpers (run after `npm run build`, then build again): `node tools/suggest-transitions.mjs` adds connector words on pages under 20%; `node tools/fix-repeats.mjs` breaks repeated sentence starts; `node tools/transition-gaps.mjs /path/` and `node tools/readability-runs.mjs /path/` show the details.
 

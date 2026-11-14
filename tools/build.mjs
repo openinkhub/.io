@@ -173,7 +173,7 @@ function footer() {
 <footer class="site-footer">
   <div class="wrap foot-grid">
     <div class="foot-about">
-      <a class="brand brand-light" href="/"><img src="${E(CFG.logo)}" alt="" width="32" height="32"><span>openink<b>Hub</b></span></a>
+      <a class="brand" href="/"><img src="${E(CFG.logo)}" alt="openink Hub logo" width="32" height="32"><span>openink<b>Hub</b></span></a>
       <p>${E(CFG.footer.about)}</p>
       <ul class="contact-list">
         <li>${icon("map")}<span>${E(c.address)}</span></li>
@@ -183,10 +183,10 @@ function footer() {
     </div>
     ${cols}
   </div>
-  <div class="wrap foot-bottom">
+  <div class="foot-bar"><div class="wrap foot-bottom">
     <span>© ${now.getFullYear()} ${E(CFG.name)}. All rights reserved.</span>
     <span class="legal">${CFG.footer.legal.map((l) => `<a href="${E(l.href)}">${E(l.label)}</a>`).join(" · ")}</span>
-  </div>
+  </div></div>
 </footer>
 <a class="wa-float" href="${E(c.whatsapp)}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">${icon("wa")}</a>
 <script src="/assets/js/site.js?v=${VERSION}" defer></script>`;
@@ -220,7 +220,7 @@ function postCard(r) {
   const cat = r.categories?.length ? r.categories[0].name : "Article";
   const ex = r.excerpt || "";
   return `<article class="post-card">
-  <a href="${E(r.path)}" class="post-card-img">${im}</a>
+  <a href="${E(r.path)}" class="post-card-img"${img ? "" : ` aria-label="${E(stripTags(r.title || ""))}"`}>${im}</a>
   <div class="post-card-body">
     <span class="tag">${E(cat)}</span>
     <h3><a href="${E(r.path)}">${E(r.title)}</a></h3>
@@ -293,6 +293,19 @@ function shape(body, legal) {
   if (A.cardLayout && !legal) body = cardify(cardLists(body));
   return body;
 }
+// In-page links (#features, #contact-form…) whose target id was lost in the WordPress migration:
+// attach the id to the best-matching heading, or to the start of the page content.
+function fixAnchors(html) {
+  const missing = [...new Set([...html.matchAll(/href="#([\w-]+)"/g)].map((m) => m[1]))].filter((id) => !new RegExp(`id="${id}"`).test(html));
+  for (const id of missing) {
+    const words = id.split(/[-_]/).filter((w) => w.length >= 4 && !/^(details|panel|section)$/.test(w));
+    const h = words.length && [...html.matchAll(/<h([23])((?:\s[^>]*)?)>([\s\S]*?)<\/h\1>/g)]
+      .find((m) => !/\sid=/.test(m[2]) && words.some((w) => m[3].toLowerCase().includes(w.toLowerCase())));
+    if (h) html = html.replace(h[0], `<h${h[1]} id="${id}"${h[2]}>${h[3]}</h${h[1]}>`);
+    else html = html.replace("<!--seo:content-->", `<!--seo:content--><span id="${id}" class="anchor"></span>`);
+  }
+  return html;
+}
 const NO_KIT = new Set([]); // every page gets the parts it lacks
 const kitFor = (rec, body, legal) => (RULES.autofix.topicKits && !legal && !NO_KIT.has(rec.path.replace(/^\/+|\/+$/g, "")) ? kitHtml(rec, body, KITS) : "");
 
@@ -327,7 +340,7 @@ function pageTpl(rec) {
   <div class="wrap ${heroImg ? "hero-split" : ""}">
     <div>${breadcrumb(rec.hub ? [["Website Design & Development", rec.hub], [rec.card_title || crumb, null]] : [[crumb, null]])}
     ${eyebrow ? `<span class="eyebrow">${E(eyebrow)}</span>` : ""}
-    <h1>${h1}</h1>${lead}
+    <h1>${h1}</h1>${lead ? `<!--seo:content-->${lead}<!--/seo:content-->` : ""}
     ${legal ? "" : `<div class="hero-ctas"><a class="btn btn-primary" href="${E(CFG.contact.demo_url)}" target="_blank" rel="noopener">Schedule a Free Demo</a><a class="btn btn-ghost" href="/contact-us/">Contact Us</a></div>`}
     </div>${heroImg}
   </div>
@@ -397,7 +410,9 @@ ${faqs}
 function listingTpl(rec, posts, label) {
   const intro = (rec.content_html || "").replace(/<[^>]+>/g, " ").trim();
   const h1 = rec.h1 || rec.title;
-  const cards = posts.map(postCard).join("") || "<p>No articles yet.</p>";
+  // images on the first cards only (the rest are text cards), so big archives stay light
+  const maxImg = Math.max(0, (RULES.thresholds.pageWeight.maxImagesPerPage || 30) - 6);
+  const cards = posts.map((p, i) => postCard(i < maxImg ? p : { ...p, featured_image: null })).join("") || "<p>No articles yet.</p>";
   const months = RECS.filter((r) => r.type === "archive").sort((a, b) => b.path.localeCompare(a.path));
   const filters = CATS.filter((c) => c.count).map((c) =>
     `<a class="chip${c.path === rec.path ? " is-on" : ""}" href="${E(c.path)}">${E(c.name)}</a>`).join("") +
@@ -406,6 +421,7 @@ function listingTpl(rec, posts, label) {
   ${breadcrumb([[label, null], [h1, null]])}
   <h1>${E(h1)}</h1>
   <p class="lead">${posts.length} article${posts.length !== 1 ? "s" : ""}${intro && len(intro) < 400 ? " · " + E(cut(intro, 200)) : ""}</p>
+  <p>Guides from Openink Hub in Ranchi on SEO, AEO, GEO and AIO, Google Business Profile, WhatsApp automation and growing your business online.</p>
   <div class="chips">${filters}</div>
 </div></section><!--/seo:content-->
 <section class="section"><div class="wrap"><div class="post-grid">${cards}</div></div></section>`, "is-archive");
@@ -422,7 +438,7 @@ function hubGrids(html) {
     return `<div class="guide-grid">${items.map((a) => {
       const rec = byPath.get(`/${a.slug}/`);
       const live = rec && !rec.draft;
-      const inner = `<span class="g-n">${E(a.n)}</span><strong>${E(a.card_title)}</strong><span class="g-t">${E(a.card_text)}</span>` +
+      const inner = `<span class="g-n">${E(a.n)}</span><h3>${E(a.card_title)}</h3><span class="g-t">${E(a.card_text)}</span>` +
         `<span class="g-s">${live ? "Read the guide →" : "Coming soon"}</span>`;
       return live ? `<a class="guide-card" href="/${E(a.slug)}/">${inner}</a>` : `<div class="guide-card is-soon">${inner}</div>`;
     }).join("")}</div>`;
@@ -457,7 +473,7 @@ function homeTpl(rec) {
   const testi = H.testimonials.items.map((t) => `<figure class="quote"><blockquote>“${E(t.quote)}”</blockquote><figcaption>` +
     `<img src="${E(t.img)}" alt="${E(t.name)}" loading="lazy" width="48" height="48"><strong>${E(t.name)}</strong></figcaption></figure>`).join("");
   const wa = H.whatsapp.items.map((x) => `<div class="wa-item">${icon("check")}<div><h3>${E(x.title)}</h3><p>${E(x.text)}</p></div></div>`).join("");
-  const logos = H.clients.logos.map((l) => `<img src="${E(l.img)}" alt="${E(l.name)}" loading="lazy">`).join("");
+  const logos = H.clients.logos.map((l) => `<img src="${E(l.img)}" alt="${E(l.name)} logo" loading="lazy">`).join("");
   const sol = H.solutions.links.map((l) => `<a class="sol-link" href="${E(l.href)}">${E(l.label)}${icon("arrow")}</a>`).join("");
   const faqItems = RULES.autofix.plainFaq ? `<div class="faq-list">${H.faq.items.map((f) => `<div class="faq-card"><h3>${E(f.q)}</h3><div class="faq-a"><p>${f.a}</p></div></div>`).join("")}</div>`
     : H.faq.items.map((f) => `<details class="faq"><summary>${E(f.q)}</summary><div class="faq-a"><p>${f.a}</p></div></details>`).join("");
@@ -595,6 +611,7 @@ function seoFiles() {
       ...group("Guides and articles", indexable.filter((r) => r.type === "post" && !isCity(r))),
       ...group("Website development guides", indexable.filter((r) => r.type === "guide")),
       ...group("SEO city guides", indexable.filter(isCity)),
+      ...group("Topics and archives", indexable.filter((r) => ["category", "tag", "archive"].includes(r.type))),
     ].join("\n") + "\n");
   }
 }
@@ -606,7 +623,7 @@ function walk(dir) {
 
 // Pages and guides with no image in their content get a branded title card (static/images/pages/<slug>.svg),
 // placed after the lead paragraph so it counts as a content image (hero_image + text_image_ratio checks).
-const NO_COVER = new Set(["contact-us"]);
+const NO_COVER = new Set([]);
 function addCovers() {
   for (const r of RECS) {
     const slug = r.path.replace(/^\/+|\/+$/g, "");
@@ -659,7 +676,7 @@ function main() {
       : r.type === "tag" ? listingTpl(r, byTag[r.path] || [], "Tag")
       : r.type === "archive" ? listingTpl(r, byMonth[r.path] || [], "Archive")
       : pageTpl(r);
-    write(r.path, out);
+    write(r.path, fixAnchors(out));
   }
   sitemaps();
   notFound();

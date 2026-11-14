@@ -483,5 +483,11 @@
   ],
   "tags": [],
   "faqs": [],
-  "keyphrase_override": "ats software for small business"
+  "keyphrase_override": "ats software for small business",
+  "keyphrase_secondary_override": [
+    "applicant tracking",
+    "hiring",
+    "recruitment",
+    "interview scheduling"
+  ]
 }

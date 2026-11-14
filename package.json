@@ -12,12 +12,13 @@
     "verify": "node tools/verify.mjs",
     "dupcheck": "node tools/dupcheck.mjs",
     "city-posts": "node tools/city-posts.mjs",
-    "test": "npm run build && npm run verify && node tools/dupcheck.mjs 0.25",
+    "test": "npm run build && npm run verify && node tools/dupcheck.mjs 0.25 && node tools/check-links.mjs",
     "preview": "node tools/serve.mjs",
     "dev": "npm run build && npm run preview",
     "audit": "node tools/seo-audit.mjs",
     "import-squirrly": "node tools/import-squirrly.mjs",
     "articles": "node tools/articles.mjs",
-    "brief-posts": "node tools/brief-posts.mjs"
+    "brief-posts": "node tools/brief-posts.mjs",
+    "check-links": "node tools/check-links.mjs"
   }
 }

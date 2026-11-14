@@ -104,7 +104,7 @@ const CITE = {
     `After that, clear, people-first answers are what Google's <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener">helpful content guidance</a> asks for.`],
 };
 // "Key steps" list: short, transition-led sentences built from each city's own data (readability + transitions)
-const STEPS_H = [(c) => `Key steps for ${c} businesses`, (c) => `Where to start in ${c}`, (c) => `A simple plan for ${c}`, (c) => `Your first five moves in ${c}`];
+const STEPS_H = [(c) => `Choosing an SEO agency in ${c}: key steps`, (c) => `Working with an SEO agency in ${c}: where to start`, (c) => `SEO agency in ${c}: a simple plan`, (c) => `Your first five SEO moves in ${c}`];
 const STEP_GBP = ["After that, keep your Google Business Profile, photos and reviews up to date.",
   "After that, reply to reviews and post fresh photos on your Google Business Profile.",
   "After that, check that your name, address and phone match everywhere online."];

@@ -483,5 +483,11 @@
   ],
   "tags": [],
   "faqs": [],
-  "keyphrase_override": "on-page seo"
+  "keyphrase_override": "on-page seo",
+  "keyphrase_secondary_override": [
+    "title tags",
+    "meta descriptions",
+    "internal links",
+    "content"
+  ]
 }

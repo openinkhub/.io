@@ -10,7 +10,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { fixRecord } from "./seo-fix.mjs";
+import { fixRecord, RULES as FIXRULES } from "./seo-fix.mjs";
+// copy edits apply to the original wording: build the page text with the later rewrite rules switched off
+const sourceHtml = (rec) => { const A = FIXRULES.autofix, keep = { ...A }; for (const k of ["summaries", "faqAdditions", "simpleWords", "shortSentences", "longParagraphs"]) A[k] = false; const h = fixRecord(JSON.parse(JSON.stringify(rec))).content_html; Object.assign(A, keep); return h; };
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const RULES = JSON.parse(fs.readFileSync(path.join(ROOT, "content", "seo", "rules.json"), "utf8"));
@@ -24,7 +26,7 @@ const words = (t) => t.match(/[A-Za-z0-9][A-Za-z0-9'’-]*/g) || [];
 // ordinary words that look like names because pages use Title Case labels ("Local SEO", "Content Strategy")
 const ALWAYS_LOW = new Set(["Automation", "Automated", "Use", "Search", "Content", "Small", "Choosing", "Consistent", "Local", "Share",
   "Building", "Backlinks", "Explore", "Profile", "Everything"]);
-const OPENERS = ["Moreover,", "Also,", "In practice,"]; // different first words, so edits never create a run of repeated starts
+const OPENERS = ["Plus,", "Also,", "In practice,"]; // different first words, so edits never create a run of repeated starts
 const COMMON = new Set(["the", "this", "these", "that", "those", "it", "its", "our", "we", "you", "your", "every", "each", "most", "many", "a", "an",
   "they", "their", "there", "some", "all", "one", "when", "if", "with", "by", "for", "from", "in", "on", "to", "at", "as", "no", "any", "both", "more", "less"]);
 
@@ -38,8 +40,8 @@ for (const p of REPORT.results) {
   const m = /([\d.]+)% of (\d+) sentences/.exec(c.value); if (!m) continue;
   const n = +m[2], have = Math.round((+m[1] / 100) * n);
   let need = Math.ceil((T.minPercent / 100) * n) + 1 - have;
-  const rec = byPath.get(p.path); if (!rec || need <= 0) continue;
-  const html = fixRecord(JSON.parse(JSON.stringify(rec))).content_html; // after plain-language + existing copy edits
+  const rec = byPath.get(p.path); if (!rec || need <= 0 || rec.type === "home") continue;
+  const html = sourceHtml(rec); // after plain-language + existing copy edits
   const pageText = text(html);
   const list = (edits[p.path] ||= []);
   const used = new Set(list.map(([f]) => f));

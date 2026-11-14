@@ -35,7 +35,30 @@ const SIMPLE = [
   [/\boptimi[sz]er\b/gi, "tool"],
   [/\boptimi[sz]e\b/gi, "improve"],
 ];
-const TARGET = /optimi[sz]|generativ|artificial intelligence/i;
+// plain-English swaps for common long words (site-wide, keyphrases excluded) and inclusive wording
+const PLAIN = [
+  [/\butili[sz](e|es|ed|ing)\b/gi, (m, e) => ({ e: "use", es: "uses", ed: "used", ing: "using" }[e.toLowerCase()])],
+  [/\butili[sz]ation\b/gi, "use"], [/\badditionally\b/gi, "also"], [/\bapproximately\b/gi, "about"],
+  [/\bdemonstrat(e|es|ed|ing)\b/gi, (m, e) => ({ e: "show", es: "shows", ed: "showed", ing: "showing" }[e.toLowerCase()])],
+  [/\bfacilitat(e|es|ed|ing)\b/gi, (m, e) => ({ e: "help", es: "helps", ed: "helped", ing: "helping" }[e.toLowerCase()])],
+  [/\bfunctionalit(y|ies)\b/gi, "features"], [/\bmethodolog(y|ies)\b/gi, "method"], [/\bcomprehensive\b/gi, "full"],
+  [/\bsignificantly\b/gi, "greatly"], [/\bconsequently\b/gi, "so"], [/\bnumerous\b/gi, "many"], [/\bsophisticated\b/gi, "advanced"],
+  [/\boptimal\b/gi, "best"], [/\bmaximi[sz](e|es|ing)\b/gi, (m, e) => ({ e: "boost", es: "boosts", ing: "boosting" }[e.toLowerCase()])],
+  [/\bminimi[sz](e|es|ing)\b/gi, (m, e) => ({ e: "cut", es: "cuts", ing: "cutting" }[e.toLowerCase()])],
+  [/\beliminat(e|es|ed|ing)\b/gi, (m, e) => ({ e: "remove", es: "removes", ed: "removed", ing: "removing" }[e.toLowerCase()])],
+  [/\bseamlessly\b/gi, "smoothly"], [/\bseamless\b/gi, "smooth"], [/\bleverag(e|es|ing)\b/gi, (m, e) => ({ e: "use", es: "uses", ing: "using" }[e.toLowerCase()])],
+  [/\benhanc(e|es|ing)\b/gi, (m, e) => ({ e: "improve", es: "improves", ing: "improving" }[e.toLowerCase()])], [/\benhanced\b/gi, "better"],
+  [/\bopportunities\b/gi, "chances"], [/\bopportunity\b/gi, "chance"], [/\bimmediately\b/gi, "at once"], [/\bfrequently\b/gi, "often"],
+  [/\bnecessary\b/gi, "needed"], [/\bprimarily\b/gi, "mainly"], [/\bcurrently\b/gi, "now"], [/\bpreviously\b/gi, "before"],
+  [/\beffectively\b/gi, "well"], [/\bpersonali[sz]ed\b/gi, "tailored"], [/\bpersonali[sz]ation\b/gi, "tailoring"],
+  [/\brevolutioni[sz](e|es|ing)\b/gi, (m, e) => ({ e: "change", es: "changes", ing: "changing" }[e.toLowerCase()])], [/\binnovative\b/gi, "new"],
+  [/\bindividuals\b/gi, "people"], [/\bcommunicate\b/gi, "talk"], [/\bnumerous\b/gi, "many"], [/\bvarious\b/gi, "many"],
+  [/\bAI assistants\b/g, "AI tools"], [/\bdigital\b/gi, "online"], [/\binformation\b/gi, "details"], [/\bmanufacturers\b/gi, "makers"],
+  [/\bmanufacturer\b/gi, "maker"], [/\bimportant\b/gi, "key"], [/\baccurate\b/gi, "correct"], [/\baccurately\b/gi, "correctly"],
+  [/\bdocumentation\b/gi, "docs"], [/\bcertifications\b/gi, "certificates"], [/\bapproximately\b/gi, "about"],
+  [/\bmanpower\b/gi, "workforce"], [/\bchairman\b/gi, "chair"], [/\bmankind\b/gi, "humanity"], [/\bman-hours\b/gi, "work hours"],
+];
+const TARGET = /optimi[sz]|generativ|artificial intelligence|utili[sz]|additionally|approximately|demonstrat|facilitat|functionalit|methodolog|comprehensive|significantly|consequently|numerous|sophisticated|optimal|maximi[sz]|minimi[sz]|eliminat|seamless|leverag|enhanc|opportunit|immediately|frequently|necessary|primarily|currently|previously|effectively|personali[sz]|revolutioni|innovative|individuals|communicate|various|manpower|chairman|mankind|man-hours|AI assistants|digital|information|manufacturer|important|accurate|documentation|certifications/i;
 const caseLike = (src, rep) => (ACR.has(rep.split(/[\s-]/)[0]) || !/^[A-Z]/.test(src) ? rep : rep.charAt(0).toUpperCase() + rep.slice(1));
 
 /** Simplify one plain-text string, keeping protected phrases (keyphrases) unchanged. */
@@ -49,6 +72,7 @@ export function simplifyText(text, protect = []) {
     t = t.replace(re, (m) => { keep.push(m); return `\u0001${keep.length - 1}\u0001`; });
   }
   for (const [re, rep] of SIMPLE) t = t.replace(re, (m) => caseLike(m, rep));
+  for (const [re, rep] of PLAIN) t = t.replace(re, (m, ...g) => caseLike(m, typeof rep === "function" ? rep(m, ...g) : rep));
   t = t.replace(/\b([A-Z]{2,4})\s*\(\1\)/g, "$1")          // "AEO (AEO)"
     .replace(/\bAI(?:\s+AI)+\b/g, "AI")                     // "AI AI"
     .replace(/\ban (AI|AEO|AIO)\b/g, "an $1").replace(/\ba (AEO|AIO)\b/g, "an $1");
@@ -81,6 +105,41 @@ export function simpleWords(rec, fixes, cfg = {}) {
   };
   walk(rec.head?.jsonld);
   if (rec.content_html !== before) fixes.push("simple-words");
+}
+
+/** Split long sentences (> maxWords) at a natural clause break near the middle: "; ", " — ", ", but ", ", so ",
+ *  or ", and <new subject>". Both halves must keep at least 7 words. Applied to <p> and <li> text. */
+const SUBJ = "we|you|it|they|this|that|these|those|our|your|their|the|a|an|many|most|each|every|search|google|customers|users|businesses|companies|ai|people|teams|buyers|visitors|clients";
+export function shortSentences(rec, fixes, maxWords = 22) {
+  let n = 0;
+  const wc = (s) => wordsIn(s);
+  const cap = (s) => s.replace(/^(\s*(?:<[^>]+>\s*)*)([a-z])/, (m, pre, ch) => pre + ch.toUpperCase());
+  const splitOne = (sent) => {
+    if (wc(sent) <= maxWords) return [sent];
+    const re = new RegExp(`(;\\s+|\\s+[—–]\\s+|,\\s+but\\s+|,\\s+so\\s+|,\\s+while\\s+|,\\s+which\\s+(?=(?:is|are|helps|help|means|makes|gives|lets|keeps|saves|turns|builds|brings|improves|reduces)\\b)|,\\s+and\\s+(?=(?:${SUBJ})\\b))`, "gi");
+    const cands = [];
+    for (const m of sent.matchAll(re)) {
+      const before = sent.slice(0, m.index);
+      if ((before.match(/</g) || []).length !== (before.match(/>/g) || []).length) continue; // inside a tag
+      if ((before.match(/<(a|strong|b|em|span)\b/g) || []).length !== (before.match(/<\/(a|strong|b|em|span)>/g) || []).length) continue;
+      const after = sent.slice(m.index + m[0].length);
+      if (wc(before) >= 7 && wc(after) >= 7) cands.push({ i: m.index, len: m[0].length, sep: m[0].trim().toLowerCase(), d: Math.abs(wc(before) - wc(sent) / 2) });
+    }
+    if (!cands.length) return [sent];
+    const c = cands.sort((a, b) => a.d - b.d)[0];
+    const head = sent.slice(0, c.i).replace(/[,;]$/, "") + ".";
+    let tail = sent.slice(c.i + c.len);
+    if (c.sep.startsWith(", but")) tail = "But " + tail; else if (c.sep.startsWith(", so")) tail = "So " + tail;
+    else if (c.sep.startsWith(", while")) tail = "Meanwhile, " + tail; else if (c.sep.startsWith(", which")) tail = "This " + tail; else tail = cap(tail);
+    n++;
+    return [...splitOne(head), ...splitOne(tail)];
+  };
+  rec.content_html = rec.content_html.replace(/<(p|li)>([\s\S]*?)<\/\1>/g, (m, tag, inner) => {
+    if (/<(p|div|ul|ol|table|h\d)\b/.test(inner) || wc(inner) <= maxWords) return m;
+    const parts = inner.split(/(?<=[.!?])\s+(?=[A-Z<“"])/);
+    return `<${tag}>${parts.map((s) => splitOne(s).join(" ")).join(" ")}</${tag}>`;
+  });
+  if (n) fixes.push(`sentence-split:${n}`);
 }
 
 const wordsIn = (s) => (String(s).replace(/<[^>]+>/g, " ").match(/[A-Za-z0-9][A-Za-z0-9'’-]*/g) || []).length;
@@ -116,6 +175,35 @@ export function longParagraphs(rec, fixes, maxWords = 150) {
     return split(inner).map((x) => `<p>${x}</p>`).join("\n");
   });
   if (n) fixes.push(`paragraph-split:${n}`);
+}
+
+/** WordPress pseudo-headings -> real headings: a paragraph that is only bold text (<= 14 words, not a sentence)
+ *  becomes <h3>; <h5>/<h6> become <h4>, so readers, screen readers and search engines see the structure. */
+export function realHeadings(rec, fixes) {
+  let n = 0;
+  rec.content_html = rec.content_html
+    .replace(/<p>\s*<(strong|b)>([^<]{3,110})<\/\1>\s*:?\s*<\/p>/g, (m, t, txt) => {
+      const w = txt.trim().split(/\s+/).length;
+      if (w > 14 || /[.!]$/.test(txt.trim())) return m;
+      n++; return `<h3>${txt.trim().replace(/:$/, "")}</h3>`;
+    })
+    .replace(/<h([56])(\s[^>]*)?>([\s\S]*?)<\/h\1>/g, (m, l, a, txt) => { n++; return `<h4${a || ""}>${txt}</h4>`; })
+    // plain short lines that lost their heading tag in the export: "Benefits of AI SEO Automation", "1. Faster Keyword Research",
+    // "What is AI SEO Automation?" - only when a real paragraph follows
+    .replace(/<p>([^<]{6,90})<\/p>(?=\s*<p>[^<]{0,40}(?:<[^>]+>[^<]*)*?(?:\S+\s+){14})/g, (m, txt) => {
+      const t = txt.trim(), w = t.split(/\s+/);
+      if (w.length < 2 || w.length > 10 || /[.!,;:]$/.test(t) || /https?:|@/.test(t)) return m;
+      const caps = w.filter((x) => /^[A-Z0-9]/.test(x)).length / w.length;
+      if (!(t.endsWith("?") || /^\d+\.\s/.test(t) || caps >= 0.6)) return m;
+      n++; return `<h3>${t}</h3>`;
+    });
+  // pages that use H4 for their main sections (no H3 at all): promote H4 -> H3
+  const cut = rec.content_html.search(/<h2[^>]*>\s*(In summary|In short|Frequently asked questions)/i);
+  const body = cut >= 0 ? rec.content_html.slice(0, cut) : rec.content_html, tail = cut >= 0 ? rec.content_html.slice(cut) : "";
+  if (/<h4\b/.test(body) && !/content-source:articles/.test(rec.content_source || "")) {
+    rec.content_html = body.replace(/<h4(\s[^>]*)?>([\s\S]*?)<\/h4>/g, (m, a, t) => { n++; return `<h3${a || ""}>${t}</h3>`; }) + tail;
+  }
+  if (n) fixes.push(`headings:${n}`);
 }
 
 /** Add the year to the title: "Topic | openink Hub" -> "Topic (2026) | openink Hub", only if it fits maxLen. */

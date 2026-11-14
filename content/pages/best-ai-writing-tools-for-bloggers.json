@@ -464,5 +464,11 @@
       "a": "Absolutely. Businesses across industries can use AI to create educational articles, product guides, FAQs, case studies, and thought leadership content, helping them publish consistently while maintaining a strong online presence."
     }
   ],
-  "keyphrase_override": "ai blog"
+  "keyphrase_override": "ai blog",
+  "keyphrase_secondary_override": [
+    "keyword research",
+    "search intent",
+    "syndication",
+    "blog checklist"
+  ]
 }

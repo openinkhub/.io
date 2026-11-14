@@ -285,9 +285,34 @@
     ],
     "lang": "en-US"
   },
-  "h1": "Insights on digital growth, AI search, and automation for SMEs.",
+  "h1": "SEO Content Agency Blog: Guides That Help You Rank in 2026",
   "type": "category",
   "title": "Insights on digital growth, AI search, and automation for SMEs.",
   "content_html": "",
-  "faqs": []
+  "faqs": [
+    {
+      "q": "What does an SEO content agency do?",
+      "a": "<p>An SEO content agency plans, writes and updates pages so they rank on Google and get quoted by AI tools. In practice, that means keyword research, clear outlines, plain writing, FAQs and schema.</p>"
+    },
+    {
+      "q": "Who writes the guides on this blog?",
+      "a": "<p>The Openink Hub team in Ranchi writes them. Our team covers SEO, content, web builds and automation, and each guide draws on client work.</p>"
+    },
+    {
+      "q": "How often do you publish new guides?",
+      "a": "<p>We add new guides in batches through the year. Also, the year in each title shows when the advice was last checked.</p>"
+    },
+    {
+      "q": "Are these guides only for businesses in India?",
+      "a": "<p>Most examples use Indian firms, tools and prices. Still, the SEO, AEO and GEO steps work the same for firms anywhere.</p>"
+    },
+    {
+      "q": "Which guide should I read first?",
+      "a": "<p>Start with the decision table on this page. It points you to two guides based on where your business is today.</p>"
+    },
+    {
+      "q": "Can Openink Hub write content like this for my business?",
+      "a": "<p>Yes. Our <a href=\"/ai-blog-article-writing/\">AI blogs and articles service</a> plans and writes posts in this same format for your brand.</p>"
+    }
+  ]
 }

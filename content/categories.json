@@ -1,0 +1,122 @@
+{
+  "_note": "Extra content for category pages, rendered by listingTpl in tools/build.mjs. FAQs live in each category record (content/pages/category__*.json) so FAQPage schema is built from the same questions.",
+  "/category/best-seo-content-agency/": {
+    "eyebrow": "Openink Hub blog",
+    "h1": "SEO Content Agency Blog: Guides That Help You Rank in 2026",
+    "lead": "Plain guides from our SEO content agency on SEO, AEO, GEO, websites and automation. Each one ends with steps you can take this week.",
+    "quick": "This blog holds 34 guides from the Openink Hub team in Ranchi. They cover SEO basics, answer engines, AI search, website builds, WhatsApp automation and HR tools for small and mid-sized firms in India.",
+    "ctas": [
+      { "label": "Get a free audit", "href": "/report/" },
+      { "label": "See our services", "href": "/best-seo-services-in-india/" }
+    ],
+    "stats": [
+      { "value": "34", "label": "Guides published" },
+      { "value": "6", "label": "Topic groups" },
+      { "value": "2026", "label": "Updated for this year" }
+    ],
+    "browse": { "eyebrow": "All articles", "title": "Browse every guide", "lead": "Newest first. Use the chips to jump to the city guides or a month." },
+    "sections": [
+      {
+        "eyebrow": "Topics",
+        "title": "What you will find on this blog",
+        "lead": "Each guide sits in one of six groups. So start with the group that matches your goal.",
+        "cards": [
+          { "title": "SEO basics", "text": "How Google ranks pages, what on-page SEO covers and how to build profile links that count.", "links": [["SEO beginner's guide", "/what-is-seo-the-ultimate-beginners-guide-to-ranking/"], ["What is on-page SEO", "/what-is-on-page-seo-step-by-step-optimization/"], ["What is profile creation", "/what-is-profile-creation/"]] },
+          { "title": "AI search (AEO, GEO, AIO)", "text": "Why ChatGPT, Gemini and Perplexity quote some sites, and how to become one of them.", "links": [["How to rank in AI search", "/artificial-intelligence-optimization-strategy-how-to-rank-in-ai/"], ["AI SEO automation", "/ai-seo-automation/"], ["Geo targeting marketing", "/boost-your-business-with-geo-targeting-marketing/"]] },
+          { "title": "Choosing a partner", "text": "Checklists for comparing SEO and web agencies, reading portfolios and spotting red flags.", "links": [["Best SEO agency in India", "/best-seo-agency/"], ["15 checks before you hire", "/hiring-website-development-company-checklist/"], ["Agency vs freelancer", "/website-development-agency-vs-freelancer/"]] },
+          { "title": "Building a website", "text": "Site types, features, process and costs, from a one-page startup site to an online store.", "links": [["Website development process", "/website-development-process/"], ["Custom build vs templates", "/custom-website-development-vs-templates/"], ["Start an ecommerce site", "/start-ecommerce-website-in-india/"]] },
+          { "title": "Local growth", "text": "Google Business Profile setup and city-level SEO for firms that sell to nearby buyers.", "links": [["How to set up GMB", "/how-to-setup-gmb-step-by-step-local-guide/"], ["SEO agency in Patna", "/seo-agency-in-patna-top-seo-services-company/"], ["SEO guides by city", "/category/seo-agency-by-city/"]] },
+          { "title": "Automation", "text": "WhatsApp API tools, AI workflows, HRMS and applicant tracking for lean teams.", "links": [["WhatsApp API automation", "/whatsapp-api-automation-tool-scale-your-sales-10x/"], ["AI agentic workflows", "/ai-agentic-workflow-automation/"], ["Best ATS for small business", "/best-ats-software-for-small-business-2026-guide/"]] }
+        ]
+      },
+      {
+        "eyebrow": "Decision guide",
+        "title": "How to choose where to start",
+        "lead": "Pick the row that sounds like you. Then read the two guides it names, in order.",
+        "table": {
+          "head": ["If you…", "Read first", "Then read"],
+          "rows": [
+            ["have no website yet", "<a href=\"/best-website-for-startups/\">Best website for startups</a>", "<a href=\"/website-development-process/\">Website development process</a>"],
+            ["have a site but no Google traffic", "<a href=\"/what-is-seo-the-ultimate-beginners-guide-to-ranking/\">SEO beginner's guide</a>", "<a href=\"/what-is-on-page-seo-step-by-step-optimization/\">What is on-page SEO</a>"],
+            ["rank on Google but not in ChatGPT", "<a href=\"/artificial-intelligence-optimization-strategy-how-to-rank-in-ai/\">How to rank in AI search</a>", "<a href=\"/ai-seo-automation/\">AI SEO automation</a>"],
+            ["sell to buyers in one city", "<a href=\"/how-to-setup-gmb-step-by-step-local-guide/\">How to set up GMB</a>", "<a href=\"/category/seo-agency-by-city/\">Your city guide</a>"],
+            ["are comparing agencies", "<a href=\"/best-seo-agency/\">Best SEO agency in India</a>", "<a href=\"/hiring-website-development-company-checklist/\">15 checks before you hire</a>"],
+            ["lose leads after the first chat", "<a href=\"/whatsapp-api-automation-tool-scale-your-sales-10x/\">WhatsApp API automation</a>", "<a href=\"/best-whatsapp-sender-for-b2b-india/\">Best WhatsApp sender for B2B</a>"]
+          ]
+        }
+      },
+      {
+        "eyebrow": "How we write",
+        "title": "What makes these guides useful",
+        "lead": "Every post follows the same five-part format, so it is quick to scan.",
+        "steps": [
+          "Each post opens with a short, direct answer to its main question.",
+          "Clear H2 and H3 headings split it into steps you can follow.",
+          "Where it helps, we name real tools, such as Google Search Console, Ahrefs or Semrush.",
+          "Each post has an FAQ in plain text, marked up with FAQ schema.",
+          "Finally, the year sits in each title, so you can see how fresh the advice is."
+        ]
+      }
+    ]
+  },
+  "/category/seo-agency-by-city/": {
+    "eyebrow": "Local SEO guides",
+    "h1": "SEO by City: Local SEO Guides for 100 Indian Cities in 2026",
+    "lead": "One guide per city, from Agartala to Vellore. Each shows how local firms can win on Google Maps, in answer boxes and in AI answers.",
+    "quick": "We have written 100 city guides across 30 states and union territories. Each one covers the local market, the main business areas, a sample plan for one local firm and an FAQ.",
+    "ctas": [
+      { "label": "Get a free audit", "href": "/report/" },
+      { "label": "Google Business Profile help", "href": "/google-my-business/" }
+    ],
+    "stats": [
+      { "value": "100", "label": "City guides" },
+      { "value": "30", "label": "States and UTs" },
+      { "value": "15", "label": "Guides in Uttar Pradesh" },
+      { "value": "750+", "label": "Words per guide, on average" }
+    ],
+    "browse": { "eyebrow": "All cities", "title": "Browse every city guide", "lead": "Newest first. Or find your state in the section below." },
+    "states": true,
+    "sections": [
+      {
+        "eyebrow": "Inside each guide",
+        "title": "What every city guide covers",
+        "lead": "Every guide follows the same plan. So you can compare two cities side by side.",
+        "cards": [
+          { "title": "The local market", "text": "Main trades, buyer types and the business areas people search for by name." },
+          { "title": "SEO steps for that city", "text": "Google Business Profile, local pages, reviews and the listings that matter there." },
+          { "title": "AEO and GEO steps", "text": "The questions locals ask, and how to answer them so AI tools quote you." },
+          { "title": "A worked example", "text": "A sample plan for one real kind of local firm, step by step." },
+          { "title": "Nearby cities", "text": "Links to guides for cities close by, for firms that serve a wider region." },
+          { "title": "Plain FAQ", "text": "Three common local questions with short, direct answers and FAQ schema." }
+        ]
+      },
+      {
+        "eyebrow": "Decision guide",
+        "title": "How to choose a local SEO partner",
+        "lead": "Use this table when you compare agencies for your city. A good partner passes all six checks.",
+        "table": {
+          "head": ["Check", "What good looks like", "Red flag"],
+          "rows": [
+            ["Google Business Profile", "Full profile, weekly posts, photos and a review plan", "Profile left half-filled"],
+            ["Local pages", "One page per service area, written for that place", "The same page copied with the city name swapped"],
+            ["Reviews", "A steady ask after every job, with replies", "Bought or fake reviews"],
+            ["Citations", "Same name, address and phone on Justdial, IndiaMART and Bing Places", "Different details on each site"],
+            ["AI answers", "Clear FAQs and schema that ChatGPT and Gemini can quote", "No plan beyond Google"],
+            ["Reporting", "Monthly calls, map views and leads by source", "Only a list of keyword ranks"]
+          ]
+        }
+      },
+      {
+        "eyebrow": "Getting started",
+        "title": "How to use these guides",
+        "lead": "Four quick steps take you from reading to doing.",
+        "steps": [
+          "Find your city in the state list above, or in the grid of all guides.",
+          "Read the worked example and note which steps fit your firm.",
+          "Then check your own Google Business Profile against the guide.",
+          "Finally, book a free audit if you want us to do the work with you."
+        ]
+      }
+    ]
+  }
+}

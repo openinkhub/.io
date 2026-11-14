@@ -6,7 +6,7 @@
   "sitemap": "categories",
   "lastmod": "2026-10-29T13:54:41+00:00",
   "head": {
-    "title": "SEO by City: Local SEO Guides - openink Hub",
+    "title": "SEO by City | Local SEO Guides for 100 Indian Cities",
     "meta": [
       {
         "attr": "name",
@@ -31,7 +31,7 @@
       {
         "attr": "property",
         "key": "og:title",
-        "content": "SEO by City: Local SEO Guides - openink Hub"
+        "content": "SEO by City | Local SEO Guides for 100 Indian Cities (2026)"
       },
       {
         "attr": "property",
@@ -71,7 +71,7 @@
       {
         "attr": "name",
         "key": "twitter:title",
-        "content": "SEO by City: Local SEO Guides - openink Hub"
+        "content": "SEO by City | Local SEO Guides for 100 Indian Cities (2026)"
       },
       {
         "attr": "name",
@@ -280,9 +280,34 @@
     ],
     "lang": "en-US"
   },
-  "h1": "SEO guides by city: ranking on Google, answer engines and AI",
+  "h1": "SEO by City: Local SEO Guides for 100 Indian Cities in 2026",
   "type": "category",
   "title": "SEO",
   "content_html": "<p>City-by-city guides to SEO, answer engine optimization (AEO), generative engine optimization (GEO) and AI optimization (AIO) for businesses across India.</p>",
-  "faqs": []
+  "faqs": [
+    {
+      "q": "What is local SEO?",
+      "a": "<p>Local SEO helps a firm show up when people nearby search for what it sells. It covers your Google Business Profile, local pages, reviews and listings.</p>"
+    },
+    {
+      "q": "Which cities do these guides cover?",
+      "a": "<p>There are 100 guides across 30 states and union territories. They range from big cities such as Pune and Lucknow to smaller ones such as Wardha and Giridih.</p>"
+    },
+    {
+      "q": "Why write a separate guide for each city?",
+      "a": "<p>Each city has its own trades, areas and search habits. So a plan that works in Surat may need changes in Shillong.</p>"
+    },
+    {
+      "q": "How do I get my business into Google Maps results?",
+      "a": "<p>First, claim and fill your Google Business Profile in full. Then add photos, post weekly, ask every happy customer for a review and keep your details the same everywhere.</p>"
+    },
+    {
+      "q": "Do these guides help with AI search too?",
+      "a": "<p>Yes. Each guide has AEO and GEO steps, so tools such as ChatGPT, Gemini and Perplexity can find and quote your business.</p>"
+    },
+    {
+      "q": "Is my city missing?",
+      "a": "<p>We add cities over time. Meanwhile, the steps in the nearest city guide will fit most firms, or you can <a href=\"/contact-us/\">ask us</a> about your area.</p>"
+    }
+  ]
 }

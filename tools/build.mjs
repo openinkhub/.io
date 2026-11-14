@@ -597,6 +597,66 @@ ${faqs}
 <div class="post-grid">${relPosts}</div></div></section>`, "is-post");
 }
 
+// Extra content for category pages (hero, topic cards, decision table, steps, FAQ) — content/categories.json
+const CATX = fs.existsSync(path.join(C, "categories.json")) ? load(path.join(C, "categories.json")) : {};
+
+/** City guides grouped by state, from content/city-posts (only guides that exist as pages). */
+function cityStates() {
+  const dir = path.join(C, "city-posts");
+  if (!fs.existsSync(dir)) return [];
+  const live = new Set(RECS.filter((r) => !r.draft).map((r) => r.path));
+  const by = new Map();
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith(".json")).sort()) {
+    const j = load(path.join(dir, f));
+    for (const c of Array.isArray(j) ? j : [j]) {
+      const p = `/${c.file}/`;
+      if (!live.has(p)) continue;
+      const list = by.get(c.state) || [];
+      if (!list.some((x) => x.city === c.city)) list.push({ city: c.city, path: p });
+      by.set(c.state, list);
+    }
+  }
+  return [...by.entries()].map(([state, cities]) => ({ state, cities: cities.sort((a, b) => a.city.localeCompare(b.city)) }))
+    .sort((a, b) => b.cities.length - a.cities.length || a.state.localeCompare(b.state));
+}
+
+function categoryTpl(rec, posts, x, cards, filters) {
+  const h1 = rec.h1 || rec.title;
+  let alt = false;
+  const secOpen = () => ((alt = !alt) ? "section" : "section section-alt");
+  const head = (s) => `<div class="sec-head">${s.eyebrow ? `<span class="eyebrow">${E(s.eyebrow)}</span>` : ""}<h2 class="sec-title">${E(s.title)}</h2>${s.lead ? `<div class="sec-lead"><p>${E(s.lead)}</p></div>` : ""}</div>`;
+  const link = (l) => `<a href="${E(l[1])}">${E(l[0])}</a>`;
+  const ctas = (x.ctas || []).map((c, i) => `<a class="btn ${i ? "btn-ghost" : "btn-primary"}" href="${E(c.href)}">${E(c.label)}${i ? "" : icon("arrow")}</a>`).join("");
+  let out = `<section class="hero hero-about hero-service">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">${breadcrumb([["Blog", rec.path === "/category/best-seo-content-agency/" ? null : "/category/best-seo-content-agency/"], ...(rec.path === "/category/best-seo-content-agency/" ? [] : [[cut(stripTags(h1), 40), null]])])}
+      ${x.eyebrow ? `<span class="eyebrow">${E(x.eyebrow)}</span>` : ""}
+      <h1>${E(h1)}</h1>
+      <!--seo:content--><p class="lead">${E(x.lead)}</p>${x.quick ? `<div class="quick-answer"><p><strong>Quick answer:</strong> ${E(x.quick)}</p></div>` : ""}<!--/seo:content-->
+      <div class="hero-ctas">${ctas}</div>
+    </div>
+  </div>
+</section>`;
+  if (x.stats?.length) out += `<section class="section section-tight"><div class="wrap"><!--seo:content--><ul class="about-stats figures">${x.stats.map((s) => `<li><span>${E(s.label)}</span><b>${E(s.value)}</b></li>`).join("")}</ul><!--/seo:content--></div></section>`;
+  const b = x.browse || { title: "All articles" };
+  out += `<section class="${secOpen()}"><div class="wrap"><!--seo:content-->${head(b)}<!--/seo:content--><div class="chips">${filters}</div><div class="post-grid">${cards}</div></div></section>`;
+  if (x.states) {
+    const st = cityStates();
+    out += `<section class="${secOpen()}"><div class="wrap"><!--seo:content-->${head({ eyebrow: "By state", title: "Find your city by state", lead: `${st.reduce((t, s) => t + s.cities.length, 0)} cities in ${st.length} states and union territories.` })}
+<div class="svc-grid svc-cards-auto state-grid">${st.map((s) => `<article class="svc-card"><span class="card-tag">${s.cities.length} ${s.cities.length === 1 ? "guide" : "guides"}</span><h3>${E(s.state)}</h3><p class="state-cities">${s.cities.map((c) => `<a href="${E(c.path)}">${E(c.city)}</a>`).join(" · ")}</p></article>`).join("")}</div><!--/seo:content--></div></section>`;
+  }
+  for (const s of x.sections || []) {
+    let body = "";
+    if (s.cards) body = `<div class="svc-grid svc-cards-auto">${s.cards.map((c) => `<article class="svc-card"><h3>${E(c.title)}</h3><p>${E(c.text)}</p>${c.links ? `<ul class="card-links">${c.links.map((l) => `<li>${link(l)}</li>`).join("")}</ul>` : ""}</article>`).join("")}</div>`;
+    else if (s.table) body = `<div class="c-card"><div class="table-wrap"><table><thead><tr>${s.table.head.map((h) => `<th>${E(h)}</th>`).join("")}</tr></thead><tbody>${s.table.rows.map((r) => `<tr>${r.map((c, k) => `<td>${k ? c : `<strong>${E(c)}</strong>`}</td>`).join("")}</tr>`).join("")}</tbody></table></div></div>`;
+    else if (s.steps) body = `<ol class="steps">${s.steps.map((t) => `<li>${E(t)}</li>`).join("")}</ol>`;
+    out += `<section class="${secOpen()}"><div class="wrap${s.steps ? " narrow" : ""}"><!--seo:content-->${head(s)}${body}<!--/seo:content--></div></section>`;
+  }
+  if (rec.faqs?.length) out += `<section class="${secOpen()}"><div class="wrap narrow"><!--seo:content-->${head({ eyebrow: "FAQ", title: "Frequently Asked Questions" })}<div class="faq-list">${rec.faqs.map((f) => `<div class="faq-card"><h3>${E(stripTags(f.q))}</h3><div class="faq-a">${localizeBody(f.a)}</div></div>`).join("")}</div><!--/seo:content--></div></section>`;
+  return document_(rec, out, "is-archive is-service is-category");
+}
+
 function listingTpl(rec, posts, label) {
   const intro = (rec.content_html || "").replace(/<[^>]+>/g, " ").trim();
   const h1 = rec.h1 || rec.title;
@@ -607,6 +667,7 @@ function listingTpl(rec, posts, label) {
   const filters = CATS.filter((c) => c.count).map((c) =>
     `<a class="chip${c.path === rec.path ? " is-on" : ""}" href="${E(c.path)}">${E(c.name)}</a>`).join("") +
     months.map((m) => `<a class="chip${m.path === rec.path ? " is-on" : ""}" href="${E(m.path)}">${E(listingLabel(m))}</a>`).join("");
+  if (CATX[rec.path]) return categoryTpl(rec, posts, CATX[rec.path], cards, filters);
   return document_(rec, `<!--seo:content--><section class="page-hero page-hero-sm"><div class="wrap">
   ${breadcrumb([[label, null], [h1, null]])}
   <h1>${E(h1)}</h1>

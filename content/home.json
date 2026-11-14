@@ -394,6 +394,74 @@
       "label": "See our website development services",
       "href": "/website-design-agency/"
     },
-    "scores_note": "Google PageSpeed Insights and Moz Page Authority, November 2026"
+    "scores_note": "Google PageSpeed Insights and Moz Page Authority, November 2026",
+    "pages": {
+      "/website-design-agency/": {
+        "projects": [
+          "Skyy Rider Electric",
+          "Makeup By Rekha",
+          "eTrialTrack"
+        ],
+        "eyebrow": "Recent websites",
+        "h2": "Websites we built recently",
+        "intro": "Three recent builds, from an EV maker to a bridal makeup studio and an eClinical platform. Each one is fast, mobile-first and ready for SEO from launch.",
+        "cta": {
+          "label": "Get a quote for your website",
+          "href": "/contact-us/"
+        }
+      },
+      "/best-seo-services-in-india/": {
+        "projects": [
+          "Skyy Rider Electric",
+          "Makeup By Rekha",
+          "eTrialTrack"
+        ],
+        "eyebrow": "SEO results",
+        "h2": "SEO work for our clients",
+        "intro": "Recent sites where we handled the build and the SEO. Every one scores 100 for SEO in Google PageSpeed Insights.",
+        "cta": {
+          "label": "Get a free SEO audit",
+          "href": "/report/"
+        }
+      },
+      "/best-on-page-seo-services/": {
+        "projects": [
+          "Skyy Rider Electric",
+          "Makeup By Rekha",
+          "eTrialTrack"
+        ],
+        "eyebrow": "On-page results",
+        "h2": "On-page SEO in practice",
+        "intro": "Clean headings, fast pages and full schema: these client sites score 100 for SEO and 91–97 for accessibility in PageSpeed Insights.",
+        "cta": {
+          "label": "Get a free on-page audit",
+          "href": "/report/"
+        }
+      },
+      "/best-answer-engine-optimization-services/": {
+        "projects": [
+          "eTrialTrack"
+        ],
+        "eyebrow": "AEO in practice",
+        "h2": "Answer-first content for an AI tech brand",
+        "intro": "For eTrialTrack, each product page opens with a direct answer and FAQ schema, so Google and AI assistants can quote it.",
+        "cta": {
+          "label": "Get a free AEO audit",
+          "href": "/report/"
+        }
+      },
+      "/google-my-business/": {
+        "projects": [
+          "Makeup By Rekha"
+        ],
+        "eyebrow": "Local SEO in practice",
+        "h2": "Local search for a Bangalore business",
+        "intro": "For Makeup By Rekha, local pages, reviews and Google Business Profile work together so nearby brides can find and book her.",
+        "cta": {
+          "label": "Get local SEO help",
+          "href": "/contact-us/"
+        }
+      }
+    }
   }
 }

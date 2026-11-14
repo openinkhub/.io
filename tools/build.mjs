@@ -17,6 +17,7 @@ import { fixRecord, fixHtml, listingLabel, RULES, SQUIRRLY, COPY_MISSES } from "
 import { makeCover, coverFigure } from "./covers.mjs";
 import { kitHtml, cardify, cardLists, faqPlain, openDetails, fixLinks } from "./layout.mjs";
 import { simplifyHtml } from "./content-rules.mjs";
+import { splitService, renderBlocks, ctaRow } from "./service-layout.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const C = path.join(ROOT, "content");
@@ -232,7 +233,7 @@ function postCard(r) {
 
 // ---------------------------------------------------------------- content shaping
 /** -> [eyebrowText, h1InnerHtml, remainingBody]. Keeps the page's real H1 (with <em> accents). */
-function splitH1(content, fallback) {
+function splitH1(content, fallback, raw = false) {
   const m = /<h1[^>]*>([\s\S]*?)<\/h1>/.exec(content);
   if (!m) return ["", E(fallback), content];
   const inner = m[1].replace(/<\/?(?!em\b|strong\b|b\b)[a-z0-9]+[^>]*>/g, "").trim();
@@ -241,7 +242,7 @@ function splitH1(content, fallback) {
   const preTxt = pre.replace(/<[^>]+>/g, " ").trim();
   let eyebrow = "";
   if (preTxt && len(preTxt) < 140 && !pre.includes("<img")) { eyebrow = unescapeHtml(preTxt.replace(/\s+/g, " ")); pre = ""; }
-  return [eyebrow, inner, enhance(pre + post)];
+  return [eyebrow, inner, raw ? pre + post : enhance(pre + post)];
 }
 
 const P_RUN = /(?:<p>(?:(?!<\/p>)[\s\S]){1,60}?<\/p>\s*){4,}/g;
@@ -432,8 +433,84 @@ ${k ? `<section class="section kit"><div class="wrap narrow prose">${localizeBod
 ${faqs}`, "is-page is-about");
 }
 
+// ---------------------------------------------------------------- service pages (home-page style)
+// Every page in the Services menu (and the services hub) shares one layout: home-style hero (headline, lead, the page's
+// own CTA buttons, quick answer, image), a stat strip, then each H2 section full width with eyebrow, heading, lead and
+// components rebuilt from the imported widgets (tools/service-layout.mjs). Sections alternate white / grey.
+const SVC_NAV = CFG.nav.find((n) => n.label === "Services") || {};
+const SERVICE_PATHS = new Set([SVC_NAV.href, ...(SVC_NAV.children || []).map((c) => c.href)].filter((p) => p && p !== ABOUT_PATH));
+function serviceTpl(rec) {
+  let [eyebrow, h1, body] = splitH1(rec.content_html || "", rec.h1 || rec.title, true);
+  if (RULES.autofix.linkText) body = fixLinks(body, titleOf);
+  if (RULES.autofix.plainFaq) body = openDetails(body);
+  body = hubGrids(localizeBody(cardLists(body)));
+  let lead = "";
+  const m = /^\s*<p>([\s\S]*?)<\/p>/.exec(body);
+  if (m && len(m[1].replace(/<[^>]+>/g, "")) < 420 && !/<a\b/.test(m[1])) { lead = m[1]; body = body.slice(m[0].length); }
+  let heroImg = "";
+  const fig = /<figure>\s*(<img\b[^>]*>)\s*<\/figure>/.exec(body);
+  if (fig) { heroImg = fig[1].replace(/<img\b/, '<img fetchpriority="high"'); body = body.replace(fig[0], ""); }
+  else if (rec.featured_image) heroImg = `<img src="${E(rel(rec.featured_image.src))}" alt="${E(rec.featured_image.alt || stripTags(h1))}" width="${rec.featured_image.width || 1200}" height="${rec.featured_image.height || 630}" fetchpriority="high">`;
+  else if (HOME.hero?.image?.src) heroImg = `<img src="${E(rel(HOME.hero.image.src))}" alt="${E(stripTags(h1))}" width="1024" height="576" fetchpriority="high">`;
+  const quick = /<p>\s*<strong>Quick answer:<\/strong>([\s\S]*?)<\/p>/.exec(body);
+  if (quick) body = body.replace(quick[0], "");
+  const { heroCtas, heroStats, preRest, sections } = splitService(body);
+  let alt = false, out = "";
+  const secOpen = () => ((alt = !alt) ? "section" : "section section-alt");
+  if (heroStats.length >= 2) { out += `<section class="section section-tight"><div class="wrap"><ul class="about-stats figures">${heroStats.map((s) => `<li><b>${E(s.value)}</b><span>${E(s.label)}</span></li>`).join("")}</ul></div></section>`; alt = false; }
+  const preHtml = preRest.map((b) => b.html).join("");
+  if (stripTags(preHtml).length > 30) out += `<section class="${secOpen()}"><div class="wrap narrow"><div class="c-card prose">${preHtml}</div></div></section>`;
+  for (const s of sections) {
+    const cls = secOpen();
+    const head = (ld = "") => `<div class="sec-head">${s.eyebrow ? `<span class="eyebrow">${E(s.eyebrow)}</span>` : ""}<h2 class="sec-title">${E(s.title)}</h2>${ld ? `<div class="sec-lead">${ld}</div>` : ""}</div>`;
+    if (/asked questions|^faq|frequently/i.test(s.title)) {
+      const items = []; let cur = null;
+      // split on every h3, even inside wrappers (e.g. opened <details>)
+      const all = s.blocks.map((b) => b.html).join("");
+      for (const seg of all.split(/(?=<h3[\s>])/)) {
+        const q = /^<h3[^>]*>([\s\S]*?)<\/h3>/.exec(seg);
+        if (!q) continue;
+        cur = { q: stripTags(q[1]), a: seg.slice(q[0].length).replace(/<\/?(details|summary|div)\b[^>]*>/g, "").trim() };
+        items.push(cur);
+      }
+      out += `<section class="${cls}"><div class="wrap narrow">${head()}<div class="faq-list">${items.map((f) => `<div class="faq-card"><h3>${E(f.q)}</h3><div class="faq-a">${f.a}</div></div>`).join("")}</div></div></section>`;
+      continue;
+    }
+    if (/^related services$/i.test(s.title)) {
+      const links = s.blocks.flatMap((b) => [...b.html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)]);
+      out += `<section class="${cls}"><div class="wrap">${head()}<div class="svc-grid svc-cards-auto">${links.map((l) =>
+        `<a class="svc-card svc-link" href="${E(l[1])}"><h3>${stripTags(l[2])}</h3><span class="link-arrow">Explore${icon("arrow")}</span></a>`).join("")}</div></div></section>`;
+      continue;
+    }
+    const r = renderBlocks(s.blocks, { icon });
+    const narrow = !/svc-grid|about-stats|about-metrics|guide-grid|svc-cards/.test(r.parts) && !r.parts.includes("<table");
+    out += `<section class="${cls}"><div class="wrap${narrow ? " narrow" : ""}">${head(r.lead)}${r.introCard}${r.parts}</div></section>`;
+  }
+  const k = kitFor(rec, body, false);
+  const faqs = /asked questions|frequently/i.test(body) || contentHasFaq(body, rec.faqs) ? "" : faqBlock(rec.faqs);
+  const crumb = len(rec.title) < 60 ? rec.title : cut(stripTags(h1), 60);
+  const ctas = heroCtas ? ctaRow(heroCtas, "hero-ctas") :
+    `<div class="hero-ctas"><a class="btn btn-primary" href="${E(CFG.contact.demo_url)}" target="_blank" rel="noopener">Schedule a Free Demo${icon("arrow")}</a><a class="btn btn-ghost" href="/contact-us/">Contact Us</a></div>`;
+  return document_(rec, `<section class="hero hero-about hero-service">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">${breadcrumb([["Services", SVC_NAV.href !== rec.path ? SVC_NAV.href : null], ...(SVC_NAV.href !== rec.path ? [[crumb, null]] : [])])}
+      ${eyebrow ? `<span class="eyebrow">${E(eyebrow)}</span>` : ""}
+      <h1>${h1}</h1>
+      <!--seo:content-->${lead ? `<p class="lead">${lead}</p>` : ""}${quick ? `<div class="quick-answer"><p><strong>Quick answer:</strong>${quick[1]}</p></div>` : ""}<!--/seo:content-->
+      ${ctas}
+    </div>
+    ${heroImg ? `<div class="hero-visual"><!--seo:content-->${heroImg}<!--/seo:content--></div>` : ""}
+  </div>
+</section>
+<!--seo:content-->${out}<!--/seo:content-->
+${k ? `<section class="section kit"><div class="wrap narrow prose">${localizeBody(k)}</div></section>` : ""}
+${faqs}`, "is-page is-service");
+}
+
 function pageTpl(rec) {
   if (rec.path === ABOUT_PATH) return aboutTpl(rec);
+  if (SERVICE_PATHS.has(rec.path)) return serviceTpl(rec);
   let [eyebrow, h1, body] = splitH1(rec.content_html || "", rec.h1 || rec.title);
   const h1Txt = stripTags(h1);
   const legal = LEGAL.has(rec.path.replace(/^\/+|\/+$/g, ""));

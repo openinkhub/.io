@@ -5,6 +5,12 @@
       "note": "Sample case studies with 'replace with your verified results' placeholders (removed on request)",
       "from": "<p>Results &amp; insights</p><h2>Artificial Intelligence Optimization success stories</h2>",
       "to": "<p>Benchmark dashboard</p>"
+    },
+    {
+      "note": "layout: SEO vs AIO table (two-column widget flattened into paragraphs)",
+      "from": "<p>Traditional SEO</p><p>Artificial Intelligence Optimization</p>",
+      "to": "<p>Terminology</p>",
+      "replace": "<table><thead><tr><th>Traditional SEO</th><th>Artificial Intelligence Optimization</th></tr></thead><tbody><tr><td>Focus on keywords</td><td>Focus on entities and meaning</td></tr><tr><td>Ranks webpages</td><td>Supports AI-generated answers</td></tr><tr><td>Blue link clicks</td><td>Conversational recommendations</td></tr><tr><td>Search engine crawler</td><td>Large Language Models &amp; AI retrieval</td></tr><tr><td>Ranking positions</td><td>Brand citations &amp; AI visibility</td></tr><tr><td>Individual pages</td><td>Connected knowledge ecosystem</td></tr></tbody></table>"
     }
   ],
   "/ai-agentic-workflow-automation/": [
@@ -105,6 +111,14 @@
       "from": "<h3>1. Audit</h3>",
       "to": "<p>Questions</p>",
       "replace": "<ol class=\"steps\"><li><strong>Audit:</strong> We audit your site and profiles and check how you appear in Bengali and English searches and AI answers.</li><li><strong>Plan:</strong> Next, we plan for Kolkata's trade hubs, schools and clinics, from Burrabazar to Salt Lake.</li><li><strong>Build:</strong> Then we build locality pages, write plain answers to common questions and connect WhatsApp enquiries.</li><li><strong>Report:</strong> You see enquiries by locality each month, and we update the plan as new searches appear.</li></ol>"
+    }
+  ],
+  "/generative-engine-optimization/": [
+    {
+      "note": "layout: GEO signal table (two-column widget flattened into paragraphs)",
+      "from": "<p>Optimization area</p><p>Purpose</p>",
+      "to": "<p>Industry applications</p>",
+      "replace": "<table><thead><tr><th>Area</th><th>Purpose</th></tr></thead><tbody><tr><td>Entity Clarity</td><td>Help AI understand who you are and what you do</td></tr><tr><td>Content Depth</td><td>Cover topics comprehensively</td></tr><tr><td>Structured Data</td><td>Improve machine-readable context</td></tr><tr><td>Internal Linking</td><td>Reinforce relationships between topics</td></tr><tr><td>Technical SEO</td><td>Ensure content is accessible and performant</td></tr><tr><td>Brand Consistency</td><td>Maintain consistent naming and messaging across channels</td></tr></tbody></table>"
     }
   ]
 }

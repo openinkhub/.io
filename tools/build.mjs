@@ -156,9 +156,7 @@ function header(p) {
   return `<a class="skip" href="#main">Skip to content</a>
 <header class="site-header" id="top">
   <div class="wrap nav-row">
-    <a class="brand" href="/" aria-label="${E(CFG.name)} home">
-      <img src="${E(CFG.logo)}" alt="${E(CFG.name)}" width="36" height="36"><span>openink<b>Hub</b></span>
-    </a>
+    <a class="brand" href="/"><picture><source srcset="/images/brand/openink-logo.webp" type="image/webp"><img src="/images/brand/openink-logo.png" alt="Openink Hub logo" width="134" height="36" class="brand-logo"></picture></a>
     <nav class="main-nav" aria-label="Primary"><ul>${items}</ul></nav>
     <div class="nav-cta">
       <a class="btn btn-sm btn-ghost hide-sm" href="tel:${E(c.phone_raw)}">${icon("phone")}<span>${E(c.phone)}</span></a>
@@ -189,7 +187,7 @@ function footer() {
 <footer class="site-footer">
   <div class="wrap foot-grid">
     <div class="foot-about">
-      <a class="brand" href="/"><img src="${E(CFG.logo)}" alt="openink Hub logo" width="32" height="32"><span>openink<b>Hub</b></span></a>
+      <a class="brand" href="/"><picture><source srcset="/images/brand/openink-logo.webp" type="image/webp"><img src="/images/brand/openink-logo.png" alt="Openink Hub logo" width="127" height="34" class="brand-logo"></picture></a>
       <p>${E(CFG.footer.about)}</p>
       <ul class="contact-list">
         <li>${icon("map")}${c.gbp_url ? `<a href="${E(c.gbp_url)}" target="_blank" rel="noopener" title="Openink Hub on Google Maps">${E(c.address)}</a>` : `<span>${E(c.address)}</span>`}</li>

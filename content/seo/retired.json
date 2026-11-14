@@ -36,12 +36,6 @@
       "to": "/category/articles/",
       "code": 301,
       "why": "category split or removed (2026-11-14)"
-    },
-    {
-      "from": "/favicon.ico",
-      "to": "/wp-content/uploads/2026/07/openinkhub-favicon-150x150.webp",
-      "code": 301,
-      "why": "tools and browsers request /favicon.ico by default"
     }
   ]
 }

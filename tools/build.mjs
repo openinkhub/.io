@@ -118,11 +118,16 @@ function headHtml(rec, tags = "") {
   const hd = rec.head;
   const out = ['<meta charset="UTF-8">', '<meta name="viewport" content="width=device-width, initial-scale=1">',
     tags.trim(), `<title>${E(hd.title, false)}</title>`].filter(Boolean); // charset + viewport stay first; then tracking tags
-  for (const m of hd.meta) out.push(`<meta ${m.attr}="${E(m.key)}" content="${E(m.content)}">`);
+  for (const m of hd.meta) { if (m.key === "msapplication-TileImage") continue; out.push(`<meta ${m.attr}="${E(m.key)}" content="${E(m.content)}">`); }
   // dead WordPress links (feeds, oEmbed, shortlink, sitemap-as-RSS) are dropped; the sitemap gets rel="sitemap"
   const dead = (l) => l.rel === "shortlink" || (l.rel === "alternate" && /\/feed\/|wp-json|oembed|sitemap\.xml/.test(l.href));
+  // brand icons (the old WordPress favicons are replaced by the set in /images/brand/icons/)
+  out.push('<link rel="icon" href="/favicon.ico" sizes="48x48">', '<link rel="icon" href="/images/brand/icons/favicon-32.png" type="image/png" sizes="32x32">',
+    '<link rel="icon" href="/images/brand/icons/favicon-192.png" type="image/png" sizes="192x192">',
+    '<link rel="apple-touch-icon" href="/images/brand/icons/favicon-180.png" sizes="180x180">', '<link rel="manifest" href="/site.webmanifest">',
+    '<meta name="msapplication-TileImage" content="/images/brand/icons/favicon-192.png">');
   for (const l of hd.links) {
-    if (dead(l) || l.hreflang) continue;
+    if (dead(l) || l.hreflang || /^(icon|apple-touch-icon|shortcut icon)$/i.test(l.rel)) continue;
     const extra = ["type", "sizes"].filter((k) => l[k]).map((k) => ` ${k}="${E(l[k])}"`).join("");
     out.push(`<link rel="${E(l.rel)}" href="${E(l.href)}"${extra}>`);
   }

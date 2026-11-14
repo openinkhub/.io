@@ -12,6 +12,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { simpleWords, longParagraphs, titleYear } from "./content-rules.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 export const RULES = JSON.parse(fs.readFileSync(path.join(ROOT, "content", "seo", "rules.json"), "utf8"));
@@ -155,6 +156,18 @@ function applyFaqs(rec, fixes) {
   fixes.push(`faqs:${add.length}`);
 }
 
+// "In summary" sections for imported pages (content/seo/summaries.json), placed before the FAQ heading if there is one.
+const SUM_FILE = path.join(ROOT, "content", "seo", "summaries.json");
+export const SUMMARIES = fs.existsSync(SUM_FILE) ? JSON.parse(fs.readFileSync(SUM_FILE, "utf8")) : {};
+function applySummaries(rec, fixes) {
+  const s = SUMMARIES[rec.path];
+  if (!FIX.summaries || !s) return;
+  const block = `\n<h2>In summary</h2>\n<p>${s}</p>\n`;
+  const i = rec.content_html.search(/<h2[^>]*>\s*Frequently asked questions/i);
+  rec.content_html = i >= 0 ? rec.content_html.slice(0, i) + block + rec.content_html.slice(i) : rec.content_html + block;
+  fixes.push("summary");
+}
+
 export function fixRecord(rec) {
   if (rec._fixed) return rec;
   rec._fixed = true;
@@ -162,10 +175,14 @@ export function fixRecord(rec) {
   applyRemovals(rec, fixes);
   applyPlainLanguage(rec, fixes);
   applyCopyEdits(rec, fixes);
+  applySummaries(rec, fixes);
   applyFaqs(rec, fixes);
   const url = rec.url?.replace(/\/?$/, rec.path === "/" ? "" : "/") || SITE.url + rec.path;
   const kp = keyphraseFor(rec);
   rec.keyphrase = kp.keyphrase; rec.keyphrase_source = kp.source; rec.keyphrase_secondary = kp.secondary;
+  // plain words (keyphrases kept) and paragraph length - see tools/content-rules.mjs
+  if (FIX.simpleWords) simpleWords(rec, fixes, RULES.simpleWords || {});
+  if (FIX.longParagraphs) longParagraphs(rec, fixes, RULES.thresholds.paragraphLength.maxWords);
 
   // archive / tag pages: unique H1 + repair WordPress's broken archive <title> (e.g. "2026-01-07T05:30:00+05:30")
   if (FIX.listingHeadings && ["archive", "tag"].includes(rec.type)) {
@@ -206,6 +223,12 @@ export function fixRecord(rec) {
   // very short titles (legal and listing pages): add the site name
   if (FIX.titleSiteName && title.length < RULES.thresholds.title.min && !/openink/i.test(title)) {
     rec.head.title = `${title} | ${SITE.name}`; title = rec.head.title; fixes.push("title-site-name");
+  }
+  // year in the title (2026), where it fits in 60 characters
+  if (FIX.titleYear) {
+    const ty = RULES.titleYear || {};
+    titleYear(rec, fixes, { year: ty.year || new Date().getFullYear(), maxLen: RULES.thresholds.title.max, skipPaths: ty.skipPaths || [], overrides: ty.overrides || {}, skipTypes: ty.skipTypes || [] });
+    title = rec.head.title;
   }
 
   // Open Graph / Twitter

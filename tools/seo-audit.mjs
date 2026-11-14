@@ -256,7 +256,7 @@ function audit(p) {
     const passive = pct(sents.filter((s) => /\b(is|are|was|were|be|been|being|get|gets|got)\s+(\w+ly\s+)?\w+(ed|en)\b/i.test(s)).length, sents.length);
     c.passive_voice = r(passive <= T.passiveVoice.maxPercent ? "pass" : "warn", `${passive}% of sentences`);
     let run = 1, maxRun = 1, prev = "";
-    for (const s of sents) { const f = (words(s)[0] || "").toLowerCase(); run = f && f === prev ? run + 1 : 1; maxRun = Math.max(maxRun, run); prev = f; }
+    for (const s of prose) { const f = (words(s)[0] || "").toLowerCase(); run = f && f === prev ? run + 1 : 1; maxRun = Math.max(maxRun, run); prev = f; } // prose only, like transitions
     c.consecutive_sentences = r(maxRun <= T.consecutiveSentences.maxRun ? "pass" : "warn", `max ${maxRun} in a row start the same`);
     const flagged = W.inclusive.filter((x) => new RegExp(`\\b${x.replace(/[/]/g, "\\/")}\\b`, "i").test(ctext));
     c.inclusive_language = r(flagged.length ? "warn" : "pass", flagged.length ? flagged.join(", ") : "none flagged");

@@ -15,6 +15,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { fixRecord, fixHtml, listingLabel, RULES, SQUIRRLY, COPY_MISSES } from "./seo-fix.mjs";
 import { makeCover, coverFigure } from "./covers.mjs";
+import { kitHtml, cardify, cardLists, faqPlain, openDetails, fixLinks } from "./layout.mjs";
+import { simplifyHtml } from "./content-rules.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const C = path.join(ROOT, "content");
@@ -269,6 +271,7 @@ function enhance(body) {
 
 function faqBlock(faqs, h2 = "Frequently Asked Questions") {
   if (!faqs?.length) return "";
+  if (RULES.autofix.plainFaq) return faqPlain(faqs, h2, localizeBody);
   const items = faqs.map((f) => `<details class="faq"><summary>${E(f.q.replace(/<[^>]+>/g, ""))}</summary>` +
     `<div class="faq-a">${localizeBody(f.a)}</div></details>`).join("");
   return `<section class="section"><div class="wrap narrow"><h2 class="sec-title">${E(h2)}</h2>${items}</div></section>`;
@@ -279,6 +282,20 @@ const contentHasFaq = (content, faqs) =>
   Boolean(faqs?.length) && faqs.slice(0, 2).every((f) => squash(content).includes(cut(squash(f.q), 40)));
 
 // ---------------------------------------------------------------- templates
+// layout rules (tools/layout.mjs): links, open FAQs, card grids and H2 cards; topic kits after the content
+const KITS = load(path.join(C, "seo", "kits.json"));
+const TITLE_OF = new Map(RECS.map((r) => [r.path, stripTags(r.card_title || r.title || r.h1 || "").replace(/\s*[|–-]\s*openink Hub$/i, "").replace(/\s*\(20\d\d\)/, "")]));
+const titleOf = (href) => TITLE_OF.get(href.replace(/^https?:\/\/(www\.)?openinkhub\.io/, "").replace(/[?#].*$/, "")) || "";
+function shape(body, legal) {
+  const A = RULES.autofix;
+  if (A.linkText) body = fixLinks(body, titleOf);
+  if (A.plainFaq) body = openDetails(body);
+  if (A.cardLayout && !legal) body = cardify(cardLists(body));
+  return body;
+}
+const NO_KIT = new Set([]); // every page gets the parts it lacks
+const kitFor = (rec, body, legal) => (RULES.autofix.topicKits && !legal && !NO_KIT.has(rec.path.replace(/^\/+|\/+$/g, "")) ? kitHtml(rec, body, KITS) : "");
+
 const LEGAL = new Set(["privacy-policy", "terms", "refund", "shipping", "disclaimer", "cookie"]);
 
 // "Articles on this topic" list on hub pages that content-plan posts point to (brief_hub)
@@ -316,7 +333,8 @@ function pageTpl(rec) {
   </div>
 </section>
 ${contact}
-<section class="section"><div class="wrap narrow prose"><!--seo:content-->${hubGrids(localizeBody(body))}<!--/seo:content--></div></section>
+<section class="section"><div class="wrap narrow prose"><!--seo:content-->${hubGrids(localizeBody(shape(body, legal)))}<!--/seo:content--></div></section>
+${(() => { const k = kitFor(rec, body, legal); return k ? `<section class="section kit"><div class="wrap narrow prose">${localizeBody(k)}</div></section>` : ""; })()}
 ${hubArticles(rec)}${faqs}`, "is-page" + (legal ? " is-legal" : ""));
 }
 
@@ -363,7 +381,8 @@ function postTpl(rec) {
       <span>${readMinutes(body)} min read</span>
     </div>
   </div></header>
-  <div class="wrap narrow">${fig}<div class="prose"><!--seo:content-->${localizeBody(body)}<!--/seo:content--></div>
+  <div class="wrap narrow">${fig}<div class="prose"><!--seo:content-->${localizeBody(shape(body, false))}<!--/seo:content--></div>
+  ${(() => { const k = kitFor(rec, body, false); return k ? `<div class="prose kit">${localizeBody(k)}</div>` : ""; })()}
   ${tags ? `<div class="post-tags">${tags}</div>` : ""}
   <aside class="post-cta"><div><h2>Want results like this for your business?</h2>
   <p>Get a free consultation on SEO, AEO, GEO and AI automation from the Openink Hub team.</p></div>
@@ -420,6 +439,12 @@ function contactCards() {
 }
 
 function homeTpl(rec) {
+  // plain words on the home page too (home.json is not a page record), keeping the home keyphrase
+  if (RULES.autofix.simpleWords && !HOME._simple) {
+    const keep = [rec.keyphrase, ...(rec.keyphrase_secondary || [])].filter(Boolean);
+    const walk = (o) => { for (const [k, v] of Object.entries(o)) { if (k === "_note" || /^(href|url|link|src|path|icon|img|image)$/i.test(k)) continue; if (typeof v === "string") { if (!/^(\/|https?:|#|mailto:|tel:)/.test(v)) o[k] = simplifyHtml(v, keep); } else if (v && typeof v === "object") walk(v); } };
+    walk(HOME); HOME._simple = true;
+  }
   const H = HOME, hero = H.hero;
   const ext = (h) => (h.startsWith("http") ? " target=_blank rel=noopener" : "");
   const ctas = hero.ctas.map((c) => `<a class="btn btn-${c.style}" href="${E(c.href)}"${ext(c.href)}>${E(c.label)}${c.style === "primary" ? icon("arrow") : ""}</a>`).join("");
@@ -434,10 +459,11 @@ function homeTpl(rec) {
   const wa = H.whatsapp.items.map((x) => `<div class="wa-item">${icon("check")}<div><h3>${E(x.title)}</h3><p>${E(x.text)}</p></div></div>`).join("");
   const logos = H.clients.logos.map((l) => `<img src="${E(l.img)}" alt="${E(l.name)}" loading="lazy">`).join("");
   const sol = H.solutions.links.map((l) => `<a class="sol-link" href="${E(l.href)}">${E(l.label)}${icon("arrow")}</a>`).join("");
-  const faqItems = H.faq.items.map((f) => `<details class="faq"><summary>${E(f.q)}</summary><div class="faq-a"><p>${f.a}</p></div></details>`).join("");
+  const faqItems = RULES.autofix.plainFaq ? `<div class="faq-list">${H.faq.items.map((f) => `<div class="faq-card"><h3>${E(f.q)}</h3><div class="faq-a"><p>${f.a}</p></div></div>`).join("")}</div>`
+    : H.faq.items.map((f) => `<details class="faq"><summary>${E(f.q)}</summary><div class="faq-a"><p>${f.a}</p></div></details>`).join("");
   const latest = POSTS.filter((p) => !p.path.includes("best-seo-agency-in-")).slice(0, 3).map(postCard).join("");
   const blogCat = CATS.find((c) => c.slug === "best-seo-content-agency")?.path || "/";
-  return document_(rec, `<!--seo:content--><section class="hero">
+  return document_(rec, (RULES.autofix.linkText ? (h) => fixLinks(h, titleOf) : (h) => h)(`<!--seo:content--><section class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
@@ -488,7 +514,7 @@ function homeTpl(rec) {
   <div class="sec-head sec-head-row"><h2 class="sec-title">Latest insights</h2><a class="link-arrow" href="${E(blogCat)}">All articles${icon("arrow")}</a></div>
   <div class="post-grid">${latest}</div>
 </div></section>
-<section class="section section-alt"><div class="wrap narrow"><h2 class="sec-title">${E(H.faq.h2)}</h2>${faqItems}</div></section><!--/seo:content-->`, "is-home");
+<section class="section section-alt"><div class="wrap narrow"><h2 class="sec-title">${E(H.faq.h2)}</h2>${faqItems}</div></section><!--/seo:content-->`) + (() => { const k = kitFor(rec, "", false); return k ? `<section class="section kit"><div class="wrap narrow prose">${k}</div></section>` : ""; })(), "is-home");
 }
 
 // ---------------------------------------------------------------- output

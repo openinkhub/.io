@@ -24,7 +24,7 @@ const words = (t) => t.match(/[A-Za-z0-9][A-Za-z0-9'’-]*/g) || [];
 // ordinary words that look like names because pages use Title Case labels ("Local SEO", "Content Strategy")
 const ALWAYS_LOW = new Set(["Automation", "Automated", "Use", "Search", "Content", "Small", "Choosing", "Consistent", "Local", "Share",
   "Building", "Backlinks", "Explore", "Profile", "Everything"]);
-const OPENERS = ["In addition,", "Also,", "In practice,"];
+const OPENERS = ["Moreover,", "Also,", "In practice,"]; // different first words, so edits never create a run of repeated starts
 const COMMON = new Set(["the", "this", "these", "that", "those", "it", "its", "our", "we", "you", "your", "every", "each", "most", "many", "a", "an",
   "they", "their", "there", "some", "all", "one", "when", "if", "with", "by", "for", "from", "in", "on", "to", "at", "as", "no", "any", "both", "more", "less"]);
 
@@ -62,7 +62,7 @@ for (const p of REPORT.results) {
       if (used.has(find) || html.split(find).length !== 2) continue; // must be unique on the page
       // lower-case ordinary words (seen in lower case elsewhere on the page); keep names and acronyms (Google, WhatsApp, AEO)
       const low = firstWord.toLowerCase();
-      const name = /[A-Z].*[A-Z]/.test(firstWord) || new RegExp(`[a-z,;] ${firstWord}\\b`).test(pageText); // AEO, WhatsApp, Google
+      const name = /^(Openink|Google|WhatsApp|WordPress|Shopify|India|Meta|ChatGPT|Gemini|Perplexity)$/.test(firstWord) || /[A-Z].*[A-Z]/.test(firstWord) || new RegExp(`[a-z,;] ${firstWord}\\b`).test(pageText); // AEO, WhatsApp, Google
       const ordinary = COMMON.has(low) || ALWAYS_LOW.has(firstWord) || !name;
       const lead = ordinary && firstWord !== "I" ? low : firstWord;
       const opener = OPENERS[k++ % OPENERS.length];

@@ -27,7 +27,7 @@ for (const dir of fs.readdirSync(DIST)) {
   const html = fs.readFileSync(f, "utf8");
   const content = [...html.matchAll(/<!--seo:content-->([\s\S]*?)<!--\/seo:content-->/g)].map((m) => m[1]).join("\n");
   const blocks = content.replace(/<\/(h[1-6]|p|li|td|th|dt|dd|summary|blockquote|figcaption|button|a|span|strong|div|section|article|header|footer|figure|ul|ol|tr)>/gi, " ¶ ").replace(/<br\s*\/?>/gi, " ¶ ");
-  const sents = text(blocks).split("¶").flatMap((b) => sentencesOf(b.trim()));
+  const sents = text(blocks).split("¶").flatMap((b) => sentencesOf(b.trim())).filter((s) => words(s).length >= (JSON.parse(fs.readFileSync(path.join(ROOT, "content", "seo", "rules.json"), "utf8")).thresholds.transitionWords.minSentenceWords || 1));
   let run = 1, prev = "";
   sents.forEach((s, i) => {
     const w = (words(s)[0] || "").toLowerCase();

@@ -5,29 +5,73 @@
     "h1": "The AI-powered growth engine for SME ready to rank everywhere search happens",
     "lead": "Openink Hub is home to a complete AI search optimization stack — SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Artificial Intelligence Optimization (AIO), WhatsApp AI automation, Google Business Profile optimization, and AI voice agents — engineered to get your business found on Google, ChatGPT, Gemini, Perplexity, and every AI assistant in between.",
     "quick_answer": "Openink Hub is an AI-powered digital growth ecosystem based in Ranchi, India. It combines SEO, answer engine, generative engine and AI optimization with WhatsApp AI automation, Google Business Profile optimization and AI voice agents, helping startups and SMEs get found, trusted and chosen across search engines and AI platforms.",
-    "image": {"src": "/wp-content/uploads/2026/07/business-process-optimization-1.webp", "alt": "seo services"},
+    "image": {
+      "src": "/wp-content/uploads/2026/07/business-process-optimization-1.webp",
+      "alt": "seo services"
+    },
     "ctas": [
-      {"label": "Explore Our SEO Services", "href": "/best-seo-services-in-india/", "style": "primary"},
-      {"label": "Schedule a Free Demo", "href": "https://calendly.com/openinkhub/30min/", "style": "ghost"}
+      {
+        "label": "Explore Our SEO Services",
+        "href": "/best-seo-services-in-india/",
+        "style": "primary"
+      },
+      {
+        "label": "Schedule a Free Demo",
+        "href": "https://calendly.com/openinkhub/30min/",
+        "style": "ghost"
+      }
     ]
   },
   "services": {
     "h2": "Everything your business needs to be found — automated",
     "intro": "Four core services businesses come to Openink Hub for. Explore each to see the full scope.",
     "items": [
-      {"icon": "chat", "title": "WhatsApp AI ChatBot", "text": "Automate customer conversations, broadcast campaigns, and support on WhatsApp with an AI chatbot built on the Official Meta Cloud API.", "cta": "Explore WhatsApp AI Chatbot", "href": "/whatsapp-ai-chatbot/"},
-      {"icon": "search", "title": "Search & Answer Engine Optimization", "text": "Technical and on-page optimization built around a rigorous, checklist-driven process designed to move you higher on every Google search & answer engine.", "cta": "Explore On-Page SEO", "href": "/best-on-page-seo-services/"},
-      {"icon": "pin", "title": "Google My Business Optimization", "text": "Win the Local Pack, automate your Google reviews, and become the best-rated option when customers search near me.", "cta": "Explore Google My Business", "href": "/google-my-business/"},
-      {"icon": "code", "title": "Website Development", "text": "Business websites, eCommerce stores, WordPress sites and custom web applications, built SEO-friendly and ready to connect with your automation tools.", "cta": "Explore Website Development", "href": "/website-design-agency/"}
+      {
+        "icon": "chat",
+        "title": "WhatsApp AI ChatBot",
+        "text": "Automate customer conversations, broadcast campaigns, and support on WhatsApp with an AI chatbot built on the Official Meta Cloud API.",
+        "cta": "Explore WhatsApp AI Chatbot",
+        "href": "/whatsapp-ai-chatbot/"
+      },
+      {
+        "icon": "search",
+        "title": "Search & Answer Engine Optimization",
+        "text": "Technical and on-page optimization built around a rigorous, checklist-driven process designed to move you higher on every Google search & answer engine.",
+        "cta": "Explore On-Page SEO",
+        "href": "/best-on-page-seo-services/"
+      },
+      {
+        "icon": "pin",
+        "title": "Google My Business Optimization",
+        "text": "Win the Local Pack, automate your Google reviews, and become the best-rated option when customers search near me.",
+        "cta": "Explore Google My Business",
+        "href": "/google-my-business/"
+      },
+      {
+        "icon": "code",
+        "title": "Website Development",
+        "text": "Business websites, eCommerce stores, WordPress sites and custom web applications, built SEO-friendly and ready to connect with your automation tools.",
+        "cta": "Explore Website Development",
+        "href": "/website-design-agency/"
+      }
     ]
   },
   "era": {
     "h2": "2026: the tipping point of the modern AI era",
     "intro": "Search has already split in two — the results page, and the answer an AI assistant gives instead of it. 2026 is the year that second path stopped being optional.",
     "items": [
-      {"title": "AI Search Has Crossed the Threshold", "text": "More people are starting their research inside ChatGPT, Gemini, and AI Overviews than ever before — and that share keeps growing."},
-      {"title": "Being Cited by AI Is the New Page One", "text": "Visibility is no longer just a ranking on a results page — it's whether AI systems choose to cite you as the answer."},
-      {"title": "Early Movers Compound the Advantage", "text": "Brands optimizing for AI search now build authority and citation history that's far harder for competitors to catch up on later."}
+      {
+        "title": "AI Search Has Crossed the Threshold",
+        "text": "More people are starting their research inside ChatGPT, Gemini, and AI Overviews than ever before — and that share keeps growing."
+      },
+      {
+        "title": "Being Cited by AI Is the New Page One",
+        "text": "Visibility is no longer just a ranking on a results page — it's whether AI systems choose to cite you as the answer."
+      },
+      {
+        "title": "Early Movers Compound the Advantage",
+        "text": "Brands optimizing for AI search now build authority and citation history that's far harder for competitors to catch up on later."
+      }
     ]
   },
   "mission": {
@@ -37,86 +81,229 @@
       "We're not just building a product — we're defining the standard for intelligent SME business processes worldwide. Our vision is a future where smart, cost-effective automation, and AI-ready visibility across every search and answer engine, is the standard for every business on the planet."
     ],
     "items": [
-      {"title": "Proven Team", "text": "Experts in design, development, and AI search, building the Openink ecosystem since the company was founded in April 2026."},
-      {"title": "Scalable Technology", "text": "A proprietary engine built to grow with every client's ambitions."},
-      {"title": "Massive Market", "text": "400 million SMEs worldwide seeking automation that actually works."}
+      {
+        "title": "Proven Team",
+        "text": "Experts in design, development, and AI search, building the Openink ecosystem since the company was founded in April 2026."
+      },
+      {
+        "title": "Scalable Technology",
+        "text": "A proprietary engine built to grow with every client's ambitions."
+      },
+      {
+        "title": "Massive Market",
+        "text": "400 million SMEs worldwide seeking automation that actually works."
+      }
     ]
   },
   "team": {
     "h2": "Meet the Experts Driving Your Digital Growth",
     "intro": "We're a startup — but not a new one at what we do. Behind Openink Hub is a small, hands-on team with real years in technology and digital marketing, not a script-reading call center. From engineering the automation platform to running SEO, AEO, GEO, and AIO strategy day to day, every person on this team has actually built and shipped the thing we're now helping you do.",
     "people": [
-      {"name": "Harish Neotia", "role": "CEO", "img": "/wp-content/uploads/2026/07/google-my-business.webp"},
-      {"name": "Tanya Raj", "role": "CMO", "img": "/wp-content/uploads/2026/07/workflow.webp"},
-      {"name": "Yash Manghnani", "role": "CTO", "img": "/wp-content/uploads/2026/07/workflow-automation.webp"},
-      {"name": "Hiten Neotia", "role": "CPO", "img": "/wp-content/uploads/2026/07/lead-management.webp"}
+      {
+        "name": "Harish Neotia",
+        "role": "CEO",
+        "img": "/wp-content/uploads/2026/07/google-my-business.webp"
+      },
+      {
+        "name": "Tanya Raj",
+        "role": "CMO",
+        "img": "/wp-content/uploads/2026/07/workflow.webp"
+      },
+      {
+        "name": "Yash Manghnani",
+        "role": "CTO",
+        "img": "/wp-content/uploads/2026/07/workflow-automation.webp"
+      },
+      {
+        "name": "Hiten Neotia",
+        "role": "CPO",
+        "img": "/wp-content/uploads/2026/07/lead-management.webp"
+      }
     ]
   },
   "platform": {
     "h2": "Complete AI Solutions for Digital Growth",
     "text": "Achieve sustainable digital growth with a complete suite of AI-powered business solutions. Automate marketing, customer communication, lead management, hiring, and daily operations using SEO Automation, WhatsApp Automation, Google Business Profile Management, Workflow Automation, AI Chatbots, HRMS, ATS, Social Media Automation, Blog Automation, and Brand Audit — all from one intelligent platform designed to help your business scale efficiently.",
-    "cta": {"label": "Explore the Platform", "href": "/best-seo-services-in-india/"}
+    "cta": {
+      "label": "Explore the Platform",
+      "href": "/best-seo-services-in-india/"
+    }
   },
   "testimonials": {
     "h2": "People That Trust Us",
     "items": [
-      {"name": "Musheer-ur-Rehman Khan", "img": "/wp-content/uploads/2026/07/testimonial.webp", "quote": "OpenInk Hub's WhatsApp chatbot transformed the way we handle customer inquiries. It responds instantly, manages conversations efficiently, and helps us capture more leads without manual effort. The automation has saved our team valuable time while improving customer experience. Their support and implementation process were smooth and professional."},
-      {"name": "Anup Kiran", "img": "/wp-content/uploads/2026/07/anup-kiran.webp", "quote": "AI SEO automation solutions from OpenInk Hub helped us improve our online presence and simplify our SEO tasks. Their smart workflows make tracking, optimization, and content management easier. We have seen better organization, improved visibility, and a more efficient approach to growing our digital presence."},
-      {"name": "Sandipon Chatterjee", "img": "/wp-content/uploads/2026/07/sandipon-chatterjee.webp", "quote": "Managing our Google Business Profile became much easier with OpenInk Hub's GMB automation. Their system helps us maintain updates, improve local visibility, and stay connected with customers. The automation saves time and allows us to focus more on running our business while they handle the digital growth process."}
+      {
+        "name": "Musheer-ur-Rehman Khan",
+        "img": "/wp-content/uploads/2026/07/testimonial.webp",
+        "quote": "OpenInk Hub's WhatsApp chatbot transformed the way we handle customer inquiries. It responds instantly, manages conversations efficiently, and helps us capture more leads without manual effort. The automation has saved our team valuable time while improving customer experience. Their support and implementation process were smooth and professional."
+      },
+      {
+        "name": "Anup Kiran",
+        "img": "/wp-content/uploads/2026/07/anup-kiran.webp",
+        "quote": "AI SEO automation solutions from OpenInk Hub helped us improve our online presence and simplify our SEO tasks. Their smart workflows make tracking, optimization, and content management easier. We have seen better organization, improved visibility, and a more efficient approach to growing our digital presence."
+      },
+      {
+        "name": "Sandipon Chatterjee",
+        "img": "/wp-content/uploads/2026/07/sandipon-chatterjee.webp",
+        "quote": "Managing our Google Business Profile became much easier with OpenInk Hub's GMB automation. Their system helps us maintain updates, improve local visibility, and stay connected with customers. The automation saves time and allows us to focus more on running our business while they handle the digital growth process."
+      }
     ]
   },
   "whatsapp": {
     "h2": "Automate customer conversations, broadcast campaigns — built on the Official Meta Cloud API",
     "items": [
-      {"title": "24/7 Instant Support", "text": "Deliver immediate, automated replies to customer inquiries around the clock, keeping engagement high."},
-      {"title": "Higher Conversion Rates", "text": "Leverage broadcast campaigns and automated lead nurturing to drive sales and recover abandoned carts effortlessly."},
-      {"title": "Official Meta Cloud API", "text": "Ensure reliable, secure, and scalable messaging integrated directly into your business stack."}
+      {
+        "title": "24/7 Instant Support",
+        "text": "Deliver immediate, automated replies to customer inquiries around the clock, keeping engagement high."
+      },
+      {
+        "title": "Higher Conversion Rates",
+        "text": "Leverage broadcast campaigns and automated lead nurturing to drive sales and recover abandoned carts effortlessly."
+      },
+      {
+        "title": "Official Meta Cloud API",
+        "text": "Ensure reliable, secure, and scalable messaging integrated directly into your business stack."
+      }
     ],
-    "cta": {"label": "Explore WhatsApp AI Chatbot", "href": "/whatsapp-ai-chatbot/"}
+    "cta": {
+      "label": "Explore WhatsApp AI Chatbot",
+      "href": "/whatsapp-ai-chatbot/"
+    }
   },
   "clients": {
     "h2": "Trusted by brands that rely on our SEO automation for better ranking, increased traffic, and sustainable online growth",
     "logos": [
-      {"name": "Xceed Beyond", "img": "/wp-content/uploads/2026/07/xceed-beyond.webp"},
-      {"name": "Dlife Healthcare", "img": "/wp-content/uploads/2026/07/dlife-healthcare.webp"},
-      {"name": "Vayura Wellness", "img": "/wp-content/uploads/2026/07/vayura.webp"},
-      {"name": "Interics", "img": "/wp-content/uploads/2026/07/interics.webp"},
-      {"name": "Strategy Steamers", "img": "/wp-content/uploads/2026/07/strategy-steamers.webp"},
-      {"name": "Epanipuricart", "img": "/wp-content/uploads/2026/07/epanipuricart.webp"},
-      {"name": "EmigrateJobs", "img": "/wp-content/uploads/2026/07/emigratejobs.webp"},
-      {"name": "CrazyShots", "img": "/wp-content/uploads/2026/07/crazyshots.webp"},
-      {"name": "Teffes", "img": "/wp-content/uploads/2026/07/teffes.webp"}
+      {
+        "name": "Xceed Beyond",
+        "img": "/wp-content/uploads/2026/07/xceed-beyond.webp"
+      },
+      {
+        "name": "Dlife Healthcare",
+        "img": "/wp-content/uploads/2026/07/dlife-healthcare.webp"
+      },
+      {
+        "name": "Vayura Wellness",
+        "img": "/wp-content/uploads/2026/07/vayura.webp"
+      },
+      {
+        "name": "Interics",
+        "img": "/wp-content/uploads/2026/07/interics.webp"
+      },
+      {
+        "name": "Strategy Steamers",
+        "img": "/wp-content/uploads/2026/07/strategy-steamers.webp"
+      },
+      {
+        "name": "Epanipuricart",
+        "img": "/wp-content/uploads/2026/07/epanipuricart.webp"
+      },
+      {
+        "name": "EmigrateJobs",
+        "img": "/wp-content/uploads/2026/07/emigratejobs.webp"
+      },
+      {
+        "name": "CrazyShots",
+        "img": "/wp-content/uploads/2026/07/crazyshots.webp"
+      },
+      {
+        "name": "Teffes",
+        "img": "/wp-content/uploads/2026/07/teffes.webp"
+      }
     ]
   },
   "solutions": {
     "h2": "Automate. Engage. Optimize.",
     "text": "Openink Hub is an AI-powered growth engine and all-in-one automation platform built for startups and SMEs. It integrates a complete search optimization stack with advanced business automation tools to help brands scale efficiently across traditional search engines and AI assistants.",
     "links": [
-      {"label": "WhatsApp AI Automation", "href": "/whatsapp-ai-chatbot/"},
-      {"label": "Search Engine Optimization", "href": "/best-on-page-seo-services/"},
-      {"label": "Google Business Profile Optimization", "href": "/google-my-business/"},
-      {"label": "AI Voice Agent", "href": "/ai-voice-agent/"},
-      {"label": "Human Resource Management Software", "href": "/human-resources-management/"},
-      {"label": "Enterprise Brand AI SEO Audit", "href": "/best-seo-audit-tools/"},
-      {"label": "Social Media Optimization", "href": "/social-media-optimization/"},
-      {"label": "Application Tracking System", "href": "/application-tracking-system/"},
-      {"label": "Artificial Intelligence Optimization", "href": "/artificial-intelligence-optimization/"},
-      {"label": "Answer Engine Optimization", "href": "/best-answer-engine-optimization-services/"},
-      {"label": "Generative Engine Optimization", "href": "/generative-engine-optimization/"},
-      {"label": "AI Blog Post", "href": "/best-ai-writing-tools-for-bloggers/"},
-      {"label": "High Authority Backlinks", "href": "/high-quality-backlinks/"},
-      {"label": "Website Development", "href": "/website-design-agency/"}
+      {
+        "label": "WhatsApp AI Automation",
+        "href": "/whatsapp-ai-chatbot/"
+      },
+      {
+        "label": "Search Engine Optimization",
+        "href": "/best-on-page-seo-services/"
+      },
+      {
+        "label": "Google Business Profile Optimization",
+        "href": "/google-my-business/"
+      },
+      {
+        "label": "AI Voice Agent",
+        "href": "/ai-voice-agent/"
+      },
+      {
+        "label": "Human Resource Management Software",
+        "href": "/human-resources-management/"
+      },
+      {
+        "label": "Enterprise Brand AI SEO Audit",
+        "href": "/best-seo-audit-tools/"
+      },
+      {
+        "label": "Social Media Optimization",
+        "href": "/social-media-optimization/"
+      },
+      {
+        "label": "Application Tracking System",
+        "href": "/application-tracking-system/"
+      },
+      {
+        "label": "Artificial Intelligence Optimization",
+        "href": "/artificial-intelligence-optimization/"
+      },
+      {
+        "label": "Answer Engine Optimization",
+        "href": "/best-answer-engine-optimization-services/"
+      },
+      {
+        "label": "Generative Engine Optimization",
+        "href": "/generative-engine-optimization/"
+      },
+      {
+        "label": "AI Blog Post",
+        "href": "/best-ai-writing-tools-for-bloggers/"
+      },
+      {
+        "label": "High Authority Backlinks",
+        "href": "/high-quality-backlinks/"
+      },
+      {
+        "label": "Website Development",
+        "href": "/website-design-agency/"
+      }
     ]
   },
   "faq": {
     "h2": "Frequently Asked Questions",
     "items": [
-      {"q": "What is business automation?", "a": "Business automation is the use of software, artificial intelligence (AI), and workflows to automate repetitive tasks. It helps businesses save time, reduce manual errors, improve efficiency, and increase overall productivity."},
-      {"q": "How does workflow automation work?", "a": "Workflow automation connects different business processes using predefined rules and triggers. When a specific action occurs, the system automatically performs the next step without requiring manual intervention."},
-      {"q": "What are the benefits of workflow automation?", "a": "Workflow automation reduces repetitive work, minimizes human errors, improves collaboration, speeds up approvals, increases productivity, and helps businesses scale operations more efficiently."},
-      {"q": "What is CRM automation?", "a": "CRM automation automatically manages customer interactions, follow-ups, lead tracking, reminders, and sales activities, allowing businesses to build stronger customer relationships."},
-      {"q": "How can CRM automation increase sales?", "a": "CRM automation captures leads, schedules follow-ups, sends reminders, and tracks customer interactions, helping sales teams respond faster and convert more prospects into customers."},
-      {"q": "What is WhatsApp automation?", "a": "WhatsApp automation uses automated messages, chatbots, and workflows to handle customer inquiries, send updates, collect information, and provide support 24/7. To Know more <a href=\"/whatsapp-ai-chatbot/\">click here</a>"}
+      {
+        "q": "What is AI search optimization?",
+        "a": "AI search optimization means making your business easy to find in Google and in AI answers from tools like ChatGPT, Gemini and Perplexity. Openink Hub combines SEO, AEO, GEO and AIO into one AI search optimization plan, so you show up wherever customers search."
+      },
+      {
+        "q": "What is business automation?",
+        "a": "Business automation is the use of software, artificial intelligence (AI), and workflows to automate repetitive tasks. It helps businesses save time, reduce manual errors, improve efficiency, and increase overall productivity."
+      },
+      {
+        "q": "How does workflow automation work?",
+        "a": "Workflow automation connects different business processes using predefined rules and triggers. When a specific action occurs, the system automatically performs the next step without requiring manual intervention."
+      },
+      {
+        "q": "What are the benefits of workflow automation?",
+        "a": "Workflow automation reduces repetitive work, minimizes human errors, improves collaboration, speeds up approvals, increases productivity, and helps businesses scale operations more efficiently."
+      },
+      {
+        "q": "What is CRM automation?",
+        "a": "CRM automation automatically manages customer interactions, follow-ups, lead tracking, reminders, and sales activities, allowing businesses to build stronger customer relationships."
+      },
+      {
+        "q": "How can CRM automation increase sales?",
+        "a": "CRM automation captures leads, schedules follow-ups, sends reminders, and tracks customer interactions, helping sales teams respond faster and convert more prospects into customers."
+      },
+      {
+        "q": "What is WhatsApp automation?",
+        "a": "WhatsApp automation uses automated messages, chatbots, and workflows to handle customer inquiries, send updates, collect information, and provide support 24/7. To Know more <a href=\"/whatsapp-ai-chatbot/\">click here</a>"
+      }
     ]
   }
 }

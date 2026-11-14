@@ -121,7 +121,7 @@
       "maxPercentLong": 25
     },
     "paragraphLength": {
-      "maxWords": 150
+      "maxWords": 120
     },
     "subheadingDistribution": {
       "maxWordsWithoutHeading": 300
@@ -184,6 +184,13 @@
     "plainLanguage": true,
     "copyEdits": true,
     "faqAdditions": true,
+    "simpleWords": true,
+    "longParagraphs": true,
+    "titleYear": true,
+    "topicKits": true,
+    "cardLayout": true,
+    "plainFaq": true,
+    "linkText": true,
     "openGraph": true,
     "twitterCard": true,
     "excerpt": true,
@@ -198,7 +205,8 @@
     "llmsTxt": true,
     "redirects": true,
     "robotsDisallowAdmin": true,
-    "securityHeaders": true
+    "securityHeaders": true,
+    "summaries": true
   },
   "critical": [
     "seo_title",
@@ -450,17 +458,17 @@
     },
     {
       "path": "/best-answer-engine-optimization-services/",
-      "label": "Answer engine optimization (AEO) services",
+      "label": "AEO services: answers for Google and AI assistants",
       "topic": "aeo answer engine optimization ai search expert"
     },
     {
       "path": "/generative-engine-optimization/",
-      "label": "Generative engine optimization (GEO)",
+      "label": "GEO services: get cited by AI tools",
       "topic": "geo generative engine optimization ai chatgpt search"
     },
     {
       "path": "/artificial-intelligence-optimization/",
-      "label": "AI optimization (AIO) services",
+      "label": "AIO services: AI-ready brand data",
       "topic": "aio artificial intelligence optimization ai automation"
     },
     {
@@ -480,7 +488,7 @@
     },
     {
       "path": "/social-media-optimization/",
-      "label": "Social media optimization",
+      "label": "Social media (SMO) services",
       "topic": "social media optimization marketing"
     },
     {
@@ -508,5 +516,33 @@
       "label": "Website design and development",
       "topic": "website design development agency web"
     }
-  ]
+  ],
+  "simpleWords": {
+    "_note": "Words replaced in page text except inside the page keyphrase/secondary keyphrases: optimization->improvement, generative->AI, artificial intelligence->AI, full service names->SEO/AEO/GEO/AIO. Add phrases to keep in keep[].",
+    "keep": []
+  },
+  "titleYear": {
+    "_note": "Adds the year to titles that have none, if it fits in the title limit.",
+    "year": 2026,
+    "skipPaths": [],
+    "skipTypes": [],
+    "overrides": {
+      "/best-seo-agency-in-aizawl/": "SEO Agency in Aizawl (2026): Local & AI Search, Mizoram",
+      "/best-seo-agency-in-allahabad/": "SEO Agency in Prayagraj (2026): Local & AI Search",
+      "/best-seo-agency-in-amravati/": "SEO Agency in Amravati (2026): Vidarbha Local & AI Search",
+      "/best-seo-agency-in-aurangabad/": "SEO Agency in Sambhajinagar (2026): Auto & Tourism",
+      "/best-seo-agency-in-bilaspur/": "SEO Agency in Bilaspur (2026): Local & B2B Search",
+      "/best-seo-agency-in-chandigarh/": "SEO Agency in Chandigarh (2026): Tricity Local & AI Search",
+      "/best-seo-agency-in-guwahati/": "SEO Agency in Guwahati (2026): Northeast Local & B2B SEO",
+      "/best-seo-agency-in-itanagar/": "SEO Agency in Itanagar (2026): Arunachal Local & Travel",
+      "/best-seo-agency-in-mathura/": "SEO Agency in Mathura & Vrindavan (2026): Pilgrimage SEO",
+      "/best-seo-agency-in-navi-mumbai/": "SEO Agency in Navi Mumbai (2026): Local & B2B SEO",
+      "/best-seo-agency/": "Best SEO Agency in India (2026): How to Choose a Partner",
+      "/best-website-development-company-in-india/": "Best Website Development Company in India (2026)",
+      "/responsive-website-design/": "Responsive Website Design (2026): Why Mobile Matters",
+      "/website-design-development/": "Website Design & Development Services (2026)",
+      "/website-development-agency-vs-freelancer/": "Website Development Agency vs Freelancer (2026)",
+      "/website-development-location/": "Website Development Company in Your City (2026)"
+    }
+  }
 }

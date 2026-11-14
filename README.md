@@ -115,6 +115,21 @@ Edit a page's HTML or FAQs, then `npm run articles && npm test`. Set `"status": 
 - the hub page named in the brief lists its articles under "Articles on this topic"; related posts prefer the same hub/cluster
 - the audit reports them as their own section, "Website development articles"
 
+## Page standards applied to every page (build time)
+
+| Rule (rules.json -> autofix) | What it does | Where |
+|---|---|---|
+| `simpleWords` | "optimization", "generative", "artificial intelligence" become plain words or SEO/AEO/GEO/AIO/AI, except inside each page's keyphrases | `tools/content-rules.mjs` |
+| `longParagraphs` | splits paragraphs over 120 words; link-only "paragraphs" become a chip list | `tools/content-rules.mjs` |
+| `titleYear` | adds "(2026)" to every title within 60 characters; hand-written exceptions in `titleYear.overrides` | `rules.json` |
+| `topicKits` | adds what a page lacks: "How to choose" numbered guide, evaluation table, named tools, key numbers with sources | `content/seo/kits.json` |
+| `cardLayout` | every H2 section is a card like the home page; "Label: text" lists become card grids | `tools/layout.mjs` |
+| `plainFaq` | FAQs shown open (no click-to-expand), with FAQPage schema | `tools/layout.mjs` |
+| `linkText` | bare-URL, "click here" and image-only links get the target page's name; "… →" links become buttons | `tools/layout.mjs` |
+| `copyEdits`, `summaries`, `faqAdditions` | wording edits, "In summary" sections and extra FAQs for imported pages | `content/seo/copy-edits.json`, `summaries.json`, `faqs.json` |
+
+Helpers (run after `npm run build`, then build again): `node tools/suggest-transitions.mjs` adds connector words on pages under 20%; `node tools/fix-repeats.mjs` breaks repeated sentence starts; `node tools/transition-gaps.mjs /path/` and `node tools/readability-runs.mjs /path/` show the details.
+
 ## Content removals and plain-language edits
 
 `content/seo/removals.json` removes or replaces sections of imported WordPress pages (e.g. placeholder case studies,

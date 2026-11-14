@@ -1,0 +1,888 @@
+{
+  "_note": "Topic kits added to every page (except home, contact, legal and listings) at build time: a 'How to choose' guide, an evaluation table, named tools and key numbers with sources. A page only gets the parts its own content lacks (no table -> table; no 'how to choose' heading -> guide; fewer than 3 of the tools named -> tools). Groups are matched by path, first match wins.",
+  "groups": [
+    {
+      "id": "whatsapp",
+      "match": [
+        "whatsapp"
+      ],
+      "topic": "WhatsApp automation",
+      "choose": [
+        "Confirm the provider uses the official WhatsApp Business Platform (Cloud API), not an unofficial tool that risks a ban.",
+        "Check how opt-ins are collected and stored, and how customers opt out.",
+        "Ask how template messages are approved and how replies inside the 24-hour window are handled.",
+        "Test the chatbot with your real customer questions, including hand-off to a live agent.",
+        "Compare total cost: platform fee, Meta conversation charges and setup work.",
+        "Make sure chats sync to your CRM so sales can follow up."
+      ],
+      "compare": {
+        "cols": [
+          "What to check",
+          "What good looks like",
+          "Red flag"
+        ],
+        "rows": [
+          [
+            "API access",
+            "Official WhatsApp Business Platform via Meta or an approved partner",
+            "Bulk senders that use personal numbers"
+          ],
+          [
+            "Consent",
+            "Clear opt-in, easy opt-out, consent records kept",
+            "Messaging bought or scraped lists"
+          ],
+          [
+            "Automation",
+            "AI replies plus smooth hand-off to people",
+            "Bot that traps customers in loops"
+          ],
+          [
+            "Integrations",
+            "CRM, calendar and payment links",
+            "Exports by spreadsheet only"
+          ],
+          [
+            "Reporting",
+            "Delivery, read, reply and conversion rates",
+            "Message counts only"
+          ]
+        ]
+      },
+      "tools": [
+        [
+          "WhatsApp Business Platform",
+          "Meta's official API for business messaging at scale"
+        ],
+        [
+          "Meta Business Manager",
+          "Account, number and template management"
+        ],
+        [
+          "WATI",
+          "Indian WhatsApp team inbox and campaigns"
+        ],
+        [
+          "AiSensy",
+          "WhatsApp broadcasts and chatbots for Indian SMEs"
+        ],
+        [
+          "Interakt",
+          "WhatsApp commerce and catalogue messaging"
+        ],
+        [
+          "Zoho CRM",
+          "Lead tracking for chats that turn into deals"
+        ]
+      ],
+      "numbers": [
+        [
+          "2B+",
+          "people use WhatsApp worldwide",
+          "Meta",
+          "https://about.fb.com/news/2020/02/two-billion-whatsapp-users/"
+        ],
+        [
+          "24 hours",
+          "customer service window for free-form replies after a customer messages you",
+          "WhatsApp Business Platform docs",
+          "https://developers.facebook.com/docs/whatsapp"
+        ],
+        [
+          "2023",
+          "year India passed the Digital Personal Data Protection Act, which covers customer consent",
+          "MeitY",
+          "https://www.meity.gov.in/"
+        ]
+      ]
+    },
+    {
+      "id": "hr",
+      "match": [
+        "hrms",
+        "human-resources",
+        "application-tracking",
+        "ats-software",
+        "hr-workflow"
+      ],
+      "topic": "HR and hiring software",
+      "choose": [
+        "List the HR tasks that take the most time today, such as attendance, payroll inputs or screening.",
+        "Check that payroll handles Indian rules such as EPF, ESI and professional tax.",
+        "Make sure managers and staff can use it on mobile.",
+        "Ask how employee data is secured and who can see what.",
+        "Check integrations with accounting, job boards and email or WhatsApp.",
+        "Run a pilot with one team before rolling out to everyone."
+      ],
+      "compare": {
+        "cols": [
+          "What to check",
+          "What good looks like",
+          "Red flag"
+        ],
+        "rows": [
+          [
+            "Core HR",
+            "Records, attendance, leave and payroll in one place",
+            "Separate tools that do not share data"
+          ],
+          [
+            "Hiring",
+            "Job posting, pipeline, interview scheduling and offers",
+            "Resumes tracked in email folders"
+          ],
+          [
+            "Compliance",
+            "EPF, ESI and labour code updates built in",
+            "Manual statutory calculations"
+          ],
+          [
+            "Self-service",
+            "Employees apply for leave and view payslips on mobile",
+            "Every request goes through HR by email"
+          ],
+          [
+            "Reports",
+            "Headcount, attrition, time-to-hire and cost reports",
+            "No exports or dashboards"
+          ]
+        ]
+      },
+      "tools": [
+        [
+          "Keka",
+          "Indian HR and payroll platform"
+        ],
+        [
+          "greytHR",
+          "Payroll and compliance for Indian SMEs"
+        ],
+        [
+          "Zoho People",
+          "HR records, attendance and leave"
+        ],
+        [
+          "Darwinbox",
+          "HR suite for larger Indian companies"
+        ],
+        [
+          "Naukri",
+          "India's large job board for sourcing candidates"
+        ],
+        [
+          "LinkedIn Jobs",
+          "Professional hiring and employer branding"
+        ]
+      ],
+      "numbers": [
+        [
+          "12%",
+          "of basic wages: the standard EPF contribution from employee and from employer",
+          "EPFO",
+          "https://www.epfindia.gov.in/"
+        ],
+        [
+          "29 → 4",
+          "central labour laws merged into four labour codes",
+          "Ministry of Labour and Employment",
+          "https://labour.gov.in/"
+        ],
+        [
+          "2023",
+          "year India passed the Digital Personal Data Protection Act, which covers employee data",
+          "MeitY",
+          "https://www.meity.gov.in/"
+        ]
+      ]
+    },
+    {
+      "id": "local",
+      "match": [
+        "google-my-business",
+        "gmb",
+        "geo-targeting",
+        "profile-creation"
+      ],
+      "topic": "local search and Google Business Profile",
+      "choose": [
+        "Start with your Google Business Profile: correct name, primary category, hours and service areas.",
+        "Make sure your name, address and phone match on your website and every directory.",
+        "Plan a steady flow of genuine reviews, and reply to each one.",
+        "Add real photos and regular posts, not stock images.",
+        "Build one page per location or service area on your website.",
+        "Track calls, direction requests and website clicks from the profile."
+      ],
+      "compare": {
+        "cols": [
+          "What to check",
+          "What good looks like",
+          "Red flag"
+        ],
+        "rows": [
+          [
+            "Profile",
+            "Every field complete, right categories, verified",
+            "Keyword-stuffed business name"
+          ],
+          [
+            "Reviews",
+            "Steady, genuine reviews with replies",
+            "Bought or fake reviews"
+          ],
+          [
+            "Citations",
+            "Consistent details on trusted directories",
+            "Hundreds of low-quality listings"
+          ],
+          [
+            "Website",
+            "Location pages with local proof",
+            "One page for all areas"
+          ],
+          [
+            "Reporting",
+            "Calls, directions and leads by location",
+            "Map rank screenshots only"
+          ]
+        ]
+      },
+      "tools": [
+        [
+          "Google Business Profile",
+          "Your listing on Google Search and Maps"
+        ],
+        [
+          "Google Maps",
+          "Where local customers find directions and reviews"
+        ],
+        [
+          "Bing Places",
+          "Your listing on Bing and Microsoft products"
+        ],
+        [
+          "Apple Business Connect",
+          "Your place card in Apple Maps"
+        ],
+        [
+          "Justdial",
+          "Large Indian local business directory"
+        ],
+        [
+          "Google Search Console",
+          "Search clicks to your location pages"
+        ]
+      ],
+      "numbers": [
+        [
+          "3",
+          "factors Google uses for local results: relevance, distance and prominence",
+          "Google Business Profile Help",
+          "https://support.google.com/business/answer/7091"
+        ],
+        [
+          "750",
+          "characters allowed in a Business Profile description",
+          "Google Business Profile Help",
+          "https://support.google.com/business/"
+        ],
+        [
+          "1 + 9",
+          "one primary category plus up to nine additional categories",
+          "Google Business Profile Help",
+          "https://support.google.com/business/"
+        ]
+      ]
+    },
+    {
+      "id": "aeo",
+      "match": [
+        "answer-engine"
+      ],
+      "topic": "AEO",
+      "choose": [
+        "Collect the real questions customers ask from sales calls, support chats and search data.",
+        "Answer each question directly in the first 40–60 words, then add detail.",
+        "Use question-led H2 and H3 headings and short paragraphs.",
+        "Add FAQ, Article and Organization schema, and test it.",
+        "Check which answers win featured snippets and AI answers, then improve the rest.",
+        "Ask any provider to show answer wins they achieved, not just rankings."
+      ],
+      "compare": {
+        "cols": [
+          "What to check",
+          "What good looks like",
+          "Red flag"
+        ],
+        "rows": [
+          [
+            "Question research",
+            "Questions from real customers and search data",
+            "Generic keyword lists"
+          ],
+          [
+            "Answer quality",
+            "Direct answer first, then proof and detail",
+            "Long intros before the answer"
+          ],
+          [
+            "Structure",
+            "Question headings, lists, tables",
+            "Walls of text"
+          ],
+          [
+            "Schema",
+            "Valid FAQ, Article and Organization markup",
+            "Markup that does not match visible content"
+          ],
+          [
+            "Measurement",
+            "Snippet wins, AI citations and clicks",
+            "Rankings only"
+          ]
+        ]
+      },
+      "tools": [
+        [
+          "Google Search Console",
+          "Queries and pages that earn clicks"
+        ],
+        [
+          "Rich Results Test",
+          "Google's schema checker"
+        ],
+        [
+          "Schema Markup Validator",
+          "Checks schema.org markup"
+        ],
+        [
+          "AlsoAsked",
+          "People Also Ask question research"
+        ],
+        [
+          "AnswerThePublic",
+          "Question ideas from search data"
+        ],
+        [
+          "Perplexity",
+          "Test how AI answers your target questions"
+        ]
+      ],
+      "numbers": [
+        [
+          "40–60",
+          "words: our target length for a direct answer (a guideline, not a Google rule)",
+          "Openink Hub practice",
+          "/best-answer-engine-optimization-services/"
+        ],
+        [
+          "Aug 2023",
+          "Google limited FAQ rich results to well-known government and health sites",
+          "Google Search Central",
+          "https://developers.google.com/search/blog/2023/08/howto-faq-changes"
+        ],
+        [
+          "2011",
+          "year Google, Bing and Yahoo launched schema.org",
+          "schema.org",
+          "https://schema.org/docs/about.html"
+        ]
+      ]
+    },
+    {
+      "id": "geo",
+      "match": [
+        "generative-engine"
+      ],
+      "topic": "GEO",
+      "choose": [
+        "Test what ChatGPT, Gemini, Perplexity and Google AI Overviews say about your brand today.",
+        "List the questions where you want to be mentioned or cited.",
+        "Publish clear, quotable pages with facts, numbers and named sources.",
+        "Keep your brand facts consistent across your site, profiles and directories.",
+        "Earn mentions on trusted sites that AI tools read.",
+        "Re-test monthly and track citations, not just traffic."
+      ],
+      "compare": {
+        "cols": [
+          "What to check",
+          "What good looks like",
+          "Red flag"
+        ],
+        "rows": [
+          [
+            "Baseline",
+            "Tested prompts across several AI tools",
+            "No measurement of AI answers"
+          ],
+          [
+            "Content",
+            "Quotable facts, data and clear answers",
+            "Thin pages written for keywords"
+          ],
+          [
+            "Entity signals",
+            "Consistent brand facts and schema",
+            "Different names and details everywhere"
+          ],
+          [
+            "Authority",
+            "Mentions on trusted, relevant sites",
+            "Spammy links"
+          ],
+          [
+            "Promises",
+            "Honest about what cannot be guaranteed",
+            "Guaranteed ChatGPT placement"
+          ]
+        ]
+      },
+      "tools": [
+        [
+          "ChatGPT",
+          "Check how OpenAI's assistant describes you"
+        ],
+        [
+          "Google Gemini",
+          "Check Google's assistant"
+        ],
+        [
+          "Perplexity",
+          "AI answers with visible source citations"
+        ],
+        [
+          "Microsoft Copilot",
+          "AI answers built on Bing"
+        ],
+        [
+          "Google AI Overviews",
+          "AI summaries at the top of Google Search"
+        ],
+        [
+          "llms.txt",
+          "A simple file that points AI tools to your key pages"
+        ]
+      ],
+      "numbers": [
+        [
+          "May 2024",
+          "Google launched AI Overviews in Search in the US",
+          "Google Search Central",
+          "https://developers.google.com/search/docs/appearance/ai-features"
+        ],
+        [
+          "Oct 2024",
+          "OpenAI launched ChatGPT search with linked sources",
+          "OpenAI",
+          "https://openai.com/index/introducing-chatgpt-search/"
+        ],
+        [
+          "Sept 2024",
+          "the llms.txt standard was proposed for AI-readable sites",
+          "llmstxt.org",
+          "https://llmstxt.org/"
+        ]
+      ]
+    },
+    {
+      "id": "ai",
+      "match": [
+        "artificial-intelligence",
+        "ai-seo",
+        "agentic",
+        "ai-voice",
+        "ai-writing",
+        "ai-blog"
+      ],
+      "topic": "AI search and AI automation",
+      "choose": [
+        "Pick one process where AI can save clear time, such as replies, content drafts or lead follow-up.",
+        "Check what data the AI tool uses and where it is stored.",
+        "Keep a person in charge of accuracy, tone and final approval.",
+        "Make your brand facts machine-readable with schema and consistent profiles.",
+        "Measure hours saved, leads won and errors, not just activity.",
+        "Scale to the next process only after the first one works."
+      ],
+      "compare": {
+        "cols": [
+          "What to check",
+          "What good looks like",
+          "Red flag"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "One clear task with a measurable goal",
+            "AI everywhere with no goal"
+          ],
+          [
+            "Data",
+            "Clear data handling and consent",
+            "Customer data pasted into public tools"
+          ],
+          [
+            "Quality",
+            "Human review before anything goes live",
+            "Fully automatic publishing"
+          ],
+          [
+            "Machine-readable brand",
+            "Schema, llms.txt and consistent facts",
+            "No structured data"
+          ],
+          [
+            "Results",
+            "Hours saved, leads and revenue tracked",
+            "Vanity metrics"
+          ]
+        ]
+      },
+      "tools": [
+        [
+          "ChatGPT",
+          "Drafting, research and support replies"
+        ],
+        [
+          "Google Gemini",
+          "AI assistant inside Google Workspace"
+        ],
+        [
+          "Perplexity",
+          "Research with cited sources"
+        ],
+        [
+          "schema.org",
+          "Shared vocabulary for structured data"
+        ],
+        [
+          "Wikidata",
+          "Open knowledge base that many AI systems read"
+        ],
+        [
+          "Zapier",
+          "Connects AI steps to your other apps"
+        ]
+      ],
+      "numbers": [
+        [
+          "2011",
+          "year Google, Bing and Yahoo launched schema.org",
+          "schema.org",
+          "https://schema.org/docs/about.html"
+        ],
+        [
+          "100M+",
+          "items in Wikidata, an open source of entity facts",
+          "Wikidata",
+          "https://www.wikidata.org/"
+        ],
+        [
+          "2023",
+          "year India passed the Digital Personal Data Protection Act, which applies to data used by AI tools",
+          "MeitY",
+          "https://www.meity.gov.in/"
+        ]
+      ]
+    },
+    {
+      "id": "social",
+      "match": [
+        "social-media"
+      ],
+      "topic": "social media (SMO)",
+      "choose": [
+        "Pick the two or three platforms your buyers actually use.",
+        "Complete every profile with the same name, logo, description and website link.",
+        "Plan a simple weekly posting calendar you can keep.",
+        "Reuse your best articles and FAQs as posts and short videos.",
+        "Reply to comments and messages quickly.",
+        "Track profile visits, clicks to your site and enquiries."
+      ],
+      "compare": {
+        "cols": [
+          "What to check",
+          "What good looks like",
+          "Red flag"
+        ],
+        "rows": [
+          [
+            "Profiles",
+            "Complete and consistent on every platform",
+            "Old logos and broken links"
+          ],
+          [
+            "Content",
+            "Useful posts tied to your services",
+            "Random reposts"
+          ],
+          [
+            "Consistency",
+            "A calendar you can sustain",
+            "Bursts then silence"
+          ],
+          [
+            "Engagement",
+            "Fast, helpful replies",
+            "Unanswered comments"
+          ],
+          [
+            "Results",
+            "Clicks, leads and enquiries",
+            "Follower counts only"
+          ]
+        ]
+      },
+      "tools": [
+        [
+          "Meta Business Suite",
+          "Facebook and Instagram posting and inbox"
+        ],
+        [
+          "LinkedIn Pages",
+          "Company page for B2B audiences"
+        ],
+        [
+          "YouTube Studio",
+          "Video uploads and analytics"
+        ],
+        [
+          "Canva",
+          "Quick branded graphics and videos"
+        ],
+        [
+          "Buffer",
+          "Scheduling posts across platforms"
+        ],
+        [
+          "Google Analytics 4",
+          "Measures social traffic to your site"
+        ]
+      ],
+      "numbers": [
+        [
+          "1B+",
+          "members on LinkedIn",
+          "LinkedIn",
+          "https://news.linkedin.com/about-us"
+        ],
+        [
+          "1200 × 630",
+          "pixels: a common size for link preview images",
+          "Meta for Developers",
+          "https://developers.facebook.com/docs/sharing/webmasters/images/"
+        ],
+        [
+          "4",
+          "basic Open Graph tags every page needs: title, type, image and URL",
+          "The Open Graph protocol",
+          "https://ogp.me/"
+        ]
+      ]
+    },
+    {
+      "id": "webdev",
+      "match": [
+        "website",
+        "web-",
+        "frontend",
+        "backend",
+        "full-stack",
+        "ecommerce",
+        "wordpress",
+        "custom-web",
+        "technology-development",
+        "startups",
+        "business-model",
+        "lead-generation",
+        "corporate",
+        "small-business"
+      ],
+      "types": [
+        "guide"
+      ],
+      "topic": "website design and development",
+      "choose": [
+        "Write a one-page brief with goals, pages, features, budget and deadline.",
+        "Shortlist three to five developers with live work like yours.",
+        "Test their live sites on a phone for speed and ease of use.",
+        "Compare itemised quotes, including SEO, testing and support.",
+        "Confirm you will own the code, domain and hosting accounts.",
+        "Agree a support plan with response times before launch."
+      ],
+      "compare": {
+        "cols": [
+          "What to check",
+          "What good looks like",
+          "Red flag"
+        ],
+        "rows": [
+          [
+            "Portfolio",
+            "Live sites in your sector with results",
+            "Mock-ups only"
+          ],
+          [
+            "Speed",
+            "Passes Core Web Vitals on mobile",
+            "Heavy sliders and plugins"
+          ],
+          [
+            "Accessibility",
+            "Meets WCAG 2.2 AA basics",
+            "Low contrast, no keyboard support"
+          ],
+          [
+            "Ownership",
+            "Code, domain and hosting in your name",
+            "Agency holds your accounts"
+          ],
+          [
+            "Support",
+            "Written plan with response times",
+            "No plan after launch"
+          ]
+        ]
+      },
+      "tools": [
+        [
+          "WordPress",
+          "Popular CMS for business sites"
+        ],
+        [
+          "Shopify",
+          "Hosted ecommerce platform"
+        ],
+        [
+          "WooCommerce",
+          "Ecommerce on WordPress"
+        ],
+        [
+          "Figma",
+          "Design and prototyping"
+        ],
+        [
+          "Cloudflare",
+          "CDN, security and fast hosting"
+        ],
+        [
+          "PageSpeed Insights",
+          "Google's speed and Core Web Vitals test"
+        ]
+      ],
+      "numbers": [
+        [
+          "2.5 s",
+          "Largest Contentful Paint for a 'good' page; INP should be 200 ms or less and CLS 0.1 or less",
+          "Google Search Central",
+          "https://developers.google.com/search/docs/appearance/core-web-vitals"
+        ],
+        [
+          "4.5 : 1",
+          "minimum text contrast ratio for WCAG AA",
+          "W3C",
+          "https://www.w3.org/WAI/standards-guidelines/wcag/"
+        ],
+        [
+          "2018",
+          "year Chrome began marking all HTTP pages 'Not secure'",
+          "Chromium Blog",
+          "https://blog.chromium.org/2018/02/a-secure-web-is-here-to-stay.html"
+        ]
+      ]
+    },
+    {
+      "id": "seo",
+      "match": [
+        ""
+      ],
+      "topic": "SEO",
+      "choose": [
+        "Ask for live results from businesses like yours, with numbers.",
+        "Check the plan covers technical SEO, content, local search and AI visibility.",
+        "Make sure reporting shows leads and revenue, not just rankings.",
+        "Confirm who does the work and how often you will get updates.",
+        "Avoid anyone who guarantees #1 rankings.",
+        "Start with an audit so the plan is based on your site, not a template."
+      ],
+      "compare": {
+        "cols": [
+          "What to check",
+          "What good looks like",
+          "Red flag"
+        ],
+        "rows": [
+          [
+            "Technical SEO",
+            "Crawl, speed and index issues fixed first",
+            "Only keyword lists"
+          ],
+          [
+            "Content",
+            "Helpful pages that match search intent",
+            "Thin, copied or spun articles"
+          ],
+          [
+            "Links",
+            "Relevant, earned mentions",
+            "Bought link packages"
+          ],
+          [
+            "AI search",
+            "Plan for AEO, GEO and AIO",
+            "Ignores AI answers"
+          ],
+          [
+            "Reporting",
+            "Leads, sales and clear next steps",
+            "Rank screenshots only"
+          ]
+        ]
+      },
+      "tools": [
+        [
+          "Google Search Console",
+          "Index coverage, queries and clicks"
+        ],
+        [
+          "Google Analytics 4",
+          "Traffic, leads and conversions"
+        ],
+        [
+          "PageSpeed Insights",
+          "Core Web Vitals and speed"
+        ],
+        [
+          "Screaming Frog SEO Spider",
+          "Site crawls and technical audits"
+        ],
+        [
+          "Ahrefs",
+          "Backlinks and keyword research"
+        ],
+        [
+          "Semrush",
+          "Keyword, competitor and site audit data"
+        ]
+      ],
+      "numbers": [
+        [
+          "2.5 s",
+          "Largest Contentful Paint for a 'good' page; INP should be 200 ms or less and CLS 0.1 or less",
+          "Google Search Central",
+          "https://developers.google.com/search/docs/appearance/core-web-vitals"
+        ],
+        [
+          "50,000",
+          "URLs maximum in one XML sitemap file (or 50 MB uncompressed)",
+          "Google Search Central",
+          "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+        ],
+        [
+          "3",
+          "factors Google uses for local results: relevance, distance and prominence",
+          "Google Business Profile Help",
+          "https://support.google.com/business/answer/7091"
+        ]
+      ]
+    }
+  ]
+}

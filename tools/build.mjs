@@ -701,22 +701,26 @@ function categoryTpl(rec, posts, x, cards, filters) {
   const ctas = (x.ctas || []).map((c, i) => `<a class="btn ${i ? "btn-ghost" : "btn-primary"}" href="${E(c.href)}">${E(c.label)}${i ? "" : icon("arrow")}</a>`).join("");
   let out = `<section class="hero hero-about hero-service">
   <div class="hero-bg" aria-hidden="true"></div>
-  <div class="wrap">
+  <div class="wrap${rec._cover ? " hero-grid" : ""}">
     <div class="hero-copy">${breadcrumb([["Blog", rec.path === "/category/best-seo-content-agency/" ? null : "/category/best-seo-content-agency/"], ...(rec.path === "/category/best-seo-content-agency/" ? [] : [[cut(stripTags(h1), 40), null]])])}
       ${x.eyebrow ? `<span class="eyebrow">${E(x.eyebrow)}</span>` : ""}
       <h1>${E(h1)}</h1>
       <!--seo:content--><p class="lead">${E(x.lead)}</p>${x.quick ? `<div class="quick-answer"><p><strong>Quick answer:</strong> ${E(x.quick)}</p></div>` : ""}<!--/seo:content-->
       <div class="hero-ctas">${ctas}</div>
     </div>
+    ${rec._cover ? `<div class="hero-visual"><!--seo:content--><img src="${E(rel(rec._cover.src))}" alt="${E(rec._cover.alt)}" width="1200" height="630" fetchpriority="high"><!--/seo:content--></div>` : ""}
   </div>
 </section>`;
-  if (x.stats?.length) out += `<section class="section section-tight"><div class="wrap"><!--seo:content--><ul class="about-stats figures">${x.stats.map((s) => `<li><span>${E(s.label)}</span><b>${E(s.value)}</b></li>`).join("")}</ul><!--/seo:content--></div></section>`;
+  // stats, the shared "Next step" cards and the state list on the SEO page are site-wide boilerplate/navigation:
+  // shown, but kept outside <!--seo:content--> so they do not count towards content overlap between categories
+  if (x.stats?.length) out += `<section class="section section-tight"><div class="wrap"><ul class="about-stats figures">${x.stats.map((s) => `<li><span>${E(s.label)}</span><b>${E(s.value)}</b></li>`).join("")}</ul></div></section>`;
   const b = x.browse || { title: "All articles" };
   out += `<section class="${secOpen()}"><div class="wrap"><!--seo:content-->${head(b)}<!--/seo:content--><div class="chips">${filters}</div><div class="post-grid">${cards}</div></div></section>`;
   if (x.states) {
     const st = cityStates();
-    out += `<section class="${secOpen()}"><div class="wrap"><!--seo:content-->${head({ eyebrow: "By state", title: "Find your city by state", lead: `${st.reduce((t, s) => t + s.cities.length, 0)} cities in ${st.length} states and union territories.` })}
-<div class="svc-grid svc-cards-auto state-grid">${st.map((s) => `<article class="svc-card"><span class="card-tag">${s.cities.length} ${s.cities.length === 1 ? "guide" : "guides"}</span><h3>${E(s.state)}</h3><p class="state-cities">${s.cities.map((c) => `<a href="${E(c.path)}">${E(c.city)}</a>`).join(" · ")}</p></article>`).join("")}</div><!--/seo:content--></div></section>`;
+    const own = rec.path === "/category/seo-agency-by-city/";
+    out += `<section class="${secOpen()}"><div class="wrap">${own ? "<!--seo:content-->" : ""}${head({ eyebrow: "By state", title: "Find your city by state", lead: `${st.reduce((t, s) => t + s.cities.length, 0)} cities in ${st.length} states and union territories.` })}
+<div class="svc-grid svc-cards-auto state-grid">${st.map((s) => `<article class="svc-card"><span class="card-tag">${s.cities.length} ${s.cities.length === 1 ? "guide" : "guides"}</span><h3>${E(s.state)}</h3><p class="state-cities">${s.cities.map((c) => `<a href="${E(c.path)}">${E(c.city)}</a>`).join(" · ")}</p></article>`).join("")}</div>${own ? "<!--/seo:content-->" : ""}</div></section>`;
   }
   for (const s of x.sections || []) {
     let body = "";
@@ -724,7 +728,8 @@ function categoryTpl(rec, posts, x, cards, filters) {
     else if (s.table) body = `<div class="c-card"><div class="table-wrap"><table><thead><tr>${s.table.head.map((h) => `<th>${E(h)}</th>`).join("")}</tr></thead><tbody>${s.table.rows.map((r) => `<tr>${r.map((c, k) => `<td>${k ? c : `<strong>${E(c)}</strong>`}</td>`).join("")}</tr>`).join("")}</tbody></table></div></div>`;
     else if (s.lessons) body = `<div class="svc-grid svc-cards-auto lesson-grid">${s.lessons.map((l) => `<a class="svc-card svc-link" href="${E(l.href)}"><span class="num">${E(l.n)}</span><h3>${E(l.title)}</h3><p>${E(l.text)}</p><span class="link-arrow">Start lesson${icon("arrow")}</span></a>`).join("")}</div>`;
     else if (s.steps) body =`<ol class="steps">${s.steps.map((t) => `<li>${E(t)}</li>`).join("")}</ol>`;
-    out += `<section class="${secOpen()}"><div class="wrap${s.steps ? " narrow" : ""}"><!--seo:content-->${head(s)}${body}<!--/seo:content--></div></section>`;
+    const shared = s.eyebrow === "Next step";
+    out += `<section class="${secOpen()}"><div class="wrap${s.steps ? " narrow" : ""}">${shared ? "" : "<!--seo:content-->"}${head(s)}${body}${shared ? "" : "<!--/seo:content-->"}</div></section>`;
   }
   if (rec.faqs?.length) out += `<section class="${secOpen()}"><div class="wrap narrow"><!--seo:content-->${head({ eyebrow: "FAQ", title: "Frequently Asked Questions" })}<div class="faq-list">${rec.faqs.map((f) => `<div class="faq-card"><h3>${E(stripTags(f.q))}</h3><div class="faq-a">${localizeBody(f.a)}</div></div>`).join("")}</div><!--/seo:content--></div></section>`;
   return document_(rec, out, "is-archive is-service is-category");
@@ -949,6 +954,11 @@ const NO_COVER = new Set([]);
 function addCovers() {
   for (const r of RECS) {
     const slug = r.path.replace(/^\/+|\/+$/g, "");
+    // category / tag pages with their own copy get a cover for the hero (counts as a content image)
+    if (["category", "tag"].includes(r.type) && CATX[r.path]) {
+      r._cover = makeCover({ dir: "categories", slug: slug.replace(/\//g, "-"), title: stripTags(CATX[r.path].h1 || r.h1 || r.title || ""), label: r.type === "tag" ? "Openink Hub guides" : "Openink Hub blog" });
+      continue;
+    }
     if (!["page", "guide"].includes(r.type) || !slug || r.draft || LEGAL.has(slug) || NO_COVER.has(slug)) continue;
     if (/<img\b/.test(r.content_html || "")) continue;
     const h1 = stripTags(r.h1 || r.title || "");

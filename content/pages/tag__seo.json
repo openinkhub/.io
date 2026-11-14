@@ -298,5 +298,7 @@
       "q": "Which SEO guide should I read first?",
       "a": "<p>Start with the SEO beginner's guide. Then use the four questions on this page to pick your next step.</p>"
     }
-  ]
+  ],
+  "keyphrase_override": "seo guides",
+  "modified": "2026-11-14T18:00:00"
 }

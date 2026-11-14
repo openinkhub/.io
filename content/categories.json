@@ -211,8 +211,8 @@
   "/category/seo-agency-by-city/": {
     "eyebrow": "Local SEO guides",
     "h1": "SEO by City: Local SEO Guides for 100 Indian Cities in 2026",
-    "lead": "One guide per city, from Agartala to Vellore. Each shows how local firms can win on Google Maps, in answer boxes and in AI answers.",
-    "quick": "We have written 100 city guides across 30 states and union territories. Each one covers the local market, the main business areas, a sample plan for one local firm and an FAQ.",
+    "lead": "SEO by city, from Agartala to Vellore: one guide per city showing how local firms can win on Google Maps, in answer boxes and in AI answers.",
+    "quick": "Our SEO by city series has 100 guides across 30 states and union territories. Each one covers the local market, the main business areas, a sample plan for one local firm and an FAQ.",
     "ctas": [
       {
         "label": "Get a free audit",
@@ -326,7 +326,7 @@
       {
         "eyebrow": "Getting started",
         "title": "How to use these guides",
-        "lead": "Four quick steps take you from reading to doing.",
+        "lead": "Four quick steps take you from reading an SEO by city guide to doing the work.",
         "steps": [
           "Find your city in the state list above, or in the grid of all guides.",
           "Read the worked example and note which steps fit your firm.",
@@ -521,7 +521,7 @@
   "/tag/seo-course/": {
     "eyebrow": "Free SEO course",
     "h1": "Free SEO Course: 5 Lessons From Basics to AI Search (2026)",
-    "lead": "Five of our guides, put in the order we suggest for beginners. Work through one lesson a day and you will know the core of SEO in a week.",
+    "lead": "This free SEO course turns five of our guides into lessons, in the order we suggest for beginners. Work through one lesson a day and you will know the core of SEO in a week.",
     "quick": "This free SEO course has 5 lessons: what SEO is, on-page SEO, profile links, Google Business Profile and ranking in AI search. Each lesson is a full Openink Hub guide with steps and an FAQ, and the last one adds AEO and GEO.",
     "ctas": [
       {
@@ -733,15 +733,33 @@
         "cards": [
           {
             "title": "Just starting",
-            "text": "Use Search Console, GA4 and Google Business Profile. All three are free and cover most early needs."
+            "text": "Use Search Console, GA4 and Google Business Profile. All three are free and cover most early needs.",
+            "links": [
+              [
+                "How to set up Google Business Profile",
+                "/how-to-setup-gmb-step-by-step-local-guide/"
+              ]
+            ]
           },
           {
             "title": "Site feels slow",
-            "text": "Run PageSpeed Insights on your top pages. Then fix the issues it lists first."
+            "text": "Run PageSpeed Insights on your top pages. Then fix the issues it lists first.",
+            "links": [
+              [
+                "Website SEO and performance guide",
+                "/website-seo-performance/"
+              ]
+            ]
           },
           {
             "title": "Adding schema",
-            "text": "Test every FAQ or product page in the Rich Results Test before and after you publish."
+            "text": "Test every FAQ or product page in the Rich Results Test before and after you publish.",
+            "links": [
+              [
+                "What is on-page SEO",
+                "/what-is-on-page-seo-step-by-step-optimization/"
+              ]
+            ]
           },
           {
             "title": "Cleaning up a big site",
@@ -749,11 +767,23 @@
           },
           {
             "title": "Chasing rivals",
-            "text": "Add Ahrefs or Semrush to see their links and keywords. One of the two is usually enough."
+            "text": "Add Ahrefs or Semrush to see their links and keywords. One of the two is usually enough.",
+            "links": [
+              [
+                "How to choose an SEO agency",
+                "/best-seo-agency/"
+              ]
+            ]
           },
           {
             "title": "Tracking AI answers",
-            "text": "Ask ChatGPT, Gemini and Perplexity the questions your buyers ask each month, and note who gets named. This is the core of AEO and GEO tracking."
+            "text": "Ask ChatGPT, Gemini and Perplexity the questions your buyers ask each month, and note who gets named. This is the core of AEO and GEO tracking.",
+            "links": [
+              [
+                "How to rank in AI search",
+                "/artificial-intelligence-optimization-strategy-how-to-rank-in-ai/"
+              ]
+            ]
           }
         ]
       },
@@ -811,37 +841,45 @@
     "states": true,
     "sections": [
       {
-        "eyebrow": "Next step",
-        "title": "Turn reading into results",
-        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "eyebrow": "Related topics",
+        "title": "Where to go next",
+        "lead": "SEO is the base that AEO, GEO and AIO build on. So once these SEO articles make sense, move on to the topics below.",
         "cards": [
           {
-            "title": "SEO services",
-            "text": "Next, see how Openink Hub delivers this service, what it costs and what you get.",
+            "title": "Openink Hub SEO services",
+            "text": "We run audits, on-page fixes, content and links for firms across India, with AEO and GEO built in.",
             "links": [
               [
-                "Explore SEO services",
+                "SEO services in India",
                 "/best-seo-services-in-india/"
+              ],
+              [
+                "On-page SEO services",
+                "/best-on-page-seo-services/"
               ]
             ]
           },
           {
-            "title": "Free audit",
-            "text": "Plus, get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "title": "Backlinks",
+            "text": "Links from trusted sites are still one of the strongest SEO signals.",
             "links": [
               [
-                "Get your free audit",
-                "/report/"
+                "Backlink articles",
+                "/category/backlinks/"
               ]
             ]
           },
           {
-            "title": "All articles",
-            "text": "Then browse every guide on the blog, grouped by topic.",
+            "title": "AI search",
+            "text": "Then learn how AEO, GEO and AIO help AI tools find and quote you.",
             "links": [
               [
-                "Back to the blog",
-                "/category/best-seo-content-agency/"
+                "AEO articles",
+                "/category/aeo/"
+              ],
+              [
+                "AIO articles",
+                "/category/aio/"
               ]
             ]
           }
@@ -885,37 +923,37 @@
     },
     "sections": [
       {
-        "eyebrow": "Next step",
-        "title": "Turn reading into results",
-        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "eyebrow": "Related topics",
+        "title": "Where to go next",
+        "lead": "Local SEO links up with your Google Business Profile, city pages and, more and more, AEO and AIO for voice and AI search.",
         "cards": [
           {
-            "title": "SEO services",
-            "text": "Next, see how Openink Hub delivers this service, what it costs and what you get.",
+            "title": "Openink Hub local SEO",
+            "text": "We set up local pages, reviews and listings for firms in Ranchi and across India, with AEO answers for voice search.",
             "links": [
               [
-                "Explore SEO services",
+                "SEO services in India",
                 "/best-seo-services-in-india/"
               ]
             ]
           },
           {
-            "title": "Free audit",
-            "text": "Plus, get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "title": "GMB articles",
+            "text": "Next, set up and grow the Google Business Profile that powers Maps results.",
             "links": [
               [
-                "Get your free audit",
-                "/report/"
+                "GMB articles",
+                "/category/gmb/"
               ]
             ]
           },
           {
-            "title": "All articles",
-            "text": "Then browse every guide on the blog, grouped by topic.",
+            "title": "City guides",
+            "text": "Then find the local SEO guide for your own city, with AIO and GEO steps included.",
             "links": [
               [
-                "Back to the blog",
-                "/category/best-seo-content-agency/"
+                "SEO by city",
+                "/category/seo-agency-by-city/"
               ]
             ]
           }
@@ -959,37 +997,45 @@
     },
     "sections": [
       {
-        "eyebrow": "Next step",
-        "title": "Turn reading into results",
-        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "eyebrow": "Related topics",
+        "title": "Where to go next",
+        "lead": "A good website is where SEO, AEO, GEO and AIO all start. So when you are ready to build, these links take you further.",
         "cards": [
           {
-            "title": "Website development services",
-            "text": "Next, see how Openink Hub delivers this service, what it costs and what you get.",
+            "title": "Openink Hub website development",
+            "text": "We design and build fast, mobile-first business websites with SEO, AEO and AIO built in from day one. Book a free call to get a quote.",
             "links": [
               [
-                "Explore Website development services",
+                "Website development services",
                 "/website-design-agency/"
+              ],
+              [
+                "Book a free call",
+                "/contact-us/"
               ]
             ]
           },
           {
-            "title": "Free audit",
-            "text": "Plus, get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "title": "SEO articles",
+            "text": "Next, learn the on-page SEO basics every new site needs.",
             "links": [
               [
-                "Get your free audit",
-                "/report/"
+                "SEO articles",
+                "/category/seo-services/"
               ]
             ]
           },
           {
-            "title": "All articles",
-            "text": "Browse every guide on the blog, grouped by service.",
+            "title": "AI search",
+            "text": "Also, see how GEO and AIO help AI tools understand your new site.",
             "links": [
               [
-                "Back to the blog",
-                "/category/best-seo-content-agency/"
+                "GEO articles",
+                "/category/geo/"
+              ],
+              [
+                "AIO articles",
+                "/category/aio/"
               ]
             ]
           }
@@ -1028,42 +1074,46 @@
     ],
     "browse": {
       "eyebrow": "WhatsApp Automation",
-      "title": "All WhatsApp Automation articles",
+      "title": "All WhatsApp articles",
       "lead": "Newest first. Use the chips to switch to another topic."
     },
     "sections": [
       {
-        "eyebrow": "Next step",
-        "title": "Turn reading into results",
-        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "eyebrow": "Related topics",
+        "title": "Where to go next",
+        "lead": "Automated WhatsApp chats turn visitors into leads, while SEO, AEO, GEO and AIO bring those visitors in. Use these links to join the two.",
         "cards": [
           {
-            "title": "WhatsApp AI chatbot",
-            "text": "Next, see how Openink Hub delivers this service, what it costs and what you get.",
+            "title": "Openink Hub WhatsApp AI chatbot",
+            "text": "We set up the official WhatsApp Business API, AI replies and CRM sync for firms in Ranchi and across India.",
             "links": [
               [
-                "Explore WhatsApp AI chatbot",
+                "WhatsApp AI chatbot",
                 "/whatsapp-ai-chatbot/"
               ]
             ]
           },
           {
-            "title": "Free audit",
-            "text": "Plus, get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "title": "AI voice agent",
+            "text": "Also, answer calls the same way with an AI voice agent.",
             "links": [
               [
-                "Get your free audit",
-                "/report/"
+                "AI voice agent",
+                "/ai-voice-agent/"
               ]
             ]
           },
           {
-            "title": "All articles",
-            "text": "Browse every guide on the blog, grouped by service.",
+            "title": "Get found first",
+            "text": "Then bring in more chats through SEO and AI search.",
             "links": [
               [
-                "Back to the blog",
-                "/category/best-seo-content-agency/"
+                "SEO articles",
+                "/category/seo-services/"
+              ],
+              [
+                "AEO articles",
+                "/category/aeo/"
               ]
             ]
           }
@@ -1107,37 +1157,41 @@
     },
     "sections": [
       {
-        "eyebrow": "Next step",
-        "title": "Turn reading into results",
-        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "eyebrow": "Related topics",
+        "title": "Where to go next",
+        "lead": "AEO works best on top of solid SEO, and it overlaps with GEO and AIO. These links help you cover all four.",
         "cards": [
           {
-            "title": "AEO services",
-            "text": "Next, see how Openink Hub delivers this service, what it costs and what you get.",
+            "title": "Openink Hub AEO services",
+            "text": "We rewrite key pages into short, direct answers and add FAQ schema so Google can lift them.",
             "links": [
               [
-                "Explore AEO services",
+                "AEO services",
                 "/best-answer-engine-optimization-services/"
               ]
             ]
           },
           {
-            "title": "Free audit",
-            "text": "Plus, get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "title": "GEO articles",
+            "text": "Next, see how AI chat tools such as ChatGPT pick the brands they name.",
             "links": [
               [
-                "Get your free audit",
-                "/report/"
+                "GEO articles",
+                "/category/geo/"
               ]
             ]
           },
           {
-            "title": "All articles",
-            "text": "Then browse every guide on the blog, grouped by topic.",
+            "title": "SEO and AIO",
+            "text": "Also, check the SEO basics and the AIO steps that make your site easy for AI to read.",
             "links": [
               [
-                "Back to the blog",
-                "/category/best-seo-content-agency/"
+                "SEO articles",
+                "/category/seo-services/"
+              ],
+              [
+                "AIO articles",
+                "/category/aio/"
               ]
             ]
           }
@@ -1181,37 +1235,41 @@
     },
     "sections": [
       {
-        "eyebrow": "Next step",
-        "title": "Turn reading into results",
-        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "eyebrow": "Related topics",
+        "title": "Where to go next",
+        "lead": "GEO sits next to AEO and AIO, and all three rely on good SEO. Use these links to fill the gaps.",
         "cards": [
           {
-            "title": "GEO services",
-            "text": "Next, see how Openink Hub delivers this service, what it costs and what you get.",
+            "title": "Openink Hub GEO services",
+            "text": "We track how ChatGPT, Gemini and Perplexity talk about your brand, then fix the facts and sources they rely on.",
             "links": [
               [
-                "Explore GEO services",
+                "GEO services",
                 "/generative-engine-optimization/"
               ]
             ]
           },
           {
-            "title": "Free audit",
-            "text": "Plus, get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "title": "AEO articles",
+            "text": "Plus, learn how short, direct answers win featured snippets and voice replies.",
             "links": [
               [
-                "Get your free audit",
-                "/report/"
+                "AEO articles",
+                "/category/aeo/"
               ]
             ]
           },
           {
-            "title": "All articles",
-            "text": "Then browse every guide on the blog, grouped by topic.",
+            "title": "SEO and AIO",
+            "text": "Then strengthen the base: SEO for rankings and AIO for clean entity data.",
             "links": [
               [
-                "Back to the blog",
-                "/category/best-seo-content-agency/"
+                "SEO articles",
+                "/category/seo-services/"
+              ],
+              [
+                "AIO articles",
+                "/category/aio/"
               ]
             ]
           }
@@ -1255,37 +1313,41 @@
     },
     "sections": [
       {
-        "eyebrow": "Next step",
-        "title": "Turn reading into results",
-        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "eyebrow": "Related topics",
+        "title": "Where to go next",
+        "lead": "AIO is the base under AEO and GEO, and it works best on a site with strong SEO. These links show how they connect.",
         "cards": [
           {
-            "title": "AIO services",
-            "text": "Next, see how Openink Hub delivers this service, what it costs and what you get.",
+            "title": "Openink Hub AIO services",
+            "text": "We add entity data, schema and a clean structure so every AI tool reads your brand the same way.",
             "links": [
               [
-                "Explore AIO services",
+                "AIO services",
                 "/artificial-intelligence-optimization/"
               ]
             ]
           },
           {
-            "title": "Free audit",
-            "text": "Plus, get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "title": "AEO and GEO",
+            "text": "Next, see how answer boxes and AI chat answers pick their sources.",
             "links": [
               [
-                "Get your free audit",
-                "/report/"
+                "AEO articles",
+                "/category/aeo/"
+              ],
+              [
+                "GEO articles",
+                "/category/geo/"
               ]
             ]
           },
           {
-            "title": "All articles",
-            "text": "Then browse every guide on the blog, grouped by topic.",
+            "title": "SEO articles",
+            "text": "Also, keep the SEO basics in place, since AI tools lean on pages that already rank.",
             "links": [
               [
-                "Back to the blog",
-                "/category/best-seo-content-agency/"
+                "SEO articles",
+                "/category/seo-services/"
               ]
             ]
           }
@@ -1329,37 +1391,37 @@
     },
     "sections": [
       {
-        "eyebrow": "Next step",
-        "title": "Turn reading into results",
-        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "eyebrow": "Related topics",
+        "title": "Where to go next",
+        "lead": "A Google Business Profile is the start of local SEO. As a result, it also feeds AEO, GEO and AIO, because AI tools read the same listing details.",
         "cards": [
           {
-            "title": "Google My Business service",
-            "text": "Next, see how Openink Hub delivers this service, what it costs and what you get.",
+            "title": "Openink Hub GMB service",
+            "text": "We set up, verify and run Google Business Profiles for firms in Ranchi and across India: posts, photos and reviews.",
             "links": [
               [
-                "Explore Google My Business service",
+                "Google My Business service",
                 "/google-my-business/"
               ]
             ]
           },
           {
-            "title": "Free audit",
-            "text": "Plus, get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "title": "Local SEO articles",
+            "text": "Next, go beyond the listing with local pages and geo targeting.",
             "links": [
               [
-                "Get your free audit",
-                "/report/"
+                "Local SEO articles",
+                "/category/local-seo/"
               ]
             ]
           },
           {
-            "title": "All articles",
-            "text": "Then browse every guide on the blog, grouped by topic.",
+            "title": "SEO by city",
+            "text": "Also, find a local SEO plan for your city, with AEO and GEO steps.",
             "links": [
               [
-                "Back to the blog",
-                "/category/best-seo-content-agency/"
+                "SEO by city",
+                "/category/seo-agency-by-city/"
               ]
             ]
           }
@@ -1370,8 +1432,8 @@
   "/category/backlinks/": {
     "eyebrow": "Blog category",
     "h1": "Backlink Articles: Earn Links That Build Trust in 2026",
-    "lead": "Our articles on backlinks: what they are, how to earn them and which ones to skip.",
-    "quick": "Backlinks are links from other sites to yours. As a result, they tell search engines you can be trusted. These articles cover profile creation and the role of links in SEO.",
+    "lead": "Our backlink articles explain what links are, how to earn them and which ones to skip.",
+    "quick": "Backlinks are links from other sites to yours. As a result, they tell search engines you can be trusted. These backlink articles cover profile creation and the role of links in SEO.",
     "ctas": [
       {
         "label": "See Backlink service",
@@ -1403,37 +1465,41 @@
     },
     "sections": [
       {
-        "eyebrow": "Next step",
-        "title": "Turn reading into results",
-        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "eyebrow": "Related topics",
+        "title": "Where to go next",
+        "lead": "Backlinks support every part of search: SEO rankings, and the trust that AEO, GEO and AIO depend on.",
         "cards": [
           {
-            "title": "Backlink service",
-            "text": "Next, see how Openink Hub delivers this service, what it costs and what you get.",
+            "title": "Openink Hub backlink service",
+            "text": "We earn links from relevant, trusted sites every month, with no bought link packages.",
             "links": [
               [
-                "Explore Backlink service",
+                "High-quality backlinks",
                 "/high-quality-backlinks/"
               ]
             ]
           },
           {
-            "title": "Free audit",
-            "text": "Plus, get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "title": "SEO articles",
+            "text": "Next, pair your links with strong on-page SEO.",
             "links": [
               [
-                "Get your free audit",
-                "/report/"
+                "SEO articles",
+                "/category/seo-services/"
               ]
             ]
           },
           {
-            "title": "All articles",
-            "text": "Then browse every guide on the blog, grouped by topic.",
+            "title": "AI search",
+            "text": "Also, see how brand mentions and links help GEO and AIO, so AI tools name you.",
             "links": [
               [
-                "Back to the blog",
-                "/category/best-seo-content-agency/"
+                "GEO articles",
+                "/category/geo/"
+              ],
+              [
+                "AIO articles",
+                "/category/aio/"
               ]
             ]
           }
@@ -1477,37 +1543,45 @@
     },
     "sections": [
       {
-        "eyebrow": "Next step",
-        "title": "Turn reading into results",
-        "lead": "Each article ends with steps you can take. So when you want hands-on help, start here.",
+        "eyebrow": "Related topics",
+        "title": "Where to go next",
+        "lead": "These business articles sit beside our SEO, AEO, GEO and AIO guides. So use the links below to switch between growth and operations topics.",
         "cards": [
           {
-            "title": "AI blogs and articles service",
-            "text": "Next, see how Openink Hub delivers this service, what it costs and what you get.",
+            "title": "Openink Hub HR tools",
+            "text": "We offer an HRMS for payroll, leave and records, plus an applicant tracking system for hiring.",
             "links": [
               [
-                "Explore AI blogs and articles service",
+                "HRMS",
+                "/human-resources-management/"
+              ],
+              [
+                "Applicant tracking system",
+                "/application-tracking-system/"
+              ]
+            ]
+          },
+          {
+            "title": "Articles for your brand",
+            "text": "Plus, our AI blogs and articles service writes posts like these for your business.",
+            "links": [
+              [
+                "AI blogs and articles",
                 "/ai-blog-article-writing/"
               ]
             ]
           },
           {
-            "title": "Free audit",
-            "text": "Plus, get a free SEO, AEO, GEO and AIO check of your site, with a fix list.",
+            "title": "Growth topics",
+            "text": "Then read our SEO and AI search guides to bring in more customers.",
             "links": [
               [
-                "Get your free audit",
-                "/report/"
-              ]
-            ]
-          },
-          {
-            "title": "All articles",
-            "text": "Then browse every guide on the blog, grouped by topic.",
-            "links": [
+                "SEO articles",
+                "/category/seo-services/"
+              ],
               [
-                "Back to the blog",
-                "/category/best-seo-content-agency/"
+                "AIO articles",
+                "/category/aio/"
               ]
             ]
           }

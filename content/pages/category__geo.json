@@ -298,5 +298,7 @@
       "q": "Can Openink Hub help with GEO?",
       "a": "<p>Yes. See our <a href=\"/generative-engine-optimization/\">GEO services</a>.</p>"
     }
-  ]
+  ],
+  "keyphrase_override": "geo articles",
+  "modified": "2026-11-14T18:00:00"
 }

@@ -298,5 +298,7 @@
       "q": "What can WhatsApp automation do?",
       "a": "<p>It can send instant replies, follow up with leads, share order updates and pass chats to your team when needed.</p>"
     }
-  ]
+  ],
+  "keyphrase_override": "whatsapp automation",
+  "modified": "2026-11-14T18:00:00"
 }

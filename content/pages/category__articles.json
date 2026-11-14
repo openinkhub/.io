@@ -298,5 +298,7 @@
       "q": "Can Openink Hub write articles like these for us?",
       "a": "<p>Yes. Our <a href=\"/ai-blog-article-writing/\">AI blogs and articles service</a> plans and writes them for your brand.</p>"
     }
-  ]
+  ],
+  "keyphrase_override": "business articles",
+  "modified": "2026-11-14T18:00:00"
 }

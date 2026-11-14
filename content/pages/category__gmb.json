@@ -298,5 +298,7 @@
       "q": "Can Openink Hub manage our profile?",
       "a": "<p>Yes. Our <a href=\"/google-my-business/\">Google My Business service</a> covers setup, posts, photos and reviews.</p>"
     }
-  ]
+  ],
+  "keyphrase_override": "gmb articles",
+  "modified": "2026-11-14T18:00:00"
 }

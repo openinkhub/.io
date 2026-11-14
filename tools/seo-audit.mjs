@@ -192,7 +192,7 @@ function audit(p) {
   const desc = metaMap.description || "";
   const robots = (metaMap.robots || "").toLowerCase();
   const kp = rec.keyphrase || ""; const kpn = kpNorm(kp); const kpTok = tokens(kp);
-  const isPost = rec.type === "post", isListing = ["category", "tag", "archive"].includes(rec.type);
+  const isPost = rec.type === "post", isListing = ["category", "tag", "archive"].includes(rec.type) && !rec.keyphrase_override; // listing pages with their own copy and keyphrase get the full checks
   const ctext = text(content);
   const w = words(ctext); const wc = w.length;
   // Every block element (heading, paragraph, list item, cell, button…) ends a sentence, as in Yoast/Flesch tools;

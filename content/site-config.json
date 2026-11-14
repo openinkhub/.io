@@ -164,23 +164,35 @@
         ]
       },
       {
-        "title": "Company",
+        "title": "Useful Resources",
         "links": [
           {
-            "label": "About Us",
-            "href": "/best-expert-in-answer-engine-optimization/"
+            "label": "NexoraPress",
+            "href": "https://nexorapress.blog/"
           },
           {
-            "label": "All Services",
-            "href": "/best-seo-services-in-india/"
+            "label": "Primenarrative",
+            "href": "https://primenarrative.blog/"
           },
           {
-            "label": "Blogs",
-            "href": "/category/best-seo-content-agency/"
+            "label": "Startupstack",
+            "href": "https://startupstack.blog/"
           },
           {
-            "label": "Contact Us",
-            "href": "/contact-us/"
+            "label": "Beyondmetrics",
+            "href": "https://beyondmetrics.blog/"
+          },
+          {
+            "label": "Nextreach",
+            "href": "https://nextreach.blog/"
+          },
+          {
+            "label": "Growthscript",
+            "href": "https://growthscript.blog/"
+          },
+          {
+            "label": "SignalLoom",
+            "href": "https://signalloom.blog/"
           }
         ]
       }

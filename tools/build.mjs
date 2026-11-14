@@ -161,7 +161,7 @@ function header(p) {
 function footer() {
   const c = CFG.contact;
   const cols = CFG.footer.columns.map((col) =>
-    `<div><h3>${E(col.title)}</h3><ul>${col.links.map((l) => `<li><a href="${E(l.href)}">${E(l.label)}</a></li>`).join("")}</ul></div>`).join("");
+    `<div><h3>${E(col.title)}</h3><ul>${col.links.map((l) => `<li><a href="${E(l.href)}"${/^https?:/.test(l.href) ? " target=\"_blank\" rel=\"noopener\"" : ""}>${E(l.label)}</a></li>`).join("")}</ul></div>`).join("");
   return `<section class="cta-band">
   <div class="wrap cta-inner">
     <div><h2>Ready to be found on Google <em>and</em> in AI answers?</h2>

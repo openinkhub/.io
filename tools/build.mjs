@@ -922,19 +922,21 @@ function sitemaps() {
   }
   const stamp = now.toISOString().slice(0, 19) + "+00:00";
   const idx = ['<?xml version="1.0" encoding="UTF-8"?>', '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
+  const listed = [];
   for (const name of ["home", "posts", "pages", "categories", "tags", "archives"]) {
     const rows = [...(groups[name] || [])].sort((a, b) => (b.lastmod || "").localeCompare(a.lastmod || ""));
     const urls = rows.map((r) => {
       const lm = r.lastmod || r.modified ? `<lastmod>${E(r.lastmod || (r.modified || "") + "+00:00")}</lastmod>` : "";
-      return `<url><loc>${E(r.path !== "/" ? r.url : BASE)}</loc>${lm}</url>\n`;
+      return `<url><loc>${E(r.path !== "/" ? r.url : BASE + "/")}</loc>${lm}</url>\n`;
     }).join("");
     write(`/sitemap-${name}.xml`, '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "</urlset>\n");
-    idx.push(`<sitemap><loc>${BASE}/sitemap-${name}.xml</loc><lastmod>${stamp}</lastmod></sitemap>`);
+    // empty sitemaps (e.g. archives, now retired) stay reachable but are not listed, so Search Console reports no empty file
+    if (rows.length) { idx.push(`<sitemap><loc>${BASE}/sitemap-${name}.xml</loc><lastmod>${stamp}</lastmod></sitemap>`); listed.push(name); }
   }
   idx.push("</sitemapindex>\n");
   write("/sitemap.xml", idx.join("\n"));
   write("/sitemap_index.xml", idx.join("\n")); // was live on WordPress too
-  write("/robots.txt", "User-agent: *\nAllow: /\n" + (RULES.autofix.robotsDisallowAdmin ? "Disallow: /admin/\n" : "") + "\n" + ["", "home", "posts", "pages", "categories", "tags", "archives"]
+  write("/robots.txt", "User-agent: *\nAllow: /\n" + (RULES.autofix.robotsDisallowAdmin ? "Disallow: /admin/\n" : "") + "\n" + ["", ...listed]
     .map((n) => `Sitemap: ${BASE}/sitemap${n ? "-" + n : ""}.xml\n`).join(""));
 }
 
@@ -1033,10 +1035,34 @@ function addRelatedLinks() {
   }
 }
 
+// Every blog post / guide links to its matching service page (rules.json service_links). If the content has no link
+// to any of the expected services, one short line is added before the FAQ (or at the end).
+const serviceFor = (r) => {
+  const SL = RULES.service_links || {};
+  if (SL.posts?.[r.path]) return SL.posts[r.path];
+  const c = (r.categories || []).find((x) => SL.categories?.[x.path]);
+  return c ? SL.categories[c.path] : null;
+};
+function addServiceLinks() {
+  const SL = RULES.service_links || {};
+  for (const r of RECS) {
+    if (!["post", "guide"].includes(r.type) || r.draft) continue;
+    const want = serviceFor(r);
+    if (!want?.length) continue;
+    const html = r.content_html || "";
+    if (want.some((s) => html.includes(`href="${s}"`) || html.includes(`href="${BASE}${s}"`))) continue;
+    const s = want[0], label = SL.labels?.[s] || stripTags(r.title);
+    const line = `<p class="service-link">Want expert help with this? Our <a href="${s}">${E(label)}</a> team can do it for you, starting with a free audit.</p>`;
+    const at = html.search(/<h2[^>]*>\s*(Frequently asked questions|Often asked questions|FAQs?)\b/i);
+    r.content_html = at > 0 ? html.slice(0, at) + line + "\n" + html.slice(at) : html + "\n" + line;
+  }
+}
+
 function main() {
   if (COPY_MISSES.length) { console.error("copy-edits.json: text not found (page changed?)\n  " + COPY_MISSES.join("\n  ")); process.exit(1); }
   addCovers();
   addRelatedLinks();
+  addServiceLinks();
   fs.rmSync(DIST, { recursive: true, force: true });
   fs.cpSync(path.join(ROOT, "static"), DIST, { recursive: true });
   const byCat = {}, byTag = {}, byMonth = {};

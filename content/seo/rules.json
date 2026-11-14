@@ -595,5 +595,76 @@
       "latitude": 23.354111,
       "longitude": 85.323375
     }
+  },
+  "service_links": {
+    "_note": "Every blog post / guide must link to its matching service page in the content. Category -> service (first is added if none present); per-post overrides win.",
+    "labels": {
+      "/best-seo-services-in-india/": "SEO services",
+      "/best-on-page-seo-services/": "on-page SEO services",
+      "/best-answer-engine-optimization-services/": "AEO services",
+      "/generative-engine-optimization/": "GEO services",
+      "/artificial-intelligence-optimization/": "AIO services",
+      "/google-my-business/": "Google My Business service",
+      "/high-quality-backlinks/": "high-quality backlinks service",
+      "/website-design-agency/": "website development services",
+      "/whatsapp-ai-chatbot/": "WhatsApp AI chatbot",
+      "/human-resources-management/": "HRMS",
+      "/application-tracking-system/": "applicant tracking system",
+      "/ai-voice-agent/": "AI voice agent"
+    },
+    "categories": {
+      "/category/seo-services/": [
+        "/best-seo-services-in-india/",
+        "/best-on-page-seo-services/"
+      ],
+      "/category/aeo/": [
+        "/best-answer-engine-optimization-services/"
+      ],
+      "/category/geo/": [
+        "/generative-engine-optimization/"
+      ],
+      "/category/aio/": [
+        "/artificial-intelligence-optimization/"
+      ],
+      "/category/local-seo/": [
+        "/best-seo-services-in-india/",
+        "/google-my-business/"
+      ],
+      "/category/gmb/": [
+        "/google-my-business/"
+      ],
+      "/category/backlinks/": [
+        "/high-quality-backlinks/"
+      ],
+      "/category/website-development/": [
+        "/website-design-agency/"
+      ],
+      "/category/whatsapp-automation/": [
+        "/whatsapp-ai-chatbot/"
+      ],
+      "/category/seo-agency-by-city/": [
+        "/best-seo-services-in-india/",
+        "/google-my-business/",
+        "/best-on-page-seo-services/"
+      ]
+    },
+    "posts": {
+      "/top-hrms-solutions-automate-your-hr-workflow/": [
+        "/human-resources-management/"
+      ],
+      "/best-ats-software-for-small-business-2026-guide/": [
+        "/application-tracking-system/"
+      ],
+      "/best-rated-ats-for-small-business-scaling/": [
+        "/application-tracking-system/"
+      ],
+      "/best-ats-software-for-growing-small-businesses/": [
+        "/application-tracking-system/"
+      ],
+      "/ai-agentic-workflow-automation/": [
+        "/whatsapp-ai-chatbot/",
+        "/ai-voice-agent/"
+      ]
+    }
   }
 }

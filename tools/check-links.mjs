@@ -32,6 +32,10 @@ for (const f of pages) {
   const page = "/" + path.relative(DIST, f).replace(/\\/g, "/").replace(/index\.html$/, "");
   const html = fs.readFileSync(f, "utf8");
   const body = (/<body[^>]*>([\s\S]*)<\/body>/.exec(html) || [])[1] || html;
+  // inline scripts must parse (a broken one fails silently in the browser, e.g. the contact form buttons)
+  for (const m of html.matchAll(/<script(?![^>]*\bsrc=)(?![^>]*application\/ld\+json)[^>]*>([\s\S]*?)<\/script>/g)) {
+    try { new Function(m[1]); } catch (e) { problems.push(`${page}: inline script does not parse (${e.message})`); }
+  }
   for (const m of body.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)) {
     links++;
     const attrs = m[1], href = (/href="([^"]*)"/.exec(attrs) || [])[1] ?? "";

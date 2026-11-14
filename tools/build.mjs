@@ -512,7 +512,8 @@ function contactTpl(rec) {
   <div class="field"><label for="cf-service">What do you need help with?</label><select id="cf-service" name="service">${f.services.map((s) => `<option>${E(s)}</option>`).join("")}</select></div>
   <div class="field"><label for="cf-msg">Your goal or question</label><textarea id="cf-msg" name="message" rows="4" required></textarea></div>
   <div class="form-actions"><button type="button" class="btn btn-primary" data-send="wa">Send on WhatsApp${icon("arrow")}</button><button type="button" class="btn btn-ghost" data-send="mail">Send by email</button></div>
-  <p class="form-alt">Not using Gmail? <button type="button" class="link-btn" data-send="mailapp">Use another email app</button> · <button type="button" class="link-btn" data-send="copy">Copy email address</button></p>
+  <p class="form-alt">Or send with: <button type="button" class="link-btn" data-send="gmail">Gmail</button> · <button type="button" class="link-btn" data-send="outlook">Outlook</button> · <button type="button" class="link-btn" data-send="mailapp">Default email app</button> · <button type="button" class="link-btn" data-send="copymsg">Copy message</button> <span class="form-copied" role="status" aria-live="polite"></span></p>
+  <p class="form-alt">Using Zoho Mail, Hostinger or another webmail? Click <strong>Copy message</strong>, then paste it into a new email to <a href="mailto:info@openinkhub.io">info@openinkhub.io</a>.</p>
   <p class="form-note">${T(f.note)}</p>
 </form>
 <script>(function(){var f=document.getElementById("contact-form-el");if(!f)return;var TO="info@openinkhub.io";
@@ -520,13 +521,19 @@ function contactTpl(rec) {
 // computers: open Gmail's compose window in a new tab, because many computers have no mail app set up for mailto links
 var mobile=/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)||(navigator.maxTouchPoints>1&&/Macintosh/.test(navigator.userAgent));
 f.addEventListener("click",function(e){var b=e.target.closest("[data-send]");if(!b)return;
-if(b.dataset.send==="copy"){var done=function(){b.textContent="Copied: "+TO};if(navigator.clipboard)navigator.clipboard.writeText(TO).then(done,function(){prompt("Our email address:",TO)});else prompt("Our email address:",TO);return}
 var v=function(n){return (f.elements[n].value||"").trim()};if(!v("name")||!v("message")){f.reportValidity();return}
 var t="Hi Openink Hub, I'm "+v("name")+(v("phone")?" ("+v("phone")+")":"")+".\\nService: "+v("service")+"\\n\\n"+v("message");
 var su="Enquiry: "+v("service"),mailto="mailto:"+TO+"?subject="+encodeURIComponent(su)+"&body="+encodeURIComponent(t);
-if(b.dataset.send==="wa")window.open("https://wa.me/919204135136?text="+encodeURIComponent(t),"_blank","noopener");
-else if(b.dataset.send==="mailapp"||mobile)location.href=mailto;
-else{var g=window.open("https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(TO)+"&su="+encodeURIComponent(su)+"&body="+encodeURIComponent(t),"_blank","noopener");if(!g)location.href=mailto}});})();</script>`;
+var gmail="https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(TO)+"&su="+encodeURIComponent(su)+"&body="+encodeURIComponent(t);
+var outlook="https://outlook.live.com/mail/0/deeplink/compose?to="+encodeURIComponent(TO)+"&subject="+encodeURIComponent(su)+"&body="+encodeURIComponent(t);
+var web=function(u){var g=window.open(u,"_blank","noopener");if(!g)location.href=u};
+var k=b.dataset.send;
+if(k==="wa")window.open("https://wa.me/919204135136?text="+encodeURIComponent(t),"_blank","noopener");
+else if(k==="copymsg"){var all="To: "+TO+"\\nSubject: "+su+"\\n\\n"+t,st=f.querySelector(".form-copied");var ok=function(){st.textContent="Copied. Paste it into a new email to "+TO+"."};if(navigator.clipboard)navigator.clipboard.writeText(all).then(ok,function(){prompt("Copy this message:",all)});else prompt("Copy this message:",all)}
+else if(k==="gmail")web(gmail);
+else if(k==="outlook")web(outlook);
+else if(k==="mailapp"||mobile)location.href=mailto;
+else web(gmail)});})();</script>`;
   const side = `<aside class="c-card contact-side"><h3>${T(f.details_title)}</h3><dl class="contact-dl">${f.details.map(([k, v, h]) =>
     `<dt>${T(k)}</dt><dd>${h ? `<a href="${E(h)}"${ext(h)}>${E(v)}</a>` : E(v)}</dd>`).join("")}</dl>
   <h3>${T(f.covered_title)}</h3><ul class="chips">${f.covered.map((s) => `<li class="chip">${E(s)}</li>`).join("")}</ul></aside>`;

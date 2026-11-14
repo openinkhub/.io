@@ -209,12 +209,29 @@ function footer() {
 <script src="/assets/js/site.js?v=${VERSION}" defer></script>`;
 }
 
+// Google Tag Manager (content/site-config.json analytics.gtm): script first in <head>, noscript right after <body>
+const GTM = /^GTM-[A-Z0-9]+$/.test(CFG.analytics?.gtm || "") ? CFG.analytics.gtm : "";
+const gtmHead = GTM ? `<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM}');</script>
+<!-- End Google Tag Manager -->
+` : "";
+const gtmBody = GTM ? `<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+` : "";
+
 const document_ = (rec, body, bodyClass = "") => `<!DOCTYPE html>
 <html lang="en-IN">
 <head>
-${headHtml(rec)}
+${gtmHead}${headHtml(rec)}
 </head>
 <body class="${bodyClass}">
+${gtmBody}
 ${header(rec.path)}
 <main id="main">
 ${body}

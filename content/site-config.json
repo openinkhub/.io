@@ -223,5 +223,9 @@
         "href": "/cookie/"
       }
     ]
+  },
+  "analytics": {
+    "gtm": "GTM-TWSLJ8JZ",
+    "_note": "Google Tag Manager container; GA4 and other tags are configured inside GTM."
   }
 }

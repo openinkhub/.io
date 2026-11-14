@@ -370,7 +370,7 @@
     ],
     "lang": "en-US"
   },
-  "h1": "Tell us what you're trying to grow , and we'll show you exactly how we can help.",
+  "h1": "Tell us what you are trying to grow, and we will show you exactly how we can help.",
   "type": "page",
   "wp_id": 126,
   "slug": "contact-us",
@@ -384,6 +384,35 @@
   "author": "Hiten Neotia",
   "categories": [],
   "tags": [],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "How soon will I hear back?",
+      "a": "<p>Within one business day for most enquiries. Phone and WhatsApp messages during working hours are usually answered the same day.</p>"
+    },
+    {
+      "q": "How can I contact Openink Hub?",
+      "a": "<p>Call or WhatsApp +91 9204135136, email info@openinkhub.io, or send the form on this page. Tell us what you want to grow and we will suggest the right next step.</p>"
+    },
+    {
+      "q": "Do I need to know exactly which service I want?",
+      "a": "<p>Not at all. Tell us your goal, such as more traffic, more local customers, faster HR or better engagement, and we will recommend the right service.</p>"
+    },
+    {
+      "q": "Is the first consultation free?",
+      "a": "<p>Yes. The first call or demo is free and comes with no obligation to sign up.</p>"
+    },
+    {
+      "q": "Can I book a demo before I decide?",
+      "a": "<p>Yes. You can book a free demo to see how our SEO, AEO, GEO, AIO and automation services would work for your business.</p>"
+    },
+    {
+      "q": "How fast can we actually get started?",
+      "a": "<p>Most accounts are set up and live within 24–48 hours of onboarding. It depends on the service and any third-party approvals, such as WhatsApp API access.</p>"
+    },
+    {
+      "q": "Do you work with businesses outside Ranchi?",
+      "a": "<p>Yes. We work with startups and SMEs across India and abroad, online and by video call.</p>"
+    }
+  ],
   "keyphrase_override": "contact openink hub"
 }

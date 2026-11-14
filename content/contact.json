@@ -1,0 +1,247 @@
+{
+  "_note": "Contact page content, rendered by contactTpl in tools/build.mjs. Text kept from the imported page; FAQs also live in content/pages/contact-us.json (faqs) for FAQPage schema.",
+  "eyebrow": "Contact Openink Hub",
+  "lead": "Whether you already know which service you need, such as SEO, HRMS, WhatsApp automation or social media, or you are not sure where to start, this is the fastest way to reach our team. Contact Openink Hub to discuss SEO, AEO, GEO, AIO or automation for your business.",
+  "quick": "To contact Openink Hub, call or WhatsApp +91 9204135136, email info@openinkhub.io or send the message form on this page. Tell us what you want to grow, and the team will point you to the right service and share a plan for your business.",
+  "ctas": [
+    {
+      "label": "Send us a message",
+      "href": "#contact-form"
+    },
+    {
+      "label": "Book a free 30-min call",
+      "href": "https://calendly.com/openinkhub/30min/"
+    }
+  ],
+  "stats": [
+    {
+      "value": "1 business day",
+      "label": "Typical reply time"
+    },
+    {
+      "value": "Mon–Sat",
+      "label": "10 AM – 8 PM IST"
+    },
+    {
+      "value": "Free",
+      "label": "First call or demo"
+    },
+    {
+      "value": "24–48 hrs",
+      "label": "Typical setup once you start"
+    }
+  ],
+  "channels": {
+    "eyebrow": "How to contact us",
+    "h2": "Reach us however works best for you",
+    "intro": "Pick whichever channel is fastest for you: email, a direct WhatsApp message, or a slot booked straight onto our calendar. Also, every channel reaches the same team, usually within one business day.",
+    "cards": [
+      {
+        "icon": "mail",
+        "label": "Email",
+        "title": "Write to us",
+        "value": "info@openinkhub.io",
+        "text": "Best for detailed queries, proposals or sharing documents.",
+        "cta": "Open in mail",
+        "href": "mailto:info@openinkhub.io"
+      },
+      {
+        "icon": "wa",
+        "label": "Call or WhatsApp",
+        "title": "Message us instantly",
+        "value": "+91 9204135136",
+        "text": "Fastest for quick questions or urgent onboarding requests.",
+        "cta": "Chat on WhatsApp",
+        "href": "https://wa.me/919204135136"
+      },
+      {
+        "icon": "phone",
+        "label": "Phone",
+        "title": "Call the team",
+        "value": "+91 9204135136",
+        "text": "Talk to us directly during working hours.",
+        "cta": "Call now",
+        "href": "tel:9204135136"
+      },
+      {
+        "icon": "calendar",
+        "label": "Schedule a meeting",
+        "title": "Book a 30-min call",
+        "value": "Pick a time that suits you",
+        "text": "Skip the back-and-forth and grab a slot directly on our calendar.",
+        "cta": "Schedule on Calendly",
+        "href": "https://calendly.com/openinkhub/30min/"
+      },
+      {
+        "icon": "map",
+        "label": "Office",
+        "title": "Visit us",
+        "value": "Ranchi, Jharkhand",
+        "text": "203 Liya Complex, Main Road, Ranchi, Jharkhand 834001, India.",
+        "cta": "Open in Google Maps",
+        "href": "https://www.google.com/maps/search/?api=1&query=Liya+Complex+Main+Road+Ranchi"
+      },
+      {
+        "icon": "clock",
+        "label": "Working hours",
+        "title": "When we are online",
+        "value": "Mon – Sat, 10 AM – 8 PM",
+        "text": "IST. Messages sent outside these hours are answered the next business day."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "What happens next",
+    "h2": "From first message to a live, working system",
+    "intro": "Here is exactly what happens after you reach out, so there is no guesswork about onboarding with Openink Hub.",
+    "steps": [
+      [
+        "You tell us what you need",
+        "Send the form below, email us or call. In practice, share your business type, current challenges and the services you are considering: SEO, GMB, WhatsApp automation, HRMS or social media."
+      ],
+      [
+        "We assess and recommend a plan",
+        "Our team reviews your current setup, such as your website, socials or internal processes. Then we come back with a specific plan, not a generic pitch, usually within 1–2 business days."
+      ],
+      [
+        "We walk you through it live",
+        "A short call or demo where we show the right dashboard, explain pricing and answer every question before you commit to anything."
+      ],
+      [
+        "Onboarding and setup",
+        "Once you are ready, we handle accounts, integrations (Google, Meta, WhatsApp, your CMS) and the first setup, typically live within 24–48 hours."
+      ],
+      [
+        "Ongoing support and reporting",
+        "You get one named contact, regular performance reports and steady improvement, not a one-time handoff."
+      ]
+    ]
+  },
+  "goals": {
+    "eyebrow": "Not sure where to start?",
+    "h2": "Tell us your goal, we'll point you to the right service",
+    "intro": "Pick the goal closest to yours. Each card links to the service that fits it.",
+    "cards": [
+      [
+        "Want more website traffic?",
+        "Ask about our SEO and AEO/GEO services.",
+        "/best-seo-services-in-india/",
+        "SEO services"
+      ],
+      [
+        "Want more local customers?",
+        "Our Google Business Profile (GMB) management puts you on Google Maps.",
+        "/google-my-business/",
+        "Google My Business"
+      ],
+      [
+        "Want faster customer replies?",
+        "Try WhatsApp Business API automation for instant replies.",
+        "/whatsapp-ai-chatbot/",
+        "WhatsApp AI chatbot"
+      ],
+      [
+        "Want a stronger social presence?",
+        "We grow your presence on LinkedIn, Instagram, Facebook, Threads and YouTube.",
+        "/social-media-optimization/",
+        "Social media (SMO)"
+      ],
+      [
+        "Want HR off spreadsheets?",
+        "A full Human Resource Management System (HRMS) handles payroll, leave and records.",
+        "/human-resources-management/",
+        "HRMS"
+      ],
+      [
+        "Not sure yet?",
+        "Tell us your business goal in the form below, and we'll recommend where to start.",
+        "#contact-form",
+        "Send us a message"
+      ]
+    ]
+  },
+  "form": {
+    "eyebrow": "Send us a message",
+    "h2": "Get a response within one business day",
+    "intro": "Share a few details and we'll come back with next steps for your business.",
+    "note": "Your message opens in WhatsApp or your email app, ready to send. Nothing is stored on this website.",
+    "services": [
+      "SEO and workflow automation",
+      "AEO / GEO / AIO",
+      "Google Business Profile (GMB)",
+      "WhatsApp Business API",
+      "Social media growth",
+      "Meta Ads and Google Ads",
+      "Website development",
+      "AI blogs and articles",
+      "AI voice agent",
+      "HRMS and payroll",
+      "Applicant tracking system",
+      "Not sure yet"
+    ],
+    "details_title": "Direct details",
+    "details": [
+      [
+        "Email",
+        "info@openinkhub.io",
+        "mailto:info@openinkhub.io"
+      ],
+      [
+        "Call / WhatsApp",
+        "+91 9204135136",
+        "https://wa.me/919204135136"
+      ],
+      [
+        "Office",
+        "203 Liya Complex, Main Road, Ranchi, Jharkhand, India",
+        ""
+      ],
+      [
+        "Hours",
+        "Mon–Sat, 10 AM–8 PM IST",
+        ""
+      ],
+      [
+        "Schedule a call",
+        "Book on Calendly",
+        "https://calendly.com/openinkhub/30min/"
+      ]
+    ],
+    "covered_title": "Services we cover",
+    "covered": [
+      "SEO & Workflow Automation",
+      "AEO / GEO / AIO",
+      "GMB Automation",
+      "WhatsApp Business API",
+      "Social Media Growth",
+      "LinkedIn Management",
+      "Instagram & Facebook Ads",
+      "YouTube & Threads",
+      "Meta Ads",
+      "Google Ads",
+      "HRMS",
+      "Payroll Automation",
+      "AI Blog Automation",
+      "Chatbot Development"
+    ]
+  },
+  "in_short": "In short, contact Openink Hub by phone, WhatsApp or email, or send the form on this page. When you contact Openink Hub, tell us your goal and we will suggest the right next step.",
+  "related": [
+    [
+      "On-page and technical SEO services",
+      "/best-on-page-seo-services/"
+    ],
+    [
+      "SEO services in India",
+      "/best-seo-services-in-india/"
+    ],
+    [
+      "AEO services: answers for Google and AI assistants",
+      "/best-answer-engine-optimization-services/"
+    ],
+    [
+      "GEO services: get cited by AI tools",
+      "/generative-engine-optimization/"
+    ]
+  ]
+}

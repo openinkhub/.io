@@ -92,6 +92,7 @@ const ICONS = {
   map: '<path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/>',
   menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
   clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  calendar: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
 };
 const icon = (name, cls = "ico") =>
   `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ` +
@@ -433,6 +434,76 @@ ${k ? `<section class="section kit"><div class="wrap narrow prose">${localizeBod
 ${faqs}`, "is-page is-about");
 }
 
+// ---------------------------------------------------------------- contact page (home-page style, content/contact.json)
+function contactTpl(rec) {
+  const X = load(path.join(C, "contact.json"));
+  const keep = [rec.keyphrase, rec.keyphrase_override, ...(rec.keyphrase_secondary || [])].filter(Boolean);
+  const T = (s) => E(RULES.autofix.simpleWords ? simplifyHtml(String(s), keep) : String(s));
+  const ext = (h) => (/^https?:/.test(h) ? ' target="_blank" rel="noopener"' : "");
+  const h1 = rec.h1 || rec.title;
+  let alt = false;
+  const sec = (eb, h2, inner, intro = "", wide = true, id = "") => {
+    const cls = (alt = !alt) ? "section" : "section section-alt";
+    return `<section class="${cls}"${id ? ` id="${id}"` : ""}><div class="wrap${wide ? "" : " narrow"}"><div class="sec-head">${eb ? `<span class="eyebrow">${T(eb)}</span>` : ""}` +
+      `<h2 class="sec-title">${T(h2)}</h2>${intro ? `<div class="sec-lead"><p>${T(intro)}</p></div>` : ""}</div>${inner}</div></section>`;
+  };
+  let out = `<section class="section section-tight"><div class="wrap"><ul class="about-stats figures">${X.stats.map((s) => `<li><b>${T(s.value)}</b><span>${T(s.label)}</span></li>`).join("")}</ul></div></section>`;
+  alt = true;
+  const ch = X.channels;
+  out += sec(ch.eyebrow, ch.h2, `<div class="svc-grid contact-cards">${ch.cards.map((c) => `<article class="svc-card contact-channel">
+  <div class="svc-ico">${icon(c.icon)}</div><span class="card-tag">${T(c.label)}</span><h3>${T(c.title)}</h3>
+  <p class="channel-value">${c.href ? `<a href="${E(c.href)}"${ext(c.href)}>${E(c.value)}</a>` : E(c.value)}</p><p>${T(c.text)}</p>
+  ${c.href && c.cta ? `<a class="link-arrow" href="${E(c.href)}"${ext(c.href)}>${T(c.cta)}${icon("arrow")}</a>` : ""}</article>`).join("")}</div>`, ch.intro);
+  const pr = X.process;
+  out += sec(pr.eyebrow, pr.h2, `<div class="svc-grid process-cards">${pr.steps.map(([t, d], i) =>
+    `<article class="svc-card"><span class="num">${String(i + 1).padStart(2, "0")}</span><h3>${T(t)}</h3><p>${T(d)}</p></article>`).join("")}</div>`, pr.intro);
+  const g = X.goals;
+  out += sec(g.eyebrow, g.h2, `<div class="svc-grid goal-cards">${g.cards.map(([t, d, href, label]) =>
+    `<article class="svc-card"><h3>${T(t)}</h3><p>${T(d)}</p><a class="link-arrow" href="${E(href)}">${E(label)}${icon("arrow")}</a></article>`).join("")}</div>`, g.intro);
+  const f = X.form;
+  const form = `<form class="c-card contact-form" id="contact-form-el" onsubmit="return false">
+  <div class="field"><label for="cf-name">Your name</label><input id="cf-name" name="name" autocomplete="name" required></div>
+  <div class="field"><label for="cf-phone">Phone or WhatsApp</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel"></div>
+  <div class="field"><label for="cf-service">What do you need help with?</label><select id="cf-service" name="service">${f.services.map((s) => `<option>${E(s)}</option>`).join("")}</select></div>
+  <div class="field"><label for="cf-msg">Your goal or question</label><textarea id="cf-msg" name="message" rows="4" required></textarea></div>
+  <div class="form-actions"><button type="button" class="btn btn-primary" data-send="wa">Send on WhatsApp${icon("arrow")}</button><button type="button" class="btn btn-ghost" data-send="mail">Send by email</button></div>
+  <p class="form-note">${T(f.note)}</p>
+</form>
+<script>(function(){var f=document.getElementById("contact-form-el");if(!f)return;f.addEventListener("click",function(e){var b=e.target.closest("[data-send]");if(!b)return;
+var v=function(n){return (f.elements[n].value||"").trim()};if(!v("name")||!v("message")){f.reportValidity();return}
+var t="Hi Openink Hub, I'm "+v("name")+(v("phone")?" ("+v("phone")+")":"")+".\\nService: "+v("service")+"\\n\\n"+v("message");
+if(b.dataset.send==="wa")window.open("https://wa.me/919204135136?text="+encodeURIComponent(t),"_blank","noopener");
+else location.href="mailto:info@openinkhub.io?subject="+encodeURIComponent("Enquiry: "+v("service"))+"&body="+encodeURIComponent(t)});})();</script>`;
+  const side = `<aside class="c-card contact-side"><h3>${T(f.details_title)}</h3><dl class="contact-dl">${f.details.map(([k, v, h]) =>
+    `<dt>${T(k)}</dt><dd>${h ? `<a href="${E(h)}"${ext(h)}>${E(v)}</a>` : E(v)}</dd>`).join("")}</dl>
+  <h3>${T(f.covered_title)}</h3><ul class="chips">${f.covered.map((s) => `<li class="chip">${E(s)}</li>`).join("")}</ul></aside>`;
+  out += sec(f.eyebrow, f.h2, `<div class="contact-form-grid">${form}${side}</div>`, f.intro, true, "contact-form");
+  out += sec("FAQ", "Frequently asked questions", `<div class="faq-list">${(rec.faqs || []).map((q) => `<div class="faq-card"><h3>${T(stripTags(q.q))}</h3><div class="faq-a">${localizeBody(q.a)}</div></div>`).join("")}</div>`, "", false);
+  out += sec("In short", "In short: contact Openink Hub", `<div class="c-card prose"><p>${T(X.in_short)}</p></div>`, "", false);
+  out += sec("Explore", "Related services", `<div class="svc-grid svc-cards-auto">${X.related.map(([t, h]) =>
+    `<a class="svc-card svc-link" href="${E(h)}"><h3>${E(t)}</h3><span class="link-arrow">Explore${icon("arrow")}</span></a>`).join("")}</div>`);
+  const k = kitFor(rec, out, false);
+  const img = rec.featured_image;
+  const heroImg = img ? `<img src="${E(rel(img.src))}" alt="${E(img.alt || stripTags(h1))}" width="${img.width || 1200}" height="${img.height || 630}" fetchpriority="high">`
+    : `<img src="/images/pages/contact-us.svg" alt="Contact Openink Hub" width="1200" height="630" fetchpriority="high">`;
+  const ctas = X.ctas.map((c, i) => `<a class="btn ${i ? "btn-ghost" : "btn-primary"}" href="${E(c.href)}"${ext(c.href)}>${E(c.label)}${i ? "" : icon("arrow")}</a>`).join("");
+  return document_(rec, `<section class="hero hero-about hero-service">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">${breadcrumb([["Contact Us", null]])}
+      <span class="eyebrow">${T(X.eyebrow)}</span>
+      <h1>${E(stripTags(h1))}</h1>
+      <!--seo:content--><p class="lead">${T(X.lead)}</p><!--/seo:content-->
+      <div class="hero-ctas">${ctas}</div>
+      <!--seo:content--><div class="quick-answer"><p><strong>Quick answer:</strong> ${T(X.quick)}</p></div><!--/seo:content-->
+    </div>
+    <div class="hero-visual"><!--seo:content-->${heroImg}<!--/seo:content--></div>
+  </div>
+</section>
+<!--seo:content-->${out}<!--/seo:content-->
+${k ? `<section class="section kit"><div class="wrap narrow prose">${localizeBody(k)}</div></section>` : ""}`, "is-page is-about is-contact");
+}
+
 // ---------------------------------------------------------------- service pages (home-page style)
 // Every page in the Services menu (and the services hub) shares one layout: home-style hero (headline, lead, the page's
 // own CTA buttons, quick answer, image), a stat strip, then each H2 section full width with eyebrow, heading, lead and
@@ -510,6 +581,7 @@ ${faqs}`, "is-page is-service");
 
 function pageTpl(rec) {
   if (rec.path === ABOUT_PATH) return aboutTpl(rec);
+  if (rec.path === "/contact-us/") return contactTpl(rec);
   if (SERVICE_PATHS.has(rec.path)) return serviceTpl(rec);
   let [eyebrow, h1, body] = splitH1(rec.content_html || "", rec.h1 || rec.title);
   const h1Txt = stripTags(h1);

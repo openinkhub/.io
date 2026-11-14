@@ -1,7 +1,7 @@
 /* openink Hub — site styles */
 :root{
-  --blue:#046bd2; --blue-d:#0352a3; --blue-50:#eef5fd; --teal:#15ccc9; --teal-d:#0ea5a3;
-  --ink:#0f1b2d; --ink-2:#1e293b; --slate:#475569; --muted:#64748b; --line:#e2e8f0; --bg:#fff; --bg-2:#f5f8fc;
+  --blue:#046bd2; --blue-d:#0352a3; --blue-50:#eef5fd; --teal:#15ccc9; --teal-d:#0b7a78;
+  --ink:#0f1b2d; --ink-2:#1e293b; --slate:#475569; --muted:#4f5d70; --line:#e2e8f0; --bg:#fff; --bg-2:#f5f8fc;
   --dark:#0a1424; --radius:16px; --radius-sm:10px; --shadow:0 1px 2px rgba(15,27,45,.05),0 8px 24px -8px rgba(15,27,45,.12);
   --shadow-lg:0 30px 60px -20px rgba(4,60,130,.28); --wrap:1200px; --narrow:820px;
   --f-head:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -512,3 +512,6 @@ a.svc-card.svc-link h3{color:var(--ink)}
 .social-list a:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-50)}
 .social-list .ico{width:18px;height:18px}
 .key-takeaways{max-width:620px}
+/* accessibility: links inside text are underlined (not colour alone); buttons, chips and cards keep their look */
+main :is(p, li, td, dd, small, blockquote) a:not([class]){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+main :is(p, li, td, dd, small, blockquote) a:not([class]):hover{text-decoration-thickness:2px}

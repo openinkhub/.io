@@ -20,6 +20,15 @@ export function kitGroup(rec, kits) {
   return null;
 }
 
+// short topic from a source URL ("…/core-web-vitals" -> "core web vitals"), so two links to the same publisher
+// never share the same link text (accessibility: identical links must have the same purpose)
+const srcTopic = (url) => {
+  try {
+    const seg = new URL(url).pathname.split("/").filter((s) => s && !/^\d+$/.test(s) && !/^(answer|docs|search|en|hl)$/i.test(s));
+    return (seg.pop() || "").replace(/\.\w+$/, "").replace(/[-_]+/g, " ").trim();
+  } catch { return ""; }
+};
+
 export function kitHtml(rec, body, kits) {
   const g = kitGroup(rec, kits);
   if (!g) return "";
@@ -40,7 +49,7 @@ export function kitHtml(rec, body, kits) {
 <ul class="card-grid">${g.tools.map(([n, d]) => `<li><strong>${E(n)}</strong><span>${E(d)}</span></li>`).join("")}</ul></div>`);
   parts.push(`<div class="c-card kit-numbers"><h2>Key numbers to know</h2>
 <ul class="stat-grid">${g.numbers.map(([n, label, src, url]) => `<li><b>${E(n)}</b><span>${E(label)}</span>` +
-    `<small>Source: <a href="${E(url)}"${/^https?:/.test(url) ? ' target="_blank" rel="noopener"' : ""}>${E(src)}</a></small></li>`).join("")}</ul></div>`);
+    `<small>Source: <a href="${E(url)}"${/^https?:/.test(url) ? ' target="_blank" rel="noopener"' : ""}>${E(src)}${(() => { const t = srcTopic(url); return t && !t.split(" ").every((w) => src.toLowerCase().includes(w.toLowerCase())) ? ` · ${E(t)}` : ""; })()}</a></small></li>`).join("")}</ul></div>`);
   return parts.join("\n");
 }
 

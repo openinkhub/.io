@@ -24,7 +24,16 @@
     "Tailwind CSS vs Bootstrap",
     "Svelte vs React vs Vue"
   ],
-  "categories": [],
+  "categories": [
+    {
+      "name": "Website Development",
+      "path": "/category/website-development/"
+    },
+    {
+      "name": "Blogs",
+      "path": "/category/best-seo-content-agency/"
+    }
+  ],
   "tags": [],
   "faqs": [
     {

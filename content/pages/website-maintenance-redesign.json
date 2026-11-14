@@ -22,7 +22,16 @@
     "website backup",
     "website hosting vs maintenance"
   ],
-  "categories": [],
+  "categories": [
+    {
+      "name": "Website Development",
+      "path": "/category/website-development/"
+    },
+    {
+      "name": "Blogs",
+      "path": "/category/best-seo-content-agency/"
+    }
+  ],
   "tags": [],
   "faqs": [
     {

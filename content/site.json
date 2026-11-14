@@ -129,7 +129,7 @@
   "categories": [
     {
       "id": 8,
-      "count": 14,
+      "count": 51,
       "description": "",
       "link": "https://openinkhub.io/category/best-seo-content-agency/",
       "name": "All articles",
@@ -201,7 +201,7 @@
       "description": ""
     },
     {
-      "count": 20,
+      "count": 37,
       "name": "Website Development",
       "slug": "website-development",
       "path": "/category/website-development/",

@@ -24,7 +24,16 @@
     "business website design ideas",
     "business website development"
   ],
-  "categories": [],
+  "categories": [
+    {
+      "name": "Website Development",
+      "path": "/category/website-development/"
+    },
+    {
+      "name": "Blogs",
+      "path": "/category/best-seo-content-agency/"
+    }
+  ],
   "tags": [],
   "faqs": [
     {

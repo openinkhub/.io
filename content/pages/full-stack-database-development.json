@@ -23,7 +23,16 @@
     "Firebase vs Supabase",
     "SQL vs NoSQL"
   ],
-  "categories": [],
+  "categories": [
+    {
+      "name": "Website Development",
+      "path": "/category/website-development/"
+    },
+    {
+      "name": "Blogs",
+      "path": "/category/best-seo-content-agency/"
+    }
+  ],
   "tags": [],
   "faqs": [
     {

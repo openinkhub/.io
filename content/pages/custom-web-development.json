@@ -23,7 +23,16 @@
     "API integration services",
     "custom software vs ready-made software"
   ],
-  "categories": [],
+  "categories": [
+    {
+      "name": "Website Development",
+      "path": "/category/website-development/"
+    },
+    {
+      "name": "Blogs",
+      "path": "/category/best-seo-content-agency/"
+    }
+  ],
   "tags": [],
   "faqs": [
     {

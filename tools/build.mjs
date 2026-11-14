@@ -986,7 +986,10 @@ function main() {
   fs.rmSync(DIST, { recursive: true, force: true });
   fs.cpSync(path.join(ROOT, "static"), DIST, { recursive: true });
   const byCat = {}, byTag = {}, byMonth = {};
-  for (const p of POSTS) {
+  // published website development guides (type "guide") are listed in their categories too, newest first
+  const LISTED = [...POSTS, ...RECS.filter((r) => r.type === "guide" && !r.draft && r.categories?.length)]
+    .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  for (const p of LISTED) {
     for (const c of p.categories || []) (byCat[c.path] ||= []).push(p);
     for (const t of p.tags || []) (byTag[t.path] ||= []).push(p);
     if (p.date) (byMonth[`/${p.date.slice(0, 4)}/${p.date.slice(5, 7)}/`] ||= []).push(p);

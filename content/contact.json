@@ -55,15 +55,6 @@
         "href": "https://wa.me/919204135136"
       },
       {
-        "icon": "phone",
-        "label": "Phone",
-        "title": "Call the team",
-        "value": "+91 9204135136",
-        "text": "Talk to us directly during working hours.",
-        "cta": "Call now",
-        "href": "tel:9204135136"
-      },
-      {
         "icon": "calendar",
         "label": "Schedule a meeting",
         "title": "Book a 30-min call",
@@ -78,8 +69,17 @@
         "title": "Visit us",
         "value": "Ranchi, Jharkhand",
         "text": "203 Liya Complex, Main Road, Ranchi, Jharkhand 834001, India.",
-        "cta": "Open in Google Maps",
-        "href": "https://www.google.com/maps/search/?api=1&query=Liya+Complex+Main+Road+Ranchi"
+        "cta": "View us on Google Maps",
+        "href": "https://www.google.com/maps?cid=15648998726756542630"
+      },
+      {
+        "icon": "spark",
+        "label": "Google reviews",
+        "title": "Rate us on Google",
+        "value": "Openink Hub on Google",
+        "text": "Worked with us? A short Google review helps other businesses find us.",
+        "cta": "Open our Google profile",
+        "href": "https://www.google.com/maps?cid=15648998726756542630"
       },
       {
         "icon": "clock",
@@ -194,7 +194,7 @@
       [
         "Office",
         "203 Liya Complex, Main Road, Ranchi, Jharkhand, India",
-        ""
+        "https://www.google.com/maps?cid=15648998726756542630"
       ],
       [
         "Hours",

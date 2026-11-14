@@ -192,7 +192,7 @@ function footer() {
       <a class="brand" href="/"><img src="${E(CFG.logo)}" alt="openink Hub logo" width="32" height="32"><span>openink<b>Hub</b></span></a>
       <p>${E(CFG.footer.about)}</p>
       <ul class="contact-list">
-        <li>${icon("map")}<span>${E(c.address)}</span></li>
+        <li>${icon("map")}${c.gbp_url ? `<a href="${E(c.gbp_url)}" target="_blank" rel="noopener" title="Openink Hub on Google Maps">${E(c.address)}</a>` : `<span>${E(c.address)}</span>`}</li>
         <li>${icon("phone")}<a href="tel:${E(c.phone_raw)}">${E(c.phone)}</a></li>
         <li>${icon("mail")}<a href="mailto:${E(c.email)}">${E(c.email)}</a></li>
       </ul>

@@ -87,8 +87,9 @@
     "whatsapp": "https://wa.me/919204135136",
     "email": "info@openinkhub.io",
     "address": "203, Liya Complex, Main Road, Ranchi, Jharkhand-834001",
-    "map_url": "https://www.google.com/maps/search/?api=1&query=Liya+Complex+Main+Road+Ranchi",
-    "demo_url": "https://calendly.com/openinkhub/30min/"
+    "map_url": "https://www.google.com/maps?cid=15648998726756542630",
+    "demo_url": "https://calendly.com/openinkhub/30min/",
+    "gbp_url": "https://www.google.com/maps?cid=15648998726756542630"
   },
   "footer": {
     "about": "Our services include SEO, WhatsApp API, AI voice agents, HRMS, ATS, GMB optimization, content writing, SMO, and workflow automation. Every solution is designed to save time, increase efficiency, and deliver measurable results.",

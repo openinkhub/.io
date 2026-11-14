@@ -286,7 +286,7 @@ function audit(p) {
   c.text_image_ratio = contentImgs.length ? r(wc / contentImgs.length >= T.textToImage.minWordsPerImage ? "pass" : "warn", `${Math.round(wc / contentImgs.length)} words per image`) : r(isListing ? "info" : "warn", "no images in content", "add at least one relevant image");
 
   // schema & social
-  const std = new Set(["Organization", "WebSite", "WebPage", "Article", "BlogPosting", "BreadcrumbList", "ListItem", "Person", "FAQPage", "Question", "Answer", "ImageObject", "CollectionPage", "Service", "City", "State", "PostalAddress", "ContactPoint", "OpeningHoursSpecification", "Country", "Thing", "SearchAction", "EntryPoint", "PropertyValueSpecification", "ReadAction", "Place", "LocalBusiness", "ProfessionalService"]);
+  const std = new Set(["Organization", "WebSite", "WebPage", "Article", "BlogPosting", "BreadcrumbList", "ListItem", "Person", "FAQPage", "Question", "Answer", "ImageObject", "CollectionPage", "Service", "City", "State", "PostalAddress", "GeoCoordinates", "ContactPoint", "OpeningHoursSpecification", "Country", "Thing", "SearchAction", "EntryPoint", "PropertyValueSpecification", "ReadAction", "Place", "LocalBusiness", "ProfessionalService"]);
   c.schema_jsonld = !p.jsonldOk ? r("fail", "invalid JSON-LD") : p.jsonld.length ? r("pass", [...typeSet].filter((t) => !["ListItem", "Question", "Answer", "ImageObject", "EntryPoint", "SearchAction", "PropertyValueSpecification", "ReadAction"].includes(t)).join(", ")) : r("fail", "no JSON-LD");
   const custom = [...typeSet].filter((t) => !std.has(t));
   c.custom_schema = r("info", custom.length ? custom.join(", ") : "none");

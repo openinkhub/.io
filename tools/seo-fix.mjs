@@ -347,7 +347,7 @@ export function fixRecord(rec) {
       graph.push({ "@type": "ProfessionalService", "@id": `${SITE.url}/#localbusiness`, name: SITE.legalName || SITE.name, url: SITE.url + "/",
         image: SITE.logo, logo: SITE.logo, telephone: B.phone, email: B.email, address, priceRange: B.priceRange,
         openingHoursSpecification: B.hours ? [{ "@type": "OpeningHoursSpecification", dayOfWeek: B.hours.days, opens: B.hours.opens, closes: B.hours.closes }] : undefined,
-        hasMap: B.mapUrl, areaServed: { "@type": "Country", name: "India" }, sameAs: B.sameAs, parentOrganization: { "@id": orgId } });
+        hasMap: B.mapUrl, geo: B.geo ? { "@type": "GeoCoordinates", ...B.geo } : undefined, areaServed: { "@type": "Country", name: "India" }, sameAs: B.sameAs, parentOrganization: { "@id": orgId } });
     }
   }
   if (graph.length) {

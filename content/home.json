@@ -345,7 +345,7 @@
           "accessibility": 91,
           "best_practices": 100,
           "seo": 100,
-          "da": 7,
+          "pa": 33,
           "rd": 162
         }
       },
@@ -365,7 +365,7 @@
           "accessibility": 97,
           "best_practices": 100,
           "seo": 100,
-          "da": 42,
+          "pa": 39,
           "rd": 386
         }
       },
@@ -385,7 +385,7 @@
           "accessibility": 97,
           "best_practices": 100,
           "seo": 100,
-          "da": 41,
+          "pa": 35,
           "rd": 210
         }
       }
@@ -394,6 +394,6 @@
       "label": "See our website development services",
       "href": "/website-design-agency/"
     },
-    "scores_note": "Google PageSpeed Insights and Moz Domain Authority, November 2026"
+    "scores_note": "Google PageSpeed Insights and Moz Page Authority, November 2026"
   }
 }

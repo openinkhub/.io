@@ -878,12 +878,12 @@ ${H.work?.items?.length ? `<section class="section section-alt" id="recent-work"
     <ul class="work-services">${w.services.map((s) => `<li>${E(s)}</li>`).join("")}</ul>
     ${w.pagespeed ? (() => {
       // PageSpeed-style gauges: ring filled to the score; green 90-100, orange 50-89, red 0-49; DA in brand blue
-      const kpis = [["performance", "Performance"], ["accessibility", "Accessibility"], ["best_practices", "Best Practices"], ["seo", "SEO"], ["da", "Domain Authority"], ["rd", "Referring Domains"]]
-        .filter(([k]) => w.pagespeed[k] != null && (!["da", "rd"].includes(k) || w.pagespeed[k] > 0));
+      const kpis = [["performance", "Performance"], ["accessibility", "Accessibility"], ["best_practices", "Best Practices"], ["seo", "SEO"], ["pa", "Page Authority"], ["rd", "Referring Domains"]]
+        .filter(([k]) => w.pagespeed[k] != null && (!["pa", "rd"].includes(k) || w.pagespeed[k] > 0));
       const C = 2 * Math.PI * 24;
       const ring = (k, l, v) => {
         // scores 0-100 fill the ring to their value; referring domains is a count, so its ring is a plain circle
-        const cls = k === "da" ? "is-da" : k === "rd" ? "is-count" : v >= 90 ? "is-good" : v >= 50 ? "is-ok" : "is-poor";
+        const cls = k === "pa" ? "is-da" : k === "rd" ? "is-count" : v >= 90 ? "is-good" : v >= 50 ? "is-ok" : "is-poor";
         const arc = k === "rd" ? "" : `<circle class="kpi-arc" cx="28" cy="28" r="24" stroke-dasharray="${(C * Math.min(v, 100) / 100).toFixed(1)} ${C.toFixed(1)}" transform="rotate(-90 28 28)"/>`;
         return `<div class="kpi ${cls}"><svg viewBox="0 0 56 56" aria-hidden="true"><circle class="kpi-bg" cx="28" cy="28" r="24"/>${arc}<text x="28" y="33" text-anchor="middle">${v}</text></svg><span>${l}</span></div>`;
       };

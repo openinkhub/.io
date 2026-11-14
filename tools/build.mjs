@@ -351,42 +351,68 @@ function aboutTpl(rec) {
   if (!heroImg && HOME.hero?.image?.src) heroImg = `<img src="${E(rel(HOME.hero.image.src))}" alt="${E(HOME.hero.image.alt || "Openink Hub")}" width="1024" height="576" fetchpriority="high">`;
   const quick = /<p>\s*<strong>Quick answer:<\/strong>([\s\S]*?)<\/p>/.exec(body);
   if (quick) body = body.replace(quick[0], "");
-  const chunks = body.split(/(?=<h2[\s>])/);
-  const intro = chunks.shift();
-  let alt = false, out = "";
-  const kicker = (html) => { const k = /<p>([^<]{2,40})<\/p>\s*$/.exec(html); return k && k[1].trim().split(/\s+/).length <= 4 ? [html.slice(0, k.index), k[1].trim()] : [html, ""]; };
-  let nextEyebrow = kicker(intro)[1];
-  const introBody = kicker(intro)[0].replace(/<p>\s*<\/p>/g, "").trim();
-  if (stripTags(introBody).length > 40) out += `<section class="section"><div class="wrap narrow prose"><div class="c-card">${localizeBody(introBody)}</div></div></section>`;
-  for (const raw of chunks) {
-    const [chunk, eb] = kicker(raw);
-    const title = stripTags((/<h2[^>]*>([\s\S]*?)<\/h2>/.exec(chunk) || [])[1] || "");
-    const rest = chunk.replace(/<h2[^>]*>[\s\S]*?<\/h2>/, "");
+  // ---- sections from content/about.json, each with the matching home-page component
+  const A = load(path.join(C, "about.json"));
+  const keep = [rec.keyphrase, ...(rec.keyphrase_secondary || [])].filter(Boolean);
+  const T = (s) => E(RULES.autofix.simpleWords ? simplifyHtml(String(s), keep) : String(s));
+  let alt = false;
+  const sec = (eb, h2, inner, intro = "", wide = true) => {
     const cls = (alt = !alt) ? "section" : "section section-alt";
-    const head = `<div class="sec-head">${nextEyebrow ? `<span class="eyebrow">${E(nextEyebrow)}</span>` : ""}<h2 class="sec-title">${E(title)}</h2>`;
-    nextEyebrow = eb;
-    if (/meet the experts|our team/i.test(title)) { out += teamSection(HOME); alt = false; continue; }
-    const parts = rest.split(/(?=<h3[\s>])/);
-    const pre = parts.shift().trim();
-    if (/frequently asked/i.test(title)) {
-      out += `<section class="${cls}"><div class="wrap narrow">${head}</div><div class="faq-list">${parts.map((p) => {
-        const q = stripTags((/<h3[^>]*>([\s\S]*?)<\/h3>/.exec(p) || [])[1] || "");
-        return `<div class="faq-card"><h3>${E(q)}</h3><div class="faq-a">${localizeBody(p.replace(/<h3[^>]*>[\s\S]*?<\/h3>/, ""))}</div></div>`;
-      }).join("")}</div></div></section>`;
-      continue;
-    }
-    if (parts.length >= 3) {
-      const cards = parts.map((p) => `<article class="svc-card">${localizeBody(p.replace(/<h3([^>]*)>/, "<h3$1>"))}</article>`).join("");
-      out += `<section class="${cls}"><div class="wrap">${head}${pre ? `<div class="sec-intro prose">${localizeBody(pre)}</div>` : ""}</div>
-  <div class="svc-grid about-grid">${cards}</div></div></section>`;
-    } else {
-      out += `<section class="${cls}"><div class="wrap narrow">${head}</div><div class="prose c-card">${localizeBody(pre + parts.join(""))}</div></div></section>`;
-    }
-  }
-  // nothing about the team in the content? still show the team
-  if (!/id="team"/.test(out)) out += teamSection(HOME);
-  const k = kitFor(rec, body, false);
-  const faqs = /frequently asked/i.test(body) || contentHasFaq(body, rec.faqs) ? "" : faqBlock(rec.faqs);
+    return `<section class="${cls}"><div class="wrap${wide ? "" : " narrow"}"><div class="sec-head">${eb ? `<span class="eyebrow">${T(eb)}</span>` : ""}` +
+      `<h2 class="sec-title">${T(h2)}</h2>${intro ? `<p>${T(intro)}</p>` : ""}</div>${inner}</div></section>`;
+  };
+  const cards = (list, numbered = false) => `<div class="svc-grid about-grid">${list.map(([t, d, href], i) =>
+    `<article class="svc-card">${numbered ? `<span class="num">${String(i + 1).padStart(2, "0")}</span>` : ""}<h3>${T(t)}</h3><p>${T(d)}</p>` +
+    `${href ? `<a class="link-arrow" href="${E(href)}">Explore ${T(t)}${icon("arrow")}</a>` : ""}</article>`).join("")}</div>`;
+  const stats = (list, cls = "") => `<ul class="about-stats ${cls}">${list.map((s) => `<li><b>${T(s.value)}</b><span>${T(s.label)}</span></li>`).join("")}</ul>`;
+  let out = "";
+  // key figures strip
+  out += `<section class="section section-tight"><div class="wrap">${stats(A.figures, "figures")}</div></section>`;
+  alt = true;
+  // problem: metrics + problem cards
+  const P = A.problem;
+  out += sec(P.eyebrow, P.h2, `<ul class="about-metrics">${P.metrics.map(([v, l]) => `<li><b>${T(v)}</b><span>${T(l)}</span></li>`).join("")}</ul>
+  <p class="about-note">${T(P.metrics_note)}</p>${cards(P.cards)}`, P.intro);
+  // solution: ecosystem cards + benefit strip
+  const S = A.ecosystem;
+  out += sec(S.eyebrow, S.h2, cards(S.cards) + stats(S.strip, "strip"), S.intro);
+  // benefits: before/after bars, traffic chart, outcomes
+  const B = A.benefits, maxV = Math.max(...B.chart.map(([, v]) => v));
+  out += sec(B.eyebrow, B.h2, `<div class="about-two">
+  <div class="c-card about-compare"><h3>${T(B.compare_title)}</h3>${B.compare.map((c) => `<div class="cmp"><strong>${T(c.label)}</strong>
+    <div class="bar-row"><span>Before</span><div class="bar"><i style="width:${c.before}%"></i></div><b>${c.before}%</b></div>
+    <div class="bar-row is-after"><span>With Openink</span><div class="bar"><i style="width:${c.after}%"></i></div><b>${c.after}%</b></div></div>`).join("")}</div>
+  <div class="c-card about-chart"><h3>${T(B.chart_title)}</h3><ul class="chart">${B.chart.map(([l, v]) =>
+    `<li><b>${v}</b><div class="plot"><i style="height:${Math.round((v / maxV) * 100)}%"></i></div><span>${T(l)}</span></li>`).join("")}</ul><p class="about-note">${T(B.chart_note)}</p></div>
+</div><ul class="about-outcomes">${B.outcomes.map((o) => `<li>${icon("check")}<span>${T(o)}</span></li>`).join("")}</ul>`, B.intro);
+  // market timing: numbered cards + banner
+  const W = A.why_now;
+  out += sec(W.eyebrow, W.h2, cards(W.cards, true) + `<div class="about-banner"><b>${T(W.banner.value)}</b><span>${T(W.banner.label)}</span></div>`);
+  // product: 8 numbered modules + platform features
+  const PR = A.product;
+  out += sec(PR.eyebrow, PR.h2, cards(PR.modules, true) + `<h3 class="about-sub">Platform features</h3>` + cards(PR.features), PR.intro);
+  // audit framework: category cards with check counts + team expertise
+  const AU = A.audit;
+  out += sec(AU.eyebrow, AU.h2, `<div class="svc-grid about-grid">${AU.categories.map(([n, d, c]) =>
+    `<article class="svc-card"><span class="badge">${c} checks</span><h3>${T(n)}</h3><p>${T(d)}</p></article>`).join("")}</div>
+  <p class="about-note about-total">${T(AU.total)}</p>
+  <div class="c-card about-expertise"><h3>${T(AU.expertise_h3)}</h3><p>${T(AU.expertise)}</p>
+  <ul class="check-list">${AU.skills.map((s) => `<li>${icon("check")}<div><strong>${T(s)}</strong></div></li>`).join("")}</ul></div>`, AU.intro);
+  // team (content/home.json -> team)
+  out += teamSection(HOME); alt = false; // team is grey, so the next section is white
+  // mission & vision
+  const M = A.mission;
+  out += sec(M.eyebrow, M.h2, `<div class="about-two"><div class="c-card"><h3>Our mission</h3><p>${T(M.mission)}</p></div>
+  <div class="c-card"><h3>Our vision</h3><p>${T(M.vision)}</p></div></div>${cards(M.cards)}`);
+  // in short (content/seo/summaries.json)
+  const SUM = load(path.join(C, "seo", "summaries.json"))[rec.path];
+  if (SUM) out += sec("", `In short: ${rec.keyphrase_override ? rec.keyphrase_override.replace(/\baeo\b/gi, "AEO") : "about Openink Hub"}`, `<div class="c-card prose"><p>${RULES.autofix.simpleWords ? simplifyHtml(SUM, keep) : SUM}</p></div>`, "", false);
+  // FAQ: open cards (FAQPage schema comes from the same questions via rec.faqs)
+  const F = A.faq;
+  out += sec(F.eyebrow, F.h2, `<div class="faq-list">${F.items.map(([q, a]) => `<div class="faq-card"><h3>${T(q)}</h3><div class="faq-a"><p>${T(a)}</p></div></div>`).join("")}</div>`, "", false);
+  const quickText = A.quick || (quick ? quick[1] : "");
+  const k = kitFor(rec, out, false);
+  const faqs = "";
   const crumb = len(rec.title) < 60 ? rec.title : cut(stripTags(h1), 60);
   return document_(rec, `<section class="hero hero-about">
   <div class="hero-bg" aria-hidden="true"></div>
@@ -396,7 +422,7 @@ function aboutTpl(rec) {
       <h1>${h1}</h1>
       <!--seo:content-->${lead ? `<p class="lead">${lead}</p>` : ""}<!--/seo:content-->
       <div class="hero-ctas"><a class="btn btn-primary" href="${E(CFG.contact.demo_url)}" target="_blank" rel="noopener">Schedule a Free Demo${icon("arrow")}</a><a class="btn btn-ghost" href="/contact-us/">Contact Us</a></div>
-      ${quick ? `<div class="quick-answer"><strong>Quick answer:</strong>${quick[1]}</div>` : ""}
+      ${quickText ? `<!--seo:content--><div class="quick-answer"><p><strong>Quick answer:</strong> ${quickText}</p></div><!--/seo:content-->` : ""}
     </div>
     ${heroImg ? `<div class="hero-visual">${heroImg}</div>` : ""}
   </div>

@@ -1,0 +1,416 @@
+{
+  "_note": "About Us page content (the page linked as 'About Us' in the menu), rendered by aboutTpl in tools/build.mjs with home-page components. The hero (H1, lead, quick answer) and SEO tags still come from content/pages/best-expert-in-answer-engine-optimization.json; the team comes from content/home.json -> team.",
+  "quick": "Openink Hub is an AI-powered online growth ecosystem and AEO expert based in Ranchi, India, founded in April 2026. It helps startups and SMEs get found online through SEO, AEO, GEO and AIO, supported by WhatsApp automation, local SEO and business tools such as HRMS and ATS.",
+  "figures": [
+    {
+      "value": "Apr 2026",
+      "label": "Founded"
+    },
+    {
+      "value": "132-point",
+      "label": "AI SEO checklist"
+    },
+    {
+      "value": "90%",
+      "label": "Automated operations"
+    },
+    {
+      "value": "SEO + AEO + GEO + AIO",
+      "label": "Unified in one platform"
+    }
+  ],
+  "problem": {
+    "eyebrow": "The problem",
+    "h2": "The hidden tax on business growth",
+    "intro": "Most SMEs are paying a productivity drain they've never actually measured: fragmented tools, manual SEO workflows, and websites that are invisible to both search engines and AI tools.",
+    "metrics": [
+      [
+        "90%",
+        "Websites with zero organic traffic"
+      ],
+      [
+        "97.5%",
+        "Traffic that never converts"
+      ],
+      [
+        "62.5%",
+        "Searches happening on mobile"
+      ],
+      [
+        "30%",
+        "Team productivity lost to manual workflows"
+      ],
+      [
+        "46%",
+        "Searches with local intent"
+      ],
+      [
+        "93%",
+        "Customers who read reviews before buying"
+      ],
+      [
+        "57.5%",
+        "Searches ending in zero clicks"
+      ],
+      [
+        "80%",
+        "SME websites unready for AI search"
+      ],
+      [
+        "65%",
+        "Sites missing structured data or schema"
+      ],
+      [
+        "50%",
+        "Qualified leads lost to slow or manual follow-up"
+      ]
+    ],
+    "metrics_note": "Illustrative online-growth metrics showing the productivity drain most SMEs never measure. Not a citation to a single third-party study.",
+    "cards": [
+      [
+        "Stifled Innovation",
+        "Teams spend their time on repetitive SEO and marketing tasks instead of building the product."
+      ],
+      [
+        "High Overhead",
+        "Stitching together separate SEO, CRM, and marketing tools multiplies cost without multiplying results."
+      ],
+      [
+        "Manual Workflows",
+        "Content, outreach, and reporting are still done by hand, one task at a time."
+      ],
+      [
+        "Fragmented Systems",
+        "Website, SEO, CRM, and analytics live in different tools that were never built to talk to each other."
+      ]
+    ]
+  },
+  "ecosystem": {
+    "eyebrow": "Our solution",
+    "h2": "The Openink Ecosystem",
+    "intro": "One AI platform for your website, SEO, AEO, GEO, AIO, marketing, CRM, analytics and automation. So growth doesn't depend on a dozen separate tools.",
+    "cards": [
+      [
+        "SEO / AEO / GEO / AIO",
+        "Unified work across traditional search, answer engines, AI engines, and AI platforms.",
+        "/best-seo-services-in-india/"
+      ],
+      [
+        "Website Development",
+        "Fast, structured, AI-crawlable websites built as the foundation for search and AI visibility.",
+        "/website-design-agency/"
+      ],
+      [
+        "Content Marketing",
+        "Semantic, entity-rich content built to rank and to be cited by AI tools.",
+        "/ai-blog-article-writing/"
+      ],
+      [
+        "Social Media",
+        "Consistent brand presence and scheduling across every social channel.",
+        "/social-media-optimization/"
+      ],
+      [
+        "Marketing Automation",
+        "End-to-end campaign management without manual, repetitive execution."
+      ],
+      [
+        "Lead Generation",
+        "Systematic capture and qualification of demand your content and SEO already earn.",
+        "/lead-generation-website/"
+      ],
+      [
+        "CRM",
+        "Unified customer relationship management connected directly to marketing and SEO performance."
+      ],
+      [
+        "Online Reputation Management",
+        "Monitoring and management of reviews and brand mentions across the web.",
+        "/google-my-business/"
+      ],
+      [
+        "WhatsApp ChatBot",
+        "24/7 automated customer support and lead capture on the channel your customers already use.",
+        "/whatsapp-ai-chatbot/"
+      ],
+      [
+        "AI Voice Agent",
+        "Intelligent, automated customer calls that scale support and outreach.",
+        "/ai-voice-agent/"
+      ],
+      [
+        "HRMS",
+        "Streamlined people operations that keep the team running the ecosystem efficient.",
+        "/human-resources-management/"
+      ],
+      [
+        "Analytics",
+        "Data-driven business insight across every module: SEO, marketing, CRM, and operations."
+      ]
+    ],
+    "strip": [
+      {
+        "value": "90%",
+        "label": "Automated operations"
+      },
+      {
+        "value": "Faster",
+        "label": "Business growth"
+      },
+      {
+        "value": "70%",
+        "label": "Less manual labour"
+      }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "The benefits",
+    "h2": "Turning the problem into growth",
+    "intro": "What changes for a client once the Openink ecosystem replaces manual, fragmented workflows.",
+    "compare_title": "Manual workload vs. automation coverage",
+    "compare": [
+      {
+        "label": "Manual workload",
+        "before": 70,
+        "after": 30
+      },
+      {
+        "label": "Automation coverage",
+        "before": 10,
+        "after": 90
+      }
+    ],
+    "chart_title": "Illustrative organic traffic growth: indexed trend, first 6 months",
+    "chart": [
+      [
+        "Month 1",
+        100
+      ],
+      [
+        "Month 2",
+        128
+      ],
+      [
+        "Month 3",
+        162
+      ],
+      [
+        "Month 4",
+        205
+      ],
+      [
+        "Month 5",
+        248
+      ],
+      [
+        "Month 6",
+        285
+      ]
+    ],
+    "chart_note": "Indexed to 100 at Month 1. Consistent with the platform automation coverage figures above.",
+    "outcomes": [
+      "Less manual work",
+      "More automated coverage",
+      "Compounding organic growth"
+    ]
+  },
+  "why_now": {
+    "eyebrow": "Market timing",
+    "h2": "Why now: the automation mandate",
+    "cards": [
+      [
+        "The Tipping Point",
+        "AI-driven efficiency is no longer optional. It's a survival requirement for every business."
+      ],
+      [
+        "Online-First Explosion",
+        "A surge of new online businesses demands scalable, cost-effective infrastructure from day one."
+      ],
+      [
+        "Cloud-Native Accessibility",
+        "Modern cloud tools have lowered the barrier, creating a massive, open market for smart automation."
+      ]
+    ],
+    "banner": {
+      "value": "2026",
+      "label": "The year of AI automation"
+    }
+  },
+  "product": {
+    "eyebrow": "Product",
+    "h2": "Automation at scale",
+    "intro": "Eight connected modules, one platform, built so growth doesn't require rip-and-replace integrations.",
+    "modules": [
+      [
+        "AEO / GEO / AIO",
+        "AI search readiness across answer engines, AI engines, and AI platforms."
+      ],
+      [
+        "AI Voice Agent",
+        "Intelligent, automated customer calls."
+      ],
+      [
+        "Marketing Automation",
+        "End-to-end campaign management."
+      ],
+      [
+        "Analytics",
+        "Data-driven business insights."
+      ],
+      [
+        "WhatsApp ChatBot",
+        "24/7 automated customer support."
+      ],
+      [
+        "CRM",
+        "Unified customer relationship management."
+      ],
+      [
+        "HRMS",
+        "Streamlined people operations."
+      ],
+      [
+        "SMO + SEO",
+        "Social and search work, together."
+      ]
+    ],
+    "features": [
+      [
+        "Real-Time Dashboard",
+        "Live workflow efficiency tracking across every module."
+      ],
+      [
+        "Drag & Drop Builder",
+        "No-code workflow design and deployment."
+      ],
+      [
+        "Robust API Architecture",
+        "Smooth connectivity into your existing stack, with no rip-and-replace."
+      ]
+    ]
+  },
+  "audit": {
+    "eyebrow": "How we work",
+    "h2": "A 132-point AI SEO, AEO, GEO & AIO audit framework",
+    "intro": "Every project uses the same 132-point checklist in 10 groups. It covers technical SEO, on-page SEO, trust signals, answers, brand facts and AI search.",
+    "categories": [
+      [
+        "Technical SEO",
+        "HTTPS, sitemaps, indexability, Core Web Vitals infrastructure, llms.txt, AI crawler access",
+        35
+      ],
+      [
+        "On-Page SEO",
+        "Titles, headings, keyword strategy, semantic entities, internal linking",
+        35
+      ],
+      [
+        "GEO",
+        "Entity graphs, SameAs, Wikidata, citation sources, knowledge panel readiness",
+        35
+      ],
+      [
+        "AEO",
+        "Direct answers, FAQPage, HowTo, featured snippets, voice search readiness",
+        30
+      ],
+      [
+        "E-E-A-T",
+        "Author credentials, editorial policy, case studies, transparency signals",
+        20
+      ],
+      [
+        "AIO",
+        "Chunked sections, LLM-friendly formatting, retrieval blocks, AI-ready metadata",
+        20
+      ],
+      [
+        "UX & Accessibility",
+        "WCAG, keyboard navigation, contrast, sticky CTAs, accessible forms",
+        20
+      ],
+      [
+        "Performance",
+        "Core Web Vitals, LCP, INP, CLS, caching, compression",
+        20
+      ],
+      [
+        "Analytics & Conversion",
+        "GA4, GSC, heatmaps, funnels, call and form tracking, CRM integration",
+        20
+      ],
+      [
+        "AI Discoverability",
+        "ChatGPT, Gemini, Claude, Perplexity & Copilot readiness, AI visibility score",
+        20
+      ]
+    ],
+    "total": "132 parameters, 10 categories: the same checklist applied to every client audit, from technical SEO through AI discoverability.",
+    "expertise_h3": "Team expertise across SEO, AEO, GEO & AIO",
+    "expertise": "Our team covers all of modern search: technical SEO, on-page work, trust building, AEO, GEO and AIO. That means we shape content for direct answers. We link your brand facts so AI tools can cite you, and we add schema to every page. Then we test how ChatGPT, Gemini, Claude, Perplexity and Copilot see you. Every project uses the same 132-point checklist, so nothing is missed. As an AEO expert team, we check every answer against it.",
+    "skills": [
+      "Technical SEO & Core Web Vitals",
+      "On-page & semantic SEO",
+      "E-E-A-T & trust signal building",
+      "AEO",
+      "GEO",
+      "AIO",
+      "Structured data & schema implementation",
+      "AI discoverability & visibility monitoring"
+    ]
+  },
+  "mission": {
+    "eyebrow": "Mission & vision",
+    "h2": "Building the future of operations, together",
+    "mission": "Our aim is simple. We want to give startups and small firms big-company SEO, AEO, GEO and AIO on one AI platform. That way, every business can be found, trusted and chosen on Google and in AI search, without paying for a dozen tools.",
+    "vision": "We're not just building a product: we're defining the standard for intelligent SME business processes worldwide. Also, we see a future where every business has smart, low-cost automation and is easy to find in every search and AI tool.",
+    "cards": [
+      [
+        "Proven Team",
+        "Two experts in design and development, building the Openink ecosystem since the company was founded in April 2026."
+      ],
+      [
+        "Scalable Technology",
+        "A proprietary engine built to grow with every client's ambitions."
+      ],
+      [
+        "Massive Market",
+        "400 million SMEs worldwide seeking automation that actually works."
+      ]
+    ]
+  },
+  "faq": {
+    "eyebrow": "Ask us anything",
+    "h2": "Often Asked Questions About Openink Hub",
+    "items": [
+      [
+        "Why choose Openink Hub as your AEO expert?",
+        "As an AEO expert, Openink Hub shapes your pages so Google, voice assistants and AI tools can quote them as the answer. We also connect AEO with SEO, GEO, AIO and automation, and we report which answers you win each month."
+      ],
+      [
+        "Is WhatsApp automation legal?",
+        "Yes. WhatsApp automation is legal when you follow WhatsApp's rules and get consent before sending offers."
+      ],
+      [
+        "What is an AI chatbot?",
+        "An AI chatbot is a virtual helper. It reads customer questions and answers at once, with no person needed."
+      ],
+      [
+        "Can AI chatbots replace human support?",
+        "AI chatbots handle common questions and repeat tasks well. People are still needed for hard cases and personal help."
+      ],
+      [
+        "What industries benefit from business automation?",
+        "Health care, schools, real estate, retail, factories, finance, hotels, logistics and service firms all gain a lot from automation."
+      ],
+      [
+        "What is Off-Page SEO and how does it improve website rankings?",
+        "Off-page SEO is work done outside your own site, such as earning backlinks, reviews and brand mentions. It shows search engines that others trust you, which helps your pages rank higher."
+      ],
+      [
+        "How does AI improve SEO?",
+        "AI studies search trends, finds keyword chances, improves content structure and helps create content that better matches what people search for."
+      ]
+    ]
+  }
+}

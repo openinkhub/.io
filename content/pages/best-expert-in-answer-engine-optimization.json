@@ -389,60 +389,6 @@
             }
           }
         ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is WhatsApp automation legal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. WhatsApp automation is legal when businesses follow WhatsApp Business Platform policies and obtain customer consent before sending promotional messages."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is an AI chatbot?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "An AI chatbot is a virtual assistant that uses artificial intelligence to understand customer questions and provide instant responses without human intervention."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can AI chatbots replace human support?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "AI chatbots handle common questions and repetitive tasks efficiently, while human agents remain essential for complex issues and personalized customer support."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What industries benefit from business automation?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Industries such as healthcare, education, real estate, retail, manufacturing, finance, hospitality, logistics, and professional services benefit significantly from automation."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is Off-Page SEO and how does it improve website rankings?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "SEO automation uses software and AI to simplify keyword research, technical audits, content optimization, reporting, and routine optimization tasks."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does AI improve SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "AI analyzes search trends, identifies keyword opportunities, optimizes content structure, and helps create content that better matches user search intent."
-            }
-          }
-        ]
       }
     ],
     "lang": "en-US"
@@ -463,28 +409,32 @@
   "tags": [],
   "faqs": [
     {
+      "q": "Why choose Openink Hub as your AEO expert?",
+      "a": "<p>As an AEO expert, Openink Hub shapes your pages so Google, voice assistants and AI tools can quote them as the answer. We also connect AEO with SEO, GEO, AIO and automation, and we report which answers you win each month.</p>"
+    },
+    {
       "q": "Is WhatsApp automation legal?",
-      "a": "Yes. WhatsApp automation is legal when businesses follow WhatsApp Business Platform policies and obtain customer consent before sending promotional messages."
+      "a": "<p>Yes. WhatsApp automation is legal when you follow WhatsApp's rules and get consent before sending offers.</p>"
     },
     {
       "q": "What is an AI chatbot?",
-      "a": "An AI chatbot is a virtual assistant that uses artificial intelligence to understand customer questions and provide instant responses without human intervention."
+      "a": "<p>An AI chatbot is a virtual helper. It reads customer questions and answers at once, with no person needed.</p>"
     },
     {
       "q": "Can AI chatbots replace human support?",
-      "a": "AI chatbots handle common questions and repetitive tasks efficiently, while human agents remain essential for complex issues and personalized customer support."
+      "a": "<p>AI chatbots handle common questions and repeat tasks well. People are still needed for hard cases and personal help.</p>"
     },
     {
       "q": "What industries benefit from business automation?",
-      "a": "Industries such as healthcare, education, real estate, retail, manufacturing, finance, hospitality, logistics, and professional services benefit significantly from automation."
+      "a": "<p>Health care, schools, real estate, retail, factories, finance, hotels, logistics and service firms all gain a lot from automation.</p>"
     },
     {
       "q": "What is Off-Page SEO and how does it improve website rankings?",
-      "a": "SEO automation uses software and AI to simplify keyword research, technical audits, content optimization, reporting, and routine optimization tasks."
+      "a": "<p>Off-page SEO is work done outside your own site, such as earning backlinks, reviews and brand mentions. It shows search engines that others trust you, which helps your pages rank higher.</p>"
     },
     {
       "q": "How does AI improve SEO?",
-      "a": "AI analyzes search trends, identifies keyword opportunities, optimizes content structure, and helps create content that better matches user search intent."
+      "a": "<p>AI studies search trends, finds keyword chances, improves content structure and helps create content that better matches what people search for.</p>"
     }
   ],
   "keyphrase_override": "aeo expert",

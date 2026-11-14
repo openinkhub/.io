@@ -132,7 +132,7 @@ function headHtml(rec, tags = "") {
   out.push('<meta name="theme-color" content="#046bd2">');
   out.push('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>');
   // fonts load without blocking the first paint (mobile speed); system fonts show until they arrive
-  const FONTS = "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap";
+  const FONTS = "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=optional";
   out.push(`<link rel="preload" as="style" href="${FONTS}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${FONTS}"></noscript>`);
   out.push(`<link rel="stylesheet" href="/assets/css/site.css?v=${VERSION}">`);
   for (const j of hd.jsonld) {
@@ -209,26 +209,25 @@ function footer() {
 <script src="/assets/js/site.js?v=${VERSION}" defer></script>`;
 }
 
-// Google Tag Manager (content/site-config.json analytics.gtm): script first in <head>, noscript right after <body>
+// Tracking and ads (content/site-config.json analytics). For page speed they do not load in the critical path:
+// - dataLayer + gtag() exist from the first byte, so nothing is lost; GA4 config and the GTM start event are queued
+// - GTM and GA4 scripts load right after the window "load" event
+// - AdSense loads on the first scroll, tap, click or key press (Auto ads were inserting a placeholder during load that
+//   pushed the whole page down: CLS 1.0 on desktop). The account meta tag and ads.txt are enough for site verification.
 const GTM = /^GTM-[A-Z0-9]+$/.test(CFG.analytics?.gtm || "") ? CFG.analytics.gtm : "";
-const gtmHead = GTM ? `<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM}');</script>
-<!-- End Google Tag Manager -->
-` : "";
-// AdSense (analytics.adsense): account meta tag + async auto-ads script (Google's site code); ads.txt written in main()
-const ADSENSE = /^ca-pub-\d{16}$/.test(CFG.analytics?.adsense || "") ? CFG.analytics.adsense : "";
-const adsHead = ADSENSE ? `<meta name="google-adsense-account" content="${ADSENSE}">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE}" crossorigin="anonymous"></script>
-` : "";
-// GA4 loaded directly (analytics.ga4); it shares the same dataLayer as GTM
 const GA4 = /^G-[A-Z0-9]+$/.test(CFG.analytics?.ga4 || "") ? CFG.analytics.ga4 : "";
-const ga4Head = GA4 ? `<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=${GA4}"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4}');</script>
+const ADSENSE = /^ca-pub-\d{16}$/.test(CFG.analytics?.adsense || "") ? CFG.analytics.adsense : "";
+const tagsHead = (GTM || GA4 || ADSENSE) ? `${ADSENSE ? `<meta name="google-adsense-account" content="${ADSENSE}">
+` : ""}<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+${GA4 ? `gtag('js',new Date());gtag('config','${GA4}');` : ""}${GTM ? `dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});` : ""}
+(function(w,d){function add(src,x){var j=d.createElement('script');j.async=true;j.src=src;if(x)j.crossOrigin='anonymous';d.head.appendChild(j)}
+function tags(){${GTM ? `add('https://www.googletagmanager.com/gtm.js?id=${GTM}');` : ""}${GA4 ? `add('https://www.googletagmanager.com/gtag/js?id=${GA4}');` : ""}}
+if(d.readyState==='complete')tags();else w.addEventListener('load',function(){setTimeout(tags,0)});
+${ADSENSE ? `var ads=false,ev=['scroll','pointerdown','keydown','touchstart'];function adsense(){if(ads)return;ads=true;ev.forEach(function(e){w.removeEventListener(e,adsense)});add('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE}',1)}
+ev.forEach(function(e){w.addEventListener(e,adsense,{passive:true,once:true})});` : ""}
+})(window,document);
+</script>
 ` : "";
 const gtmBody = GTM ? `<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM}"
@@ -239,7 +238,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 const document_ = (rec, body, bodyClass = "") => `<!DOCTYPE html>
 <html lang="en-IN">
 <head>
-${headHtml(rec, gtmHead + ga4Head + adsHead)}
+${headHtml(rec, tagsHead)}
 </head>
 <body class="${bodyClass}">
 ${gtmBody}

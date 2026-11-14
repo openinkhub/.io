@@ -870,6 +870,19 @@ function homeTpl(rec) {
   <div class="sec-head"><h2 class="sec-title">${E(H.services.h2)}</h2><p>${E(H.services.intro)}</p></div>
   <div class="svc-grid">${services}</div>
 </div></section>
+${H.work?.items?.length ? `<section class="section section-alt" id="recent-work"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">${E(H.work.eyebrow)}</span><h2 class="sec-title">${E(H.work.h2)}</h2><p>${E(H.work.intro)}</p></div>
+  <div class="work-grid">${H.work.items.map((w) => `<article class="work-card">
+    <a class="work-shot" href="${E(w.url)}" target="_blank" rel="noopener" aria-label="Visit the ${E(w.name)} website"><img src="${E(w.img)}" alt="${E(w.alt)}" width="1280" height="800" loading="lazy" decoding="async"></a>
+    <div class="work-body"><span class="tag">${E(w.industry)}</span><h3>${E(w.name)}</h3><p>${E(w.text)}</p>
+    <ul class="work-services">${w.services.map((s) => `<li>${E(s)}</li>`).join("")}</ul>
+    ${w.pagespeed ? `<dl class="work-scores" title="${E(H.work.scores_note || "Google PageSpeed Insights scores")}">${[["performance", "Performance"], ["accessibility", "Accessibility"], ["best_practices", "Best practices"], ["seo", "SEO"]]
+      .filter(([k]) => w.pagespeed[k] != null).map(([k, l]) => `<div class="${w.pagespeed[k] >= 90 ? "is-good" : w.pagespeed[k] >= 50 ? "is-ok" : "is-poor"}"><dt>${l}</dt><dd>${w.pagespeed[k]}</dd></div>`).join("")}</dl>` : ""}
+    <a class="link-arrow" href="${E(w.url)}" target="_blank" rel="noopener">Visit ${E(w.url.replace(/^https?:\/\/(www\.)?|\/$/g, ""))}${icon("arrow")}</a></div>
+  </article>`).join("")}</div>
+  ${H.work.items.some((w) => w.pagespeed) ? `<p class="work-note">Scores: ${E(H.work.scores_note || "Google PageSpeed Insights")}.</p>` : ""}
+  ${H.work.cta ? `<div class="work-cta"><a class="btn btn-primary" href="${E(H.work.cta.href)}">${E(H.work.cta.label)}${icon("arrow")}</a></div>` : ""}
+</div></section>` : ""}
 <section class="section section-dark"><div class="wrap">
   <div class="sec-head"><span class="eyebrow eyebrow-light">The Tipping Point of the Modern AI Era</span><h2 class="sec-title">${E(H.era.h2)}</h2><p>${E(H.era.intro)}</p></div>
   <div class="era-grid">${era}</div>

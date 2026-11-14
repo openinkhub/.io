@@ -515,3 +515,28 @@ a.svc-card.svc-link h3{color:var(--ink)}
 /* accessibility: links inside text are underlined (not colour alone); buttons, chips and cards keep their look */
 main :is(p, li, td, dd, small, blockquote) a:not([class]){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
 main :is(p, li, td, dd, small, blockquote) a:not([class]):hover{text-decoration-thickness:2px}
+/* home: our recent work (website screenshots) */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.work-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.2s}
+.work-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.work-shot{display:block;aspect-ratio:16/10;overflow:hidden;background:var(--bg-2);border-bottom:1px solid var(--line)}
+.work-shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .4s}
+.work-card:hover .work-shot img{transform:scale(1.03)}
+.work-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.work-body h3{margin:0;font-size:19px}
+.work-body p{margin:0;color:var(--slate);font-size:15px;line-height:1.55}
+.work-services{list-style:none;margin:4px 0 6px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.work-services li{font:600 12.5px var(--f-head);color:var(--blue-d);background:var(--blue-50);border-radius:999px;padding:5px 10px}
+.work-body .link-arrow{margin-top:auto}
+.work-cta{text-align:center;margin-top:30px}
+@media (max-width:1020px){.work-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.work-grid{grid-template-columns:1fr}}
+.work-scores{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:4px 0 8px}
+.work-scores div{text-align:center;border-radius:var(--radius-sm);padding:8px 4px;background:var(--bg-2)}
+.work-scores dt{font:600 11px var(--f-head);color:var(--slate);text-transform:uppercase;letter-spacing:.03em}
+.work-scores dd{margin:2px 0 0;font:800 20px/1.1 var(--f-head)}
+.work-scores .is-good dd{color:#0a7a3e}.work-scores .is-ok dd{color:#9a5b00}.work-scores .is-poor dd{color:#b42318}
+.work-note{text-align:center;font-size:13px;color:var(--muted);margin:14px 0 0}
+.work-scores div{min-width:0}.work-scores dt{overflow-wrap:anywhere}
+.work-cta .btn{white-space:normal;max-width:100%;text-align:center;line-height:1.3}
+@media (max-width:640px){.work-scores{grid-template-columns:repeat(2,1fr)}}

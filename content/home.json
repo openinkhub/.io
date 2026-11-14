@@ -323,5 +323,65 @@
         "a": "WhatsApp automation uses set messages, chatbots and simple rules. It answers questions, sends updates, collects details and gives support at any hour. To Know more <a href=\"/whatsapp-ai-chatbot/\">click here</a>"
       }
     ]
+  },
+  "work": {
+    "eyebrow": "Our recent work",
+    "h2": "Websites we built and grow with SEO",
+    "intro": "A few recent website development and SEO projects. Each site is fast, mobile-first and set up to be found on Google and in AI answers.",
+    "items": [
+      {
+        "name": "Skyy Rider Electric",
+        "url": "https://skyyriderelectric.com/",
+        "img": "/images/work/skyyriderelectric.webp",
+        "alt": "Skyy Rider Electric website home page showing electric golf carts",
+        "industry": "Electric vehicles",
+        "services": [
+          "Website development",
+          "SEO"
+        ],
+        "text": "Product website for a maker of electric golf carts, e-rickshaws, e-buses and e-trucks, built to turn campus, resort and factory buyers into enquiries.",
+        "pagespeed": {
+          "performance": 79,
+          "accessibility": 91,
+          "best_practices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "name": "Rekha Krishnamurthy",
+        "url": "https://rekhakrishnamurthy.com/",
+        "img": "/images/work/rekhakrishnamurthy.webp",
+        "alt": "Rekha Krishnamurthy bridal makeup website home page",
+        "industry": "Bridal makeup, Bangalore",
+        "services": [
+          "Website development",
+          "Local SEO"
+        ],
+        "text": "Booking-focused website for a bridal makeup artist in Bangalore, with service, academy and portfolio pages set up for local search."
+      },
+      {
+        "name": "eTrialTrack",
+        "url": "https://etrialtrack.in/",
+        "img": "/images/work/etrialtrack.webp",
+        "alt": "eTrialTrack clinical trial software website home page",
+        "industry": "Clinical trial software",
+        "services": [
+          "Website development",
+          "SEO and AEO"
+        ],
+        "text": "Website for a unified eClinical platform covering EDC, eConsent, ePRO, RTSM and telehealth, written so buyers and AI tools understand each product.",
+        "pagespeed": {
+          "performance": 82,
+          "accessibility": 97,
+          "best_practices": 100,
+          "seo": 100
+        }
+      }
+    ],
+    "cta": {
+      "label": "See our website development services",
+      "href": "/website-design-agency/"
+    },
+    "scores_note": "Google PageSpeed Insights scores, November 2026"
   }
 }

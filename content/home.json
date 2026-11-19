@@ -361,13 +361,14 @@
         ],
         "text": "Booking-focused website for a Bangalore bridal makeup artist, with HD, airbrush, academy and portfolio pages. Local SEO helps nearby brides find her and book a trial.",
         "pagespeed": {
-          "performance": 65,
-          "accessibility": 97,
+          "performance": 94,
+          "accessibility": 100,
           "best_practices": 100,
           "seo": 100,
           "pa": 39,
           "rd": 386
-        }
+        },
+        "pagespeed_report": "https://pagespeed.web.dev/analysis/https-rekhakrishnamurthy-com/mc7hn9sxaq?hl=en&form_factor=mobile"
       },
       {
         "name": "eTrialTrack",

@@ -70,6 +70,7 @@ const pad = (n) => String(n).padStart(2, "0");
 // ---------------------------------------------------------------- data
 const CFG = load(path.join(C, "site-config.json"));
 const HOME = load(path.join(C, "home.json"));
+const SS = fs.existsSync(path.join(C, "success-stories.json")) ? load(path.join(C, "success-stories.json")) : null;
 const CATS = load(path.join(C, "site.json")).categories || [];
 const RECS = fs.readdirSync(path.join(C, "pages")).filter((n) => n.endsWith(".json")).sort()
   .map((n) => load(path.join(C, "pages", n))).filter((r) => r.status === 200 && r.head).map(fixRecord); // safe SEO auto-fixes (content/seo/rules.json)
@@ -592,8 +593,8 @@ function serviceTpl(rec) {
   const preHtml = preRest.map((b) => b.html).join("");
   if (stripTags(preHtml).length > 30) out += `<section class="${secOpen()}"><div class="wrap narrow"><div class="c-card prose">${preHtml}</div></div></section>`;
   // recent client work (home.json work.pages) goes before the "In short" / FAQ / related services block
-  let workDone = !HOME.work?.pages?.[rec.path];
-  const addWork = () => { if (!workDone) { out += workForPage(rec.path, secOpen()); workDone = true; } };
+  let workDone = !HOME.work?.pages?.[rec.path] && !SS?.cta?.pages?.[rec.path];
+  const addWork = () => { if (!workDone) { out += (HOME.work?.pages?.[rec.path] ? workForPage(rec.path, secOpen()) : "") + (SS?.cta?.pages?.[rec.path] ? successCta(rec.path, secOpen()) : ""); workDone = true; } };
   for (const s of sections) {
     if (/^in short|asked questions|^faq|frequently|^related services/i.test(s.title)) addWork();
     const cls = secOpen();
@@ -648,6 +649,7 @@ function pageTpl(rec) {
   if (rec.path === ABOUT_PATH) return aboutTpl(rec);
   if (rec.path === "/contact-us/") return contactTpl(rec);
   if (SERVICE_PATHS.has(rec.path)) return serviceTpl(rec);
+  if (SS && rec.path === SS.path) return successTpl(rec);
   let [eyebrow, h1, body] = splitH1(rec.content_html || "", rec.h1 || rec.title);
   const h1Txt = stripTags(h1);
   const legal = LEGAL.has(rec.path.replace(/^\/+|\/+$/g, ""));
@@ -675,7 +677,7 @@ function pageTpl(rec) {
 ${contact}
 <section class="section"><div class="wrap narrow prose"><!--seo:content-->${hubGrids(localizeBody(shape(body, legal)))}<!--/seo:content--></div></section>
 ${(() => { const k = kitFor(rec, body, legal); return k ? `<section class="section kit"><div class="wrap narrow prose">${localizeBody(k)}</div></section>` : ""; })()}
-${hubArticles(rec)}${faqs}`, "is-page" + (legal ? " is-legal" : ""));
+${hubArticles(rec)}${successCta(rec.path, "section section-alt")}${faqs}`, "is-page" + (legal ? " is-legal" : ""));
 }
 
 function related(rec, n = 3) {
@@ -883,6 +885,60 @@ function workForPage(path, cls = "section section-alt") {
   return workSection({ ...HOME.work, ...P, cls: cls + " work-on-service", id: "client-work" }, items);
 }
 
+// "Our Success Stories": keyword-anchor link to a site (the URL itself is never shown)
+const ssLink = (s) => `<a class="ss-anchor" href="${E(s.url)}" target="_blank" rel="noopener">${E(s.anchor)}${icon("arrow")}</a>`;
+// CTA band on the home page and matching service pages (success-stories.json cta.pages), with 3 keyword links of the page's themes
+function successCta(p, cls = "section") {
+  const C = SS?.cta, P = C?.pages?.[p];
+  if (!P || p === SS.path) return "";
+  const picks = [];
+  for (const t of P.themes) for (const s of SS.sites) if (s.category === t && !picks.includes(s) && picks.length < 3 && !picks.some((x) => x.name === s.name)) picks.push(s);
+  return `<section class="${cls} ss-cta-band" id="success-stories"><div class="wrap"><div class="ss-cta">
+  <div class="ss-cta-copy"><span class="eyebrow">${E(C.eyebrow)}</span><h2 class="sec-title">${E(C.h2)}</h2><p>${E(C.text)}</p>
+  <ul class="ss-cta-stats">${SS.stats.slice(0, 3).map((s) => `<li><b>${E(s.value)}</b><span>${E(s.label)}</span></li>`).join("")}</ul>
+  <a class="btn btn-primary" href="${E(SS.path)}">${E(C.label)}${icon("arrow")}</a></div>
+  ${picks.length ? `<div class="ss-cta-links"><strong>From our blog network</strong><ul>${picks.map((s) => `<li><span class="tag">${E(s.category)}</span>${ssLink(s)}<small>${E(s.name)}: ${E(s.positioning)}</small></li>`).join("")}</ul></div>` : ""}
+</div></div></section>`;
+}
+function successTpl(rec) {
+  const S = SS, st = S.stack, N = S.network;
+  const cats = [...new Set(S.sites.map((s) => s.category))].sort();
+  const cards = S.sites.map((s) => `<article class="ss-card" data-cat="${E(s.category)}">
+    <div class="ss-card-top"><span class="tag">${E(s.category)}</span><span class="ss-ed">${E(s.edition)}</span></div>
+    <h3>${E(s.name)}</h3><p>${E(s.positioning)}. For ${E(s.audience.toLowerCase())}.</p>
+    <p class="ss-kw"><span>Target keyword</span>${ssLink(s)}</p></article>`).join("");
+  return document_(rec, `<section class="hero hero-about hero-service">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">${breadcrumb([[rec.title, null]])}
+      <span class="eyebrow">${E(S.eyebrow)}</span>
+      <h1>${E(S.h1)}</h1>
+      <!--seo:content--><p class="lead">${E(S.lead)}</p><!--/seo:content-->
+      <div class="hero-ctas"><a class="btn btn-primary" href="#site-network">Browse 135 sites${icon("arrow")}</a><a class="btn btn-ghost" href="/contact-us/">Contact Us</a></div>
+    </div>
+    <div class="hero-visual"><!--seo:content--><img src="${E(rec.featured_image.src)}" alt="${E(rec.featured_image.alt)}" width="1280" height="800" fetchpriority="high"><!--/seo:content--></div>
+  </div>
+</section>
+<section class="section section-tight"><div class="wrap"><ul class="about-stats figures">${S.stats.map((s) => `<li><b>${E(s.value)}</b><span>${E(s.label)}</span></li>`).join("")}</ul></div></section>
+<!--seo:content--><section class="section"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">${E(st.eyebrow)}</span><h2 class="sec-title">${E(st.h2)}</h2><p>${st.intro_html}</p></div>
+  <div class="ss-stack">${st.cards.map((c) => `<article class="svc-card"><div class="svc-ico">${icon(c.icon)}</div><h3>${E(c.title)}</h3><ul class="ss-list">${c.items.map((i) => `<li>${icon("check")}<span>${E(i)}</span></li>`).join("")}</ul></article>`).join("")}</div>
+</div></section>
+<!--/seo:content-->${workSection({ ...HOME.work, ...S.featured, id: "featured-work", cta: null }, HOME.work.items)}<!--seo:content-->
+<section class="section" id="site-network"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">${E(N.eyebrow)}</span><h2 class="sec-title">${E(N.h2)}</h2><p>${E(N.intro)}</p></div><!--/seo:content-->
+  <div class="ss-tools"><label class="ss-search"><span>Search sites</span><input type="search" id="ss-q" placeholder="Keyword, industry or audience" autocomplete="off"></label>
+  <label class="ss-filter"><span>Theme</span><select id="ss-cat"><option value="">All themes (${cats.length})</option>${cats.map((c) => `<option>${E(c)}</option>`).join("")}</select></label>
+  <p class="ss-count" id="ss-count" aria-live="polite">Showing ${S.sites.length} of ${S.sites.length} sites</p></div>
+  <div class="ss-grid" id="ss-grid">${cards}</div>
+</div></section>
+<!--seo:content--><section class="section section-alt"><div class="wrap narrow center"><h2 class="sec-title">${E(S.closing.h2)}</h2><p>${E(S.closing.text)}</p>
+  <a class="btn btn-primary" href="${E(S.closing.href)}">${E(S.closing.label)}${icon("arrow")}</a></div></section>${faqBlock(rec.faqs)}<!--/seo:content-->
+<script>(function(){var q=document.getElementById("ss-q"),c=document.getElementById("ss-cat"),n=document.getElementById("ss-count"),cards=[].slice.call(document.querySelectorAll(".ss-card"));
+function f(){var v=q.value.trim().toLowerCase(),k=c.value,shown=0;cards.forEach(function(e){var ok=(!k||e.getAttribute("data-cat")===k)&&(!v||e.textContent.toLowerCase().indexOf(v)>-1);e.hidden=!ok;if(ok)shown++;});n.textContent="Showing "+shown+" of "+cards.length+" sites";}
+q.addEventListener("input",f);c.addEventListener("change",f);})();</script>`, "is-page is-service is-success");
+}
+
 function homeTpl(rec) {
   // plain words on the home page too (home.json is not a page record), keeping the home keyphrase
   if (RULES.autofix.simpleWords && !HOME._simple) {
@@ -929,6 +985,7 @@ function homeTpl(rec) {
   <div class="svc-grid">${services}</div>
 </div></section>
 ${workSection(H.work || {}, H.work?.items)}
+${successCta("/")}
 <section class="section section-dark"><div class="wrap">
   <div class="sec-head"><span class="eyebrow eyebrow-light">The Tipping Point of the Modern AI Era</span><h2 class="sec-title">${E(H.era.h2)}</h2><p>${E(H.era.intro)}</p></div>
   <div class="era-grid">${era}</div>

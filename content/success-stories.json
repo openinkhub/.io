@@ -1,0 +1,1636 @@
+{
+ "_note": "Our Success Stories page (/our-success-stories/) and the CTA band on the home page and matching service pages. Rendered by successTpl / successCta in tools/build.mjs. sites come from Blogsite_Industry_Domain_Keyword_Mapping_135_Sites.xlsx (sheet Website Editorial Strategy): each card links its URL with a keyword anchor; URLs are never shown.",
+ "path": "/our-success-stories/",
+ "eyebrow": "Our Success Stories",
+ "h1": "Our Success Stories: 150+ Websites Built and Ranked",
+ "lead": "These success stories show how Openink Hub has built 150+ websites on WordPress, Node.js and Next.js. They range from client business sites to a network of 135 keyword-mapped blogs. We plan each site around a target keyword, build it for speed, and connect it to the tools that help it rank.",
+ "stats": [
+  {
+   "value": "150+",
+   "label": "Websites built"
+  },
+  {
+   "value": "135",
+   "label": "Blog sites mapped to keywords"
+  },
+  {
+   "value": "24",
+   "label": "Industry themes covered"
+  },
+  {
+   "value": "3",
+   "label": "Featured client builds"
+  }
+ ],
+ "stack": {
+  "eyebrow": "How we build",
+  "h2": "The technology behind our success stories",
+  "cards": [
+   {
+    "icon": "code",
+    "title": "Coding languages",
+    "items": [
+     "JavaScript and TypeScript for Node.js and Next.js builds",
+     "PHP for WordPress themes, plugins and custom functions",
+     "HTML5 and CSS3 for clean, accessible page markup",
+     "SQL for MySQL queries, reports and data clean-up"
+    ]
+   },
+   {
+    "icon": "spark",
+    "title": "Frameworks and CMS",
+    "items": [
+     "WordPress for blogs and sites the client edits each day",
+     "Next.js (React) for fast, server-rendered pages that rank",
+     "Node.js for APIs, automation scripts and static site builds",
+     "Static HTML builds for very fast, low-cost pages"
+    ]
+   },
+   {
+    "icon": "search",
+    "title": "Databases",
+    "items": [
+     "MySQL for WordPress and structured business data",
+     "MongoDB for flexible app data, logs and content stores",
+     "Backups and staging copies before every major change"
+    ]
+   },
+   {
+    "icon": "chat",
+    "title": "Integrations and tools",
+    "items": [
+     "GitHub for version control, reviews and deploy history",
+     "Google Search Console, GA4 and Tag Manager on every site",
+     "Schema markup, XML sitemaps and Core Web Vitals checks",
+     "WhatsApp Business API, forms and CRM hand-offs"
+    ]
+   }
+  ],
+  "intro_html": "We pick the stack that fits the job. For example, a content-heavy blog needs a fast, easy editor, while a booking site needs custom logic and a database. Our <a href=\"/website-design-agency/\">website design and development</a> team then hands each site to our <a href=\"/best-seo-services-in-india/\">SEO services</a> team, and our <a href=\"/high-quality-backlinks/\">backlink building</a> work helps it earn authority. Here is what we use and why."
+ },
+ "featured": {
+  "eyebrow": "Featured work",
+  "h2": "Three featured client success stories",
+  "intro": "Real client websites, with their measured Google PageSpeed scores and Moz Page Authority."
+ },
+ "network": {
+  "eyebrow": "Keyword-mapped blog network",
+  "h2": "135 blog sites, each mapped to a target keyword",
+  "intro": "Every blog in our network has its own editorial focus, audience and primary keyword. Each card below links to the site through its target keyword, so you can see the topic it is built to rank for.",
+  "note": "Use the search box to find a site by keyword, industry or audience."
+ },
+ "cta": {
+  "eyebrow": "Our Success Stories",
+  "h2": "150+ websites built on WordPress, Node.js and Next.js",
+  "text": "See our three featured client builds and 135 blog sites, each mapped to a target keyword and built to rank.",
+  "label": "See our success stories",
+  "pages": {
+   "/": {
+    "themes": [
+     "SEO & Search Marketing",
+     "Digital Growth & Products",
+     "AI & Emerging Technology"
+    ]
+   },
+   "/best-seo-services-in-india/": {
+    "themes": [
+     "SEO & Search Marketing",
+     "Research & Data Analysis",
+     "Market Trends & Intelligence"
+    ]
+   },
+   "/best-answer-engine-optimization-services/": {
+    "themes": [
+     "Beginner Guides & Education",
+     "Business Knowledge & Explainers",
+     "Learning & Knowledge"
+    ]
+   },
+   "/generative-engine-optimization/": {
+    "themes": [
+     "AI & Emerging Technology",
+     "Content & Publishing"
+    ]
+   },
+   "/artificial-intelligence-optimization/": {
+    "themes": [
+     "AI & Emerging Technology",
+     "Technology & Innovation",
+     "Digital Growth & Products"
+    ]
+   },
+   "/website-design-agency/": {
+    "themes": [
+     "Technology & Innovation",
+     "Digital Growth & Products",
+     "Business Operations & Tools"
+    ]
+   },
+   "/high-quality-backlinks/": {
+    "themes": [
+     "Content & Publishing",
+     "Editorial Stories & Explainers"
+    ]
+   },
+   "/best-seo-audit-tools/": {
+    "themes": [
+     "Research & Analysis",
+     "Performance & Decision Making"
+    ]
+   }
+  }
+ },
+ "closing": {
+  "h2": "Want a website that ranks like these?",
+  "text": "Tell us about your business and target keywords. We will suggest the right stack and a build plan.",
+  "label": "Talk to our team",
+  "href": "/contact-us/"
+ },
+ "sites": [
+  {
+   "name": "StartupSEO",
+   "edition": "Main blog",
+   "url": "https://startupseo.blog/",
+   "keyword": "SEO strategies for businesses",
+   "anchor": "SEO strategies for businesses",
+   "theme": "SEO & Technology",
+   "category": "SEO & Search Marketing",
+   "positioning": "SEO and technology education",
+   "audience": "Startup founders, marketers"
+  },
+  {
+   "name": "RankLaunch",
+   "edition": "Main blog",
+   "url": "https://ranklaunch.blog/",
+   "keyword": "Business research and analysis",
+   "anchor": "Business research and analysis",
+   "theme": "Research & Analytics",
+   "category": "Research & Data Analysis",
+   "positioning": "Data, comparisons and research",
+   "audience": "Researchers, professionals"
+  },
+  {
+   "name": "SeedToSearch",
+   "edition": "Main blog",
+   "url": "https://seedtosearch.blog/",
+   "keyword": "Financial planning for startups",
+   "anchor": "Financial planning for startups",
+   "theme": "Finance & Entrepreneurship",
+   "category": "Business Finance",
+   "positioning": "Startup finance and literacy",
+   "audience": "Entrepreneurs, young earners"
+  },
+  {
+   "name": "GrowthSERP",
+   "edition": "Main blog",
+   "url": "https://growthserp.blog/",
+   "keyword": "Business growth strategies",
+   "anchor": "Business growth strategies",
+   "theme": "Digital Products & Growth",
+   "category": "Digital Growth & Products",
+   "positioning": "Digital products and growth technology",
+   "audience": "Growth teams, operators"
+  },
+  {
+   "name": "StartupVision",
+   "edition": "Main blog",
+   "url": "https://startupvision.blog/",
+   "keyword": "AI technology for businesses",
+   "anchor": "AI technology for businesses",
+   "theme": "AI & Innovation",
+   "category": "AI & Emerging Technology",
+   "positioning": "AI, innovation and future technology",
+   "audience": "Technology leaders, founders, curious professionals"
+  },
+  {
+   "name": "Openink Hub Blogspot",
+   "edition": "Main blog",
+   "url": "https://blog.openinkhub.cloud/",
+   "keyword": "Business guides for beginners",
+   "anchor": "Business guides for beginners",
+   "theme": "General Knowledge & Education",
+   "category": "Beginner Guides & Education",
+   "positioning": "Practical explainers and accessible literacy",
+   "audience": "Everyday readers, first-time learners"
+  },
+  {
+   "name": "SignalLoom",
+   "edition": "Main blog",
+   "url": "https://signalloom.blog/",
+   "keyword": "Business trends and analysis",
+   "anchor": "Business trends and analysis",
+   "theme": "Trends & Intelligence",
+   "category": "Market Trends & Intelligence",
+   "positioning": "Signals, trends and data-led decisions",
+   "audience": "Analytical readers, professionals"
+  },
+  {
+   "name": "BeyondMetrics",
+   "edition": "Main blog",
+   "url": "https://beyondmetrics.blog/",
+   "keyword": "Business performance improvement",
+   "anchor": "Business performance improvement",
+   "theme": "Performance & Decision Science",
+   "category": "Performance & Decision Making",
+   "positioning": "Personal goal beyond headline numbers",
+   "audience": "Professionals, households, curious readers"
+  },
+  {
+   "name": "Openink Hub",
+   "edition": "Main blog",
+   "url": "https://openinkhub.blog/",
+   "keyword": "Business knowledge and education",
+   "anchor": "Business knowledge and education",
+   "theme": "Knowledge & Business Education",
+   "category": "Business Knowledge & Explainers",
+   "positioning": "Editorial explainers and foundational knowledge",
+   "audience": "General readers, beginners"
+  },
+  {
+   "name": "PrimeNarrative",
+   "edition": "Main blog",
+   "url": "https://primenarrative.blog/",
+   "keyword": "Business strategy and planning",
+   "anchor": "Business strategy and planning",
+   "theme": "Business Strategy & Decision Making",
+   "category": "Business Strategy & Comparisons",
+   "positioning": "Clear narratives for complex choices",
+   "audience": "Readers comparing options"
+  },
+  {
+   "name": "NexoraPress",
+   "edition": "Main blog",
+   "url": "https://nexorapress.blog/",
+   "keyword": "Business and industry developments",
+   "anchor": "Business and industry developments",
+   "theme": "Developments & Consumer Insights",
+   "category": "Industry News & Developments",
+   "positioning": "Developments and consumer reporting",
+   "audience": "Followers, digitally active consumers"
+  },
+  {
+   "name": "NextReach",
+   "edition": "Main blog",
+   "url": "https://nextreach.blog/",
+   "keyword": "Business and career planning",
+   "anchor": "Business and career planning",
+   "theme": "Planning & Professional Development",
+   "category": "Planning & Action Guides",
+   "positioning": "Capability and next-step action guides",
+   "audience": "Young earners, families, early investors"
+  },
+  {
+   "name": "StartupStack",
+   "edition": "Main blog",
+   "url": "https://startupstack.blog/",
+   "keyword": "Business operations management",
+   "anchor": "Business operations management",
+   "theme": "Startup & Business Operations",
+   "category": "Business Operations & Tools",
+   "positioning": "Startup operations, founder tools",
+   "audience": "Startup founders, operators, small teams"
+  },
+  {
+   "name": "GrowthScript",
+   "edition": "Main blog",
+   "url": "https://growthscript.blog/",
+   "keyword": "Business growth and productivity",
+   "anchor": "Business growth and productivity",
+   "theme": "Growth & Productivity",
+   "category": "Growth Strategies & Playbooks",
+   "positioning": "Growth playbooks for habits and products",
+   "audience": "Growth-minded consumers, product teams"
+  },
+  {
+   "name": "World Buzz",
+   "edition": "Main blog",
+   "url": "https://worldbuzz.wiki/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "TrendNest",
+   "edition": "Main blog",
+   "url": "https://trendnest.buzz/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and developments",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "BuzzChronicle",
+   "edition": "Main blog",
+   "url": "https://buzzchronicle.forum/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis by BuzzChronicle",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "WisdomTrack",
+   "edition": "Main blog",
+   "url": "https://wisdomtrack.study/",
+   "keyword": "Practical learning and business education",
+   "anchor": "Practical learning and business education",
+   "theme": "Knowledge & Education",
+   "category": "Learning & Knowledge",
+   "positioning": "Accessible learning and practical knowledge",
+   "audience": "Learners, professionals, business owners"
+  },
+  {
+   "name": "FutureBytes",
+   "edition": "Main blog",
+   "url": "https://futurebytes.cyou/",
+   "keyword": "Technology trends for businesses",
+   "anchor": "Technology trends for businesses",
+   "theme": "Technology & Digital Transformation",
+   "category": "Technology & Innovation",
+   "positioning": "Digital change, technology and future-facing ideas",
+   "audience": "Professionals, business owners, technology-curious readers"
+  },
+  {
+   "name": "StoryForum",
+   "edition": "Main blog",
+   "url": "https://storyforum.sbs/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Business and industry explainers",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "ExploreWorld",
+   "edition": "Main blog",
+   "url": "https://exploreworld.surf/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Practical explainers",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "CreativeOrbit",
+   "edition": "Main blog",
+   "url": "https://creativeorbit.space/",
+   "keyword": "Creative ideas for businesses",
+   "anchor": "Creative ideas for businesses",
+   "theme": "Creativity & Design",
+   "category": "Creativity & Design",
+   "positioning": "Creative ideas, visual communication and practical inspiration",
+   "audience": "Creators, professionals, entrepreneurs, general readers"
+  },
+  {
+   "name": "DigitalExpress",
+   "edition": "Main blog",
+   "url": "https://digitalexpress.click/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis by DigitalExpress",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "ModernJournal",
+   "edition": "Main blog",
+   "url": "https://modernjournal.living/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Business stories",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "StudyBeacon",
+   "edition": "Main blog",
+   "url": "https://studybeacon.cfd/",
+   "keyword": "Practical learning and business education",
+   "anchor": "Learning methods",
+   "theme": "Knowledge & Education",
+   "category": "Learning & Knowledge",
+   "positioning": "Accessible learning and practical knowledge",
+   "audience": "Learners, professionals, business owners"
+  },
+  {
+   "name": "VisualStories",
+   "edition": "Main blog",
+   "url": "https://visualstories.pics/",
+   "keyword": "Creative ideas for businesses",
+   "anchor": "Creative workflows",
+   "theme": "Creativity & Design",
+   "category": "Creativity & Design",
+   "positioning": "Creative ideas, visual communication and practical inspiration",
+   "audience": "Creators, professionals, entrepreneurs, general readers"
+  },
+  {
+   "name": "ContentJunction",
+   "edition": "Main blog",
+   "url": "https://contentjunction.casa/",
+   "keyword": "Content marketing strategies",
+   "anchor": "Content marketing strategies",
+   "theme": "Content & Publishing",
+   "category": "Content & Publishing",
+   "positioning": "Content creation, publishing and digital communication",
+   "audience": "Writers, creators, professionals, businesses"
+  },
+  {
+   "name": "RankQuest",
+   "edition": "Main blog",
+   "url": "https://rankquest.cfd/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis by RankQuest",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "CreativeCasa",
+   "edition": "Main blog",
+   "url": "https://creativecasa.homes/",
+   "keyword": "Creative ideas for businesses",
+   "anchor": "Visual communication",
+   "theme": "Creativity & Design",
+   "category": "Creativity & Design",
+   "positioning": "Creative ideas, visual communication and practical inspiration",
+   "audience": "Creators, professionals, entrepreneurs, general readers"
+  },
+  {
+   "name": "HomeJournal",
+   "edition": "Main blog",
+   "url": "https://homejournal.rest/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Consumer topics",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "RestAndRead",
+   "edition": "Main blog",
+   "url": "https://restandread.cfd/",
+   "keyword": "Practical lifestyle guides",
+   "anchor": "Practical lifestyle guides",
+   "theme": "Lifestyle & Practical Guides",
+   "category": "Lifestyle & Practical Guides",
+   "positioning": "Everyday living, home, wellbeing and practical lifestyle knowledge",
+   "audience": "Households, professionals, general readers"
+  },
+  {
+   "name": "RankQuest",
+   "edition": "Main blog",
+   "url": "https://rankquest.sbs/",
+   "keyword": "Business research and analysis",
+   "anchor": "Market research",
+   "theme": "Research & Decision Intelligence",
+   "category": "Research & Analysis",
+   "positioning": "Research, comparisons, signals and evidence-led decisions",
+   "audience": "Researchers, professionals, business decision-makers"
+  },
+  {
+   "name": "TrendPilot",
+   "edition": "Main blog",
+   "url": "https://trendpilot.cyou/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis by TrendPilot",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "GrowthVision",
+   "edition": "Main blog",
+   "url": "https://growthvision.cfd/",
+   "keyword": "Business growth strategies",
+   "anchor": "Business growth",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "StartupGrowth",
+   "edition": "Main blog",
+   "url": "https://startupgrowth.online/",
+   "keyword": "Business growth strategies",
+   "anchor": "Startup planning",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "NexoraPress",
+   "edition": "Main blog",
+   "url": "https://nexorapress.courses/",
+   "keyword": "Business and industry developments",
+   "anchor": "New developments",
+   "theme": "Developments & Consumer Insights",
+   "category": "Industry News & Developments",
+   "positioning": "Developments and consumer reporting",
+   "audience": "Followers, digitally active consumers"
+  },
+  {
+   "name": "PrimeNarrative",
+   "edition": "Main blog",
+   "url": "https://primenarrative.site/",
+   "keyword": "Business strategy and planning",
+   "anchor": "Business models",
+   "theme": "Business Strategy & Decision Making",
+   "category": "Business Strategy & Comparisons",
+   "positioning": "Clear narratives for complex choices",
+   "audience": "Readers comparing options"
+  },
+  {
+   "name": "WebBuzzDaily",
+   "edition": "Main blog",
+   "url": "https://webbuzzdaily.cfd/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis by WebBuzzDaily",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "GrowthSERP",
+   "edition": "Main blog",
+   "url": "https://growthserp.store/",
+   "keyword": "Business growth strategies",
+   "anchor": "Digital tools",
+   "theme": "Digital Products & Growth",
+   "category": "Digital Growth & Products",
+   "positioning": "Digital products and growth technology",
+   "audience": "Growth teams, operators"
+  },
+  {
+   "name": "NextReach",
+   "edition": "Main blog",
+   "url": "https://nextreach.quest/",
+   "keyword": "Business and career planning",
+   "anchor": "Financial habits",
+   "theme": "Planning & Professional Development",
+   "category": "Planning & Action Guides",
+   "positioning": "Capability and next-step action guides",
+   "audience": "Young earners, families, early investors"
+  },
+  {
+   "name": "GrowthScript",
+   "edition": "Main blog",
+   "url": "https://growthscript.website/",
+   "keyword": "Business growth and productivity",
+   "anchor": "Growth frameworks",
+   "theme": "Growth & Productivity",
+   "category": "Growth Strategies & Playbooks",
+   "positioning": "Growth playbooks for habits and products",
+   "audience": "Growth-minded consumers, product teams"
+  },
+  {
+   "name": "StartupGrowth",
+   "edition": "Main blog",
+   "url": "https://startupgrowth.cyou/",
+   "keyword": "Business growth strategies",
+   "anchor": "Productivity",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "DailySurf",
+   "edition": "Main blog",
+   "url": "https://dailysurf.cyou/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis by DailySurf",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "BlogSpace",
+   "edition": "Main blog",
+   "url": "https://blogspace.cyou/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Industry perspectives",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "ShopStories",
+   "edition": "Main blog",
+   "url": "https://shopstories.sbs/",
+   "keyword": "E-commerce business strategies",
+   "anchor": "E-commerce business strategies",
+   "theme": "Commerce & Consumer Insights",
+   "category": "Commerce & Consumer Insights",
+   "positioning": "Commerce, products and consumer decision-making",
+   "audience": "Consumers, retailers, entrepreneurs, business professionals"
+  },
+  {
+   "name": "TrendNest",
+   "edition": "App edition",
+   "url": "https://app.trendnest.buzz/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and developments by TrendNest",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "BuzzChronicle",
+   "edition": "App edition",
+   "url": "https://app.buzzchronicle.forum/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and developments by BuzzChronicle",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "WisdomTrack",
+   "edition": "App edition",
+   "url": "https://app.wisdomtrack.study/",
+   "keyword": "Practical learning and business education",
+   "anchor": "Practical guides",
+   "theme": "Knowledge & Education",
+   "category": "Learning & Knowledge",
+   "positioning": "Accessible learning and practical knowledge",
+   "audience": "Learners, professionals, business owners"
+  },
+  {
+   "name": "FutureBytes",
+   "edition": "App edition",
+   "url": "https://app.futurebytes.cyou/",
+   "keyword": "Technology trends for businesses",
+   "anchor": "Technology adoption",
+   "theme": "Technology & Digital Transformation",
+   "category": "Technology & Innovation",
+   "positioning": "Digital change, technology and future-facing ideas",
+   "audience": "Professionals, business owners, technology-curious readers"
+  },
+  {
+   "name": "StoryForum",
+   "edition": "App edition",
+   "url": "https://app.storyforum.sbs/",
+   "keyword": "Business and industry explainers",
+   "anchor": "How-to content",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "ExploreWorld",
+   "edition": "App edition",
+   "url": "https://app.exploreworld.surf/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Practical explainers by ExploreWorld",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "CreativeOrbit",
+   "edition": "App edition",
+   "url": "https://app.creativeorbit.space/",
+   "keyword": "Creative ideas for businesses",
+   "anchor": "Design thinking",
+   "theme": "Creativity & Design",
+   "category": "Creativity & Design",
+   "positioning": "Creative ideas, visual communication and practical inspiration",
+   "audience": "Creators, professionals, entrepreneurs, general readers"
+  },
+  {
+   "name": "DigitalExpress",
+   "edition": "App edition",
+   "url": "https://app.digitalexpress.click/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and developments by DigitalExpress",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "ModernJournal",
+   "edition": "App edition",
+   "url": "https://app.modernjournal.living/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Practical explainers by ModernJournal",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "StudyBeacon",
+   "edition": "App edition",
+   "url": "https://app.studybeacon.cfd/",
+   "keyword": "Practical learning and business education",
+   "anchor": "Business fundamentals",
+   "theme": "Knowledge & Education",
+   "category": "Learning & Knowledge",
+   "positioning": "Accessible learning and practical knowledge",
+   "audience": "Learners, professionals, business owners"
+  },
+  {
+   "name": "VisualStories",
+   "edition": "App edition",
+   "url": "https://app.visualstories.pics/",
+   "keyword": "Creative ideas for businesses",
+   "anchor": "Content creation",
+   "theme": "Creativity & Design",
+   "category": "Creativity & Design",
+   "positioning": "Creative ideas, visual communication and practical inspiration",
+   "audience": "Creators, professionals, entrepreneurs, general readers"
+  },
+  {
+   "name": "ContentJunction",
+   "edition": "App edition",
+   "url": "https://app.contentjunction.casa/",
+   "keyword": "Content marketing strategies",
+   "anchor": "Content strategy",
+   "theme": "Content & Publishing",
+   "category": "Content & Publishing",
+   "positioning": "Content creation, publishing and digital communication",
+   "audience": "Writers, creators, professionals, businesses"
+  },
+  {
+   "name": "RankQuest",
+   "edition": "App edition",
+   "url": "https://app.rankquest.cfd/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and developments by RankQuest",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "CreativeCasa",
+   "edition": "App edition",
+   "url": "https://app.creativecasa.homes/",
+   "keyword": "Creative ideas for businesses",
+   "anchor": "Innovation",
+   "theme": "Creativity & Design",
+   "category": "Creativity & Design",
+   "positioning": "Creative ideas, visual communication and practical inspiration",
+   "audience": "Creators, professionals, entrepreneurs, general readers"
+  },
+  {
+   "name": "HomeJournal",
+   "edition": "App edition",
+   "url": "https://app.homejournal.rest/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Practical explainers by HomeJournal",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "RestAndRead",
+   "edition": "App edition",
+   "url": "https://app.restandread.cfd/",
+   "keyword": "Practical lifestyle guides",
+   "anchor": "Home management",
+   "theme": "Lifestyle & Practical Guides",
+   "category": "Lifestyle & Practical Guides",
+   "positioning": "Everyday living, home, wellbeing and practical lifestyle knowledge",
+   "audience": "Households, professionals, general readers"
+  },
+  {
+   "name": "RankQuest",
+   "edition": "App edition",
+   "url": "https://app.rankquest.sbs/",
+   "keyword": "Business research and analysis",
+   "anchor": "Comparisons",
+   "theme": "Research & Decision Intelligence",
+   "category": "Research & Analysis",
+   "positioning": "Research, comparisons, signals and evidence-led decisions",
+   "audience": "Researchers, professionals, business decision-makers"
+  },
+  {
+   "name": "TrendPilot",
+   "edition": "App edition",
+   "url": "https://app.trendpilot.cyou/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and developments by TrendPilot",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "GrowthVision",
+   "edition": "App edition",
+   "url": "https://app.growthvision.cfd/",
+   "keyword": "Business growth strategies",
+   "anchor": "Customer development",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "StartupGrowth",
+   "edition": "App edition",
+   "url": "https://app.startupgrowth.online/",
+   "keyword": "Business growth strategies",
+   "anchor": "Operational improvement",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "NexoraPress",
+   "edition": "App edition",
+   "url": "https://app.nexorapress.courses/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and developments by NexoraPress",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "PrimeNarrative",
+   "edition": "App edition",
+   "url": "https://app.primenarrative.site/",
+   "keyword": "Business strategy and planning",
+   "anchor": "Product comparisons",
+   "theme": "Business Strategy & Decision Making",
+   "category": "Business Strategy & Comparisons",
+   "positioning": "Clear narratives for complex choices",
+   "audience": "Readers comparing options"
+  },
+  {
+   "name": "WebBuzzDaily",
+   "edition": "App edition",
+   "url": "https://app.webbuzzdaily.cfd/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and developments by WebBuzzDaily",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "GrowthSERP",
+   "edition": "App edition",
+   "url": "https://app.growthserp.store/",
+   "keyword": "Business growth strategies",
+   "anchor": "Action plans",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "NextReach",
+   "edition": "App edition",
+   "url": "https://app.nextreach.quest/",
+   "keyword": "Business research and analysis",
+   "anchor": "Benchmarks",
+   "theme": "Research & Decision Intelligence",
+   "category": "Research & Analysis",
+   "positioning": "Research, comparisons, signals and evidence-led decisions",
+   "audience": "Researchers, professionals, business decision-makers"
+  },
+  {
+   "name": "GrowthScript",
+   "edition": "App edition",
+   "url": "https://app.growthscript.website/",
+   "keyword": "Business growth and productivity",
+   "anchor": "Customer engagement",
+   "theme": "Growth & Productivity",
+   "category": "Growth Strategies & Playbooks",
+   "positioning": "Growth playbooks for habits and products",
+   "audience": "Growth-minded consumers, product teams"
+  },
+  {
+   "name": "StartupGrowth",
+   "edition": "App edition",
+   "url": "https://app.startupgrowth.cyou/",
+   "keyword": "Business growth strategies",
+   "anchor": "Business growth by StartupGrowth",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "DailySurf",
+   "edition": "App edition",
+   "url": "https://app.dailysurf.cyou/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and developments by DailySurf",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "BlogSpace",
+   "edition": "App edition",
+   "url": "https://app.blogspace.cyou/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Practical explainers by BlogSpace",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "ShopStories",
+   "edition": "App edition",
+   "url": "https://app.shopstories.sbs/",
+   "keyword": "E-commerce business strategies",
+   "anchor": "Retail trends",
+   "theme": "Commerce & Consumer Insights",
+   "category": "Commerce & Consumer Insights",
+   "positioning": "Commerce, products and consumer decision-making",
+   "audience": "Consumers, retailers, entrepreneurs, business professionals"
+  },
+  {
+   "name": "StartupSEO",
+   "edition": "App edition",
+   "url": "https://app.startupseo.blog/",
+   "keyword": "SEO strategies for businesses",
+   "anchor": "SEO strategies",
+   "theme": "SEO & Technology",
+   "category": "SEO & Search Marketing",
+   "positioning": "SEO and technology education",
+   "audience": "Startup founders, marketers"
+  },
+  {
+   "name": "RankLaunch",
+   "edition": "App edition",
+   "url": "https://app.ranklaunch.blog/",
+   "keyword": "Business research and analysis",
+   "anchor": "Industry comparisons",
+   "theme": "Research & Analytics",
+   "category": "Research & Data Analysis",
+   "positioning": "Data, comparisons and research",
+   "audience": "Researchers, professionals"
+  },
+  {
+   "name": "SeedToSearch",
+   "edition": "App edition",
+   "url": "https://app.seedtosearch.blog/",
+   "keyword": "Financial planning for startups",
+   "anchor": "Startup funding",
+   "theme": "Finance & Entrepreneurship",
+   "category": "Business Finance",
+   "positioning": "Startup finance and literacy",
+   "audience": "Entrepreneurs, young earners"
+  },
+  {
+   "name": "GrowthSERP",
+   "edition": "App edition",
+   "url": "https://app.growthserp.blog/",
+   "keyword": "Business growth strategies",
+   "anchor": "SaaS",
+   "theme": "Digital Products & Growth",
+   "category": "Digital Growth & Products",
+   "positioning": "Digital products and growth technology",
+   "audience": "Growth teams, operators"
+  },
+  {
+   "name": "StartupVision",
+   "edition": "App edition",
+   "url": "https://app.startupvision.blog/",
+   "keyword": "AI technology for businesses",
+   "anchor": "AI applications",
+   "theme": "AI & Innovation",
+   "category": "AI & Emerging Technology",
+   "positioning": "AI, innovation and future technology",
+   "audience": "Technology leaders, founders, curious professionals"
+  },
+  {
+   "name": "Openink Hub Blogspot",
+   "edition": "Web edition",
+   "url": "https://web.openinkhub.cloud/",
+   "keyword": "Business guides for beginners",
+   "anchor": "Beginner guides",
+   "theme": "General Knowledge & Education",
+   "category": "Beginner Guides & Education",
+   "positioning": "Practical explainers and accessible literacy",
+   "audience": "Everyday readers, first-time learners"
+  },
+  {
+   "name": "SignalLoom",
+   "edition": "App edition",
+   "url": "https://app.signalloom.blog/",
+   "keyword": "Business trends and analysis",
+   "anchor": "Industry trends",
+   "theme": "Trends & Intelligence",
+   "category": "Market Trends & Intelligence",
+   "positioning": "Signals, trends and data-led decisions",
+   "audience": "Analytical readers, professionals"
+  },
+  {
+   "name": "BeyondMetrics",
+   "edition": "App edition",
+   "url": "https://app.beyondmetrics.blog/",
+   "keyword": "Business performance improvement",
+   "anchor": "Performance beyond numbers",
+   "theme": "Performance & Decision Science",
+   "category": "Performance & Decision Making",
+   "positioning": "Personal goal beyond headline numbers",
+   "audience": "Professionals, households, curious readers"
+  },
+  {
+   "name": "Openink Hub",
+   "edition": "App edition",
+   "url": "https://app.openinkhub.blog/",
+   "keyword": "Business knowledge and education",
+   "anchor": "Business concepts",
+   "theme": "Knowledge & Business Education",
+   "category": "Business Knowledge & Explainers",
+   "positioning": "Editorial explainers and foundational knowledge",
+   "audience": "General readers, beginners"
+  },
+  {
+   "name": "PrimeNarrative",
+   "edition": "App edition",
+   "url": "https://app.primenarrative.blog/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Practical explainers by PrimeNarrative",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "NexoraPress",
+   "edition": "App edition",
+   "url": "https://app.nexorapress.blog/",
+   "keyword": "Business and industry developments",
+   "anchor": "Product updates",
+   "theme": "Developments & Consumer Insights",
+   "category": "Industry News & Developments",
+   "positioning": "Developments and consumer reporting",
+   "audience": "Followers, digitally active consumers"
+  },
+  {
+   "name": "NextReach",
+   "edition": "App edition",
+   "url": "https://app.nextreach.blog/",
+   "keyword": "Business and career planning",
+   "anchor": "Career planning",
+   "theme": "Planning & Professional Development",
+   "category": "Planning & Action Guides",
+   "positioning": "Capability and next-step action guides",
+   "audience": "Young earners, families, early investors"
+  },
+  {
+   "name": "StartupStack",
+   "edition": "App edition",
+   "url": "https://app.startupstack.blog/",
+   "keyword": "Business operations management",
+   "anchor": "Startup operations",
+   "theme": "Startup & Business Operations",
+   "category": "Business Operations & Tools",
+   "positioning": "Startup operations, founder tools",
+   "audience": "Startup founders, operators, small teams"
+  },
+  {
+   "name": "GrowthScript",
+   "edition": "App edition",
+   "url": "https://app.growthscript.blog/",
+   "keyword": "Content marketing strategies",
+   "anchor": "Blogging",
+   "theme": "Content & Publishing",
+   "category": "Content & Publishing",
+   "positioning": "Content creation, publishing and digital communication",
+   "audience": "Writers, creators, professionals, businesses"
+  },
+  {
+   "name": "World Buzz",
+   "edition": "App edition",
+   "url": "https://app.worldbuzz.wiki/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and developments by World Buzz",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "StartupSEO",
+   "edition": "Site edition",
+   "url": "https://site.startupseo.blog/",
+   "keyword": "SEO strategies for businesses",
+   "anchor": "Keyword research",
+   "theme": "SEO & Technology",
+   "category": "SEO & Search Marketing",
+   "positioning": "SEO and technology education",
+   "audience": "Startup founders, marketers"
+  },
+  {
+   "name": "RankLaunch",
+   "edition": "Site edition",
+   "url": "https://site.ranklaunch.blog/",
+   "keyword": "Business research and analysis",
+   "anchor": "Business statistics",
+   "theme": "Research & Analytics",
+   "category": "Research & Data Analysis",
+   "positioning": "Data, comparisons and research",
+   "audience": "Researchers, professionals"
+  },
+  {
+   "name": "SeedToSearch",
+   "edition": "Site edition",
+   "url": "https://site.seedtosearch.blog/",
+   "keyword": "Financial planning for startups",
+   "anchor": "Budgeting",
+   "theme": "Finance & Entrepreneurship",
+   "category": "Business Finance",
+   "positioning": "Startup finance and literacy",
+   "audience": "Entrepreneurs, young earners"
+  },
+  {
+   "name": "GrowthSERP",
+   "edition": "Site edition",
+   "url": "https://site.growthserp.blog/",
+   "keyword": "Business growth strategies",
+   "anchor": "Product development",
+   "theme": "Digital Products & Growth",
+   "category": "Digital Growth & Products",
+   "positioning": "Digital products and growth technology",
+   "audience": "Growth teams, operators"
+  },
+  {
+   "name": "StartupVision",
+   "edition": "Site edition",
+   "url": "https://site.startupvision.blog/",
+   "keyword": "AI technology for businesses",
+   "anchor": "Automation",
+   "theme": "AI & Innovation",
+   "category": "AI & Emerging Technology",
+   "positioning": "AI, innovation and future technology",
+   "audience": "Technology leaders, founders, curious professionals"
+  },
+  {
+   "name": "Openink Hub Blogspot",
+   "edition": "Site edition",
+   "url": "https://site.openinkhub.cloud/",
+   "keyword": "Business guides for beginners",
+   "anchor": "Technology explainers",
+   "theme": "General Knowledge & Education",
+   "category": "Beginner Guides & Education",
+   "positioning": "Practical explainers and accessible literacy",
+   "audience": "Everyday readers, first-time learners"
+  },
+  {
+   "name": "SignalLoom",
+   "edition": "Site edition",
+   "url": "https://site.signalloom.blog/",
+   "keyword": "Business trends and analysis",
+   "anchor": "Market signals",
+   "theme": "Trends & Intelligence",
+   "category": "Market Trends & Intelligence",
+   "positioning": "Signals, trends and data-led decisions",
+   "audience": "Analytical readers, professionals"
+  },
+  {
+   "name": "BeyondMetrics",
+   "edition": "Site edition",
+   "url": "https://site.beyondmetrics.blog/",
+   "keyword": "Business performance improvement",
+   "anchor": "Behavioural insights",
+   "theme": "Performance & Decision Science",
+   "category": "Performance & Decision Making",
+   "positioning": "Personal goal beyond headline numbers",
+   "audience": "Professionals, households, curious readers"
+  },
+  {
+   "name": "Openink Hub",
+   "edition": "Site edition",
+   "url": "https://site.openinkhub.blog/",
+   "keyword": "Business knowledge and education",
+   "anchor": "Industry explainers",
+   "theme": "Knowledge & Business Education",
+   "category": "Business Knowledge & Explainers",
+   "positioning": "Editorial explainers and foundational knowledge",
+   "audience": "General readers, beginners"
+  },
+  {
+   "name": "PrimeNarrative",
+   "edition": "Site edition",
+   "url": "https://site.primenarrative.blog/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Business stories by PrimeNarrative",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "NexoraPress",
+   "edition": "Site edition",
+   "url": "https://site.nexorapress.blog/",
+   "keyword": "Business and industry developments",
+   "anchor": "Market changes",
+   "theme": "Developments & Consumer Insights",
+   "category": "Industry News & Developments",
+   "positioning": "Developments and consumer reporting",
+   "audience": "Followers, digitally active consumers"
+  },
+  {
+   "name": "NextReach",
+   "edition": "Site edition",
+   "url": "https://site.nextreach.blog/",
+   "keyword": "Business and career planning",
+   "anchor": "Professional skills",
+   "theme": "Planning & Professional Development",
+   "category": "Planning & Action Guides",
+   "positioning": "Capability and next-step action guides",
+   "audience": "Young earners, families, early investors"
+  },
+  {
+   "name": "StartupStack",
+   "edition": "Site edition",
+   "url": "https://site.startupstack.blog/",
+   "keyword": "Business operations management",
+   "anchor": "Business tools",
+   "theme": "Startup & Business Operations",
+   "category": "Business Operations & Tools",
+   "positioning": "Startup operations, founder tools",
+   "audience": "Startup founders, operators, small teams"
+  },
+  {
+   "name": "GrowthScript",
+   "edition": "Site edition",
+   "url": "https://site.growthscript.blog/",
+   "keyword": "Content marketing strategies",
+   "anchor": "Publishing",
+   "theme": "Content & Publishing",
+   "category": "Content & Publishing",
+   "positioning": "Content creation, publishing and digital communication",
+   "audience": "Writers, creators, professionals, businesses"
+  },
+  {
+   "name": "World Buzz",
+   "edition": "Site edition",
+   "url": "https://site.worldbuzz.wiki/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis by World Buzz",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "TrendNest",
+   "edition": "Site edition",
+   "url": "https://site.trendnest.buzz/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis by TrendNest",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "BuzzChronicle",
+   "edition": "Site edition",
+   "url": "https://site.buzzchronicle.forum/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis on BuzzChronicle forum",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "WisdomTrack",
+   "edition": "Site edition",
+   "url": "https://site.wisdomtrack.study/",
+   "keyword": "Practical learning and business education",
+   "anchor": "Explainers",
+   "theme": "Knowledge & Education",
+   "category": "Learning & Knowledge",
+   "positioning": "Accessible learning and practical knowledge",
+   "audience": "Learners, professionals, business owners"
+  },
+  {
+   "name": "FutureBytes",
+   "edition": "Site edition",
+   "url": "https://site.futurebytes.cyou/",
+   "keyword": "Technology trends for businesses",
+   "anchor": "Digital transformation",
+   "theme": "Technology & Digital Transformation",
+   "category": "Technology & Innovation",
+   "positioning": "Digital change, technology and future-facing ideas",
+   "audience": "Professionals, business owners, technology-curious readers"
+  },
+  {
+   "name": "StoryForum",
+   "edition": "Site edition",
+   "url": "https://site.storyforum.sbs/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Business stories by StoryForum",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "ExploreWorld",
+   "edition": "Site edition",
+   "url": "https://site.exploreworld.surf/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Business stories by ExploreWorld",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "CreativeOrbit",
+   "edition": "Site edition",
+   "url": "https://site.creativeorbit.space/",
+   "keyword": "Creative ideas for businesses",
+   "anchor": "Practical inspiration",
+   "theme": "Creativity & Design",
+   "category": "Creativity & Design",
+   "positioning": "Creative ideas, visual communication and practical inspiration",
+   "audience": "Creators, professionals, entrepreneurs, general readers"
+  },
+  {
+   "name": "DigitalExpress",
+   "edition": "Site edition",
+   "url": "https://site.digitalexpress.click/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis on DigitalExpress click",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "ModernJournal",
+   "edition": "Site edition",
+   "url": "https://site.modernjournal.living/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Business stories by ModernJournal",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "StudyBeacon",
+   "edition": "Site edition",
+   "url": "https://site.studybeacon.cfd/",
+   "keyword": "Practical learning and business education",
+   "anchor": "Practical guides by StudyBeacon",
+   "theme": "Knowledge & Education",
+   "category": "Learning & Knowledge",
+   "positioning": "Accessible learning and practical knowledge",
+   "audience": "Learners, professionals, business owners"
+  },
+  {
+   "name": "VisualStories",
+   "edition": "Site edition",
+   "url": "https://site.visualstories.pics/",
+   "keyword": "Creative ideas for businesses",
+   "anchor": "Visual communication by VisualStories",
+   "theme": "Creativity & Design",
+   "category": "Creativity & Design",
+   "positioning": "Creative ideas, visual communication and practical inspiration",
+   "audience": "Creators, professionals, entrepreneurs, general readers"
+  },
+  {
+   "name": "ContentJunction",
+   "edition": "Site edition",
+   "url": "https://site.contentjunction.casa/",
+   "keyword": "Content marketing strategies",
+   "anchor": "Audience development",
+   "theme": "Content & Publishing",
+   "category": "Content & Publishing",
+   "positioning": "Content creation, publishing and digital communication",
+   "audience": "Writers, creators, professionals, businesses"
+  },
+  {
+   "name": "RankQuest",
+   "edition": "Site edition",
+   "url": "https://site.rankquest.cfd/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis on RankQuest cfd",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "CreativeCasa",
+   "edition": "Site edition",
+   "url": "https://site.creativecasa.homes/",
+   "keyword": "Creative ideas for businesses",
+   "anchor": "Visual communication by CreativeCasa",
+   "theme": "Creativity & Design",
+   "category": "Creativity & Design",
+   "positioning": "Creative ideas, visual communication and practical inspiration",
+   "audience": "Creators, professionals, entrepreneurs, general readers"
+  },
+  {
+   "name": "HomeJournal",
+   "edition": "Site edition",
+   "url": "https://site.homejournal.rest/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Business stories by HomeJournal",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "RestAndRead",
+   "edition": "Site edition",
+   "url": "https://site.restandread.cfd/",
+   "keyword": "Practical lifestyle guides",
+   "anchor": "Lifestyle choices",
+   "theme": "Lifestyle & Practical Guides",
+   "category": "Lifestyle & Practical Guides",
+   "positioning": "Everyday living, home, wellbeing and practical lifestyle knowledge",
+   "audience": "Households, professionals, general readers"
+  },
+  {
+   "name": "RankQuest",
+   "edition": "Site edition",
+   "url": "https://site.rankquest.sbs/",
+   "keyword": "Business research and analysis",
+   "anchor": "Metrics",
+   "theme": "Research & Decision Intelligence",
+   "category": "Research & Analysis",
+   "positioning": "Research, comparisons, signals and evidence-led decisions",
+   "audience": "Researchers, professionals, business decision-makers"
+  },
+  {
+   "name": "TrendPilot",
+   "edition": "Site edition",
+   "url": "https://site.trendpilot.cyou/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis on TrendPilot cyou",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "GrowthVision",
+   "edition": "Site edition",
+   "url": "https://site.growthvision.cfd/",
+   "keyword": "Business growth strategies",
+   "anchor": "Startup planning by GrowthVision",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "StartupGrowth",
+   "edition": "Site edition",
+   "url": "https://site.startupgrowth.online/",
+   "keyword": "Business growth strategies",
+   "anchor": "Startup planning by StartupGrowth",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "NexoraPress",
+   "edition": "Site edition",
+   "url": "https://site.nexorapress.courses/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis by NexoraPress",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "PrimeNarrative",
+   "edition": "Site edition",
+   "url": "https://site.primenarrative.site/",
+   "keyword": "Business strategy and planning",
+   "anchor": "Strategic choices",
+   "theme": "Business Strategy & Decision Making",
+   "category": "Business Strategy & Comparisons",
+   "positioning": "Clear narratives for complex choices",
+   "audience": "Readers comparing options"
+  },
+  {
+   "name": "WebBuzzDaily",
+   "edition": "Site edition",
+   "url": "https://site.webbuzzdaily.cfd/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis on WebBuzzDaily cfd",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "GrowthSERP",
+   "edition": "Site edition",
+   "url": "https://site.growthserp.store/",
+   "keyword": "Business growth strategies",
+   "anchor": "Startup planning by GrowthSERP",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "NextReach",
+   "edition": "Site edition",
+   "url": "https://site.nextreach.quest/",
+   "keyword": "Business research and analysis",
+   "anchor": "Trend analysis",
+   "theme": "Research & Decision Intelligence",
+   "category": "Research & Analysis",
+   "positioning": "Research, comparisons, signals and evidence-led decisions",
+   "audience": "Researchers, professionals, business decision-makers"
+  },
+  {
+   "name": "GrowthScript",
+   "edition": "Site edition",
+   "url": "https://site.growthscript.website/",
+   "keyword": "Business growth and productivity",
+   "anchor": "Repeatable processes",
+   "theme": "Growth & Productivity",
+   "category": "Growth Strategies & Playbooks",
+   "positioning": "Growth playbooks for habits and products",
+   "audience": "Growth-minded consumers, product teams"
+  },
+  {
+   "name": "StartupGrowth",
+   "edition": "Site edition",
+   "url": "https://site.startupgrowth.cyou/",
+   "keyword": "Business growth strategies",
+   "anchor": "Productivity by StartupGrowth",
+   "theme": "Business Growth & Action",
+   "category": "Business Growth & Playbooks",
+   "positioning": "Business growth, capability building and practical action",
+   "audience": "Startups, MSMEs, business owners, professionals"
+  },
+  {
+   "name": "DailySurf",
+   "edition": "Site edition",
+   "url": "https://site.dailysurf.cyou/",
+   "keyword": "Industry trends and analysis",
+   "anchor": "Industry trends and analysis on DailySurf cyou",
+   "theme": "Trends & Developments",
+   "category": "Industry News & Trends",
+   "positioning": "News-aware reporting on trends and developments",
+   "audience": "General readers, consumers, professionals"
+  },
+  {
+   "name": "BlogSpace",
+   "edition": "Site edition",
+   "url": "https://site.blogspace.cyou/",
+   "keyword": "Business and industry explainers",
+   "anchor": "Business stories by BlogSpace",
+   "theme": "Stories & Explainers",
+   "category": "Editorial Stories & Explainers",
+   "positioning": "Accessible editorial storytelling across topics",
+   "audience": "General readers, professionals, curious audiences"
+  },
+  {
+   "name": "ShopStories",
+   "edition": "Site edition",
+   "url": "https://site.shopstories.sbs/",
+   "keyword": "E-commerce business strategies",
+   "anchor": "E-commerce",
+   "theme": "Commerce & Consumer Insights",
+   "category": "Commerce & Consumer Insights",
+   "positioning": "Commerce, products and consumer decision-making",
+   "audience": "Consumers, retailers, entrepreneurs, business professionals"
+  }
+ ]
+}

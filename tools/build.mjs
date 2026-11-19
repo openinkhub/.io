@@ -886,7 +886,7 @@ function workForPage(path, cls = "section section-alt") {
 }
 
 // "Our Success Stories": keyword-anchor link to a site (the URL itself is never shown)
-const ssLink = (s) => `<a class="ss-anchor" href="${E(s.url)}" target="_blank" rel="noopener">${E(s.anchor)}${icon("arrow")}</a>`;
+const ssLink = (s, arrow = true) => `<a class="ss-anchor" href="${E(s.url)}" target="_blank" rel="noopener">${E(s.anchor)}${arrow ? icon("arrow") : ""}</a>`;
 // CTA band on the home page and matching service pages (success-stories.json cta.pages), with 3 keyword links of the page's themes
 function successCta(p, cls = "section") {
   const C = SS?.cta, P = C?.pages?.[p];
@@ -900,13 +900,22 @@ function successCta(p, cls = "section") {
   ${picks.length ? `<div class="ss-cta-links"><strong>From our blog network</strong><ul>${picks.map((s) => `<li><span class="tag">${E(s.category)}</span>${ssLink(s)}<small>${E(s.name)}: ${E(s.positioning)}</small></li>`).join("")}</ul></div>` : ""}
 </div></div></section>`;
 }
+// hero screenshot of a site (tools/shoot-sites.mjs -> static/images/success/<host>.webp); a branded tile when there is none yet
+const ssShotFile = (url) => new URL(url).hostname.replace(/^www./, "").replace(/[^a-z0-9.-]/gi, "-") + ".webp";
+const ssShot = (s) => {
+  const f = "/images/success/" + ssShotFile(s.url);
+  return fs.existsSync(path.join(ROOT, "static", ...f.split("/").filter(Boolean)))
+    ? `<div class="ss-shot"><img src="${f}" alt="Home page of ${E(s.name)} (${E(s.edition.toLowerCase())})" width="640" height="400" loading="lazy" decoding="async"></div>`
+    : `<div class="ss-shot ss-ph" aria-hidden="true"><b>${E(s.name)}</b><span>New content coming soon</span></div>`;
+};
 function successTpl(rec) {
   const S = SS, st = S.stack, N = S.network;
   const cats = [...new Set(S.sites.map((s) => s.category))].sort();
   const cards = S.sites.map((s) => `<article class="ss-card" data-cat="${E(s.category)}">
+    ${ssShot(s)}
     <div class="ss-card-top"><span class="tag">${E(s.category)}</span><span class="ss-ed">${E(s.edition)}</span></div>
     <h3>${E(s.name)}</h3><p>${E(s.positioning)}. For ${E(s.audience.toLowerCase())}.</p>
-    <p class="ss-kw"><span>Target keyword</span>${ssLink(s)}</p></article>`).join("");
+    <p class="ss-kw"><span>Target keyword</span>${ssLink(s, false)}</p></article>`).join("");
   return document_(rec, `<section class="hero hero-about hero-service">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-grid">

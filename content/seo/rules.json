@@ -171,7 +171,11 @@
     },
     "pageWeight": {
       "maxHtmlKB": 150,
-      "maxImagesPerPage": 30
+      "maxImagesPerPage": 30,
+      "maxImagesPerPageOverrides": {
+        "_note": "gallery pages whose extra images are all lazy-loaded screenshots",
+        "/our-success-stories/": 160
+      }
     },
     "faq": {
       "minQuestions": 3

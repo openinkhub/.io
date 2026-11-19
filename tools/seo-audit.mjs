@@ -308,7 +308,7 @@ function audit(p) {
 
   // performance
   const kb = Math.round(Buffer.byteLength(p.html) / 1024);
-  c.page_speed = r(kb <= T.pageWeight.maxHtmlKB && imgs.length <= T.pageWeight.maxImagesPerPage ? "pass" : "warn", `${kb} KB HTML · ${imgs.length} images · ${(p.html.match(/<script\b[^>]*src=/g) || []).length} scripts`, "static build, CDN-cached");
+  c.page_speed = r(kb <= T.pageWeight.maxHtmlKB && imgs.length <= (T.pageWeight.maxImagesPerPageOverrides?.[rec.path] ?? T.pageWeight.maxImagesPerPage) ? "pass" : "warn", `${kb} KB HTML · ${imgs.length} images · ${(p.html.match(/<script\b[^>]*src=/g) || []).length} scripts`, "static build, CDN-cached");
   const m = psi.get(rec.path);
   const vital = (val, good, poor, unit) => val == null ? r("na", "not measured", "set PSI_API_KEY to measure with PageSpeed Insights") : r(val <= good ? "pass" : val <= poor ? "warn" : "fail", unit === "s" ? `${(val / 1000).toFixed(2)} s` : unit === "" ? val.toFixed(3) : `${Math.round(val)} ms`, m?.source || "");
   c.lcp = vital(m?.lcp, 2500, 4000, "s"); c.inp = vital(m?.inp, 200, 500, "ms"); c.cls = vital(m?.cls, 0.1, 0.25, "");
